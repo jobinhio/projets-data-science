@@ -1,36 +1,59 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <utime.h>
+#include <stdarg.h>
+#include <stdnoreturn.h>
+#include <stdint.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
-void usage (char *argv0)
+#define InfoServeur "InfoServeur.cfg"
+#define IMAGE_IPV4 "127.0.0.1"
+#define IMAGE_PORT 8080
+#define TAG_IPV4 "127.0.0.1"
+#define TAG_PORT 9090
+
+
+#define MAXLEN 256
+#define MAX_ADDR_LEN 256
+
+#define	CHK(op)		do { if ((op) == -1) raler (1, #op) ; } while (0)
+
+noreturn void raler (int syserr, const char *fmt, ...)
 {
-    fprintf (stderr, "usage: %s [port]\n", argv0) ;
+    va_list ap ;
+
+    va_start (ap, fmt) ;
+    vfprintf (stderr, fmt, ap) ;
+    fprintf (stderr, "\n") ;
+    va_end (ap) ;
+    if (syserr)
+	perror ("") ;
     exit (1) ;
 }
 
-void raler (char *msg)
+
+void WriteInfoServeur(const char *serverName, const char *serv_adrIPv4, int serv_port)
 {
-    perror (msg) ;
-    exit (1) ;
-}
+    // Ouverture du fichier en mode écriture
+    int fd;
+    CHK(fd = open (InfoServeur, O_WRONLY | O_CREAT | O_APPEND, 0666));
+    // Écriture des informations dans le fichier en utilisant write
+    char buffer[MAX_ADDR_LEN + 50]; // Assez grand pour contenir les informations
+    int necrit = snprintf(buffer, sizeof(buffer), "%s %s %d\n", serverName, serv_adrIPv4, serv_port);
+    if (necrit < 0 || necrit >= sizeof(buffer))
+        raler(0,"snprintf");
 
-#define	MAXLEN	1024
-
-void serveur (int in)
-{
-    int r ;
-    char buf [MAXLEN] ;
-    int n ;
-
-    n = 0 ;
-    while ((r = read (in, buf, MAXLEN)) > 0)
-	n += r ;
-    printf ("%d\n", n) ;
+    buffer[necrit] ='\0';
+    CHK(write(fd, buffer, necrit));
+    // Fermeture du fichier
+    CHK(close(fd));
 }
 
 
@@ -141,95 +164,93 @@ void traiter_requete(int in, char *requete)
     }
 }
 
+
 void serveur (int in)
 {
-    int r;
-    char buf[MAXLEN];
-    int n;
+    int r ;
+    char buf [MAXLEN] ;
+    int n ;
 
-    // Lire la requête du client
-    n = read(in, buf, MAXLEN);
-
-    if (n > 0)
-    {
-        // Traiter la requête
-        traiter_requete(in, buf);
-    }
-    else if (n < 0)
-    {
-        // Erreur de lecture
-        perror("read");
-    }
+    n = 0 ;
+    while ((r = read (in, buf, MAXLEN)) > 0)
+	n += r ;
+    printf ("%d\n", n) ;
 }
 
 
-
-
-
-
-
-
-
-
-
-int main (int argc, char *argv [])
+void Connexion(const char *serv_adrIPv4, int serv_port, int socketType)
 {
-    int s, sd, r ;
-    struct sockaddr_in6 monadr, sonadr ;
-    socklen_t salong ;
-    int port, val ;
-    char padr [INET6_ADDRSTRLEN] ;
+    int serverSocket;
+    struct sockaddr_in serv_addr;
 
-    switch (argc)
+    // Création du socket serveur
+    CHK(serverSocket = socket(AF_INET, socketType, 0));
+
+    // Configurer l'adresse du serveur
+    memset(&serv_addr, 0, sizeof(serv_addr));
+    serv_addr.sin_family = AF_INET;
+    serv_addr.sin_addr.s_addr = INADDR_ANY; //inet_addr(IMAGE_IPV4);
+    serv_addr.sin_port = htons(IMAGE_PORT);
+
+    // Lier la socket à l'adresse et au port
+    int r;
+    r = bind(serverSocket, (struct sockaddr *)&serv_addr, sizeof serv_addr);
+    if (r == -1) raler (0,"bind") ;
+
+    // Mettre la socket en mode écoute
+    r = listen(serverSocket, 5);
+    if (r == -1) raler (0,"listen") ;
+
+    printf("Le serveur écoute sur le port %d...\n", IMAGE_PORT);
+
+    // Accepter les connexions entrantes
+    int clientSocket;
+    struct sockaddr_in clientAddr;
+    socklen_t clientAddrLen = sizeof(clientAddr);
+
+    r = (clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddr, &clientAddrLen)) ;
+    if (r == -1) raler (0,"accept") ;
+
+    printf("Connexion acceptée depuis %s:%d\n", inet_ntoa(clientAddr.sin_addr), ntohs(clientAddr.sin_port));
+
+    // Ici, vous pouvez interagir avec le client en utilisant clientSocket
+
+    // Fermer les sockets
+    close(clientSocket);
+    close(serverSocket);
+   
+
+   /*
+    // Boucle principale d'acceptation des connexions
+    int clientSocket;
+    struct sockaddr_in client_adr;
+    socklen_t client_adrLen = sizeof(client_adr);
+    for (;;) 
     {
-	case 1 :
-	    port = 9000 ;
-	    break ;
-	case 2 :
-	    port = atoi (argv [1]) ;
-	    break ;
-	default :
-	    usage (argv [0]) ;
+        client_adrLen  = sizeof client_adr;
+        clientSocket = accept(serverSocket, (struct sockaddr *)&client_adr, &client_adrLen );
+        printf("client accepté\n");
+        serveur(clientSocket);
+        close(clientSocket);
     }
+    // Fermeture du socket
+    close(serverSocket);
 
-    // Création de la socket IPv6
-    s = socket (PF_INET6, SOCK_STREAM, 0) ;
-    if (s == -1) raler ("socket") ;
+    */
 
-    // Désactivation de l'exclusivité IPv6
-    val = 0 ;
-    r = setsockopt (s, IPPROTO_IPV6, IPV6_V6ONLY, &val, sizeof val) ;
-    if (r == -1) raler ("setsockopt") ;
+    
 
-    // Configuration de l'adresse d'écoute du serveur
-    memset (&monadr, 0, sizeof monadr) ;
-    monadr.sin6_family = AF_INET6 ;
-    monadr.sin6_port = htons (port) ;
-    monadr.sin6_addr = in6addr_any ;
-    r = bind (s, (struct sockaddr *) &monadr, sizeof monadr) ;
-    if (r == -1) raler ("bind") ;
+}
 
-    // Mise en écoute de la socket
-    r = listen (s, 5) ;
-    if (r == -1) raler ("listen") ;
+int main()
+{
+    // Ecriture dans InfoServeur
+    WriteInfoServeur("image", IMAGE_IPV4, IMAGE_PORT);
+    WriteInfoServeur("tag", TAG_IPV4,TAG_PORT);
 
-    // Acceptation d'une connexion entrante
-    salong = sizeof sonadr ;
-    sd = accept (s, (struct sockaddr *) &sonadr, &salong) ;
-    if (sd == -1) raler ("accept") ;
-
-    // Récupération de l'adresse IP du client connecté
-    if (inet_ntop (AF_INET6, &sonadr.sin6_addr, padr, sizeof padr) == NULL)
-	raler ("inet_ntop") ;
-    printf ("Connexion depuis %s\n", padr) ;
+    // Exemple d'utilisation pour un serveur TCP
+    Connexion(IMAGE_IPV4, IMAGE_PORT, SOCK_STREAM);
 
 
-    // Appel de la fonction serveur pour traiter les données du client
-    serveur (sd) ;
-
-    // Fermeture des sockets
-    close (sd) ;
-    close (s) ;
-
-    exit (0) ;
+    return 0;
 }
