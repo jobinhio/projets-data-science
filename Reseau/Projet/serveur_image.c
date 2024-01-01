@@ -16,10 +16,12 @@
 #define InfoServeur "InfoServeur.cfg"
 #define IMAGE_IPV4 "127.0.0.1"
 #define IMAGE_PORT 8080
+
 #define TAG_IPV4 "127.0.0.1"
 #define TAG_PORT 9090
 
 
+#define	CHEMIN_MAX	512
 #define MAXLEN 256
 #define MAX_ADDR_LEN 256
 
@@ -38,6 +40,11 @@ noreturn void raler (int syserr, const char *fmt, ...)
     exit (1) ;
 }
 
+void usage (char *argv0)
+{
+    fprintf (stderr, "usage: %s port répertoire\n", argv0) ;
+    exit (1) ;
+}
 
 void WriteInfoServeur(const char *serverName, const char *serv_adrIPv4, int serv_port)
 {
@@ -57,128 +64,116 @@ void WriteInfoServeur(const char *serverName, const char *serv_adrIPv4, int serv
 }
 
 
-
-
-void traiter_requete(int in, char *requete)
+char *base (char *chemin)
 {
-    // Extraire le type de requête du premier octet
-    char type = requete[0];
+    char *p ;
 
-    // Pointeur pour parcourir la requête
-    char *ptr = requete + 1;
+    p = strrchr (chemin, '/') ;
+    return p == NULL ? chemin : p+1 ;
+}
+
+void serveur ( int clientSocket,char *rep)
+{
+
+    // reception des requetes
+
+    // pour le type de requete recu
+    ssize_t nlus ;
+    unsigned char type ;
+    CHK(nlus = read(clientSocket, &type, 1));
+    printf("type : %d\n", type);
+
+    
+    char nom[MAXLEN];  
+    unsigned char chaine[4];
+    char Contenu[MAXLEN];  
+    char filename[CHEMIN_MAX + 1] ;
+    char *b ;
+
+
+
 
     switch (type)
     {
-        case 0: // Requête de lister les images présentes
-        {
-            // Traitement de la requête de listage
-            // ...
-
-            // Exemple de réponse : une liste de noms
-            char liste_noms[] = {2, 'i', 'm', 'g', '1', 'i', 'm', 'g', '2'};
-            write(in, liste_noms, sizeof(liste_noms));
+        case 0: // lister les images présentes
+            printf("type : %d\n", type);
             break;
-        }
-        case 1: // Requête de tester l'existence d'une image
-        {
-            // Extraire le nom de la requête
-            int len = (unsigned char)*ptr;
-            ptr++;
-            char nom[len + 1];
-            strncpy(nom, ptr, len);
-            nom[len] = '\0';
-
-            // Traitement de la requête de test d'existence
-            // ...
-
-            // Exemple de réponse : une erreur
-            char erreur[] = {7, 'E', 'r', 'r', 'e', 'u', 'r'};
-            write(in, erreur, sizeof(erreur));
+    
+        case 1: // tester l’existence d’une image
+            printf("type : %d\n", type);
             break;
-        }
-        case 2: // Requête d'envoyer une image vers le serveur
-        {
-            // Extraire le nom et le contenu de la requête
-            int len_nom = (unsigned char)*ptr;
-            ptr++;
-            char nom[len_nom + 1];
-            strncpy(nom, ptr, len_nom);
-            nom[len_nom] = '\0';
-            ptr += len_nom;
+        case 2: // envoyer une image vers le serveur
 
-            int len_contenu = *((int *)ptr);
-            ptr += sizeof(int);
-            char contenu[len_contenu];
-            strncpy(contenu, ptr, len_contenu);
+            // Parametres: nom et contenu
 
-            // Traitement de la requête d'envoi d'image
-            // ...
+            // nom de l'image 
+            unsigned char tailleNom ;
+            CHK(nlus = read(clientSocket, &tailleNom, 1));
+            CHK(nlus = read(clientSocket, nom, tailleNom ));
+            nom[tailleNom] = '\0';  // Terminer la chaîne avec le caractère nul
+            printf("tailleNom: %d\n", tailleNom);
+            printf("nom : %s\n", nom);
 
-            // Exemple de réponse : une erreur
-            char erreur[] = {5, 'O', 'K'};
-            write(in, erreur, sizeof(erreur));
+
+
+            // Taillecontenu 
+            unsigned int tailleContenu;
+            CHK(nlus = read(clientSocket,chaine, 4));
+            chaine[4]= '\0';
+            if (sscanf(chaine, "%u", &tailleContenu) == 1) {
+                // Afficher la valeur convertie
+                printf("tailleContenu: %u\n", tailleContenu);
+            } else {
+                // Gérer les erreurs de conversion
+                printf("Erreur de conversion\n");
+            }
+
+            // creer fichier de nom : nom
+            int n;
+            n = snprintf (filename, filename, "%s/%s", rep, nom) ;
+            if (n < 0 || n > CHEMIN_MAX)
+                raler (0, "chemin '%s/%s' trop long", rep, nom) ;
+
+            printf("filename : %s\n", filename);
+            
+            int fd ;
+            CHK (fd = open (filename, O_WRONLY | O_CREAT | O_TRUNC, 0666)) ;
+
+            while ((nlus = read (clientSocket,Contenu, tailleContenu)) > 0)
+            CHK (write (fd, Contenu, nlus)) ;
+            CHK (nlus) ;
+            CHK (close (fd)) ;
+
+
+
+
+            // CHK(nlus = read(clientSocket,Contenu, tailleContenu));
+            // Contenu[tailleContenu] = '\0';  // Terminer la chaîne avec le caractère nul
+            // printf("Contenu : %s\n", Contenu);
+
             break;
-        }
-        case 3: // Requête de récupérer une image depuis le serveur
-        {
-            // Extraire le nom de la requête
-            int len = (unsigned char)*ptr;
-            ptr++;
-            char nom[len + 1];
-            strncpy(nom, ptr, len);
-            nom[len] = '\0';
-
-            // Traitement de la requête de récupération d'image
-            // ...
-
-            // Exemple de réponse : le nom et le contenu de l'image
-            int len_reponse = 9 + strlen(nom) + 1 + sizeof(int) + 7;
-            char reponse[len_reponse];
-            reponse[0] = (unsigned char)(strlen(nom) + 1);
-            strncpy(reponse + 1, nom, strlen(nom) + 1);
-            *((int *)(reponse + 1 + strlen(nom) + 1)) = 7;
-            strncpy(reponse + 1 + strlen(nom) + 1 + sizeof(int), "Contenu", 7);
-            write(in, reponse, len_reponse);
+        case 3: // récupérer une image depuis le serveur 
+            printf("type : %d\n", type);
             break;
-        }
-        case 4: // Requête de supprimer une image sur le serveur
-        {
-            // Extraire le nom de la requête
-            int len = (unsigned char)*ptr;
-            ptr++;
-            char nom[len + 1];
-            strncpy(nom, ptr, len);
-            nom[len] = '\0';
-
-            // Traitement de la requête de suppression d'image
-            // ...
-
-            // Exemple de réponse : une erreur
-            char erreur[] = {6, 'D', 'e', 'l', 'e', 't', 'e'};
-            write(in, erreur, sizeof(erreur));
+        case 4: // supprimer une image sur le serveur
+            printf("type : %d\n", type);
             break;
-        }
         default:
-            // Type de requête non pris en charge
-            break;
+            printf("erreur \n");
+        break;
     }
+
+
+
+    // Envoyer des données au client
+    const char *response = "Bonjour, client!\n";
+    CHK(write(clientSocket, response, strlen(response))) ;
+
+    
 }
 
 
-void serveur (int in)
-{
-    int r ;
-    char buf [MAXLEN] ;
-    int n ;
-
-    n = 0 ;
-    while ((r = read (in, buf, MAXLEN)) > 0)
-	n += r ;
-    printf ("%d\n", n) ;
-}
-
-
-void Connexion(const char *serv_adrIPv4, int serv_port, int socketType)
+void Connexion(const char *serv_adrIPv4, int serv_port, int socketType,char *rep)
 {
     int serverSocket;
     struct sockaddr_in serv_addr;
@@ -215,10 +210,14 @@ void Connexion(const char *serv_adrIPv4, int serv_port, int socketType)
 
     // Ici, vous pouvez interagir avec le client en utilisant clientSocket
 
+    serveur ( clientSocket,rep);
+
     // Fermer les sockets
     close(clientSocket);
     close(serverSocket);
-   
+
+}
+
 
    /*
     // Boucle principale d'acceptation des connexions
@@ -240,16 +239,28 @@ void Connexion(const char *serv_adrIPv4, int serv_port, int socketType)
 
     
 
-}
-
-int main()
+int main(int argc, char *argv[]) 
 {
+
+    //usage 
+    if (argc != 3)
+    {
+        usage(argv[0]);
+    }
+    int image_port;
+    image_port= atoi(argv[1]);
+    char *RepImage = argv[2];
+
+
     // Ecriture dans InfoServeur
-    WriteInfoServeur("image", IMAGE_IPV4, IMAGE_PORT);
+    WriteInfoServeur("image", IMAGE_IPV4, image_port);
     WriteInfoServeur("tag", TAG_IPV4,TAG_PORT);
+    // WriteInfoServeur("image", IMAGE_IPV4, IMAGE_PORT);
+
+    
 
     // Exemple d'utilisation pour un serveur TCP
-    Connexion(IMAGE_IPV4, IMAGE_PORT, SOCK_STREAM);
+    Connexion(IMAGE_IPV4, IMAGE_PORT, SOCK_STREAM,RepImage);
 
 
     return 0;

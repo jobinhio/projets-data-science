@@ -18,6 +18,13 @@
 #define MAX_PORT 50
 
 #define	MAXLEN	1024
+#define	MAX_REQ_LEN 1024
+
+
+#define	NOM "%c%s" // 1 octet + nom
+#define	ERREUR "%c%s" // 1 octet + message
+#define	CONTENU "%04u%s" // 4 octet + contenu
+#define	LISTNOM "%02u%s" // 2 octet + liste de noms
 
 
 #define	CHK(op)		do { if ((op) == -1) raler (1, #op) ; } while (0)
@@ -35,7 +42,8 @@ noreturn void raler (int syserr, const char *fmt, ...)
     exit (1) ;
 }
 
-struct ServeurInfo {
+struct ServeurInfo 
+{
     char name[MAX_ADDR_LEN];
     char address[MAX_ADDR_LEN];
     int port;
@@ -74,11 +82,7 @@ void usage (char *argv0)
     exit (1) ;
 }
 
-
-
-
-
-void connectToServer(const char *address, int port, int socketType)
+int connectToServer(const char *address, int port, int socketType)
 {
 
     int clientSocket;
@@ -93,20 +97,110 @@ void connectToServer(const char *address, int port, int socketType)
     serv_addr.sin_addr.s_addr = inet_addr(address);
     serv_addr.sin_port = htons(port);
 
-
     // Se connecter au serveur
-    if (connect(clientSocket, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) == -1) {
-        perror("Erreur lors de la connexion au serveur");
-        exit(EXIT_FAILURE);
-    }
-
+    CHK(connect(clientSocket, (struct sockaddr *)&serv_addr, sizeof(serv_addr)));
     printf("Connecté au serveur %s:%d\n",address, port);
 
-    // Ici, vous pouvez interagir avec le serveur en utilisant clientSocket
+    return clientSocket;
+}
 
-    // Fermer la socket client
-    close(clientSocket);
+/// Requete
+void ReqSendImageToServer(int clientSocket,unsigned char   type, const char *nom, const char *contenu)
+{
+    // Formation requete
+    unsigned char tailleNom = (unsigned char)strlen(nom);
+    unsigned int tailleContenu = (unsigned int)strlen(contenu);
+    char requete[1+ 1 + tailleNom + 4 + tailleContenu + 1];  // +1 pour le caractère nul
+    // Ecriture de requete avec snprintf
+    int bytesWritten = snprintf(requete, sizeof(requete), "%c%c%s%04u%s",type, tailleNom, nom, tailleContenu, contenu);
+    if (bytesWritten < 0 || bytesWritten >= sizeof(requete)) {
+        fprintf(stderr, "Erreur lors de la création de la requête\n");
+    }
+    requete[1 +1 + tailleNom + 4 + tailleContenu] = '\0';
 
+    // Afficher la requete
+    /*
+    printf("type: %d\n",type);
+    printf("tailleNom: %d\n", tailleNom);
+    printf("tailleContenu: %d\n", tailleContenu);
+    printf("Requete : %s\n", requete);
+    */
+    
+    // Envoyer des données au serveur
+    CHK(write(clientSocket, requete, strlen(requete))); 
+    printf("Requete envoyée au serveur\n");
+
+
+
+
+
+    // Recevoir des données du serveur
+    // char buffer[1024];
+    // ssize_t nlus;
+
+    // while ((nlus = read(clientSocket, buffer, 1)) > 0)
+    // {
+    //     // écrire sur la sortie standard
+    //     write(0, buffer, nlus);
+    // }
+
+    char buffer[1024];
+    ssize_t totalLus = 0;
+    ssize_t nlus ;
+    while ((nlus = read(clientSocket, buffer + totalLus, sizeof(buffer))) > 0) {
+        totalLus += nlus;
+    }
+    buffer[totalLus] = '\0';
+    printf("Données reçues du serveur: %s\n", buffer);
+
+
+}
+
+
+void ReqRecvImageFromServer(int clientSocket, const char *nom)
+{
+
+    // Formation requete
+    unsigned char tailleNom = (unsigned char)strlen(nom);
+    char requete[1 + tailleNom + 1];  // +1 pour le caractère nul
+
+    // Ecriture de requete
+    memcpy(requete, &tailleNom, sizeof(unsigned char));
+    memcpy(requete + sizeof(unsigned char), nom, tailleNom);
+    requete[1+ tailleNom] = '\0';
+
+
+    // Envoyer des données au serveur
+    CHK(write(clientSocket, requete, strlen(requete))); 
+
+
+    // Recevoir des données du serveur
+    char buffer[1024];
+    ssize_t nlus;
+    while ((nlus = read(clientSocket, buffer, 1)) > 0)
+    {
+        // écrire sur la sortie standard
+        write(0, buffer, nlus);
+    }
+
+}
+
+
+
+
+void ReqList()
+{
+
+    
+}
+
+
+
+
+void ReqTestExist()
+{
+
+    
 }
 
 
@@ -127,17 +221,20 @@ int main(int argc, char *argv[]) {
 
     int serv_port;
     char serv_addr[MAX_ADDR_LEN];
+    unsigned char type;
 
 
-    // usage : client ... et recupération servers 
+  
     if (argc < 4)
     {
         usage(argv[0]);
     }
 
+    //coté serveur image
     if (strcmp(argv[1], servers[0].name) == 0 && argc == 4)
     {
         const char *validCommands[] = {"add", "del", "tag", "get"};
+        const char validType[] = {2, 4, 1, 3};
 
         for (size_t i = 0; i < sizeof(validCommands) / sizeof(validCommands[0]); ++i)
         {
@@ -145,10 +242,12 @@ int main(int argc, char *argv[]) {
             {
                 strcpy(serv_addr, servers[0].address); // indice 0 pour "image"
                 serv_port = servers[0].port;
+                type = validType[i];
             }
         }
     }
 
+    //coté serveur tag
     else if (strcmp(argv[1], servers[1].name) == 0)
     {
         const char *validCommands[] = {"add", "del", "image"};
@@ -162,6 +261,7 @@ int main(int argc, char *argv[]) {
             }
         }
     }
+    // usage : client ... 
     else
     {
         usage(argv[0]);
@@ -170,9 +270,23 @@ int main(int argc, char *argv[]) {
 
 
     // Connexion au serveur concerné
-    connectToServer(serv_addr, serv_port, SOCK_STREAM);
+    int clientSocket = connectToServer(serv_addr, serv_port, SOCK_STREAM);
     printf("Connecté au serveur image en TCP\n");
 
+
+    // Ici, on la connection est établi
+
+
+    // Nom à envoyer
+    const char *nom = "image.jpg";
+    // Contenu à envoyer
+    const char *contenu = "Ceci est un exemple de contenu.";
+    type =2;
+    ReqSendImageToServer(clientSocket,type,nom, contenu);
+
+    // ReqRecvImageFromServer(clientSocket,nom);
+    // Fermer la socket client
+    CHK(close(clientSocket));
 
 
     exit(0);
