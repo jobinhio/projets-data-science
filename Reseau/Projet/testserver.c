@@ -1,20 +1,24 @@
 #include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include <inttypes.h>
 
 int main() {
-    // Chaîne de caractères
-    const char *chaine = "0031";
 
-    // Variable pour stocker la valeur convertie
-    unsigned int val;
+char nom[256];  // Taille de 256 pour stocker les 255 octets plus le caractère nul
 
-    // Utiliser sscanf pour convertir la chaîne en unsigned int
-    if (sscanf(chaine, "%u", &val) == 1) {
-        // Afficher la valeur convertie
-        printf("La valeur convertie est : %u\n", val);
-    } else {
-        // Gérer les erreurs de conversion
-        printf("Erreur de conversion\n");
-    }
+ssize_t nlus;
+CHK(nlus = read(clientSocket, nom, 255));  // Lire 255 octets depuis clientSocket
+nom[255] = '\0';  // Terminer la chaîne avec le caractère nul
+
+// Convertir les octets en entier (en supposant une représentation Little-Endian)
+unsigned int entier = 0;
+for (int i = 0; i < 4; ++i) {
+    entier |= (unsigned char)nom[i] << (i * 8);
+}
+
+printf("Entier : %u\n", entier);
+
 
     return 0;
 }
