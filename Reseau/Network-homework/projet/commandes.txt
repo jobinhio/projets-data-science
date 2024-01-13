@@ -1,0 +1,5 @@
+# afficher les processus avec un nom contenant 'mot-clé'
+ps -ejH | grep -i 'mot-clé'
+
+# afficher les message de la console du système contenant 'mot-clé'
+sudo grep -i 'mot-clé' /var/log/syslog
