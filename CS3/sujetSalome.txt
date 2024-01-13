@@ -1,0 +1,15 @@
+
+Dans le cours et feelpp-project, nous avons introduit l'exemple d'un radiateur.
+La geometrie est disponible sous la forme d'un fichier Gmsh au format geo,
+disponlble dans le depot github feelpp-project.
+
+Il s'agit dans ce travail de generer la geometrie en utilisant:
+
+ l'API python de Gmsh : Le script devra creer la geometrie avec les memes parametres que dans 
+le fichier geo. Ces parametres pourront etre modifier par l'utilisateur au moment du lancement 
+du script. Le script devra egalement realise le maillage de la geometrie avec la possibilite de 
+raffiner le maillage sur les bords du domaine Gamma_Ext.La taille du  maillage sera donnee comme 
+un parametre.Salome: comme pour Gmsh, on donnera les parametres de la geometrie au script python. 
+La geometrie sera sauve au format Xao avec la definition des groupes contenant respectivement
+Gamma_ext et Gamma_in.Un document decrivant l'utilisation des scripts est, egalement, a fournir. 
+Ce document doit etre concu comme un manuel d'utilisation des scripts. 

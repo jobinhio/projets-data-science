@@ -95,14 +95,17 @@ void usage (char *argv0)
     exit (1) ;
 }
 
+
 int connectToServer(const char *address, int port, int socketType)
 {
 
     int clientSocket;
     struct sockaddr_in serv_addr;
 
-    // Création d'une socket TCP
+    // Création d'une socket TCP ou UDP
     CHK(clientSocket = socket(AF_INET, socketType, 0));
+
+
 
     // Configurer l'adresse du serveur
     memset(&serv_addr, 0, sizeof(serv_addr));
@@ -118,7 +121,7 @@ int connectToServer(const char *address, int port, int socketType)
 }
 
 
-/// Requete
+/// Requete Image 
 void ReqSendImageToServer(int clientSocket,unsigned char type, char *nom, char *reponse)
 {
 
@@ -163,8 +166,6 @@ void ReqSendImageToServer(int clientSocket,unsigned char type, char *nom, char *
         printf("L'image n'a pas été ajoutée\n");
     
 }
-
-
 
 
 void ReqListeImage(int clientSocket,unsigned char type, char *reponse)
@@ -237,8 +238,6 @@ void ReqSupImage(int clientSocket,unsigned char type, char *nom, char *reponse)
 }
 
 
-
-
 void ReqRecupImage(int s,unsigned char type, char *nom, char *reponse)
 {
     char *filename;
@@ -283,6 +282,54 @@ void ReqRecupImage(int s,unsigned char type, char *nom, char *reponse)
 }
 
 
+/// Requete Tag 
+void RepListeTagOfImage(int clientSocket,unsigned char type, char *nom, char *reponse)
+{
+
+    char *filename;
+    char requete [MAXLEN];
+    uint8_t tailleNom;
+    uint32_t tailleContenu;
+    int fd;
+    struct stat stbuf;
+    ssize_t nlus;
+   
+    //Formation de requete
+    //type
+    requete[0] = type;
+    //tailleNom
+    CHKN (filename = basename(nom));
+    tailleNom = (uint8_t) strlen(filename) + 1; // longueur du nom + caractère nul
+    requete[1] = tailleNom ;
+    //Nom
+    memcpy(&requete[2], filename, strlen(filename) + 1);
+    //tailleContenu
+    CHK (lstat (nom, &stbuf)) ;
+    tailleContenu = htonl (stbuf.st_size) ;
+    memcpy (&requete[2 + strlen(filename) + 1], &tailleContenu, sizeof tailleContenu) ;
+    // lecture du fichier et écriture dans requete
+    CHK (fd = open (nom, O_RDONLY)) ;
+    CHK ( read (fd, &requete[2 + strlen(filename) + 1 + sizeof tailleContenu], 
+            tailleContenu));
+    CHK (close (fd)) ;
+
+    // Envoyer des données au serveur
+    CHK (write (clientSocket, requete, 2 + strlen(filename) + 1 + sizeof tailleContenu + 
+            stbuf.st_size)) ;
+
+
+    // Reception de la réponse du server
+    CHK (read (clientSocket, reponse, MAXLEN)) ;
+
+    if (reponse[0] == 1)
+        printf("L'image a été ajoutée\n");
+    else
+        printf("L'image n'a pas été ajoutée\n");
+    
+}
+
+
+
 int main(int argc, char *argv[]) {
 
     // Lecture fichier "InfoServeur.cfg" 
@@ -304,9 +351,13 @@ int main(int argc, char *argv[]) {
 
    
     // Nom de l'image
-    char *nom ;
-
-      // Pour recevoir la reponse du serveur
+    // char *nom ;
+    char *nomImage ;
+    // Tag 
+    char *nomTag ;
+    int nbTag = 10;
+    char *ListTag[nbTag] ;
+    // Pour recevoir la reponse du serveur
     char reponse[MAX_REQ_LEN];
   
   
@@ -318,8 +369,10 @@ int main(int argc, char *argv[]) {
     //coté serveur image
     if (strcmp(argv[1], servers[0].name) == 0)
     {
-        const char *Commandevalable[] = {"list", "test", "add", "get", "del"};
-        const char Typevalable[] = {0, 1, 2, 3,4};
+            //list = lister les tags associés à une image
+            //image = lister les images associées à un ensemble de tags
+        const char *Commandevalable[] = {"list", "image", "add", "del"};
+        const char Typevalable[] = {0, 1, 2, 3};
 
         for (size_t i = 0; i < sizeof(Commandevalable) / sizeof(Commandevalable[0]); ++i)
         {
@@ -331,7 +384,7 @@ int main(int argc, char *argv[]) {
                 // Recupere le nom du fichier
                 if(type  != 0)
                 {
-                    nom = argv[3];
+                    nomImage = argv[3];
                 }
             }
         }
@@ -340,7 +393,8 @@ int main(int argc, char *argv[]) {
     //coté serveur tag
     else if (strcmp(argv[1], servers[1].name) == 0)
     {
-        const char *Commandevalable[] = {"add", "del", "image"};
+        const char *Commandevalable[] = {"list", "test", "add", "get", "del"};
+        const char Typevalable[] = {0, 1, 2, 3,4};
 
         for (size_t i = 0; i < sizeof(Commandevalable) / sizeof(Commandevalable[0]); ++i)
         {
@@ -359,50 +413,78 @@ int main(int argc, char *argv[]) {
    
 
 
-    // Connexion au serveur concerné
-    int clientSocket = connectToServer(serv_addr, serv_port, SOCK_STREAM);
-    printf("Connecté au serveur image en TCP\n");
+    // connexion dans serveur et tout le reste
 
-
-    // Ici, on la connection est établi
-
-
-    //Envoyer requete au serveur Image
-    switch (type)
+    if (strcmp(argv[1], servers[0].name) == 0) // coté image
     {
-        case 0: // Requete de type : lister les images présentes
-            printf("type : %d\n", type);
-            ReqListeImage(clientSocket,type,reponse);
-            break;
-    
-        case 1: // Requete de type : tester l’existence d’une image
-            printf("type : %d\n", type);
-            ReqTesterExistenceImage(clientSocket,type,nom,reponse);
-            break;
-        case 2: // Requete de type : envoyer une image vers le serveur
-            printf("type : %d\n", type);
-            ReqSendImageToServer(clientSocket,type,nom,reponse);
-            break;
-        case 3: // Requete de type : récupérer une image depuis le serveur 
-            // printf("type : %d\n", type);
-            ReqRecupImage(clientSocket,type,nom,reponse);
+        // Connexion au serveur concerné Image 
+        int clientSocket = connectToServer(serv_addr, serv_port, SOCK_STREAM);
+        printf("Connecté au serveur image en TCP\n");
 
 
+        // Ici, on la connection est établi
+
+
+        //Envoyer la requete au serveur Image
+        switch (type)
+        {
+            case 0: // Requete de type : lister les images présentes
+                printf("type : %d\n", type);
+                ReqListeImage(clientSocket,type,reponse);
+                break;
+        
+            case 1: // Requete de type : tester l’existence d’une image
+                printf("type : %d\n", type);
+                ReqTesterExistenceImage(clientSocket,type,nomImage,reponse);
+                break;
+            case 2: // Requete de type : envoyer une image vers le serveur
+                printf("type : %d\n", type);
+                ReqSendImageToServer(clientSocket,type,nomImage,reponse);
+                break;
+            case 3: // Requete de type : récupérer une image depuis le serveur 
+                // printf("type : %d\n", type);
+                ReqRecupImage(clientSocket,type,nomImage,reponse);
+
+
+                break;
+            case 4: // Requete de type : supprimer une image sur le serveur
+                printf("type : %d\n", type);
+                ReqSupImage(clientSocket,type,nomImage,reponse);
+                break;
+            default:
+                printf("erreur \n");
             break;
-        case 4: // Requete de type : supprimer une image sur le serveur
-            printf("type : %d\n", type);
-            ReqSupImage(clientSocket,type,nom,reponse);
+        }
+        
+        // Fermer la socket client
+        CHK(close(clientSocket));
+    }
+    else                                       // coté tag
+    {
+        // Connexion au serveur concerné Tag
+        int clientSocket = connectToServer(serv_addr, serv_port, SOCK_DGRAM);
+        printf("Connecté au serveur Tag en UDP\n");
+
+
+        // Ici, on la connection est établi
+
+        //Envoyer la requete au serveur Image
+        switch (type)
+        {
+            case 0: // Requete de type : lister les images présentes
+                printf("type : %d\n", type);
+                RepListeTagOfImage(clientSocket,type,nomTag,reponse);
+                break;
+            default:
+                printf("erreur \n");
             break;
-        default:
-            printf("erreur \n");
-        break;
+        }
+        
+
+        // Fermer la socket client
+        CHK(close(clientSocket));
     }
     
-
-    // Fermer la socket client
-    CHK(close(clientSocket));
-
- 
 
     exit(0);
 }
