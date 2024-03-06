@@ -1,0 +1,104 @@
+
+************************** Objectif **************************
+
+Calibrer les paramètres du compresseur pour correspondre aux résultats d'essais
+
+
+
+************************** lien FMU **************************
+
+Lien FMU : https://we.tl/t-S8Iy0apXUT
+
+
+
+************************** paramètres FMU **************************
+
+Les paramètres suivants peuvent être modifiés dans leur plage de variation :
+
+x_areaLeakage : [1e-8 ; 1e-6] m²
+x_areaSuctionValve : [2e-6 ; 1e-3] m²
+x_areaDischargeValve : [1e-4 ; 1e-7] m²
+x_relativeDeadSpace : [0.001 ; 0.1]
+x_driveEfficiency : [0.85 ; 0.98]
+
+!!!!!
+x_driveEfficiency correspond à l'efficacité du drive (composant électronique qui permet de réguler la fréquence du compresseur)
+x_driveEfficiency dépend de la fréquence du compresseur
+x_driveEfficiency peut être mis sous la forme d'un polynôme d'ordre 4 en fonction de la fréquence compresseur
+x_driveEfficiency = eff_drive = a5*freq^4 + a4*freq^3 + a3*freq^2 + a2*freq + a1
+!!!!!
+
+!!!!!
+Lancer des simulations de 1500s afin de s'assurer de la stabilité des outputs
+!!!!!
+
+
+
+************************** inputs FMU **************************
+
+u_compressorFrequency : fréquence compresseur ; unité = Hz
+u_VFlow : débit d'eau ; unité = m3/s
+u_T_watrer : température d'eau en entrée de la pompe à chaleur ; unité = K (pardon pour la faute de frappe dans le modèle)
+u_T_air : température d'air en entrée de la pompe à chaleur ; unité = K
+
+
+
+************************** outputs FMU **************************
+
+y_T_out : température d'eau en sortie de la pompe à chaleur ; unité = K
+y_heatPower : puissance thermique de la pompe à chaleur (côté chaud) ; unité = W
+y_elecPower : puissance électriqe de la pompe à chaleur ; unité = W
+y_COP : coefficient de performance de la pompe à chaleur ; unité = []
+
+
+
+************************** données d'essai **************************
+
+Onglet à utiliser : "All data"
+Exemple nom des tableaux : A12 W35
+	-Température d'air = 12°C (A12)
+	-Température cible de sortie d'eau = 35°C (W35)
+		La valeur du résultat d'essais peut varier légèrement par rapport à la cible
+
+Données utiles :
+	-Colonne I : Frequency -> fréquence compresseur ; input du FMU
+	-Colonne J : Water in -> température d'eau en entrée de la pompe à chaleur ; input du FMU
+	-Colonne K : Water out -> température d'eau en sortie de la pompe à chaleur ; output du FMU
+	-Colonne L : Flow -> débit d'eau ; input du FMU
+	-Colonne M : Defrosts -> indique si un dégivrage a eu lieu lors de l'essai
+	-Colonne O : Power out -> puissance thermique de la pompe à chaleur (côté chaud) ; output du FMU
+	-Colonne P : Power in -> puissance électriqe de la pompe à chaleur ; output du FMU
+	-Colonne Q : COP -> coefficient de performance de la pompe à chaleur ; output du FMU
+
+
+
+************************** Calibration **************************
+
+Pour un essai donnée (une ligne de l'onglet "All data") 
+	-Faire correspondre les inputs
+	-Comparer les outputs
+	-Faire varier les paramètres de façon à ce que puissances et COP du modèle soient le plus proche possible de l'essai
+
+!!!!!
+Attention aux unités 
+!!!!!
+
+Dans un premier temps, ignorer les essais où "Defrosts" = yes (colonne M)
+Si le temps traiter ces essais
+	-Augmenter la puissance thermique de l'essai (Power out) de 10%
+	-Augmenter le COP de l'essai de 10%
+
+Il est reccomandé dans un premier temps de se concentrer sur la puissance thermique
+Puis de corriger la puissance électrique à l'aide du paramètre x_driveEfficiency 
+x_driveEfficiency doit être mis sous la forme d'un polynôme d'ordre 4 en fonction de la fréquence compresseur
+x_driveEfficiency doit rester compris entre 0.85 et 0.98 
+
+Il est possible que plusieurs jeux de paramètres différents donnent les mêmes résultats
+
+Le modèle de pompe à chaleur est une simplification d'une vraie pompe à chaleur
+Des erreurs de mesure ont pu avoir lieu lors des essais
+	-> Des écarts entre simulation et essais sont attendus
+	-> Il est attendu que l'écart ne soit pas constant ; exemple: 10% d'écart sur un point, -3% sur un autre
+	-> Faire au mieux 
+
+

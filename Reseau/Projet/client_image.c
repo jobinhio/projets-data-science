@@ -14,32 +14,14 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 
-#define MAX_ADDR_LEN 256
-#define MAX_PORT 50
 
-#define	MAX_REQ_LEN	1048576
-// #define MAXLEN	(uint32_t)2818963800000
-#define MAXLEN	1048576
-
-#define	MAX_NOM_LEN 255 //  2^8 -1
-#define	MAX_ERREUR_LEN 255 //  2^8 -1
-#define	MAX_CONTENU_LEN  65535 //  2^16 -1
-
-
-
-
-
-
-
-#define	NOM "%c%s" // 1 octet + nom
-#define	ERREUR "%c%s" // 1 octet + message
-#define	CONTENU "%04u%s" // 4 octet + contenu
-#define	LISTNOM "%02u%s" // 2 octet + liste de noms
-
-#define	CHKN(op)	do { if ((op) == NULL) raler (1, #op) ; } while (0)
-
+#define MAXADDRLEN 256
+#define MAXPORT 50
+#define	CHEMIN_MAX	512
+#define MAXLEN	3783406
 
 #define	CHK(op)		do { if ((op) == -1) raler (1, #op) ; } while (0)
+#define	CHKN(op)	do { if ((op) == NULL) raler (1, #op) ; } while (0)
 
 noreturn void raler (int syserr, const char *fmt, ...)
 {
@@ -56,28 +38,30 @@ noreturn void raler (int syserr, const char *fmt, ...)
 
 struct ServeurInfo 
 {
-    char name[MAX_ADDR_LEN];
-    char address[MAX_ADDR_LEN];
+    char name[MAXADDRLEN];
+    char address[MAXADDRLEN];
     int port;
 };
 
-void LireServeurInfo(const char *filename, struct ServeurInfo servers[]) {
+void LireServeurInfo(const char *filename, struct ServeurInfo servers[]) 
+{
     int fd;
     ssize_t nlus;
-    char buffer[MAX_ADDR_LEN * 2 + MAX_PORT*2]; 
+    char buffer[MAXADDRLEN * 2 + MAXPORT*2]; 
 
     // lecture dans le fichier InfoServeur
     CHK(fd = open(filename, O_RDONLY));
     CHK(nlus = read(fd, buffer, sizeof(buffer) - 1));
     CHK(close(fd));
-
-    buffer[nlus] = '\0'; // placer l'octet nul à la fin
+    buffer[nlus] = '\0'; 
 
     // récuperation des infos
     if (sscanf(buffer, "%s %s %d %s %s %d",
                servers[0].name, servers[0].address, &servers[0].port,
                servers[1].name, servers[1].address, &servers[1].port) == 6) { // 6 le nombre d'argument reconnus 
-    } else {
+    } 
+    else 
+    {
         raler (0, "Format incorrect dans le fichier") ;
     }
 }
@@ -96,6 +80,7 @@ void usage (char *argv0)
 }
 
 
+// Connexion au serveur Image
 int connectToServer(const char *address, int port, int socketType)
 {
 
@@ -105,23 +90,20 @@ int connectToServer(const char *address, int port, int socketType)
     // Création d'une socket TCP ou UDP
     CHK(clientSocket = socket(AF_INET, socketType, 0));
 
-
-
     // Configurer l'adresse du serveur
     memset(&serv_addr, 0, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = inet_addr(address);
     serv_addr.sin_port = htons(port);
-
-    // Se connecter au serveur
+    
+    // Se connecter au serveur TCP
     CHK(connect(clientSocket, (struct sockaddr *)&serv_addr, sizeof(serv_addr)));
     printf("Connecté au serveur %s:%d\n",address, port);
 
     return clientSocket;
 }
 
-
-/// Requete Image 
+// Requete à envoyer au serveur Image 
 void ReqSendImageToServer(int clientSocket,unsigned char type, char *nom, char *reponse)
 {
 
@@ -131,7 +113,7 @@ void ReqSendImageToServer(int clientSocket,unsigned char type, char *nom, char *
     uint32_t tailleContenu;
     int fd;
     struct stat stbuf;
-    ssize_t nlus;
+  
    
     //Formation de requete
     //type
@@ -167,26 +149,23 @@ void ReqSendImageToServer(int clientSocket,unsigned char type, char *nom, char *
     
 }
 
-
 void ReqListeImage(int clientSocket,unsigned char type, char *reponse)
 {
     
     //Envoyer la requête au serveur
     CHK (write (clientSocket, &type, 1)) ;
 
-    // Recevoir de la réponse
+    // Reception de la réponse
     CHK (read (clientSocket, reponse, MAXLEN)) ;
-    uint16_t nbImages;
-    // on extrait le nombre d'images de reponse
-    memcpy(&nbImages, reponse, sizeof nbImages);
-    nbImages = ntohs (nbImages) ;
-    printf("Nombre d'images: %d\n", nbImages);
-    printf("%s\n", &reponse[sizeof nbImages]);
+    uint16_t nbNoms;
+    memcpy(&nbNoms, reponse, sizeof nbNoms);
+    nbNoms = ntohs (nbNoms) ;
+    printf("Nombre d'images: %d\n", nbNoms);
+    printf("%s\n", &reponse[sizeof nbNoms]);
 }
 
 void ReqTesterExistenceImage(int clientSocket,unsigned char type, char *nom, char *reponse)
 {
-    int r;
     char requete[MAXLEN];
     char *filename;
     uint8_t tailleNom;
@@ -197,18 +176,20 @@ void ReqTesterExistenceImage(int clientSocket,unsigned char type, char *nom, cha
     //Basename de nom
     CHKN (filename = basename(nom));
     //tailleNom
-    tailleNom = (uint8_t) strlen(filename) + 1; // longueur du nom + caractère nul
+    tailleNom = (uint8_t) strlen(filename) + 1; 
     requete[1] =  tailleNom;
-    // memcpy(&requete[2], nom,  tailleNom);
     memcpy(&requete[2], filename,  tailleNom);
-    // doit d'abord envoyer une requête au serveur
+
+    //Envoyer la requête au serveur
     CHK (write (clientSocket, requete,  tailleNom + 2)) ;
 
-    // puis recevoir la réponse
-    CHK (r = read (clientSocket, reponse, MAXLEN)) ;
+    // recevoir la réponse
+    CHK (read (clientSocket, reponse, MAXLEN)) ;
 
-    if (reponse[0] == 1) // octet nul
+    if (reponse[0] == 1)
+    {
         printf("L'image existe\n");
+    }
     else
     {
         printf("L'image n'existe pas\n");
@@ -222,68 +203,61 @@ void ReqSupImage(int clientSocket,unsigned char type, char *nom, char *reponse)
     char requete [MAXLEN];
 
 
-    // doit d'abord envoyer une requête au serveur
+    //type
     requete[0] = type;
+    //Basename de nom
     CHKN (filename = basename(nom));
-    requete[1] = strlen(filename) + 1; // longueur du nom + caractère nul
+    //tailleNom
+    requete[1] = strlen(filename) + 1; 
     memcpy(&requete[2], filename, strlen(filename) + 1);
+
+    //Envoyer la requête au serveur
     CHK (write (clientSocket, requete, 2 + strlen(filename) + 1)) ;
 
     // puis recevoir la réponse
     CHK (read (clientSocket, reponse, MAXLEN)) ;
     if (reponse[0] == 1)
-        printf("L'image a été supprimée\n");
+        printf("L'image a été supprimée de la Base de données\n");
     else
-        printf("L'image n'a pas été supprimée\n");
+        printf("L'image n'a pas été supprimée de la Base de données\n");
 }
 
 
-void ReqRecupImage(int s,unsigned char type, char *nom, char *reponse)
+void ReqRecupImage(int  clientSocket,unsigned char type, char *nom, char *reponse)
 {
     char *filename;
     char requete [MAXLEN];
-    
-    // doit d'abord envoyer une requête au serveur
+    uint32_t tailleContenu;
+    size_t size;
+
+    //type
     requete[0] = type;
+    //tailleNnom
     CHKN (filename = basename(nom));
-    requete[1] = strlen(filename) + 1; // longueur du nom + caractère nul
+    requete[1] = strlen(filename) + 1; 
+    // Nom
     memcpy(&requete[2], filename, strlen(filename) + 1);
-    CHK (write (s, requete, 2 + strlen(filename) + 1)) ;
 
-
-
-
+    // Envoyer la requête au serveur
+    CHK (write ( clientSocket, requete, 2 + strlen(filename) + 1)) ;
 
     // puis recevoir la réponse
-    CHK (read (s, reponse, MAXLEN)) ;
+    CHK (read ( clientSocket, reponse, MAXLEN)) ;
 
-    uint32_t taille;
-    off_t taillestbuf;
-
-        // en supposant que l'image existe
-    // on extrait la taille de l'image de reponse
-    memcpy(&taille, reponse, sizeof taille);
-    taillestbuf = ntohl (taille) ;
-
-    printf ("taillestbuf = %lu\n", taillestbuf) ;
-
-    // on écrit le contenu de l'image sur la sortie standard
-    // CHK (necrit = write (1, &reponse[sizeof taille], taillestbuf)) ;
+    // en supposant que l'image existe
+    // on recupere la tailleContenu
+    memcpy(&tailleContenu, reponse, sizeof tailleContenu);
+    size = ntohl (tailleContenu) ;
 
 
-
-    size_t necrit;
-    int fd ;
-    CHK (fd = open ("/home/congo/Reseau/Projet/image.jpg", O_WRONLY)) ;
-    CHK (necrit = write (fd, &reponse[sizeof taille], taillestbuf)) ;
-    printf ("necrit = %lu\n", necrit) ;
-
-
+    // Ecrire le contenu de l'image sur la sortie standard
+    CHK (write (1, &reponse[sizeof tailleContenu], size)) ;
 }
 
 
-/// Requete Tag 
-void RepListeTagOfImage(int clientSocket,unsigned char type, char *nom, char *reponse)
+// Requete à envoyer au serveur Tag
+
+void RepListeTagOfImage(int clientSocket,unsigned char type, char *nomImage, char *reponse, struct sockaddr_in *serv_addr)
 {
 
     char *filename;
@@ -292,41 +266,39 @@ void RepListeTagOfImage(int clientSocket,unsigned char type, char *nom, char *re
     uint32_t tailleContenu;
     int fd;
     struct stat stbuf;
-    ssize_t nlus;
-   
+
     //Formation de requete
     //type
     requete[0] = type;
     //tailleNom
-    CHKN (filename = basename(nom));
+    CHKN (filename = basename(nomImage));
     tailleNom = (uint8_t) strlen(filename) + 1; // longueur du nom + caractère nul
     requete[1] = tailleNom ;
     //Nom
     memcpy(&requete[2], filename, strlen(filename) + 1);
     //tailleContenu
-    CHK (lstat (nom, &stbuf)) ;
+    CHK (lstat (nomImage, &stbuf)) ;
     tailleContenu = htonl (stbuf.st_size) ;
     memcpy (&requete[2 + strlen(filename) + 1], &tailleContenu, sizeof tailleContenu) ;
+   
+   
     // lecture du fichier et écriture dans requete
-    CHK (fd = open (nom, O_RDONLY)) ;
+    CHK (fd = open (nomImage, O_RDONLY)) ;
     CHK ( read (fd, &requete[2 + strlen(filename) + 1 + sizeof tailleContenu], 
             tailleContenu));
     CHK (close (fd)) ;
 
-    // Envoyer des données au serveur
-    CHK (write (clientSocket, requete, 2 + strlen(filename) + 1 + sizeof tailleContenu + 
-            stbuf.st_size)) ;
-
+    
+     // Envoyer des données au serveur
+    sendto(clientSocket, requete, 2 + strlen(filename) + 1 + sizeof tailleContenu + stbuf.st_size, 0,
+           (struct sockaddr *)serv_addr, sizeof(*serv_addr));
 
     // Reception de la réponse du server
-    CHK (read (clientSocket, reponse, MAXLEN)) ;
+    recvfrom(clientSocket, reponse,
+     MAXLEN, 0,(struct sockaddr *) 0, (socklen_t *) 0);
 
-    if (reponse[0] == 1)
-        printf("L'image a été ajoutée\n");
-    else
-        printf("L'image n'a pas été ajoutée\n");
-    
 }
+   
 
 
 
@@ -337,15 +309,9 @@ int main(int argc, char *argv[]) {
     const char *filename = "InfoServeur.cfg";
     LireServeurInfo(filename, servers);
 
-    /*
-    printf("Informations du serveur lues à partir du fichier :\n");
-    for (int i = 0; i < 2; i++) {
-        printf("Serveur %d: Nom = %s, Adresse = %s, Port = %d\n", i + 1, servers[i].name, servers[i].address, servers[i].port);
-    }
-    */
-
     int serv_port;
-    char serv_addr[MAX_ADDR_LEN];
+    char servIP[MAXADDRLEN];
+    // char serv_addr[MAXADDRLEN];
     unsigned char type;
 
 
@@ -358,27 +324,26 @@ int main(int argc, char *argv[]) {
     int nbTag = 10;
     char *ListTag[nbTag] ;
     // Pour recevoir la reponse du serveur
-    char reponse[MAX_REQ_LEN];
+    char reponse[MAXLEN];
   
   
-    if ((argc != 3) && (argc != 4))
-    {
-        usage(argv[0]);
-    }
-
     //coté serveur image
     if (strcmp(argv[1], servers[0].name) == 0)
     {
-            //list = lister les tags associés à une image
-            //image = lister les images associées à un ensemble de tags
-        const char *Commandevalable[] = {"list", "image", "add", "del"};
-        const char Typevalable[] = {0, 1, 2, 3};
+        // verif nombre d'arguments
+        if ((argc != 3) && (argc != 4))
+        {
+            usage(argv[0]);
+        }
 
-        for (size_t i = 0; i < sizeof(Commandevalable) / sizeof(Commandevalable[0]); ++i)
+        const char *Commandevalable[] = {"list", "test", "add", "get", "del"};
+        const char Typevalable[] = {0, 1, 2, 3,4};
+
+        for (int i = 0; i < 5; ++i)
         {
             if (strcmp(argv[2], Commandevalable[i]) == 0)
             {
-                strcpy(serv_addr, servers[0].address); // indice 0 pour "image"
+                strcpy(servIP, servers[0].address); // indice 0 pour "image"
                 serv_port = servers[0].port;
                 type = Typevalable[i];
                 // Recupere le nom du fichier
@@ -389,21 +354,43 @@ int main(int argc, char *argv[]) {
             }
         }
     }
-
     //coté serveur tag
     else if (strcmp(argv[1], servers[1].name) == 0)
     {
-        const char *Commandevalable[] = {"list", "test", "add", "get", "del"};
-        const char Typevalable[] = {0, 1, 2, 3,4};
 
-        for (size_t i = 0; i < sizeof(Commandevalable) / sizeof(Commandevalable[0]); ++i)
+        //list = lister les tags associés à une image
+        //image = lister les images associées à un ensemble de tags
+        const char *Commandevalable[] = {"list", "image", "add", "del"};
+        const char Typevalable[] = {0, 1, 2, 3};
+
+        for (int i = 0; i < 4; ++i)
         {
             if (strcmp(argv[2], Commandevalable[i]) == 0)
             {
-                strcpy(serv_addr, servers[1].address); // indice 0 pour "image"
+                strcpy(servIP, servers[1].address); // indice 0 pour "image"
                 serv_port = servers[1].port;
+                type = Typevalable[i];
+                 // Recupere le nom du fichier type 0
+                if(type  == 0)
+                {
+                    nomImage = argv[3];
+                }
+
+                // type 1 
+                if(type  == 1)
+                {
+                    nbTag = argc - 3;
+                    for (int j  = 0; j < nbTag; ++i)
+                    {
+                        ListTag[j] = argv[j+3];
+                    }
+                }
+                //type 2 et 4
+                nomImage = argv[3];
+                nomTag = argv[4];
             }
         }
+    
     }
     // usage : client ... 
     else
@@ -412,13 +399,13 @@ int main(int argc, char *argv[]) {
     }
    
 
-
     // connexion dans serveur et tout le reste
+
 
     if (strcmp(argv[1], servers[0].name) == 0) // coté image
     {
         // Connexion au serveur concerné Image 
-        int clientSocket = connectToServer(serv_addr, serv_port, SOCK_STREAM);
+        int clientSocket = connectToServer(servIP, serv_port, SOCK_STREAM);
         printf("Connecté au serveur image en TCP\n");
 
 
@@ -459,28 +446,38 @@ int main(int argc, char *argv[]) {
         // Fermer la socket client
         CHK(close(clientSocket));
     }
-    else                                       // coté tag
+
+    if (strcmp(argv[1], servers[1].name) == 0)  // coté tag
     {
-        // Connexion au serveur concerné Tag
-        int clientSocket = connectToServer(serv_addr, serv_port, SOCK_DGRAM);
+        ///////// Connexion au serveur concerné Tag
+
+        // Création d'une socket UDP
+        int clientSocket;
+
+        CHK(clientSocket = socket(AF_INET, SOCK_DGRAM, 0));
+        // Configurer l'adresse du serveur
+        struct sockaddr_in serv_addr;
+        memset(&serv_addr, 0, sizeof(serv_addr));
+        serv_addr.sin_family = AF_INET;
+        serv_addr.sin_addr.s_addr = inet_addr(servIP);
+        serv_addr.sin_port = htons(serv_port);
+
+
         printf("Connecté au serveur Tag en UDP\n");
 
-
-        // Ici, on la connection est établi
-
-        //Envoyer la requete au serveur Image
+                //Envoyer la requete au serveur Image
         switch (type)
         {
-            case 0: // Requete de type : lister les images présentes
-                printf("type : %d\n", type);
-                RepListeTagOfImage(clientSocket,type,nomTag,reponse);
+            case 0: // lister les tags associés à une image
+                RepListeTagOfImage(clientSocket,type,nomImage,reponse,&serv_addr);
                 break;
             default:
                 printf("erreur \n");
             break;
         }
         
-
+        (void) nomTag;
+        (void) ListTag;
         // Fermer la socket client
         CHK(close(clientSocket));
     }

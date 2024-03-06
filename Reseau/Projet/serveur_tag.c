@@ -18,26 +18,15 @@
 #define InfoServeur "InfoServeur.cfg"
 #define IMAGE_IPV4 "127.0.0.1"
 #define IMAGE_PORT 8080
-
 #define TAG_IPV4 "127.0.0.1"
 #define TAG_PORT 9090
 
 
-#define	MAX_NOM_LEN 255 //  2^8 -1
-#define	MAX_ERREUR_LEN 255 //  2^8 -1
-#define	MAX_CONTENU_LEN  65535 //  2^16 -1
-
-
-
-
-
-
+#define MAXADDRLEN 256
 #define	CHEMIN_MAX	512
-#define MAXLEN	2048576
-#define MAX_ADDR_LEN 256
+#define MAXLEN	3783406
 
 #define	CHK(op)		do { if ((op) == -1) raler (1, #op) ; } while (0)
-
 #define	CHKN(op)	do { if ((op) == NULL) raler (1, #op) ; } while (0)
 
 noreturn void raler (int syserr, const char *fmt, ...)
@@ -61,26 +50,21 @@ void usage (char *argv0)
 
 void WriteInfoServeur(const char *serverName, const char *serv_adrIPv4, int serv_port)
 {
-    // Ouverture du fichier en mode écriture
     int fd;
     CHK(fd = open (InfoServeur, O_WRONLY | O_CREAT | O_APPEND, 0666));
-    // Écriture des informations dans le fichier en utilisant write
-    char buffer[MAX_ADDR_LEN + 50]; // Assez grand pour contenir les informations
+    char buffer[MAXADDRLEN]; 
     int necrit = snprintf(buffer, sizeof(buffer), "%s %s %d\n", serverName, serv_adrIPv4, serv_port);
-    if (necrit < 0 || necrit >= sizeof(buffer))
+    if (necrit < 0 || necrit >= MAXADDRLEN)
         raler(0,"snprintf");
 
     buffer[necrit] ='\0';
     CHK(write(fd, buffer, necrit));
-    // Fermeture du fichier
     CHK(close(fd));
 }
-
 
 char *base (char *chemin)
 {
     char *p ;
-
     p = strrchr (chemin, '/') ;
     return p == NULL ? chemin : p+1 ;
 }
@@ -88,20 +72,60 @@ char *base (char *chemin)
 
 
 /// Reponse
-
-void RepListeTagOfImage(const int in, char *rep)
+// Fonction pour vérifier la présence d'une chaîne dans fichier
+int lireEtVerifier(const char *nomFichier, const char *chaineAVerifier) 
 {
-    struct stat stbuf ;
+    // Ouvrir le fichier en lecture seule
+    int fd;
+    CHK((fd = open(nomFichier, O_RDONLY)));
+
+    // Buffer pour stocker les données lues du fichier
+    char buffer[1024];
+    
+    // Lire le fichier
+    ssize_t nlus;
+    while ((nlus = read(fd, buffer, sizeof(buffer))) > 0) 
+    {
+        // Rechercher la chaîne dans le buffer
+        char *position = strstr(buffer, chaineAVerifier);
+
+        // Si la chaîne est trouvée, fermer le fichier et retourner le succès
+        if (position != NULL) 
+        {
+            close(fd);
+            return 1; // La chaîne est présente
+        }
+    }
+
+    // Fermer le fichier, ici la chaine n'est pas trouvée
+    close(fd);
+    return 0;
+}
+
+void RepListeTagOfImage(int clientSocket,char *requete, char *rep,
+    struct sockaddr_in clientAddr,socklen_t clientAddrLen)
+{
+
+    //recuperation de tailleNom
+    char tailleNom = requete[0]; 
+    char nom [(int) tailleNom]; 
+
+    //Nom fichier
+    memcpy(nom, &requete[1], tailleNom);
+
+
+    // Parcourir le repertoire RepTag
     DIR *dp ;
     struct dirent *d ;
-    uint16_t nbNoms = 0;
+    uint16_t NbTags =0;
     int nbOctets = 2;
-    int ind;
-    char *buf = NULL;
-    int n;
-    char nchemin [CHEMIN_MAX + 1];
+    int index;
 
-    CHKN (buf = (char *) realloc (buf, nbOctets)) ;
+
+    char reponse [MAXLEN];
+    char nchemin [CHEMIN_MAX + 1];
+    int n;
+
 
     CHKN (dp = opendir (rep)) ;
     while ((d = readdir (dp)) != NULL)
@@ -112,23 +136,19 @@ void RepListeTagOfImage(const int in, char *rep)
             if (n < 0 || n > CHEMIN_MAX)
                 raler(0, "chemin '%s/%s' trop long", rep, d->d_name) ;
 
-            CHK (lstat (nchemin, &stbuf)) ;
-            switch (stbuf.st_mode & S_IFMT)
+
+            // Verifier que ce nom est dans le ficher Tag associé  
+            if (lireEtVerifier(nchemin, nom)) 
             {
-            case S_IFREG :
-                nbNoms++;
-                ind = nbOctets;
-                nbOctets += strlen(d->d_name) + 1;
-                CHKN (buf = (char *) realloc (buf, nbOctets)) ;
-                n = snprintf(buf + ind, strlen(d->d_name) + 1, "%s", d->d_name);
+
+                // Ecire dans reponse 
+                index = nbOctets;
+                nbOctets += strlen(nchemin) + 1;
+                n = snprintf(reponse + index, strlen(nchemin) + 1, "%s", nchemin);
                 if (n < 0)
                     raler (0, "snprintf") ;
-                buf[nbOctets - 1] = '\n';
-                break ;
-
-            default :
-                // ignorer les autres types de fichiers
-                break ;
+                reponse[nbOctets - 1] = '\n';
+                NbTags++;
             }
         }
     }
@@ -137,38 +157,40 @@ void RepListeTagOfImage(const int in, char *rep)
     if (nbOctets == 2) // pas d'images dans le répertoire
     {
         nbOctets += 1;
-        CHKN (buf = (char *) realloc (buf, nbOctets)) ;
     }
-    buf[nbOctets - 1] = 0; // octet de fin de chaîne
+    reponse[nbOctets - 1] =  '\0'; 
 
-    // écrire les 2 octets indiquant le nombre d'images
-    nbNoms = htons(nbNoms);
-    memcpy(buf, &nbNoms, sizeof(nbNoms));
-    CHK (write (in, buf, nbOctets)) ;
+    // Les 2 octets indiquant le nombre de Tag
+    NbTags = htons(NbTags);
+    memcpy(reponse, &NbTags, sizeof(NbTags));
 
-    free (buf) ;
+    
+    // Envoyer la reponse au client
+    sendto(clientSocket, reponse, nbOctets, 0,
+            (struct sockaddr*)&clientAddr, clientAddrLen);
 }
 
 
-void serveur ( int clientSocket,char *rep)
+void serveur ( int clientSocket,char *rep,struct sockaddr_in clientAddr,socklen_t clientAddrLen )
 {
     // lecture entiere du la requete du client
     char requete [MAXLEN] ;
-    CHK (read (clientSocket, &requete, MAXLEN));
-    // recuperation du type
-    char type = requete[0];
 
+    // Reception des donnes du client
+    ssize_t nrecu = recvfrom(clientSocket,&requete, MAXLEN, 0,
+                                    (struct sockaddr*)&clientAddr, &clientAddrLen);
+    CHK(nrecu);
+
+    char type = requete[0];
     switch (type)
     {
         case 0: // Reponse à lister les tags associés à une image
-            printf("type : %d\n", type);
-           RepListeTagOfImage(clientSocket,rep);
+           RepListeTagOfImage(clientSocket,&requete[0],rep,clientAddr,clientAddrLen);
             break;
         default:
             printf("erreur \n");
         break;
     }
-
     
 }
 
@@ -178,16 +200,16 @@ void Connexion(const char *serv_adrIPv4, int serv_port, int socketType, char *re
     int serverSocket;
     struct sockaddr_in serv_addr;
 
-    // Create a UDP server socket
+    // Création du socket serveur
     CHK(serverSocket = socket(AF_INET, socketType, 0));
 
-    // Configure the server address
+    // Configurer l'adresse du serveur
     memset(&serv_addr, 0, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
-    serv_addr.sin_addr.s_addr = INADDR_ANY;
+    serv_addr.sin_addr.s_addr = inet_addr(serv_adrIPv4);
     serv_addr.sin_port = htons(serv_port);
 
-    // Bind the socket to the address and port
+    // Lier la socket à l'adresse et au port
     int r;
     r = bind(serverSocket, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
     if (r == -1) raler(0, "bind");
@@ -195,12 +217,14 @@ void Connexion(const char *serv_adrIPv4, int serv_port, int socketType, char *re
     printf("Le serveur écoute sur le port %d...\n", serv_port);
 
 
+    struct sockaddr_in clientAddr;
+    socklen_t clientAddrLen = sizeof(clientAddr);
 
-    serveur(serverSocket, rep);
-
-    // Close the socket
+    serveur(serverSocket, rep, clientAddr,clientAddrLen);
     close(serverSocket);
+
 }
+
 
 
 
@@ -214,16 +238,12 @@ int main(int argc, char *argv[])
     }
     int tag_port;
     tag_port= atoi(argv[1]);
-    char *RepImage = argv[2];
-
+    char *RepTag = argv[2];
 
     // Ecriture dans InfoServeur pour communiquer au client
     WriteInfoServeur("tag", TAG_IPV4, tag_port);    
-
-    // Exemple d'utilisation pour un serveur UDP
-    Connexion(TAG_IPV4, tag_port, SOCK_DGRAM,RepImage);
-    // Connexion(TAG_IPV4, TAG_PORT, SOCK_DGRAM,RepImage);
-
+    
+    Connexion(TAG_IPV4, tag_port, SOCK_DGRAM,RepTag);
 
     return 0;
 }

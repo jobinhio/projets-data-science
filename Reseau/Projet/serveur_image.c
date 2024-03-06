@@ -18,26 +18,15 @@
 #define InfoServeur "InfoServeur.cfg"
 #define IMAGE_IPV4 "127.0.0.1"
 #define IMAGE_PORT 8080
-
 #define TAG_IPV4 "127.0.0.1"
 #define TAG_PORT 9090
 
 
-#define	MAX_NOM_LEN 255 //  2^8 -1
-#define	MAX_ERREUR_LEN 255 //  2^8 -1
-#define	MAX_CONTENU_LEN  65535 //  2^16 -1
-
-
-
-
-
-
+#define MAXADDRLEN 256
 #define	CHEMIN_MAX	512
-#define MAXLEN	2048576
-#define MAX_ADDR_LEN 256
+#define MAXLEN	3783406
 
 #define	CHK(op)		do { if ((op) == -1) raler (1, #op) ; } while (0)
-
 #define	CHKN(op)	do { if ((op) == NULL) raler (1, #op) ; } while (0)
 
 noreturn void raler (int syserr, const char *fmt, ...)
@@ -61,36 +50,29 @@ void usage (char *argv0)
 
 void WriteInfoServeur(const char *serverName, const char *serv_adrIPv4, int serv_port)
 {
-    // Ouverture du fichier en mode écriture
     int fd;
     CHK(fd = open (InfoServeur, O_WRONLY | O_CREAT | O_APPEND, 0666));
-    // Écriture des informations dans le fichier en utilisant write
-    char buffer[MAX_ADDR_LEN + 50]; // Assez grand pour contenir les informations
-    int necrit = snprintf(buffer, sizeof(buffer), "%s %s %d\n", serverName, serv_adrIPv4, serv_port);
-    if (necrit < 0 || necrit >= sizeof(buffer))
+    char buffer[MAXADDRLEN]; 
+    int necrit = snprintf(buffer, MAXADDRLEN, "%s %s %d\n", serverName, serv_adrIPv4, serv_port);
+    if (necrit < 0 || necrit >= MAXADDRLEN)
         raler(0,"snprintf");
 
     buffer[necrit] ='\0';
     CHK(write(fd, buffer, necrit));
-    // Fermeture du fichier
     CHK(close(fd));
 }
-
 
 char *base (char *chemin)
 {
     char *p ;
-
     p = strrchr (chemin, '/') ;
     return p == NULL ? chemin : p+1 ;
 }
 
 
-
-/// Reponse
+/// Reponse aux requetes des clients
 void RepSendImageToServer(int clientSocket,char *requete, char *rep)
 {
-
     char reponse [MAXLEN];
     char nchemin [CHEMIN_MAX + 1];
     uint32_t tailleContenu;
@@ -109,7 +91,7 @@ void RepSendImageToServer(int clientSocket,char *requete, char *rep)
     memcpy(&tailleContenu, &requete[tailleNom +1], sizeof tailleContenu);
     tailleContenu = ntohl (tailleContenu) ;
 
-    // Ecriture dans la base de données
+    // Ecriture dans la base de données le contenu de l'image
     n = snprintf (nchemin, sizeof nchemin, "%s/%s", rep, nom) ;
     if (n < 0 || n > CHEMIN_MAX)
         raler(0, "chemin '%s/%s' trop long", rep, nom) ;
@@ -117,28 +99,27 @@ void RepSendImageToServer(int clientSocket,char *requete, char *rep)
     CHK (write (fd, &requete[tailleNom + 1 + sizeof tailleContenu], tailleContenu)) ;
     CHK (close (fd)) ;
 
+    // message d'erreur (pas d'erreur)
+    reponse[0] = 1; 
+    reponse[1] = '\0'; 
     // envoyer la réponse au client
-    reponse[0] = 1; // longueur du message d'erreur (pas d'erreur)
-    reponse[1] = 0; // caractère nul
     CHK (write (clientSocket, reponse, 2)) ;
-
 }
 
-
-
-void RepListeImages (const int in, char *rep)
+void RepListeImages (int clientSocket, char *rep)
 {
     struct stat stbuf ;
     DIR *dp ;
     struct dirent *d ;
+    
     uint16_t nbNoms = 0;
     int nbOctets = 2;
-    int ind;
-    char *buf = NULL;
+    int index;
+    char *reponse = NULL;
     int n;
     char nchemin [CHEMIN_MAX + 1];
 
-    CHKN (buf = (char *) realloc (buf, nbOctets)) ;
+    CHKN(reponse = (char *) realloc (reponse, nbOctets)) ;
 
     CHKN (dp = opendir (rep)) ;
     while ((d = readdir (dp)) != NULL)
@@ -152,20 +133,20 @@ void RepListeImages (const int in, char *rep)
             CHK (lstat (nchemin, &stbuf)) ;
             switch (stbuf.st_mode & S_IFMT)
             {
-            case S_IFREG :
-                nbNoms++;
-                ind = nbOctets;
-                nbOctets += strlen(d->d_name) + 1;
-                CHKN (buf = (char *) realloc (buf, nbOctets)) ;
-                n = snprintf(buf + ind, strlen(d->d_name) + 1, "%s", d->d_name);
-                if (n < 0)
-                    raler (0, "snprintf") ;
-                buf[nbOctets - 1] = '\n';
-                break ;
+                case S_IFREG :
+                    nbNoms++;
+                    index = nbOctets;
+                    nbOctets += strlen(d->d_name) + 1;
+                    CHKN (reponse = (char *) realloc (reponse, nbOctets)) ;
+                    n = snprintf(reponse + index, strlen(d->d_name) + 1, "%s", d->d_name);
+                    if (n < 0)
+                        raler (0, "snprintf") ;
+                    reponse[nbOctets - 1] = '\n';
+                    break ;
 
-            default :
-                // ignorer les autres types de fichiers
-                break ;
+                default :
+                    // ignorer les autres types de fichiers
+                    break ;
             }
         }
     }
@@ -174,28 +155,30 @@ void RepListeImages (const int in, char *rep)
     if (nbOctets == 2) // pas d'images dans le répertoire
     {
         nbOctets += 1;
-        CHKN (buf = (char *) realloc (buf, nbOctets)) ;
+        CHKN (reponse = (char *) realloc (reponse, nbOctets)) ;
     }
-    buf[nbOctets - 1] = 0; // octet de fin de chaîne
+    reponse[nbOctets - 1] = '\0'; 
 
-    // écrire les 2 octets indiquant le nombre d'images
+    //Nombre de noms
     nbNoms = htons(nbNoms);
-    memcpy(buf, &nbNoms, sizeof(nbNoms));
-    CHK (write (in, buf, nbOctets)) ;
+    memcpy(reponse, &nbNoms, sizeof(nbNoms));
+    CHK (write (clientSocket, reponse, nbOctets)) ;
 
-    free (buf) ;
+    free (reponse) ;
 }
 
 void RepTesterExistenceImage(int clientSocket,char *requete, char *rep)
 {
     struct stat stbuf ;
     char nchemin [CHEMIN_MAX + 1];
-    char tailleNom = requete[0]; // longueur du nom de l'image
-    char nom [tailleNom]; // nom de l'image + caractère nul
-    char *msg = "image inexistante"; // message à envoyer au client
+    char *message = "ce n'est pas un fichier régulier"; 
     int n, existe = 0;
-    char bufEnv [MAXLEN];
+    char reponse[MAXLEN];
 
+
+    //tailleNom
+    char tailleNom = requete[0]; 
+    char nom [tailleNom]; // nom de l'image + caractère nul
     memcpy(nom, &requete[1], tailleNom);
 
     // tester l'existence de l'image
@@ -203,111 +186,101 @@ void RepTesterExistenceImage(int clientSocket,char *requete, char *rep)
     if (n < 0 || n > CHEMIN_MAX)
         raler(0, "chemin '%s/%s' trop long", rep, nom) ;
     
- 
-
+    // tester l'existence de l'image
     CHK (lstat (nchemin, &stbuf)) ;
     switch (stbuf.st_mode & S_IFMT)
     {
-    case S_IFREG :
-        existe = 1;
-        break ;
-
-    default :
-        // ignorer les autres types de fichiers
-        break ;
+        case S_IFREG :
+            existe = 1;
+            break ;
+        default :
+            // ignorer les autres types de fichiers
+            break ;
     }
-    
-    bufEnv[0] = 1; // longueur du message d'erreur (pas d'erreur)
-    bufEnv[1] = 0; // caractère nul
-    if (!existe)
+
+    // envoyer la réponse au client
+    if (existe)
     {
-        bufEnv[0] = strlen(msg) + 1; // longueur du message + caractère nul
-        memcpy(&bufEnv[1], msg, strlen(msg) + 1);
+        // pas d'erreur
+        reponse[0] = 1; 
+        reponse[1] = '\0'; 
+        CHK (write (clientSocket, reponse, 2)) ;
     }
-
-    CHK (write (clientSocket, bufEnv, strlen(msg) + 2)) ;
+    else
+    {
+        // longueur du message + caractère nul
+        reponse[0] = strlen(message) + 1; 
+        memcpy(&reponse[1], message, strlen(message) + 1);
+        CHK (write (clientSocket, reponse, strlen(message) + 1)) ;
+    }
 }
 
-
-void RepSupImage(int s, char *bufRec, char *rep)
+void RepSupImage(int clientSocket,char *requete, char *rep)
 {
-    char tailleNom = bufRec[0]; // longueur du nom de l'image
-    char nom [(int) tailleNom]; // nom de l'image + caractère nul
     char nchemin [CHEMIN_MAX + 1];
     int n;
-    char bufEnv [MAXLEN];
+    char reponse [MAXLEN];
 
-    memcpy(nom, &bufRec[1], tailleNom);
+    // tailleNom
+    char tailleNom =requete[0]; 
+    char nom [(int) tailleNom]; 
 
+    // Recuperer le Nom
+    memcpy(nom, &requete[1], tailleNom);
     n = snprintf (nchemin, sizeof nchemin, "%s/%s", rep, nom) ;
     if (n < 0 || n > CHEMIN_MAX)
         raler(0, "chemin '%s/%s' trop long", rep, nom) ;
+    
+    // supression du fichier
     CHK (unlink (nchemin)) ;
 
+    // message d'erreur (pas d'erreur)
+    reponse[0] = 1; 
+    reponse[1] = '\0'; 
+
     // envoyer la réponse au client
-    bufEnv[0] = 1; // longueur du message d'erreur (pas d'erreur)
-    bufEnv[1] = 0; // caractère nul
-    CHK (write (s, bufEnv, 2)) ;
-    printf ("image supprimée\n");
+    CHK (write (clientSocket, reponse, 2)) ;
+    printf ("L'image est supprimée de la Base de données\n");
 }
 
-
-
-
-void RepRecupImage(int s, char *bufRec, char *rep)
+void RepRecupImage(int clientSocket,char *requete, char *rep)
 {
-    char tailleNom = bufRec[0]; // longueur du nom de l'image
-    char bufEnv [MAXLEN];
-    char nom [(int) tailleNom]; // nom de l'image + caractère nul
+    char reponse [MAXLEN];
     char nchemin [CHEMIN_MAX + 1];
     int n, fd;
     struct stat stbuf;
+    ssize_t nlus;
+    uint32_t tailleContenu;
 
 
-    memcpy(nom, &bufRec[1], tailleNom);
-
+    // tailleNom
+    char tailleNom =requete[0]; 
+    // Nom
+    char nom [(int) tailleNom]; 
+    memcpy(nom, &requete[1], tailleNom);
     n = snprintf (nchemin, sizeof nchemin, "%s/%s", rep, nom) ;
     if (n < 0 || n > CHEMIN_MAX)
         raler(0, "chemin '%s/%s' trop long", rep, nom) ;
 
+    // tailleContenu
     CHK (lstat (nchemin, &stbuf)) ;
-    uint32_t taille = htonl (stbuf.st_size) ;
-    memcpy (bufEnv, &taille, sizeof taille) ;
+    tailleContenu = htonl (stbuf.st_size) ;
+    memcpy (reponse, &tailleContenu, sizeof tailleContenu) ;
 
-
-
+    // Contenu 
     CHK (fd = open (nchemin, O_RDONLY)) ;
-    // CHK (read (fd, &bufEnv[sizeof taille], stbuf.st_size)) ;
-
-    printf ("taille = %u\n",taille) ;
-    printf ("taillestbuf = %lu\n", stbuf.st_size) ;
-    printf ("sizeof taille = %lu\n", sizeof taille) ;
-
-
-
-
-    if( stbuf.st_size > (MAXLEN-(sizeof taille)) )
-        raler(0,"taille:%ld",stbuf.st_size);
-
-    ssize_t nlus;
-    CHK (nlus = read (fd, &bufEnv[sizeof taille], stbuf.st_size)) ;
+    CHK (nlus = read (fd, &reponse[sizeof tailleContenu], stbuf.st_size)) ;
     CHK (close (fd)) ;
 
+    // envoyer la réponse au client
+    CHK (write (clientSocket, reponse, sizeof tailleContenu + nlus)) ;
 
-    printf ("nlus = %lu\n", nlus) ;
-
-
-    if( nlus != (ssize_t) stbuf.st_size )
-        raler(0,"nlus :%ld",stbuf.st_size);
-
-    CHK (write (s, bufEnv, sizeof taille + nlus)) ;
-
-
-    printf ("image envoyée\n") ;
-
+    printf ("L'image est envoyée au client\n") ;
 }
 
 
+
+// Ce que fait le serveur une fois la connexion établie
 void serveur ( int clientSocket,char *rep)
 {
     // lecture entiere du la requete du client
@@ -319,127 +292,27 @@ void serveur ( int clientSocket,char *rep)
     switch (type)
     {
         case 0: // Reponse à lister les images présentes
-            printf("type : %d\n", type);
             RepListeImages (clientSocket,rep);
             break;
         case 1: // Reponse à tester l’existence d’une image
-            printf("type : %d\n", type);
             RepTesterExistenceImage(clientSocket,&requete[1],rep);
             break;
         case 2: // Reponse à envoyer une image vers le serveur
-            printf("type : %d\n", type);
             RepSendImageToServer(clientSocket,&requete[1],rep);
             break;
         case 3: // Reponse à récupérer une image depuis le serveur 
-            // printf("type : %d\n", type);
             RepRecupImage(clientSocket,&requete[1],rep);
-
-
             break;
         case 4: // Reponse à supprimer une image sur le serveur
-            printf("type : %d\n", type);
             RepSupImage(clientSocket,&requete[1],rep);
             break;
         default:
             printf("erreur \n");
         break;
     }
-
-    
 }
 
-/*
-
-void serveur ( int clientSocket,char *rep)
-{
-
-    // reception des requetes
-
-
-    
-    // // pour le type de requete recu
-    // char requete [MAXLEN] ;
-    // CHK (read (in, &requete, MAXLEN));
-
-
-    // char reponse [MAXLEN];
-    // char nchemin [CHEMIN_MAX + 1];
-    // int n, fd;
-    // struct stat stbuf;
-    // uint32_t taille;
-
-    // char type = requete[0];
-    // char tailleNom = requete[1]; // longueur du nom de l'image
-    // char nom [(int) tailleNom]; // nom de l'image + caractère nul
-
-    
-
-
-    // lecture entiere du la requete du client
-    char requete [MAXLEN] ;
-    CHK (read (clientSocket, &requete, MAXLEN));
-
-
-    char reponse [MAXLEN];
-    char nchemin [CHEMIN_MAX + 1];
-    uint32_t tailleContenu;
-    int n, fd;
-
-    // recuperation du type
-    char type = requete[0];
-    //recuperation de tailleNom
-    char tailleNom = requete[1]; 
-    char nom [(int) tailleNom]; // nom de l'image + caractère nul
-
-
-    switch (type)
-    {
-        case 0: // lister les images présentes
-            printf("type : %d\n", type);
-            break;
-    
-        case 1: // tester l’existence d’une image
-            printf("type : %d\n", type);
-            break;
-        case 2: // envoyer une image vers le serveur
-
-            //Nom fichier
-            memcpy(nom, &requete[2], tailleNom);
-
-            //TailleContenu
-            memcpy(&tailleContenu, &requete[tailleNom +2], sizeof tailleContenu);
-            tailleContenu = ntohl (tailleContenu) ;
-
-            // Ecriture dans la base de données
-            n = snprintf (nchemin, sizeof nchemin, "%s/%s", rep, nom) ;
-            if (n < 0 || n > CHEMIN_MAX)
-                raler(0, "chemin '%s/%s' trop long", rep, nom) ;
-            CHK (fd = open (nchemin, O_WRONLY | O_CREAT, 0666)) ;
-            CHK (write (fd, &requete[tailleNom + 2 + sizeof tailleContenu], tailleContenu)) ;
-            CHK (close (fd)) ;
-
-            // envoyer la réponse au client
-            reponse[0] = 1; // longueur du message d'erreur (pas d'erreur)
-            reponse[1] = 0; // caractère nul
-            CHK (write (clientSocket, reponse, 2)) ;
-
-            break;
-        case 3: // récupérer une image depuis le serveur 
-            printf("type : %d\n", type);
-            break;
-        case 4: // supprimer une image sur le serveur
-            printf("type : %d\n", type);
-            break;
-        default:
-            printf("erreur \n");
-        break;
-    }
-
-    
-}
-*/
-
-
+// On etablie la connexion avec les clients
 void Connexion(const char *serv_adrIPv4, int serv_port, int socketType,char *rep)
 {
     int serverSocket;
@@ -451,8 +324,8 @@ void Connexion(const char *serv_adrIPv4, int serv_port, int socketType,char *rep
     // Configurer l'adresse du serveur
     memset(&serv_addr, 0, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
-    serv_addr.sin_addr.s_addr = INADDR_ANY; //inet_addr(IMAGE_IPV4);
-    serv_addr.sin_port = htons(IMAGE_PORT);
+    serv_addr.sin_addr.s_addr = inet_addr(serv_adrIPv4); //INADDR_ANY;
+    serv_addr.sin_port = htons( serv_port);  // htons(IMAGE_PORT);
 
     // Lier la socket à l'adresse et au port
     int r;
@@ -467,44 +340,24 @@ void Connexion(const char *serv_adrIPv4, int serv_port, int socketType,char *rep
 
     // Accepter les connexions entrantes
     int clientSocket;
-    struct sockaddr_in clientAddr;
-    socklen_t clientAddrLen = sizeof(clientAddr);
-
-    r = (clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddr, &clientAddrLen)) ;
-    if (r == -1) raler (0,"accept") ;
-
-    printf("Connexion acceptée depuis %s:%d\n", inet_ntoa(clientAddr.sin_addr), ntohs(clientAddr.sin_port));
-
-    // Ici, vous pouvez interagir avec le client en utilisant clientSocket
-
-    serveur ( clientSocket,rep);
-
-    // Fermer les sockets
-    close(clientSocket);
-    close(serverSocket);
-
-}
-
-
-   /*
-    // Boucle principale d'acceptation des connexions
-    int clientSocket;
     struct sockaddr_in client_adr;
-    socklen_t client_adrLen = sizeof(client_adr);
+    socklen_t client_adrLen ;
     for (;;) 
     {
-        client_adrLen  = sizeof client_adr;
-        clientSocket = accept(serverSocket, (struct sockaddr *)&client_adr, &client_adrLen );
-        printf("client accepté\n");
-        serveur(clientSocket);
+        // Accepter les connexions entrantes
+        client_adrLen = sizeof(client_adr);
+        r = (clientSocket = accept(serverSocket, (struct sockaddr *)&client_adr, &client_adrLen)) ;
+        if (r == -1) raler (0,"accept") ;
+        printf("Connexion acceptée depuis %s:%d\n", inet_ntoa(client_adr.sin_addr), ntohs(client_adr.sin_port));
+        serveur ( clientSocket,rep);
+        // Fermer les sockets
         close(clientSocket);
     }
     // Fermeture du socket
     close(serverSocket);
 
-    */
+}
 
-    
 
 int main(int argc, char *argv[]) 
 {
@@ -519,16 +372,12 @@ int main(int argc, char *argv[])
     char *RepImage = argv[2];
 
 
-    // Ecriture dans InfoServeur
-    WriteInfoServeur("image", IMAGE_IPV4, image_port);
+    // Ecriture les infos dans InfoServeur
+    WriteInfoServeur("image", IMAGE_IPV4,image_port);
     WriteInfoServeur("tag", TAG_IPV4,TAG_PORT);
     // WriteInfoServeur("image", IMAGE_IPV4, IMAGE_PORT);
 
-    
-
-    // Exemple d'utilisation pour un serveur TCP
     Connexion(IMAGE_IPV4, IMAGE_PORT, SOCK_STREAM,RepImage);
-
 
     return 0;
 }

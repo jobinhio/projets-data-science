@@ -4,53 +4,48 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
-#define CHK(expr) if ((expr) == -1) { perror(#expr); exit(EXIT_FAILURE); }
+void client_udp(int clientSocket, const char *serverIP, int serverPort) {
+    struct sockaddr_in serverAddr;
 
-int connectToServer(const char *address, int port, int socketType) {
-    int clientSocket;
-    struct sockaddr_in serv_addr;
+    // Configure the server address
+    memset(&serverAddr, 0, sizeof(serverAddr));
+    serverAddr.sin_family = AF_INET;
+    serverAddr.sin_addr.s_addr = inet_addr(serverIP);
+    serverAddr.sin_port = htons(serverPort);
 
-    // Création d'une socket TCP
-    CHK(clientSocket = socket(AF_INET, socketType, 0));
+    // Send data to the server
+    const char *dataToSend = "Hello from the client!";
+    sendto(clientSocket, dataToSend, strlen(dataToSend), 0,
+           (struct sockaddr*)&serverAddr, sizeof(serverAddr));
 
-    // Configurer l'adresse du serveur
-    memset(&serv_addr, 0, sizeof(serv_addr));
-    serv_addr.sin_family = AF_INET;
-    serv_addr.sin_addr.s_addr = inet_addr(address);
-    serv_addr.sin_port = htons(port);
+    // Receive the response from the server
+    char buffer[1024];
+    ssize_t receivedBytes = recvfrom(clientSocket, buffer, sizeof(buffer), 0, NULL, NULL);
 
-    // Se connecter au serveur
-    CHK(connect(clientSocket, (struct sockaddr *)&serv_addr, sizeof(serv_addr)));
-    printf("Connecté au serveur %s:%d\n", address, port);
+    if (receivedBytes == -1) {
+        perror("Error receiving response");
+        exit(EXIT_FAILURE);
+    }
 
-    return clientSocket;
+    buffer[receivedBytes] = '\0';
+    printf("Received from server: %s\n", buffer);
 }
 
 int main() {
-    const char *serverAddress = "127.0.0.1";
-    const int serverPort = 8080;
-    const int socketType = SOCK_STREAM;
-
-    // Se connecter au serveur
-    int clientSocket = connectToServer(serverAddress, serverPort, socketType);
-
-    // Envoyer des données au serveur
-    const char *message = "Bonjour, serveur!";
-    if (send(clientSocket, message, strlen(message), 0) == -1) {
-        perror("Erreur lors de l'envoi des données au serveur");
+    int clientSocket;
+    
+    // Create a UDP socket
+    clientSocket = socket(AF_INET, SOCK_DGRAM, 0);
+    if (clientSocket == -1) {
+        perror("Error creating socket");
+        exit(EXIT_FAILURE);
     }
 
-    // Recevoir des données du serveur
-    char buffer[1024];
-    ssize_t bytesRead = recv(clientSocket, buffer, sizeof(buffer), 0);
-    if (bytesRead == -1) {
-        perror("Erreur lors de la réception des données du serveur");
-    } else {
-        buffer[bytesRead] = '\0';
-        printf("Données reçues du serveur : %s\n", buffer);
-    }
+    // Replace "127.0.0.1" with the server's IP address
+    // and 5000 with the port the server is listening on
+    client_udp(clientSocket, "127.0.0.1", 5000);
 
-    // Fermer la socket
+    // Close the socket
     close(clientSocket);
 
     return 0;
