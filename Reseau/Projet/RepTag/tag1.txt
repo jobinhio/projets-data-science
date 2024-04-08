@@ -1,4 +1,0 @@
-image.jpg
-image2.jpg
-image4.jpg
-image5.jpg
