@@ -1,24 +1,20 @@
-import numpy as np
-
-def concat_arrays(matrix_main, vector_main, matrix_to_concat, vector_to_concat):
+def nettoyer_dataframe(df_table,  df_MP_indispo):
     """
-    Concatène les matrices 'matrix_to_concat' et les vecteurs 'vector_to_concat' à 'matrix_main' et 'vector_main' respectivement.
+    Supprime les lignes correspondant aux articles indisponibles et les colonnes des éléments chimiques spécifiés.
 
     Args:
-    matrix_main (numpy.ndarray): Matrice numpy à laquelle concaténer 'matrix_to_concat'.
-    vector_main (numpy.ndarray): Vecteur numpy à concaténer avec 'vector_to_concat'.
-    matrix_to_concat (numpy.ndarray): Matrice numpy à concaténer avec 'matrix_main'.
-    vector_to_concat (numpy.ndarray): Vecteur numpy à concaténer avec 'vector_main'.
+    df (DataFrame): Le dataframe contenant les données.
+    articles_indisponibles (list): Liste des noms des articles indisponibles.
+    elements_a_supprimer (list): Liste des noms des éléments chimiques à supprimer.
 
     Returns:
-    numpy.ndarray: La matrice résultante après la concaténation de 'matrix_to_concat' à 'matrix_main'.
-    numpy.ndarray: Le vecteur résultant après la concaténation de 'vector_to_concat' à 'vector_main'.
+    DataFrame: Le dataframe modifié.
     """
-    if len(matrix_main) == 0:
-        matrix_main = matrix_to_concat
-        vector_main = vector_to_concat
-    else:
-        matrix_main = np.vstack((matrix_main, matrix_to_concat))
-        vector_main = np.concatenate((vector_main, vector_to_concat))
+    # Supprimer les lignes correspondant aux articles indisponibles
+    articles_indisponibles = df_MP_indispo['Article'].to_list()
+    df_table = df_table[~df_table['Article'].isin(articles_indisponibles)]
 
-    return matrix_main, vector_main
+    # Réinitialiser les indices du dataframe
+    df_table = df_table.reset_index(drop=True)
+
+    return df_table
