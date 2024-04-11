@@ -1,8 +1,8 @@
 import pandas as pd
 from openpyxl import load_workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
-
-
+import os
+from openpyxl import Workbook
 
 
 def lire_fichiers_excel(chemin_fichier):
@@ -38,8 +38,15 @@ def write_dataframe_to_excel(df, excel_file_path, new_sheet_name='Recette'):
     Returns:
         None
     """
-    # Charger le classeur Excel
-    workbook = load_workbook(excel_file_path)
+
+
+    workbook = Workbook()
+
+    # Supprimer la première feuille s'il y en a une
+    if workbook.sheetnames:
+        first_sheet = workbook.sheetnames[0]
+        workbook.remove(workbook[first_sheet])
+
 
     # Vérifier si la feuille existe déjà dans le classeur Excel
     if new_sheet_name in workbook.sheetnames:
@@ -56,8 +63,12 @@ def write_dataframe_to_excel(df, excel_file_path, new_sheet_name='Recette'):
     for row in dataframe_to_rows(df, index=False, header=True):
         new_sheet.append(row)
 
-    # Sauvegarder les modifications
-    workbook.save(excel_file_path)
+    # Créer le chemin complet du nouveau fichier Excel
+    dossier_parent = os.path.dirname(excel_file_path)
+    nouveau_fichier_excel = os.path.join(dossier_parent, 'Resultats.xlsx')
+
+    # Sauvegarder le classeur Excel dans le nouveau fichier Excel
+    workbook.save(nouveau_fichier_excel)
 
     # Fermer le classeur Excel
     workbook.close()

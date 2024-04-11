@@ -35,12 +35,14 @@ def create_optimal_recipe(chemin_fichier_excel):
     # Résoudre le problème d'optimisation linéaire
     res = solve_linear_program(C, A_ub, b_ub, A_eq, b_eq, bounds)
 
-    # Construire le DataFrame résultant
-    df_res = construct_result_dataframe(df_MP_dispo, df_table, res, nb_MP=10)
 
-    # Écrire le DataFrame résultant dans le fichier Excel
-    write_dataframe_to_excel(df_res, chemin_fichier_excel, new_sheet_name='Recette')
-
+    if res.x.any() != None:
+        # Construire le DataFrame résultant
+        df_res = construct_result_dataframe(df_MP_dispo, df_table, res, nb_MP=10)
+        # Écrire le DataFrame résultant dans le fichier Excel
+        write_dataframe_to_excel(df_res, chemin_fichier_excel, new_sheet_name='Recette')
+    else :
+        print("Le problème n'admet pas de solution.")
 
 # Appel de la fonction main avec le chemin du fichier Excel comme argument
 if __name__ == "__main__":
