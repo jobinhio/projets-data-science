@@ -22,15 +22,16 @@ def create_optimal_recipe(chemin_fichier_excel):
     # Initialisation des listes pour les contraintes
     A_ub, b_ub, A_eq, b_eq = [], [], [], []
 
-    # Mettre  les contraintes concernant les éléments
-    df_contraints_element = Transpose_dataframe(df_contraints_element)
-    A_ub, b_ub, A_eq, b_eq = format_constraints_elements(A_ub, b_ub, A_eq, b_eq, df_contraints_element, A)
+    # Mettre les contraintes concernant les matières premières disponibles
+    A_eq, b_eq, bounds = format_constraints_MP(A_eq, b_eq, df_MP_dispo)
 
     # Mettre  les contraintes concernant la qualité
     A_ub, b_ub, A_eq, b_eq = format_constraints_qualite(A_ub, b_ub, A_eq, b_eq, df_contraints_qualite, A)
 
-    # Mettre les contraintes concernant les matières premières disponibles
-    A_eq, b_eq, bounds = format_constraints_MP(A_eq, b_eq, df_MP_dispo)
+
+    # # Mettre  les contraintes concernant les éléments
+    # df_contraints_element = Transpose_dataframe(df_contraints_element)
+    # A_ub, b_ub, A_eq, b_eq = format_constraints_elements(A_ub, b_ub, A_eq, b_eq, df_contraints_element, A)
 
     # Résoudre le problème d'optimisation linéaire
     res = solve_linear_program(C, A_ub, b_ub, A_eq, b_eq, bounds)

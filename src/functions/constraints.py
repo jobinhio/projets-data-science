@@ -20,8 +20,9 @@ def concat_arrays(matrix_main, vector_main, matrix_to_concat, vector_to_concat):
         matrix_main = matrix_to_concat
         vector_main = vector_to_concat
     else:
-        matrix_main = np.vstack((matrix_main, matrix_to_concat))
-        vector_main = np.concatenate((vector_main, vector_to_concat))
+        if len(matrix_to_concat) != 0:
+          matrix_main = np.vstack((matrix_main, matrix_to_concat))
+          vector_main = np.concatenate((vector_main, vector_to_concat))
 
     return matrix_main, vector_main
 
