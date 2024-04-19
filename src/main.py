@@ -29,9 +29,9 @@ def create_optimal_recipe(chemin_fichier_excel):
     A_ub, b_ub, A_eq, b_eq = format_constraints_qualite(A_ub, b_ub, A_eq, b_eq, df_contraints_qualite, A)
 
 
-    # # Mettre  les contraintes concernant les éléments
-    # df_contraints_element = Transpose_dataframe(df_contraints_element)
-    # A_ub, b_ub, A_eq, b_eq = format_constraints_elements(A_ub, b_ub, A_eq, b_eq, df_contraints_element, A)
+    # Mettre  les contraintes concernant les éléments
+    df_contraints_element = Transpose_dataframe(df_contraints_element)
+    A_ub, b_ub, A_eq, b_eq = format_constraints_elements(A_ub, b_ub, A_eq, b_eq, df_contraints_element, A)
 
     # Résoudre le problème d'optimisation linéaire
     res = solve_linear_program(C, A_ub, b_ub, A_eq, b_eq, bounds)
@@ -39,7 +39,7 @@ def create_optimal_recipe(chemin_fichier_excel):
 
     if res.x.any() != None:
         # Construire le DataFrame résultant
-        df_res = construct_result_dataframe(df_MP_dispo, df_table, res, nb_MP=10)
+        df_res = construct_result_dataframe(df_MP_dispo, df_table, res)
         # Écrire le DataFrame résultant dans le fichier Excel
         write_dataframe_to_excel(df_res, chemin_fichier_excel, new_sheet_name='Recette')
     else :

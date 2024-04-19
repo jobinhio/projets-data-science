@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 
-def construct_result_dataframe(df_MP_dispo, df_table, res, nb_MP=10):
-    # Création d'un nouveau DataFrame avec les colonnes 'Article' et 'Prix' de df_MP_dispo
-    df_res = pd.DataFrame(df_MP_dispo[['Article', 'Prix']])
+def construct_result_dataframe(df_MP_dispo, df_table, res):
+    # Création d'un nouveau DataFrame avec les colonnes 'Article','Métallique ?' et 'Prix' de df_MP_dispo
+    df_res = pd.DataFrame(df_MP_dispo[['Article', 'Prix','Métallique ?']])
     
     # Ajout de la colonne 'Proportion' avec les valeurs de res.x
     df_res['Proportion'] = res.x
@@ -21,8 +21,16 @@ def construct_result_dataframe(df_MP_dispo, df_table, res, nb_MP=10):
     df_res['ONO'] = np.nan
     df_res['Impurete'] = np.nan
     
-    # Conserver uniquement les nb_MP premières lignes
-    df_res = df_res.iloc[:nb_MP, :]
+    # Définir les seuils pour chaque valeur de la colonne 'Métallique ?'
+    seuil_0 = 0.001
+    seuil_1 = 0.01 #0.05
+
+    # Filtrer les lignes en fonction de la valeur de la colonne 'Métallique ?' et du seuil correspondant
+    df_res = df_res[(df_res['Métallique ?'] == 0) & (df_res['Proportion'] >= seuil_0) |
+                    (df_res['Métallique ?'] == 1) & (df_res['Proportion'] >= seuil_1)]
+
+
+    df_res = df_res.drop(columns=['Métallique ?'])
     Article_selected = df_res.loc[:, 'Article'].tolist()
     
     # Récupérer les éléments chimiques correspondant aux articles sélectionnés
@@ -37,8 +45,8 @@ def construct_result_dataframe(df_MP_dispo, df_table, res, nb_MP=10):
     # Ajout de la partie résultats
     df_res.loc[n_ligne, 'Article'] = 'Resultats'
     
-    # Ajouter la somme des colonnes 'Prix', 'Proportion' et 'Valeur (/T)' dans la ligne des résultats
-    df_res.loc[n_ligne, ['Prix', 'Proportion', 'Valeur (/T)']] = [df_res['Prix'].sum(), df_res['Proportion'].sum(), df_res['Valeur (/T)'].sum()]
+    # Ajouter la somme des colonnes 'Proportion' et 'Valeur (/T)' dans la ligne des résultats
+    df_res.loc[n_ligne, ['Proportion', 'Valeur (/T)']] = [df_res['Proportion'].sum(), df_res['Valeur (/T)'].sum()]
 
     
     # Calcul des proportions des éléments dans la fonte
