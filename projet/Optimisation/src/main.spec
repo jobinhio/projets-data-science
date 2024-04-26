@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['main.py'],
+    ['C:\\Users\\congoj\\Desktop\\congo\\projet\\Optimisation\\src\\main.py'],
     pathex=[],
     binaries=[],
     datas=[],

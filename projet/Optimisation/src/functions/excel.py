@@ -1,45 +1,9 @@
-import pandas as pd
-from openpyxl import load_workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
 import os
 from openpyxl import Workbook
 
 
-def lire_fichiers_excel(chemin_fichier): 
-    # Lecture de la première feuille du fichier Excel : Table Matière Element
-    df_table = pd.read_excel(chemin_fichier, engine='calamine')
-    # Lecture de la deuxième feuille du fichier Excel : Contraintes Element
-    df_contraints = pd.read_excel(chemin_fichier, engine='calamine', sheet_name=1)
-    # Lecture de la troisième feuille du fichier Excel : Contraintes Matière Première
-    df_MP = pd.read_excel(chemin_fichier, engine='calamine', sheet_name=2)
-
-
-    # Récupérer les Elements chimiques
-    Elements = list(df_table.columns)
-
-    # Supprimer 'Article' si elle apparait dans Elements
-    if 'Article' in Elements:
-        Elements.remove('Article')
-
-    #  qualités + les Elements
-    contraints = df_contraints.columns[:3].tolist() + Elements
-    # On récupère les contraintes sur la qualité et les Elements
-    df_contraints = df_contraints.loc[:, contraints]
-
-    
-    # Filtrage des articles disponibles et indisponibles
-    df_MP_indispo = df_MP[df_MP['Disponible ?'] == 0].reset_index(drop=True)
-    df_MP_dispo = df_MP[df_MP['Disponible ?'] == 1].reset_index(drop=True)
-
-    # Separation des contraintes
-    df_contraints_qualite = df_contraints.loc[:,['Composant','Impurété','ONO']]
-    df_contraints_element = df_contraints.drop(columns=['Impurété', 'ONO'])
-
-    return df_table,df_contraints_element, df_contraints_qualite, df_MP_dispo, df_MP_indispo
-
-
-
-def write_dataframe_to_excel(df, excel_file_path, new_sheet_name='Recette'):
+def write_dataframe_to_excel(df, dossier_data, new_sheet_name='Recette'):
     """
     Écrit un DataFrame dans une nouvelle feuille Excel ou écrase une feuille existante avec les données du DataFrame.
 
@@ -52,6 +16,14 @@ def write_dataframe_to_excel(df, excel_file_path, new_sheet_name='Recette'):
         None
     """
 
+
+    # Créer le chemin complet du nouveau fichier Excel
+    fichier_erreurs = os.path.join(dossier_data, 'erreurs.txt')
+
+    # Vérifier si le fichier Excel existe déjà
+    if os.path.exists(fichier_erreurs):
+        # Supprimer le fichier existant
+        os.remove(fichier_erreurs)
 
     workbook = Workbook()
 
@@ -77,8 +49,7 @@ def write_dataframe_to_excel(df, excel_file_path, new_sheet_name='Recette'):
         new_sheet.append(row)
 
     # Créer le chemin complet du nouveau fichier Excel
-    dossier_parent = os.path.dirname(excel_file_path)
-    nouveau_fichier_excel = os.path.join(dossier_parent, 'Resultats.xlsx')
+    nouveau_fichier_excel = os.path.join(dossier_data, 'Resultats.xlsx')
 
     # Sauvegarder le classeur Excel dans le nouveau fichier Excel
     workbook.save(nouveau_fichier_excel)

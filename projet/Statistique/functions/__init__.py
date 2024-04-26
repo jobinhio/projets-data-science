@@ -24,7 +24,8 @@ from .correlation import (
 from .linear_regression import (
     linear_regression_with_predict_intervals,
     plot_linear_regression_with_predict_intervals,
-    compute_confidence_interval
+    compute_confidence_interval,
+    export_IC_data
 )
 
 from .outliers import (

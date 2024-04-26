@@ -29,7 +29,7 @@ def concat_arrays(matrix_main, vector_main, matrix_to_concat, vector_to_concat):
 
 def format_constraints_elements(A_ub, b_ub,A_eq, b_eq,df_contraints, A):
   # Initialisation des listes pour les contraintes
-  A_eq_list, b_eq_list, A_sup_list, b_sup_list, A_inf_list, b_inf_list = [], [], [], [], [], []
+  A_eq_list, b_eq_list, A_sup_list, b_sup_list = [], [], [], []
 
   # Parcours des données de contraintes
   for index, row in df_contraints.iterrows():
@@ -42,20 +42,18 @@ def format_constraints_elements(A_ub, b_ub,A_eq, b_eq,df_contraints, A):
           b_sup_list.append(row['Valeur Max par four'])
 
       if not pd.isna(row['Valeur Min par four']):
-          A_inf_list.append(-A[index])
-          b_inf_list.append(-row['Valeur Min par four'])
+          A_sup_list.append(-A[index])
+          b_sup_list.append(-row['Valeur Min par four'])
 
   # Conversion des listes en tableaux numpy
-  A_eq_array, b_eq_array, A_sup_array, b_sup_array, A_inf_array, b_inf_array = map(np.array, (A_eq_list, b_eq_list, A_sup_list, b_sup_list, A_inf_list, b_inf_list))
+  A_eq_array, b_eq_array, A_sup_array, b_sup_array= map(np.array, (A_eq_list, b_eq_list, A_sup_list, b_sup_list))
 
 
   # Concaténation verticale
   A_ub, b_ub = concat_arrays(A_ub, b_ub, A_sup_array, b_sup_array)
-  A_ub, b_ub = concat_arrays(A_ub, b_ub, A_inf_array, b_inf_array)
   A_eq, b_eq = concat_arrays(A_eq, b_eq, A_eq_array, b_eq_array)
 
   return A_ub, b_ub, A_eq, b_eq
-
 
 def format_constraints_qualite(A_ub, b_ub,A_eq, b_eq,df_contraints, A):
   # Initialisation des listes pour les contraintes
@@ -65,18 +63,24 @@ def format_constraints_qualite(A_ub, b_ub,A_eq, b_eq,df_contraints, A):
   I_min, I_max= df_contraints.loc[0,'Impurété'],df_contraints.loc[2,'Impurété']
   O_min, O_max= df_contraints.loc[0,'ONO'],df_contraints.loc[2,'ONO']
 
-  I_min, I, I_max = map(np.array, ([I_min], I, [I_max]))
-  O_min, O, O_max = map(np.array, ([O_min], O, [O_max]))
+  I, O = map(np.array, (I, O))
+  I_dot_A, O_dot_A = I@A, O@A
 
-  I_dot_A = I@A
-  O_dot_A = O@A
+  if pd.notna(I_min):
+    I_min = np.array([I_min])
+    A_ub, b_ub = concat_arrays(A_ub, b_ub, -1*I_dot_A, -1*I_min)
 
+  if pd.notna(I_max):
+    I_max = np.array([I_max])
+    A_ub, b_ub = concat_arrays(A_ub, b_ub, I_dot_A, I_max)
 
-  # Concaténation verticale
-  A_ub, b_ub = concat_arrays(A_ub, b_ub, -1*I_dot_A, -1*I_min)
-  A_ub, b_ub = concat_arrays(A_ub, b_ub, I_dot_A, I_max)
-  A_ub, b_ub = concat_arrays(A_ub, b_ub, -1*O_dot_A, -1*O_min)
-  A_ub, b_ub = concat_arrays(A_ub, b_ub, O_dot_A, O_max)
+  if pd.notna(O_min):
+    O_min = np.array([O_min])
+    A_ub, b_ub = concat_arrays(A_ub, b_ub, -1*O_dot_A, -1*O_min)
+
+  if pd.notna(O_max):
+    O_max = np.array([O_max])
+    A_ub, b_ub = concat_arrays(A_ub, b_ub, O_dot_A, O_max)
 
   return A_ub, b_ub, A_eq, b_eq
 
