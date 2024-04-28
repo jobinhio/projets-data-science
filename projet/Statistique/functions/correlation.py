@@ -20,7 +20,7 @@ def compute_correlation(df, X_var, Y_var,plot=True, file_path=None):
         if file_path :
             recipe_name = df.iloc[0]['Recette']
             # Chemin vers le dossier
-            folder_path = r'..\Images\\' + recipe_name
+            folder_path = os.path.join('..', 'Images', recipe_name)
             # Vérifier si le dossier existe, sinon le créer
             if not os.path.exists(folder_path):
                 os.makedirs(folder_path)

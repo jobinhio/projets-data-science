@@ -95,7 +95,7 @@ def plot_linear_regression_with_predict_intervals(df,x_name, y_name, width,file_
     if file_path :
         recipe_name = df.iloc[0]['Recette']
         # Chemin vers le dossier
-        folder_path = r'..\Images\\' + recipe_name
+        folder_path = os.path.join('..', 'Images', recipe_name)
         # Vérifier si le dossier existe, sinon le créer
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)

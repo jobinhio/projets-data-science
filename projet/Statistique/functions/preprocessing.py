@@ -131,7 +131,7 @@ def split_GS(recipe_name, df):
     df_conforme = df_conforme.sort_values(by=sort_attributes)
 
     # exportation des données
-    output_dir = r'..\data\données nettoyées' 
+    output_dir = os.path.join('..', 'data', 'données nettoyées')
 
     # Vérifier si le dossier existe, sinon le créer
     if not os.path.exists(output_dir ):
