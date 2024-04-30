@@ -137,12 +137,12 @@ def compute_confidence_interval(df, column, confidence=0.95):
 
 def export_IC_data(recipe_name, output_dir,df_conforme_without_outliers,IC_column, confidence=0.95):
     df_IC = pd.DataFrame(columns= ['Intervalle de Confiance'] +IC_column)
-    df_IC.loc[0,'Intervalle de Confiance'] = 'Borne_sup'
-    df_IC.loc[1,'Intervalle de Confiance'] = 'Borne_inf'
+    df_IC.loc[0,'Intervalle de Confiance'] = 'Borne_inf'
+    df_IC.loc[1,'Intervalle de Confiance'] = 'Borne_sup' 
     for column in IC_column :
         inf,sup = compute_confidence_interval( df_conforme_without_outliers, column, confidence=0.95)
-        df_IC.loc[0,column] =  sup
-        df_IC.loc[1,column] = inf 
+        df_IC.loc[0,column] =  inf
+        df_IC.loc[1,column] = sup
     # Exportation des données conformes avec et sans outliers
     excel_path = os.path.join(output_dir, f'{recipe_name}.xlsx')
 

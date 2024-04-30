@@ -1,121 +1,116 @@
 import numpy as np
 import pandas as pd
+from .constants import Impurete_Values, ONO_Values
 
+def format_constraints_qualite(df_contraints, A,constraints):
+    I = list(Impurete_Values.values())
+    O = list(ONO_Values.values())
 
-def concat_arrays(matrix_main, vector_main, matrix_to_concat, vector_to_concat):
+    I_min, I_visee, I_max= df_contraints.loc[0,'Impurété'],df_contraints.loc[1,'Impurété'],df_contraints.loc[2,'Impurété']
+    O_min, O_visee, O_max= df_contraints.loc[0,'ONO'],df_contraints.loc[1,'ONO'],df_contraints.loc[2,'ONO']
+
+    I, O = map(np.array, (I, O))
+    I_dot_A, O_dot_A = I@A, O@A
+    # Ajouter les contraintes d'impureté à A_eq et b_eq si nécessaire
+    if pd.notna(I_visee):
+        constraints['A_eq']['Impurete_visee'] = I_dot_A
+        constraints['b_eq']['Impurete_visee'] = I_visee
+
+    # Ajouter les contraintes d'ONO à A_eq et b_eq si nécessaire
+    if pd.notna(O_visee):
+        constraints['A_eq']['ONO_visee'] = O_dot_A
+        constraints['b_eq']['ONO_visee'] = O_visee
+
+    # Ajouter les contraintes d'impureté maximale à A_sup et b_sup si nécessaire
+    if pd.notna(I_max):
+        constraints['A_sup']['Impurete_max'] = I_dot_A
+        constraints['b_sup']['Impurete_max'] = I_max
+
+    # Ajouter les contraintes d'impureté minimale à A_sup et b_sup si nécessaire
+    if pd.notna(I_min):
+        constraints['A_sup']['Impurete_min'] = -I_dot_A
+        constraints['b_sup']['Impurete_min'] = -I_min
+
+    # Ajouter les contraintes d'ONO maximale à A_sup et b_sup si nécessaire
+    if pd.notna(O_max):
+        constraints['A_sup']['ONO_max'] = O_dot_A
+        constraints['b_sup']['ONO_max'] = O_max
+
+    # Ajouter les contraintes d'ONO minimale à A_sup et b_sup si nécessaire
+    if pd.notna(O_min):
+        constraints['A_sup']['ONO_min'] = -O_dot_A
+        constraints['b_sup']['ONO_min'] = -O_min
+
+    return constraints
+
+def format_constraints_MP(df_MP_dispo, constraints):
+    bounds = []
+    m = df_MP_dispo.shape[0] # m le nb de MP disponibles
+
+    # Contraintes sur les pourcentages sum(x_i) = 1
+    constraints['A_eq']["Proportion_Total"] = np.ones(m)
+    constraints['b_eq']["Proportion_Total"] = 1
+
+    # Parcours des lignes du DataFrame
+    for index, row in df_MP_dispo.iterrows():
+        # Récupération des valeurs de "Part Min" et "Part Max", avec une valeur par défaut de 0 et 1 respectivement si elles sont manquantes
+        part_min = row['Part Min'] if not pd.isna(row['Part Min']) else 0
+        part_max = row['Part Max'] if not pd.isna(row['Part Max']) else 1
+        # Ajout du tuple (Part Min, Part Max) à la liste bounds
+        bounds.append((part_min, part_max))
+
+        # Les % de MP à consommer
+        if not pd.isna(row['Part à consommer']):
+            # Construction de A_eq_MP et b_eq_MP
+            A_eq = np.zeros(m)
+            A_eq[index] = 1
+            composant = row['Article']
+            constraints['A_eq'][composant] = A_eq
+            constraints['b_eq'][composant] = row['Part à consommer']
+
+    return constraints, bounds
+
+def Transpose_dataframe(df):
     """
-    Concatène les matrices 'matrix_to_concat' et les vecteurs 'vector_to_concat' à 'matrix_main' et 'vector_main' respectivement.
-
+    Transpose le DataFrame, définissant la première colonne comme noms de colonnes,
+    puis déplace les index dans une nouvelle colonne, et enfin supprime le nom de l'index.
+    
     Args:
-    matrix_main (numpy.ndarray): Matrice numpy à laquelle concaténer 'matrix_to_concat'.
-    vector_main (numpy.ndarray): Vecteur numpy à concaténer avec 'vector_to_concat'.
-    matrix_to_concat (numpy.ndarray): Matrice numpy à concaténer avec 'matrix_main'.
-    vector_to_concat (numpy.ndarray): Vecteur numpy à concaténer avec 'vector_main'.
-
+    - df: DataFrame à transposer
+    
     Returns:
-    numpy.ndarray: La matrice résultante après la concaténation de 'matrix_to_concat' à 'matrix_main'.
-    numpy.ndarray: Le vecteur résultant après la concaténation de 'vector_to_concat' à 'vector_main'.
+    - DataFrame Transposé
     """
-    if len(matrix_main) == 0:
-        matrix_main = matrix_to_concat
-        vector_main = vector_to_concat
-    else:
-        if len(matrix_to_concat) != 0:
-          matrix_main = np.vstack((matrix_main, matrix_to_concat))
-          vector_main = np.concatenate((vector_main, vector_to_concat))
+    # Transposer le DataFrame et définir la première colonne comme noms de colonnes
+    df_transposed = df.set_index(df.columns[0]).transpose()
+    
+    # Déplacer les index dans une nouvelle colonne
+    df_transposed.reset_index(inplace=True)
+    df_transposed = df_transposed.rename(columns={'index': df.columns[0]})
+    
+    # Supprimer le nom de l'index
+    df_transposed = df_transposed.rename_axis(None, axis=1)
+    
+    return df_transposed
 
-    return matrix_main, vector_main
-
-
-def format_constraints_elements(A_ub, b_ub,A_eq, b_eq,df_contraints, A):
-  # Initialisation des listes pour les contraintes
-  A_eq_list, b_eq_list, A_sup_list, b_sup_list = [], [], [], []
-
-  # Parcours des données de contraintes
-  for index, row in df_contraints.iterrows():
-      if not pd.isna(row['Valeur visée']):
-          A_eq_list.append(A[index])
-          b_eq_list.append(row['Valeur visée'])
-
-      if not pd.isna(row['Valeur Max par four']):
-          A_sup_list.append(A[index])
-          b_sup_list.append(row['Valeur Max par four'])
-
-      if not pd.isna(row['Valeur Min par four']):
-          A_sup_list.append(-A[index])
-          b_sup_list.append(-row['Valeur Min par four'])
-
-  # Conversion des listes en tableaux numpy
-  A_eq_array, b_eq_array, A_sup_array, b_sup_array= map(np.array, (A_eq_list, b_eq_list, A_sup_list, b_sup_list))
+def format_constraints_elements(df_contraints_element, A,constraints):
+    df_contraints_element = Transpose_dataframe(df_contraints_element)
+    # Parcours des données de contraintes
+    for index, row in df_contraints_element.iterrows():
+        if not pd.isna(row['Valeur visée']):
+            composant = row['Composant'] + '_visee'
+            constraints['A_eq'][composant] = A[index]
+            constraints['b_eq'][composant] = row['Valeur visée']
 
 
-  # Concaténation verticale
-  A_ub, b_ub = concat_arrays(A_ub, b_ub, A_sup_array, b_sup_array)
-  A_eq, b_eq = concat_arrays(A_eq, b_eq, A_eq_array, b_eq_array)
+        if not pd.isna(row['Valeur Max par four']):
+            composant = row['Composant'] + '_max'
+            constraints['A_sup'][composant] = A[index]
+            constraints['b_sup'][composant] = row['Valeur Max par four']
 
-  return A_ub, b_ub, A_eq, b_eq
+        if not pd.isna(row['Valeur Min par four']):
+            composant = row['Composant'] + '_min'
+            constraints['A_sup'][composant] = -A[index]
+            constraints['b_sup'][composant] = -row['Valeur Min par four']
 
-def format_constraints_qualite(A_ub, b_ub,A_eq, b_eq,df_contraints, A):
-  # Initialisation des listes pour les contraintes
-  I = [ 0, 0, 0.44, 4.90, 0.37, 5.60, 0.37, 7.90, 39.00, 0, 0, 0, 0, 0, 4.40, 0, 0, 0]
-  O = [ 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1 ]
-
-  I_min, I_max= df_contraints.loc[0,'Impurété'],df_contraints.loc[2,'Impurété']
-  O_min, O_max= df_contraints.loc[0,'ONO'],df_contraints.loc[2,'ONO']
-
-  I, O = map(np.array, (I, O))
-  I_dot_A, O_dot_A = I@A, O@A
-
-  if pd.notna(I_min):
-    I_min = np.array([I_min])
-    A_ub, b_ub = concat_arrays(A_ub, b_ub, -1*I_dot_A, -1*I_min)
-
-  if pd.notna(I_max):
-    I_max = np.array([I_max])
-    A_ub, b_ub = concat_arrays(A_ub, b_ub, I_dot_A, I_max)
-
-  if pd.notna(O_min):
-    O_min = np.array([O_min])
-    A_ub, b_ub = concat_arrays(A_ub, b_ub, -1*O_dot_A, -1*O_min)
-
-  if pd.notna(O_max):
-    O_max = np.array([O_max])
-    A_ub, b_ub = concat_arrays(A_ub, b_ub, O_dot_A, O_max)
-
-  return A_ub, b_ub, A_eq, b_eq
-
-
-def format_constraints_MP(A_eq, b_eq,df_MP_dispo):
-  # Les % de MP Min et Max
-  bounds = []
-  A_eq_MP, b_eq_MP = [],[]
-
-  m = len(df_MP_dispo)
-
-  # Contraintes sur les pourcentages sum(x_i) = 1
-  A_eq_MP.append(np.ones(m))
-  b_eq_MP.append(1)
-
-
-  # Parcours des lignes du DataFrame
-  for index, row in df_MP_dispo.iterrows():
-      # Récupération des valeurs de "Part Min" et "Part Max", avec une valeur par défaut de 0 et 1 respectivement si elles sont manquantes
-      part_min = row['Part Min'] if not pd.isna(row['Part Min']) else 0
-      part_max = row['Part Max'] if not pd.isna(row['Part Max']) else 1
-      # Ajout du tuple (Part Min, Part Max) à la liste bounds
-      bounds.append((part_min, part_max))
-
-      # Les % de MP à consommer
-      part_a_consommer = row['Part à consommer']
-      # Vérification si la valeur de "Part à consommer" est valide
-      if not pd.isna(part_a_consommer):
-        # Construction de A_eq_MP et b_eq_MP
-          A_eq_tmp = np.zeros(m)
-          A_eq_tmp[index] = 1
-          A_eq_MP.append(A_eq_tmp)
-          b_eq_MP.append(part_a_consommer)
-
-  A_eq_array, b_eq_array = map(np.array, (A_eq_MP, b_eq_MP))
-  A_eq, b_eq = concat_arrays(A_eq, b_eq, A_eq_array, b_eq_array)
-
-  return A_eq, b_eq, bounds
+    return constraints
