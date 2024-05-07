@@ -5,9 +5,9 @@ from .constants import Impurete_Values, ONO_Values
 def format_constraints_qualite(df_contraints, A,constraints):
     I = list(Impurete_Values.values())
     O = list(ONO_Values.values())
-
-    I_min, I_visee, I_max= df_contraints.loc[0,'Impurété'],df_contraints.loc[1,'Impurété'],df_contraints.loc[2,'Impurété']
-    O_min, O_visee, O_max= df_contraints.loc[0,'ONO'],df_contraints.loc[1,'ONO'],df_contraints.loc[2,'ONO']
+    
+    I_min, I_visee, I_max = pd.to_numeric(df_contraints.loc[0:2, 'Impurété'], errors='coerce')
+    O_min, O_visee, O_max = pd.to_numeric(df_contraints.loc[0:2, 'ONO'], errors='coerce')
 
     I, O = map(np.array, (I, O))
     I_dot_A, O_dot_A = I@A, O@A

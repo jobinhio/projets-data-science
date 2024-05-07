@@ -2,130 +2,156 @@ import pandas as pd
 import numpy as np
 import os
 from .constants import Impurete_Values, ONO_Values
+from openpyxl import load_workbook
+from openpyxl.utils.dataframe import dataframe_to_rows
+from openpyxl import Workbook
 
-def construct_result_dataframe(df_MP_dispo, df_table, res):
-    # Création d'un nouveau DataFrame avec les colonnes 'Article','Métallique ?' et 'Prix' de df_MP_dispo
-    df_res = pd.DataFrame(df_MP_dispo[['Article', 'Prix','Métallique ?']])
-    
+def construct_result_dataframe(res, df_MP_dispo, df_table,constraints):
+    # Constantes pour les seuils
+    SEUIL_0 = 1e-20
+    SEUIL_1 = 1e-20  # 0.01
+
+    # Création du DataFrame df_res
+    df_res = df_MP_dispo[['Article', 'Prix', 'Métallique ?']].copy()
+
     # Ajout de la colonne 'Proportion' avec les valeurs de res.x
     df_res['Proportion'] = res.x
-    
+
     # Calcul de la colonne 'Valeur (/T)' en multipliant 'Proportion' par 'Prix'
     df_res['Valeur (/T)'] = df_res['Proportion'] * df_res['Prix']
-    
-    # Garder les Proportions non nulles seulement
-    df_res = df_res[(df_res['Proportion'] > 0)]
 
+    # Filtre des lignes avec des proportions non nulles seulement
+    df_res = df_res[df_res['Proportion'] > 0]
 
-    # Trier le DataFrame par 'Proportion' de manière décroissante
-    df_res = df_res.sort_values(by='Proportion', ascending=False)
-    
-    # Initialiser les colonnes 'ONO' et 'Impurete' avec des valeurs NaN
+    # Tri du DataFrame par 'Proportion' de manière décroissante
+    df_res.sort_values(by='Proportion', ascending=False, inplace=True)
+
+    # Initialisation des colonnes 'ONO' et 'Impurete' avec des valeurs NaN
     df_res['ONO'] = np.nan
     df_res['Impurete'] = np.nan
-    
-    # # Définir les seuils pour chaque valeur de la colonne 'Métallique ?'
-    # seuil_0 = 0.0001
-    # seuil_1 = 0.01 #0.01
 
-    # # Filtrer les lignes en fonction de la valeur de la colonne 'Métallique ?' et du seuil correspondant
-    # df_res = df_res[(df_res['Métallique ?'] == 0) & (df_res['Proportion'] >= seuil_0) |
-    #                 (df_res['Métallique ?'] == 1) & (df_res['Proportion'] >= seuil_1)]
+    # Filtrage des lignes en fonction de la valeur de la colonne 'Métallique ?' et du seuil correspondant
+    df_res = df_res.loc[((df_res['Métallique ?'] == 0) & (df_res['Proportion'] >= SEUIL_0)) |
+                        ((df_res['Métallique ?'] == 1) & (df_res['Proportion'] >= SEUIL_1))]
 
+    # Suppression de la colonne 'Métallique ?' qui n'est plus nécessaire
+    df_res.drop(columns=['Métallique ?'], inplace=True)
 
-    df_res = df_res.drop(columns=['Métallique ?'])
-    Article_selected = df_res.loc[:, 'Article'].tolist()
-    
-    # Récupérer les éléments chimiques correspondant aux articles sélectionnés
-    Element_selected = df_table[df_table['Article'].isin(Article_selected)]
-    df_res = pd.merge(df_res, Element_selected, on='Article', how='inner')
-    
-    # Effectuer un saut de ligne dans df_res
-    n_ligne = len(df_res)
-    df_res.loc[n_ligne] = np.nan
-    n_ligne += 1
-    
-    # Ajout de la partie résultats
-    df_res.loc[n_ligne, 'Article'] = 'Resultats'
-    
-    # Ajouter la somme des colonnes 'Proportion' et 'Valeur (/T)' dans la ligne des résultats
-    df_res.loc[n_ligne, ['Proportion', 'Valeur (/T)']] = [df_res['Proportion'].sum(), df_res['Valeur (/T)'].sum()]
+    # Fusion avec les éléments chimiques correspondant aux articles sélectionnés
+    articles_selectionnes = df_res['Article'].tolist()
+    elements_selectionnes = df_table[df_table['Article'].isin(articles_selectionnes)]
+    df_res = pd.merge(df_res, elements_selectionnes, on='Article', how='inner')
 
-    
+    # Ajout de la ligne de résultats
+    df_res.loc[df_res.shape[0] , :] = np.nan
+    df_res.loc[df_res.shape[0] , 'Article'] = 'Resultats'
+
+    df_res.loc[df_res.shape[0] - 1, ['Proportion', 'Valeur (/T)']] = [df_res['Proportion'].sum(), df_res['Valeur (/T)'].sum()]
+
     # Calcul des proportions des éléments dans la fonte
-    cols_to_multiply = df_res.columns[df_res.columns.get_loc('C'):]
-    proportion_elements = []
-    for col in cols_to_multiply:
-        part_element = (df_res['Proportion'] * df_res[col]).sum()
-        proportion_elements.append(part_element)
-    
+    cols_elements = df_table.columns[1:]
+    proportions_elements = df_res[cols_elements].mul(df_res['Proportion'], axis=0).sum()
+
     # Ajout des valeurs des proportions des éléments
-    df_res.loc[n_ligne, 'C':] = proportion_elements
-    
-    # Ajout des valeurs des indicateurs qualité
-    I,O  = map(np.array,(list(Impurete_Values.values()), list(ONO_Values.values())))
-    proportion_elements = np.array(proportion_elements)
-    df_res.loc[n_ligne, 'Impurete'] = I @ proportion_elements
-    df_res.loc[n_ligne, 'ONO'] = O @ proportion_elements
-    
-    return df_res
+    df_res.loc[df_res.shape[0]-1, cols_elements] = proportions_elements 
 
-def Save_errors(erreurs, dossier_data, res, A, df_contraints_qualite, df_contraints_element, df_MP_dispo ):
-    # Supprimer le fichier existant des résultats s'il existe
-    fichier_Resultats = os.path.join(dossier_data, 'Resultats.xlsx')
-    if os.path.exists(fichier_Resultats):
-        os.remove(fichier_Resultats)
+    # Calcul des valeurs des indicateurs qualité
+    impurete_values, ono_values = np.array(list(Impurete_Values.values())), np.array(list(ONO_Values.values()))
+    df_res.loc[df_res.shape[0]-1, 'Impurete'] = impurete_values @ proportions_elements
+    df_res.loc[df_res.shape[0]-1, 'ONO'] = ono_values @ proportions_elements
+
+
+    contraints_res = {}
+    contraints_res = proportions_elements.to_dict()
+    contraints_res['Impurete'] = impurete_values @ proportions_elements
+    contraints_res['ONO'] = ono_values @ proportions_elements
+    contraints_res['Proportion_Total'] = df_res.loc[df_res.shape[0] - 1, ['Proportion']].values[0]
     
+    # Ajout du resultats des contraintes de MP
+    b_eq = constraints['b_eq'] 
+    for key, value in b_eq.items() :
+        for article in df_res['Article'] :
+            if article == key :
+                contraints_res[key] = df_res.loc[df_res['Article'] == key,'Proportion'].values[0]
+    return df_res,contraints_res
+
+
+def export_result(df, dossier_data, new_sheet_name):
+
+    # Créer le chemin complet du nouveau fichier erreurs
+    fichier_erreurs = os.path.join(dossier_data, 'erreurs_'+ new_sheet_name+'.txt')
+
+
+    # Vérifier si le fichier erreurs et supprimer
+    if os.path.exists(fichier_erreurs):
+        os.remove(fichier_erreurs)
+
+    # Créer le chemin complet du nouveau fichier Excel
+    fichier_resultats = os.path.join(dossier_data, 'Resultats.xlsx')
+
+    # Vérifier si le fichier Excel existe
+    if os.path.exists(fichier_resultats):
+        # Charger le classeur Excel existant
+        workbook_existant = load_workbook(fichier_resultats)
+        # Vérifier si la feuille existe déjà dans le classeur Excel
+        if new_sheet_name in workbook_existant.sheetnames and len(workbook_existant.sheetnames) != 1:
+            # Supprimer la feuille existante
+            workbook_existant.remove(workbook_existant[new_sheet_name])
+        # Sauvegarder le classeur Excel dans le fichier existant
+        workbook_existant.save(fichier_resultats)
+    else:
+        workbook_existant = None
+
+    # Créer un nouveau classeur s'il n'existe pas
+    if workbook_existant is None:
+        workbook = Workbook()
+        feuille = workbook.active 
+        feuille.title = new_sheet_name
+    else:
+        workbook = workbook_existant
+        if new_sheet_name in workbook_existant.sheetnames :
+            feuille = workbook.active 
+            feuille.title = new_sheet_name
+        else :
+            feuille = workbook.create_sheet(title=new_sheet_name)
+
+
+    # Écrire le DataFrame dans la feuille
+    for r_idx, row in enumerate(dataframe_to_rows(df, index=False, header=True), 1):
+        for c_idx, value in enumerate(row, 1):
+            feuille.cell(row=r_idx, column=c_idx, value=value)
+
+    # Sauvegarder le classeur
+    workbook.save(fichier_resultats)
+
+
+def save_errors(erreurs, dossier_data,recette):
+    # Chemin complet du fichier Excel des résultats
+    fichier_resultats = os.path.join(dossier_data, 'Resultats.xlsx')
+
+    # Vérifier si le fichier existe
+    if os.path.exists(fichier_resultats):
+        # Supprimer la feuille recette du classeur Excel si elle existe et si c'est la derniere feuille supprimer le fichier excel
+        workbook = load_workbook(fichier_resultats)
+        # Supprimer le fichier Excel s'il n'y a plus de feuilles
+        if recette in workbook.sheetnames and len(workbook.sheetnames) == 1:
+            workbook.save(fichier_resultats)
+            workbook.close()  
+            os.remove(fichier_resultats)
+
+        elif recette in workbook.sheetnames and len(workbook.sheetnames) != 1 :
+            del workbook[recette]
+            workbook.save(fichier_resultats)
+            workbook.close()
+
     # Sauvegarder les erreurs dans un fichier texte
-    I,O  = map(np.array,(list(Impurete_Values.values()), list(ONO_Values.values())))
-    n_ligne = df_contraints_qualite.shape[0]
-    df_contraints_qualite.loc[n_ligne,'Composant'] = 'Valeur obtenu'
-    df_contraints_qualite.loc[n_ligne,'Impurété'] = I @ (np.dot(A,res.x))
-    df_contraints_qualite.loc[n_ligne,'ONO'] = O @ (np.dot(A,res.x))
-    df_qualite_result = df_contraints_qualite.iloc[-1:]
-    df_contraints_element['Valeur obtenu'] = np.dot(A,res.x)
-    df_element_result = df_contraints_element[['Composant', 'Valeur obtenu']]
-    df_MP_result = df_MP_dispo[['Article', 'Part à consommer']]
-    df_MP_result.loc[:, ['Proportion']] = res.x
-    df_MP_result = df_MP_result.dropna()
-
-
-    df_result = pd.DataFrame(df_MP_dispo[['Article']])
-    # Ajout de la colonne 'Proportion' avec les valeurs de res.x
-    df_result['Proportion'] = res.x
-    df_result = df_result[(df_result['Proportion'] > 0)]
-    df_result = df_result.sort_values(by='Proportion', ascending=False)
-
-
-    # Ajout de la partie résultats
-    n_ligne = df_result.shape[0]
-    df_result.loc[n_ligne,'Article'] = 'Somme Total'
-    
-    # Ajouter la somme des colonnes 'Proportion' et 'Valeur (/T)' dans la ligne des résultats
-    df_result.loc[n_ligne,['Proportion']] = df_result['Proportion'].sum()
-
-
-
-    fichier_erreurs = os.path.join(dossier_data, 'erreurs.txt')
+    fichier_erreurs = os.path.join(dossier_data, 'erreurs_'+ recette +'.txt')
     with open(fichier_erreurs, "w", encoding="utf-8") as f:
+        message = "Veillez revoir les contraintes suivantes :"
+        f.write(message+ "\n")
         for erreur in erreurs:
             f.write(erreur + "\n")
         f.write("\n")
-        f.write("Voici une proposition :"+ "\n" + "\n")
-
-    # Écrire le DataFrame dans le fichier
-    df_result.to_csv(fichier_erreurs, sep='\t', index=False,  mode='a',  header=True)
-    with open(fichier_erreurs, "a", encoding="utf-8") as f:
-        f.write("\n")
-    df_qualite_result.to_csv(fichier_erreurs, sep='\t', index=False,  mode='a')
-    # Ajouter un espace entre les deux écritures
-    with open(fichier_erreurs, "a", encoding="utf-8") as f:
-        f.write("\n")
-    df_element_result.to_csv(fichier_erreurs, sep='\t', index=False, mode='a', header=False)
-    # Ajouter un espace entre les deux écritures
-    with open(fichier_erreurs, "a", encoding="utf-8") as f:
-        f.write("\n")
-    df_MP_result.to_csv(fichier_erreurs, sep='\t', index=False, mode='a', header=True)
-    
     return 
+
 

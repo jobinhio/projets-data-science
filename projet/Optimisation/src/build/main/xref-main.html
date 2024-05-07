@@ -17825,8 +17825,9 @@ imports:
  &#8226;   <a href="#functions.constants">functions.constants</a>
  &#8226;   <a href="#functions.constraints">functions.constraints</a>
  &#8226;   <a href="#functions.data_processing">functions.data_processing</a>
- &#8226;   <a href="#functions.excel">functions.excel</a>
+ &#8226;   <a href="#functions.input_processing">functions.input_processing</a>
  &#8226;   <a href="#functions.linear_programming">functions.linear_programming</a>
+ &#8226;   <a href="#functions.linear_programming_with_correction">functions.linear_programming_with_correction</a>
  &#8226;   <a href="#functions.result_processing">functions.result_processing</a>
 
   </div>
@@ -17836,8 +17837,9 @@ imported by:
  &#8226;   <a href="#functions.constants">functions.constants</a>
  &#8226;   <a href="#functions.constraints">functions.constraints</a>
  &#8226;   <a href="#functions.data_processing">functions.data_processing</a>
- &#8226;   <a href="#functions.excel">functions.excel</a>
+ &#8226;   <a href="#functions.input_processing">functions.input_processing</a>
  &#8226;   <a href="#functions.linear_programming">functions.linear_programming</a>
+ &#8226;   <a href="#functions.linear_programming_with_correction">functions.linear_programming_with_correction</a>
  &#8226;   <a href="#functions.result_processing">functions.result_processing</a>
  &#8226;   <a href="#main.py">main.py</a>
 
@@ -17874,6 +17876,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#functions">functions</a>
+ &#8226;   <a href="#functions.constraints">functions.constraints</a>
  &#8226;   <a href="#functions.result_processing">functions.result_processing</a>
 
   </div>
@@ -17886,6 +17889,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#functions">functions</a>
+ &#8226;   <a href="#functions.constants">functions.constants</a>
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#pandas">pandas</a>
 
@@ -17915,14 +17919,13 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="functions.excel"></a>
-  <a target="code" href="///C:/Users/congoj/Desktop/congo/projet/Optimisation/src/functions/excel.py" type="text/plain"><tt>functions.excel</tt></a>
+  <a name="functions.input_processing"></a>
+  <a target="code" href="///C:/Users/congoj/Desktop/congo/projet/Optimisation/src/functions/input_processing.py" type="text/plain"><tt>functions.input_processing</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#functions">functions</a>
- &#8226;   <a href="#openpyxl">openpyxl</a>
- &#8226;   <a href="#openpyxl.utils.dataframe">openpyxl.utils.dataframe</a>
  &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#pandas">pandas</a>
 
   </div>
   <div class="import">
@@ -17939,7 +17942,26 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#functions">functions</a>
+ &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#scipy.optimize">scipy.optimize</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#functions">functions</a>
+ &#8226;   <a href="#functions.linear_programming_with_correction">functions.linear_programming_with_correction</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="functions.linear_programming_with_correction"></a>
+  <a target="code" href="///C:/Users/congoj/Desktop/congo/projet/Optimisation/src/functions/linear_programming_with_correction.py" type="text/plain"><tt>functions.linear_programming_with_correction</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#functions">functions</a>
+ &#8226;   <a href="#functions.linear_programming">functions.linear_programming</a>
 
   </div>
   <div class="import">
@@ -17958,6 +17980,8 @@ imports:
     <a href="#functions">functions</a>
  &#8226;   <a href="#functions.constants">functions.constants</a>
  &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#openpyxl">openpyxl</a>
+ &#8226;   <a href="#openpyxl.utils.dataframe">openpyxl.utils.dataframe</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#pandas">pandas</a>
 
@@ -31172,6 +31196,7 @@ imported by:
  &#8226;   <a href="#contourpy.typecheck">contourpy.typecheck</a>
  &#8226;   <a href="#contourpy.types">contourpy.types</a>
  &#8226;   <a href="#functions.constraints">functions.constraints</a>
+ &#8226;   <a href="#functions.linear_programming">functions.linear_programming</a>
  &#8226;   <a href="#functions.result_processing">functions.result_processing</a>
  &#8226;   <a href="#ipykernel.pickleutil">ipykernel.pickleutil</a>
  &#8226;   <a href="#matplotlib">matplotlib</a>
@@ -36879,7 +36904,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#functions.excel">functions.excel</a>
+    <a href="#functions.result_processing">functions.result_processing</a>
  &#8226;   <a href="#openpyxl._constants">openpyxl._constants</a>
  &#8226;   <a href="#openpyxl.cell">openpyxl.cell</a>
  &#8226;   <a href="#openpyxl.cell._writer">openpyxl.cell._writer</a>
@@ -40326,7 +40351,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#functions.excel">functions.excel</a>
+    <a href="#functions.result_processing">functions.result_processing</a>
 
   </div>
 
@@ -41912,7 +41937,7 @@ imported by:
  &#8226;   <a href="#filecmp">filecmp</a>
  &#8226;   <a href="#fnmatch">fnmatch</a>
  &#8226;   <a href="#functions.cleaning">functions.cleaning</a>
- &#8226;   <a href="#functions.excel">functions.excel</a>
+ &#8226;   <a href="#functions.input_processing">functions.input_processing</a>
  &#8226;   <a href="#functions.result_processing">functions.result_processing</a>
  &#8226;   <a href="#genericpath">genericpath</a>
  &#8226;   <a href="#getopt">getopt</a>
@@ -42623,6 +42648,7 @@ imports:
 imported by:
     <a href="#functions.cleaning">functions.cleaning</a>
  &#8226;   <a href="#functions.constraints">functions.constraints</a>
+ &#8226;   <a href="#functions.input_processing">functions.input_processing</a>
  &#8226;   <a href="#functions.result_processing">functions.result_processing</a>
  &#8226;   <a href="#openpyxl.utils.dataframe">openpyxl.utils.dataframe</a>
  &#8226;   <a href="#pandas">pandas</a>
