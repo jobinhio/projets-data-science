@@ -124,11 +124,8 @@ def export_result(df, dossier_data, new_sheet_name):
             feuille.cell(row=r_idx, column=c_idx, value=value)
 
     # Sauvegarder le classeur
-    feuille.save(fichier_resultats)
-    feuille.close()
-
-    # workbook.save(fichier_resultats)
-    # workbook.close()
+    workbook.save(fichier_resultats)
+    workbook.close()
 
 
 def save_errors(erreurs, dossier_data,recette):
