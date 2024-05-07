@@ -5,6 +5,8 @@ from .constants import Impurete_Values, ONO_Values
 from openpyxl import load_workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
 from openpyxl import Workbook
+import gc
+
 
 def construct_result_dataframe(res, df_MP_dispo, df_table,constraints):
     # Constantes pour les seuils
@@ -122,7 +124,11 @@ def export_result(df, dossier_data, new_sheet_name):
             feuille.cell(row=r_idx, column=c_idx, value=value)
 
     # Sauvegarder le classeur
-    workbook.save(fichier_resultats)
+    feuille.save(fichier_resultats)
+    feuille.close()
+
+    # workbook.save(fichier_resultats)
+    # workbook.close()
 
 
 def save_errors(erreurs, dossier_data,recette):
@@ -137,6 +143,9 @@ def save_errors(erreurs, dossier_data,recette):
         if recette in workbook.sheetnames and len(workbook.sheetnames) == 1:
             workbook.save(fichier_resultats)
             workbook.close()  
+            # Forcer la libération des ressources non utilisées
+            gc.collect()
+            # Supprimer le fichier Excel
             os.remove(fichier_resultats)
 
         elif recette in workbook.sheetnames and len(workbook.sheetnames) != 1 :
