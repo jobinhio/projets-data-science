@@ -100,17 +100,17 @@ def format_constraints_elements(df_contraints_element, A,constraints):
         if not pd.isna(row['Valeur visée']):
             composant = row['Composant'] + '_visee'
             constraints['A_eq'][composant] = A[index]
-            constraints['b_eq'][composant] = row['Valeur visée']
+            constraints['b_eq'][composant] = pd.to_numeric(row['Valeur visée'], errors='coerce')
 
 
         if not pd.isna(row['Valeur Max par four']):
             composant = row['Composant'] + '_max'
             constraints['A_sup'][composant] = A[index]
-            constraints['b_sup'][composant] = row['Valeur Max par four']
+            constraints['b_sup'][composant] = pd.to_numeric(row['Valeur Max par four'], errors='coerce')
 
         if not pd.isna(row['Valeur Min par four']):
             composant = row['Composant'] + '_min'
             constraints['A_sup'][composant] = -A[index]
-            constraints['b_sup'][composant] = -row['Valeur Min par four']
+            constraints['b_sup'][composant] = -pd.to_numeric(row['Valeur Min par four'], errors='coerce')
 
     return constraints
