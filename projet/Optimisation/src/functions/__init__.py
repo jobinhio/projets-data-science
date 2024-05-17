@@ -6,6 +6,6 @@ from .constraints import format_constraints_elements, format_constraints_qualite
 from .linear_programming import solve_linear_program
 from .linear_programming_with_correction import optimize_with_correction
 from .data_processing import construire_tableau, Transpose_dataframe
-from .result_processing import construct_result_dataframe,export_result,save_errors
+from .result_processing import construct_result_dataframe,export_result,save_errors,remove_old_resultats
 
 

@@ -13,7 +13,7 @@ def construire_tableau(df_table, df_MP_dispo):
     - C : Tableau NumPy contenant les prix des matières premières
     """
     # Construction de A : le tableau des pourcentages des éléments dans chaque matière première
-    df_A = df_table.drop(columns=['Article'])
+    df_A = df_table.drop(columns=['Article','Code Article'])
     A = df_A.to_numpy().T
 
     # Récupération des prix des matières premières

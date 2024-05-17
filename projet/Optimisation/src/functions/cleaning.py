@@ -9,6 +9,8 @@ def Separate_data(df_table, df_MP, df_contraints):
     # Supprimer 'Article' si elle apparait dans Elements
     if 'Article' in Elements:
         Elements.remove('Article')
+    if 'Code Article' in Elements:
+        Elements.remove('Code Article')
 
     #  qualités + les Elements
     contraints = df_contraints.columns[:3].tolist() + Elements

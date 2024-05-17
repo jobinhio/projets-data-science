@@ -46,7 +46,7 @@ def Give_contraints_MP_per_recipe(Matieres_premiere):
         idx = Matieres_premiere.columns.get_loc(recette)
         
         # Sélection des colonnes pertinentes pour la recette
-        cols = ['Unnamed: 0', 'Unnamed: 1', recette] + [f'Unnamed: {i}' for i in range(idx + 1, idx + 5)]
+        cols = ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', recette] + [f'Unnamed: {i}' for i in range(idx + 1, idx + 5)]
         
         # Création du DataFrame pour la recette
         df_recette = Matieres_premiere[cols]
@@ -98,7 +98,7 @@ def check_MP_and_contraints_values(df_mp,df_elmt_and_quality,erreurs):
 
 def check_table_values(df_table,erreurs): 
     # Tableau des MP et des elements chimiques
-    valid_values = df_table [df_table.columns[1:]].apply(lambda x: (x >= 0) & (x <= 100)).all(axis=1)
+    valid_values = df_table [df_table.columns[2:]].apply(lambda x: (x >= 0) & (x <= 100)).all(axis=1)
     if not valid_values.all():
         erreurs.append("Erreur : Certaines valeurs de Tableau A sont en dehors de la plage autorisée (0-100).")
     return

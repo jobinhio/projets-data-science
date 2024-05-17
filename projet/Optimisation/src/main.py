@@ -1,6 +1,8 @@
 import sys
 from os.path import abspath
 import os
+from tqdm import tqdm
+import time
 # Chemin du dossier src
 chemin_src = os.path.join('.', 'src')
 sys.path.append(chemin_src)
@@ -11,9 +13,7 @@ from functions import read_and_check_input_values
 from functions import construire_tableau
 from functions import format_constraints_elements, format_constraints_qualite, format_constraints_MP
 from functions import optimize_with_correction
-from functions import  construct_result_dataframe,export_result,save_errors
-
-
+from functions import  construct_result_dataframe,export_result,save_errors,remove_old_resultats
 def create_optimal_recipe(recette,Tableau_Matiere_Element, contraintes_mp, contraintes_elmt_and_quality,dossier_data):
     df_mp, df_elmt_and_quality = contraintes_mp[recette], contraintes_elmt_and_quality[recette]
 
@@ -39,7 +39,6 @@ def create_optimal_recipe(recette,Tableau_Matiere_Element, contraintes_mp, contr
 
     # Résoudre le problème d'optimisation linéaire
     method = 'simplex' #'interior-point' 'simplex'
-    coefficients = [0.6, 0.65,0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1]
     coefficients = [0.6, 0.65,0.7, 0.75, 0.8, 0.85, 0.9, 0.95]
     res, erreurs = optimize_with_correction(Tableau_Matiere_Element, C, constraints, bounds, method, coefficients)
 
@@ -67,10 +66,14 @@ if __name__ == "__main__":
 
     # On recupere le chemin du dossier data
     dossier_data = os.path.dirname(chemin_fichier)
-    Recettes = ['GS 450-10','GS 400-15','GS 500-7','GS 600-3']
-    for recette in Recettes :
+    # Suppression du vieux resultats
+    remove_old_resultats(dossier_data)
+    # Resolutions du nouveau probleme
+    Recettes = ['GS 400-15','GS 450-10','GS 500-7','GS 600-3']
+    for recette in tqdm(Recettes, desc="Processing recipes", unit="recipe"):
         raw_material_table, mp_constraints, elmt_quality_constraints, errors= read_and_check_input_values(chemin_fichier)
         if errors :
             save_errors(errors, dossier_data,recette)
             break;
         create_optimal_recipe(recette, raw_material_table, mp_constraints,elmt_quality_constraints,dossier_data)
+        time.sleep(0.1)  # Simulate time delay

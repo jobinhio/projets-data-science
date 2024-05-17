@@ -1,1 +1,0 @@
-Erreur : Les valeurs de 'Part Max' doivent être inférieures à 'Part Min'
