@@ -2,6 +2,28 @@ import numpy as np
 import pandas as pd
 from .constants import Impurete_Values, ONO_Values
 
+def create_matrix_A_and_C(table_mp, df_mp_dispo):
+    """
+    Construit la matrice des pourcentages des éléments dans chaque matière première et récupère les prix des matières premières.
+    
+    Args:
+    - table_mp : DataFrame contenant les pourcentages des éléments dans chaque article
+    - df_mp_dispo : DataFrame contenant les prix des matières premières disponibles
+    
+    Returns:
+    - A : Tableau NumPy des pourcentages des éléments dans chaque matière première (transposé)
+    - C : Tableau NumPy contenant les prix des matières premières
+    """
+    # Construction de A : le tableau des pourcentages des éléments dans chaque matière première
+    df_A = table_mp.drop(columns=['Article','Code Article'])
+    A = df_A.to_numpy().T
+
+    # Récupération des prix des matières premières
+    df_C = df_mp_dispo['Prix']
+    C = df_C.to_numpy()
+
+    return A, C
+
 def format_constraints_qualite(df_contraints, A,constraints):
     I = list(Impurete_Values.values())
     O = list(ONO_Values.values())

@@ -2,28 +2,25 @@ import sys
 from os.path import abspath
 import os
 from tqdm import tqdm
-import time
-# Chemin du dossier src
-chemin_src = os.path.join('.', 'src')
-sys.path.append(chemin_src)
+import pandas as pd
 
 
-from functions import Separate_data, nettoyer_dataframe 
+from functions import Separate_data, clean_table_mp  
 from functions import read_and_check_input_values 
-from functions import construire_tableau
-from functions import format_constraints_elements, format_constraints_qualite, format_constraints_MP
+from functions import create_matrix_A_and_C,format_constraints_elements
+from functions import format_constraints_qualite, format_constraints_MP
+from functions import solve_linear_program
 from functions import optimize_with_correction
-from functions import  construct_result_dataframe,export_result,save_errors,remove_old_resultats
-def create_optimal_recipe(recette,Tableau_Matiere_Element, contraintes_mp, contraintes_elmt_and_quality,dossier_data):
-    df_mp, df_elmt_and_quality = contraintes_mp[recette], contraintes_elmt_and_quality[recette]
+from functions import  construct_result_dataframe,export_result,save_errors,remove_old_recipes
+def create_optimal_recipe(recette,table_mp, mp_constraints, elmt_quality_constraints,dossier_data):
+    df_mp, df_elmt_and_quality = mp_constraints[recette], elmt_quality_constraints[recette]
 
-    df_contraints_element, df_contraints_qualite, df_MP_dispo, df_MP_indispo = Separate_data(Tableau_Matiere_Element, df_mp, df_elmt_and_quality)
-
-    # Suppression des matières premières indisponibles
-    Tableau_Matiere_Element = nettoyer_dataframe(Tableau_Matiere_Element, df_MP_indispo)
+    df_contraints_element, df_contraints_qualite, df_mp_dispo, df_mp_indispo = Separate_data(table_mp, df_mp, df_elmt_and_quality)
+    # Suppression des matières premières indisponibles dans
+    table_mp = clean_table_mp(table_mp, df_mp_indispo)
 
     # Construction de la matrice A et du vecteur C
-    A, C = construire_tableau(Tableau_Matiere_Element, df_MP_dispo)
+    A, C = create_matrix_A_and_C(table_mp, df_mp_dispo)
 
     # Initialisation des listes pour les contraintes
     constraints = {'A_eq': {},'b_eq': {},'A_sup': {},'b_sup': {} }
@@ -35,17 +32,18 @@ def create_optimal_recipe(recette,Tableau_Matiere_Element, contraintes_mp, contr
     constraints = format_constraints_qualite(df_contraints_qualite, A,constraints)
 
     # Mettre les contraintes concernant les matières premières disponibles
-    constraints, bounds = format_constraints_MP(df_MP_dispo, constraints)
+    constraints, bounds = format_constraints_MP(df_mp_dispo, constraints)
 
     # Résoudre le problème d'optimisation linéaire
     method = 'simplex' #'interior-point' 'simplex'
     coefficients = [0.6, 0.65,0.7, 0.75, 0.8, 0.85, 0.9, 0.95]
-    res, erreurs = optimize_with_correction(Tableau_Matiere_Element, C, constraints, bounds, method, coefficients)
-
-    # Gestion du resultats
+    # res, erreurs = optimize_with_correction(table_mp, C, constraints, bounds, method, coefficients)
+    res, erreurs = solve_linear_program(C, constraints, bounds,method)
+    
+    # Gestion du recettes
     if not erreurs: 
         # Construire le DataFrame résultats
-        df_res,contraints_res = construct_result_dataframe(res, df_MP_dispo, Tableau_Matiere_Element,constraints)
+        df_res,contraints_res = construct_result_dataframe(res, df_mp_dispo, table_mp,constraints)
         # Écrire le DataFrame résultats dans le fichier Excel
         export_result(df_res, dossier_data, new_sheet_name= recette)
         print("Le problème pour la recette" ,recette,"admet une solution.")
@@ -59,7 +57,7 @@ def create_optimal_recipe(recette,Tableau_Matiere_Element, contraintes_mp, contr
 if __name__ == "__main__":
     # Vérifiez si un chemin de fichier Excel est fourni en argument
     if len(sys.argv) != 2:
-        print("Usage: python main.py chemin_vers_fichier_excel")
+        print("Usage: python main.py recipe_optimization_data")
         sys.exit(1)
     # Récupérez le chemin du fichier Excel à partir des arguments de ligne de commande
     chemin_fichier = abspath(sys.argv[1])
@@ -67,13 +65,12 @@ if __name__ == "__main__":
     # On recupere le chemin du dossier data
     dossier_data = os.path.dirname(chemin_fichier)
     # Suppression du vieux resultats
-    remove_old_resultats(dossier_data)
+    remove_old_recipes(dossier_data)
     # Resolutions du nouveau probleme
-    Recettes = ['GS 400-15','GS 450-10','GS 500-7','GS 600-3']
+    Recettes = [col for col in pd.read_excel(chemin_fichier, engine='calamine', sheet_name=2).columns if 'Unnamed' not in col]
     for recette in tqdm(Recettes, desc="Processing recipes", unit="recipe"):
         raw_material_table, mp_constraints, elmt_quality_constraints, errors= read_and_check_input_values(chemin_fichier)
         if errors :
             save_errors(errors, dossier_data,recette)
             break;
         create_optimal_recipe(recette, raw_material_table, mp_constraints,elmt_quality_constraints,dossier_data)
-        time.sleep(0.1)  # Simulate time delay
