@@ -36,6 +36,7 @@ def create_optimal_recipe(recette,table_mp, mp_constraints, elmt_quality_constra
 
     # Résoudre le problème d'optimisation linéaire
     method = 'simplex' #'interior-point' 'simplex'
+    coefficients = [0.6, 0.65]
     coefficients = [0.6, 0.65,0.7, 0.75, 0.8, 0.85, 0.9, 0.95]
     # res, erreurs = optimize_with_correction(table_mp, C, constraints, bounds, method, coefficients)
     res, erreurs = solve_linear_program(C, constraints, bounds,method)

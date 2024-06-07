@@ -47,7 +47,7 @@ def construct_result_dataframe(res, df_mp_dispo, table_mp, constraints):
     """
     # Constantes pour les seuils Métalliques
     SEUIL_0 = 1e-20
-    SEUIL_1 = 1e-20  # 0.01
+    SEUIL_1 = 0.01  # 1e-20
 
     # Création du DataFrame df_res
     df_res = df_mp_dispo[['Code Article','Article', 'Prix', 'Métallique ?']].copy()

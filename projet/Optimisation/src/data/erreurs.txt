@@ -1,0 +1,6 @@
+Pour la recette GS 500-7:
+Veuillez revoir la valeur de 'Proportion_Total' : 1
+
+Pour la recette GS 600-3:
+Veuillez revoir la valeur de 'Proportion_Total' : 1
+
