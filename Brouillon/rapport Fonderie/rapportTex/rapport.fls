@@ -1,8 +1,8 @@
-PWD c:/Users/congoj/Desktop/Brouillon/rapport Fonderie/rapportTex
+PWD c:/Users/congoj/Desktop/congo/Brouillon/rapport Fonderie/rapportTex
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/congoj/Desktop/Brouillon/rapport Fonderie/rapportTex/rapport.tex
+INPUT c:/Users/congoj/Desktop/congo/Brouillon/rapport Fonderie/rapportTex/rapport.tex
 OUTPUT rapport.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -416,40 +416,36 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
+INPUT ./Images/coule HWS.jpg
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
+INPUT ./Images/Poche 1.pdf
+INPUT ./Images/Poche 1.pdf
+INPUT ./Images/Poche 1.pdf
+INPUT ./Images/Poche 1.pdf
+INPUT ./Images/Poche 1.pdf
+INPUT ./Images/Poche 2.pdf
+INPUT ./Images/Poche 2.pdf
+INPUT ./Images/Poche 2.pdf
+INPUT ./Images/Poche 2.pdf
+INPUT ./Images/Poche 2.pdf
+INPUT ./Images/Poche 3.pdf
+INPUT ./Images/Poche 3.pdf
+INPUT ./Images/Poche 3.pdf
+INPUT ./Images/Poche 3.pdf
+INPUT ./Images/Poche 3.pdf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 OUTPUT rapport.thm
 INPUT rapport.aux

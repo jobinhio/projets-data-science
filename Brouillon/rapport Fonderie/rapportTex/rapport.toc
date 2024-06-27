@@ -9,5 +9,5 @@
 \contentsline {section}{\numberline {3}Optimisation}{7}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Présentation du problème d'Optimisation }{7}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Modélisation du problème}{8}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}La méthode du simplexe}{8}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Mise en oeuvre de la méthode du simplexe}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.3}La méthode du simplexe}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Mise en oeuvre de la méthode du simplexe}{9}{subsection.3.4}%

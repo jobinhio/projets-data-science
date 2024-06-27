@@ -30,8 +30,8 @@ def calcul_K_res_et_longueur_fil(P1, P2, P3, K_visee, eC, temps_traitement, T, S
     """
     
     # Calcul des pertes de magnésium
-    mg_perdu_1 = P1 * temps_traitement * eC
-    mg_perdu_2 = (P1 + P2) * temps_traitement * eP
+    mg_perdu = temps_traitement * eC
+
     
     S1, S2, S3 = S, S, S
     T1, T2, T3 = T, T, T
@@ -48,8 +48,10 @@ def calcul_K_res_et_longueur_fil(P1, P2, P3, K_visee, eC, temps_traitement, T, S
     # Définition des équations
     eq1 = Eq(Q_1,Q_2)
     eq2 = Eq(Q_1,Q_3)
-    eq3 = Eq(K1 * P1 + K2 * P2 + K3 * P3,
-             K_visee * (P1 + P2 + P3) + (mg_perdu_1 + mg_perdu_2))
+    eq3 = Eq(K_visee * (P1 + P2 + P3),
+            K1*P1*( 1 - 2*mg_perdu) + K2*P2*(1 - mg_perdu) + K3*P3)
+
+
     
     # Résolution du système d'équations
     solution = solve((eq1, eq2, eq3), (K1, K2, K3))
@@ -58,12 +60,24 @@ def calcul_K_res_et_longueur_fil(P1, P2, P3, K_visee, eC, temps_traitement, T, S
     K1_res = float(solution[K1])
     K2_res = float(solution[K2])
     K3_res = float(solution[K3])
+
+    # Apres l'ajout des poches
+    pct_mg_coulee1 = K1_res
+    pct_mg_coulee2 = (pct_mg_coulee1*(1 - temps_traitement * eC)*P1 + K2_res*P2)/(P1 + P2)
+    pct_mg_coulee3 = (pct_mg_coulee2*(1 - temps_traitement * eC)*(P1 + P2) + K3_res*P3)/(P1 + P2 + P3)
     
+
+    # pct_mg_coulee1 = K1_res
+    # pct_mg_coulee2 = (pct_mg_coulee1*(1 - temps_traitement * eC)*P1 + K2_res*P2)/((1 - pct_mg_coulee1*temps_traitement * eC)*P1 + P2)
+    # pct_mg_coulee3 = (pct_mg_coulee2*(1 - temps_traitement * eC)*(P1 + P2) + K3_res*P3)/((1 - pct_mg_coulee2*temps_traitement * eC)*(P1 + P2) + P3)
+    
+    # print(K1_res,K2_res,K3_res)
+    # print(pct_mg_coulee1,pct_mg_coulee2,pct_mg_coulee3)
 
     # Longueur de fil pour avoir la masse de Mg manquante
     Q = P1 * (0.76*(S1 - 0.01) + K1_res + t1 * eP) * ((T1 / 1450)**2) / (R * Mg / 100)
     L = Q / (masse_fil* 1e-3)   # en m
-    return K1_res, K2_res, K3_res, L
+    return K1_res, K2_res, K3_res, pct_mg_coulee1, pct_mg_coulee2, pct_mg_coulee3, L
 
 
 def export_result(df, dossier_data):
@@ -108,16 +122,19 @@ def main_fct(chemin_fichier, dossier_courant):
         pd.to_numeric(df2.iloc[7, i], errors='coerce') for i in range(0, 3)
     ]
     pct_mg_fil = masse_mg_fil/masse_fil *100
-
-    K1_res, K2_res, K3_res, L = calcul_K_res_et_longueur_fil(masse_fonte_poche_1, masse_fonte_poche_2, masse_fonte_poche_3, 
+    
+    K1_res, K2_res, K3_res, pct_mg_coulee1, pct_mg_coulee2, pct_mg_coulee3, L = calcul_K_res_et_longueur_fil(masse_fonte_poche_1, masse_fonte_poche_2, masse_fonte_poche_3, 
                                                                 K_visee, pct_perdu_mg_coulee_min, 
                                                                 temps_traitement, tempera_fonte_poche, pct_Soufre, temps_gs, pct_rendement_mg, pct_mg_fil,pct_perdu_mg_poche_min, masse_fil)
             
     # Liste des noms de valeurs à rechercher
     output_name = [
-        'Pourcentage de magnésium dans  la poche de traitement 1 (%)',
-        'Pourcentage de magnésium dans  la poche de traitement 2 (%)',
-        'Pourcentage de magnésium dans  la poche de traitement 3 (%)',
+        'Pourcentage de magnésium résiduel dans  la poche de traitement 1 (%)',
+        'Pourcentage de magnésium résiduel dans  la poche de traitement 2 (%)',
+        'Pourcentage de magnésium résiduel dans la poche de traitement 3 (%)',
+        'Pourcentage de magnésium dans le four de coulée après l\'ajout poche 1 (%)',
+        'Pourcentage de magnésium dans le four de coulée après l\'ajout poche 2 (%)',
+        'Pourcentage de magnésium dans le four de coulée après l\'ajout poche 3 (%)',
         'Longueur théorique du fil fourré à utiliser (en m)'
     ]
 
@@ -143,7 +160,10 @@ def main_fct(chemin_fichier, dossier_courant):
     df_res.loc[indices_lignes_output[0] +1, noms_colonnes_output[0]] = K1_res
     df_res.loc[indices_lignes_output[1] +1, noms_colonnes_output[1]] = K2_res
     df_res.loc[indices_lignes_output[2]+1, noms_colonnes_output[2]] = K3_res
-    df_res.loc[indices_lignes_output[3]+1, noms_colonnes_output[3]] = L
+    df_res.loc[indices_lignes_output[3]+1, noms_colonnes_output[3]] = pct_mg_coulee1
+    df_res.loc[indices_lignes_output[4]+1, noms_colonnes_output[4]] = pct_mg_coulee2
+    df_res.loc[indices_lignes_output[5]+1, noms_colonnes_output[5]] = pct_mg_coulee3
+    df_res.loc[indices_lignes_output[6]+1, noms_colonnes_output[6]] = L
 
     export_result(df_res, dossier_courant )
     return 

@@ -332,87 +332,19 @@ en vue de minimiser les coûts de production tout en préservant la qualité de 
 % (Afficher les images de matières premières de la fonderie)
 \subsection{Modélisation du problème}
 
-\subsection{La méthode du simplexe}
-
-\subsection{Mise en oeuvre de la méthode du simplexe}
-
-\begin{table}[H]
-    \centering
-    \textbf{Poids métriques des principaux éléments contenus}
-    \begin{tabular}{|c|c|c|c|c|}
-        \hline
-        \textbf{Si (g/m)} & \textbf{Mg (g/m)} & \textbf{RE (g/m)} & \textbf{Zr (g/m)} \\
-        \hline
-        130 - 147 & 40 - 45 & 3,0 – 3,5 & 3 – 3,5 \\
-        \hline
-    \end{tabular}
-    \caption{Poids métriques des principaux éléments contenus dans la fonte GS}
-    \label{tab:poids_elements}
-\end{table}
-
-
-
-
-
-\begin{tikzpicture}
-
-% Node with image and title (adjust image dimensions)
-\node (fusion) at (0,0) {\includegraphics[width=3cm,height=2cm]{Images/coule.jpg}};
-\node[below] at (fusion.south) {Fours de Fusion};
-
-% Other nodes and labels (adjust image dimensions)
-\node (cabine) at (3,-3) {\includegraphics[width=3cm,height=2cm]{Images/coule.jpg}};
-\node[below] at (cabine.south) {Cabine de Fil fourré};
-
-\node (coulee) at (6,-3) {\includegraphics[width=3cm,height=2cm]{Images/coule.jpg}};
-\node[below] at (coulee.south) {Poche de Coulée};
-
-\node (Fours) at (9,-3) {\includegraphics[width=3cm,height=2cm]{Images/coule.jpg}};
-\node[below] at (Fours.south) {Fours de Coulée};
-
-\node (Moulage) at (12,-3) {\includegraphics[width=3cm,height=2cm]{Images/coule.jpg}};
-\node[below] at (Moulage.south) {Coulée dans la grappe};
-
-% Informational text
-\node[right=0.1cm of fusion, align=left] {F = 5000 kg};
-
-\node[left=0.1cm of cabine, align=left] {
-    $P_1 = 1250 \text{ kg}$ \\
-    $K_{\text{res1}} = 0.0533 $
-};
-
-\node[above=0.1cm of coulee, align=center] {
-    $C = 1250 \text{ kg}$ \\
-    $K_{\text{final}} = 0.0533 $
-};
-
-% Arrows
-\draw[-{Latex[length=10mm,width=8mm]}, line width=4pt, gray, solid] (fusion) -- (cabine);
-\draw[-{Latex[length=10mm,width=8mm]}, line width=4pt, gray, solid] (cabine) -- (coulee);
-\draw[-{Latex[length=10mm,width=8mm]}, line width=4pt, gray, solid] (coulee) -- (Fours);
-\draw[-{Latex[length=10mm,width=8mm]}, line width=4pt, gray, solid] (Fours) -- (Moulage);
-
-\end{tikzpicture}
-
-
-
-
-
-
-
 \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}
 
     % Node with image and title
-    \node (fusion) at (0,0) {\includegraphics[width=5cm,height=3cm]{Images/coule.jpg}};
+    \node (fusion) at (0,0) {\includegraphics[width=5cm,height=3cm]{Images/coule HWS.jpg}};
     \node[below] at (fusion.south) {Fours de Fusion}; % Title below the node
 
     % Other nodes and labels
-    \node (cabine) at (2,-5) {\includegraphics[width=5cm,height=3cm]{Images/coule.jpg}};
+    \node (cabine) at (2,-5) {\includegraphics[width=5cm,height=3cm]{Images/coule HWS.jpg}};
     \node[below] at (cabine.south) {Cabine de Fil fourré};
 
-    \node (coulee) at (12,-5) {\includegraphics[width=5cm,height=3cm]{Images/coule.jpg}};
+    \node (coulee) at (12,-5) {\includegraphics[width=5cm,height=3cm]{Images/coule HWS.jpg}};
     \node[below] at (coulee.south) {Fours de Coulée};
 
     % Informational text
@@ -439,6 +371,48 @@ en vue de minimiser les coûts de production tout en préservant la qualité de 
     \caption{Etape 1 : Ajout de la poche 1 dans le four de coulée }
     \label{fig:fusion-coulee}
 \end{figure}
+
+
+\subsection{La méthode du simplexe}
+
+\subsection{Mise en oeuvre de la méthode du simplexe}
+
+\begin{table}[H]
+    \centering
+    \textbf{Poids métriques des principaux éléments contenus}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{Si (g/m)} & \textbf{Mg (g/m)} & \textbf{RE (g/m)} & \textbf{Zr (g/m)} \\
+        \hline
+        130 - 147 & 40 - 45 & 3,0 – 3,5 & 3 – 3,5 \\
+        \hline
+    \end{tabular}
+    \caption{Poids métriques des principaux éléments contenus dans la fonte GS}
+    \label{tab:poids_elements}
+\end{table}
+
+
+
+\begin{figure}[htbp]
+    \centering
+    \resizebox{\textwidth}{!}{\includegraphics{Images/Poche 1.pdf}}
+    \caption{Description de l'image}
+
+    \resizebox{\textwidth}{!}{\includegraphics{Images/Poche 2.pdf}}
+    \caption{Description de l'image}
+
+    \resizebox{\textwidth}{!}{\includegraphics{Images/Poche 3.pdf}}
+    \caption{Description de l'image}
+    \label{fig:large_image}
+\end{figure}
+
+
+
+
+Place l'image pdf sur toute la largeur et longueur possible
+
+
+
 
 
 
