@@ -332,66 +332,6 @@ en vue de minimiser les coûts de production tout en préservant la qualité de 
 % (Afficher les images de matières premières de la fonderie)
 \subsection{Modélisation du problème}
 
-\begin{figure}[htbp]
-    \centering
-    \begin{tikzpicture}
-
-    % Node with image and title
-    \node (fusion) at (0,0) {\includegraphics[width=5cm,height=3cm]{Images/coule HWS.jpg}};
-    \node[below] at (fusion.south) {Fours de Fusion}; % Title below the node
-
-    % Other nodes and labels
-    \node (cabine) at (2,-5) {\includegraphics[width=5cm,height=3cm]{Images/coule HWS.jpg}};
-    \node[below] at (cabine.south) {Cabine de Fil fourré};
-
-    \node (coulee) at (12,-5) {\includegraphics[width=5cm,height=3cm]{Images/coule HWS.jpg}};
-    \node[below] at (coulee.south) {Fours de Coulée};
-
-    % Informational text
-    \node[right=0.1cm of fusion, align=left] {F = 5000 kg};
-
-    \node[left=0.1cm of cabine, align=left] {
-        $P_1 = 1250 \text{ kg}$ \\
-        $K_{\text{res1}} = 0.0533 $
-    };
-
-    \node[above=0.1cm of coulee, align=center] {
-        $C = 1250 \text{ kg}$ \\
-        $K_{\text{final}} = 0.0533 $
-    };
-
-    % Arrows
-    \draw[-{Latex[length=10mm,width=8mm]}, line width=4pt, gray, solid] (fusion) -- (cabine);
-    \draw[-{Latex[length=10mm,width=8mm]}, line width=4pt, gray, solid] (cabine) -- (coulee);
-
-    % Additional arrow
-    % \draw[-{Latex[length=10mm,width=8mm]}, line width=4pt, gray, solid] (coulee) -- (fusion);
-
-    \end{tikzpicture}
-    \caption{Etape 1 : Ajout de la poche 1 dans le four de coulée }
-    \label{fig:fusion-coulee}
-\end{figure}
-
-
-\subsection{La méthode du simplexe}
-
-\subsection{Mise en oeuvre de la méthode du simplexe}
-
-\begin{table}[H]
-    \centering
-    \textbf{Poids métriques des principaux éléments contenus}
-    \begin{tabular}{|c|c|c|c|c|}
-        \hline
-        \textbf{Si (g/m)} & \textbf{Mg (g/m)} & \textbf{RE (g/m)} & \textbf{Zr (g/m)} \\
-        \hline
-        130 - 147 & 40 - 45 & 3,0 – 3,5 & 3 – 3,5 \\
-        \hline
-    \end{tabular}
-    \caption{Poids métriques des principaux éléments contenus dans la fonte GS}
-    \label{tab:poids_elements}
-\end{table}
-
-
 
 \begin{figure}[htbp]
     \centering
@@ -408,8 +348,137 @@ en vue de minimiser les coûts de production tout en préservant la qualité de 
 
 
 
+\subsection{La méthode du simplexe}
 
-Place l'image pdf sur toute la largeur et longueur possible
+\subsection{Mise en oeuvre de la méthode du simplexe}
+
+
+
+
+
+
+
+
+
+
+
+\section{Introduction}
+La fonderie est un procédé industriel de fabrication de pièces métalliques en coulant du métal en fusion dans un moule. Ce procédé est utilisé pour produire des pièces complexes et de grande taille qui seraient difficiles ou impossibles à réaliser par d'autres méthodes de fabrication. Dans ce chapitre, nous allons décrire en détail le processus de production utilisé par l'entreprise.
+
+\section{Les étapes du processus de production}
+
+\subsection{Préparation du modèle et du moule}
+La première étape dans la production en fonderie est la préparation du modèle et du moule. Le modèle est une réplique de la pièce finale, généralement réalisée en bois, en plastique ou en métal. Le moule est fabriqué en utilisant le modèle pour créer une cavité dans laquelle le métal en fusion sera coulé. Il existe plusieurs types de moules, mais les plus courants sont les moules en sable.
+
+\subsubsection{Conception du modèle}
+Les ingénieurs conçoivent le modèle en utilisant des logiciels de CAO (Conception Assistée par Ordinateur) pour s'assurer que la pièce finale respectera les spécifications demandées. Cette étape inclut :
+
+\begin{itemize}
+    \item Analyse des besoins du client et des spécifications techniques.
+    \item Création du modèle 3D à l'aide de logiciels spécialisés comme SolidWorks ou CATIA.
+    \item Validation du modèle avec des simulations numériques pour anticiper les contraintes et les défauts potentiels.
+\end{itemize}
+
+\subsubsection{Fabrication du modèle}
+Le modèle est fabriqué à partir de matériaux spécifiques en fonction de la complexité et des exigences de la pièce finale. Les matériaux couramment utilisés incluent :
+
+\begin{itemize}
+    \item Bois pour des pièces uniques ou de grande taille.
+    \item Plastique pour des productions en série grâce à des techniques comme l'impression 3D.
+    \item Métal pour des modèles de haute précision ou des moules permanents.
+\end{itemize}
+
+\subsubsection{Création du moule}
+Le modèle est ensuite utilisé pour créer le moule. Pour les moules en sable, un mélange de sable et de liant est compacté autour du modèle pour créer une cavité exacte de la pièce à produire. Cette étape comprend :
+
+\begin{itemize}
+    \item Préparation du sable en ajustant la granulométrie et en ajoutant des liants.
+    \item Compactage du sable autour du modèle dans un cadre ou une boîte de moulage.
+    \item Séparation du modèle du moule sans détériorer la cavité.
+    \item Assemblage des parties du moule et des canaux de coulée pour guider le métal liquide.
+\end{itemize}
+
+\subsection{Fusion et coulée du métal}
+Une fois le moule préparé, l'étape suivante est la fusion du métal. Cette étape consiste à chauffer le métal jusqu'à ce qu'il devienne liquide.
+
+\subsubsection{Sélection du métal}
+Le choix du métal dépend des propriétés souhaitées pour la pièce finale. Les métaux couramment utilisés incluent :
+
+\begin{itemize}
+    \item Fer et ses alliages pour des applications nécessitant une grande résistance.
+    \item Aluminium pour des pièces légères avec une bonne conductivité thermique.
+    \item Cuivre et ses alliages pour des pièces nécessitant une haute conductivité électrique.
+\end{itemize}
+
+\subsubsection{Fusion}
+Le métal est fondu dans un four à haute température. Il existe plusieurs types de fours utilisés en fonderie, tels que :
+
+\begin{itemize}
+    \item Les fours à induction, qui chauffent le métal par des courants induits.
+\end{itemize}
+
+\subsubsection{Coulée}
+Une fois fondu, le métal est versé dans le moule à travers un système de canaux appelés « systèmes de coulée ». Le métal liquide remplit la cavité du moule et prend la forme du modèle. Cette étape nécessite une attention particulière pour :
+
+\begin{itemize}
+    \item Contrôler la température du métal pour éviter des défauts comme les inclusions ou les porosités.
+    \item Utiliser des techniques de dégazage pour éliminer les gaz dissous dans le métal.
+    \item Assurer un remplissage uniforme et éviter les turbulences qui pourraient introduire des impuretés.
+\end{itemize}
+
+\subsection{Refroidissement et solidification}
+Après la coulée, le métal liquide doit refroidir et se solidifier pour prendre la forme finale de la pièce. Le temps de refroidissement varie en fonction du type de métal et de la taille de la pièce.
+
+\subsubsection{Contrôle du refroidissement}
+Un refroidissement contrôlé est essentiel pour éviter les défauts dans la pièce finale. Des systèmes de refroidissement peuvent être utilisés pour réguler la température, comme :
+
+\begin{itemize}
+    \item L'utilisation de noyaux refroidisseurs en métal ou en céramique.
+    \item L'application de traitements thermiques pendant le refroidissement pour modifier la structure du métal.
+    \item La mise en place de systèmes de refroidissement à eau ou à air pour des pièces de grande taille.
+\end{itemize}
+
+\subsubsection{Démoulage}
+Une fois le métal solidifié, le moule est cassé ou retiré pour récupérer la pièce. Pour les moules en sable, le moule est détruit pour libérer la pièce coulée. Cette étape peut inclure :
+
+\begin{itemize}
+    \item Le cassage manuel ou mécanique du moule.
+    \item Le nettoyage de la pièce pour enlever les résidus de sable ou de liant.
+    \item L'inspection initiale de la pièce pour détecter des défauts majeurs.
+\end{itemize}
+
+\subsection{Finition et inspection}
+La pièce obtenue après démoulage n'est pas encore prête pour une utilisation directe. Elle doit subir plusieurs opérations de finition et une inspection de qualité rigoureuse.
+
+\subsubsection{Ébarbage}
+Les excédents de métal et les bavures sont enlevés par des opérations de meulage ou de découpage. Cela inclut :
+
+\begin{itemize}
+    \item L'utilisation de meuleuses, de scies ou de cisailles pour enlever les excès.
+    \item Le polissage des surfaces pour obtenir la finition souhaitée.
+\end{itemize}
+
+\subsubsection{Traitements thermiques}
+La pièce peut subir des traitements thermiques pour améliorer ses propriétés mécaniques, tels que :
+
+\begin{itemize}
+    \item La trempe, pour augmenter la dureté et la résistance.
+    \item Le recuit, pour réduire les contraintes internes et améliorer la ductilité.
+    \item Le revenu, pour ajuster la dureté et la ténacité après la trempe.
+\end{itemize}
+
+\subsubsection{Inspection de qualité}
+La pièce est inspectée pour détecter tout défaut interne ou externe. Les méthodes d'inspection incluent :
+
+\begin{itemize}
+    \item La radiographie, pour détecter les défauts internes comme les fissures ou les inclusions.
+    \item Les ultrasons, pour examiner l'intégrité interne sans détruire la pièce.
+    \item Les tests de dureté, pour vérifier que les propriétés mécaniques sont conformes aux spécifications.
+    \item Les contrôles dimensionnels, pour s'assurer que les dimensions respectent les tolérances définies.
+\end{itemize}
+
+\section{Conclusion}
+Le processus de production en fonderie est complexe et implique plusieurs étapes cruciales pour garantir la qualité et la précision des pièces fabriquées. Chaque étape, de la conception du modèle à l'inspection finale, doit être réalisée avec précision pour répondre aux exigences spécifiques du client. La maîtrise de ces processus est essentielle pour l'efficacité et la compétitivité de l'entreprise dans le secteur de la fonderie. En conclusion, une compréhension approfondie et une exécution rigoureuse de chaque phase du processus de production sont indispensables pour produire des pièces de haute qualité et satisfaire les besoins du marché.
 
 
 

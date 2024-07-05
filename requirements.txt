@@ -1,99 +1,28 @@
-\subsection{Contexte}
+Optimisation : 
 
-Dans ce stage, on cherche à optimiser la production de la fontes GS à chaque étape 
-de son processus de productions. Voici un schema decrivant les differents etapes de 
-la production de la fonte GS :
+    pip install tqdm
+    pip install pandas
+    pip install scipy
+    pip install openpyxl
+    pip install python-calamine
 
 
+Statistique : 
 
+    pip install seaborn
+    pip install plotly
+    pip install statsmodels
+    pip install xlsxwriter
+    pip install -U kaleido
 
-\begin{figure}[H]
-    \centering
-    \textbf{\Large \underline{Processus de Production de la fonte GS}}
-    \vspace{0.5cm}
-
-    \begin{tikzpicture}
-        % Style des noeuds
-        \tikzstyle{process} = [rectangle, rounded corners, minimum width=3.5cm, minimum height=1cm, text centered, draw=black, drop shadow, fill=white]
-        \tikzstyle{arrow} = [thick,->,>=stealth, line width=2pt]
-
-        % Couleurs dégradées pour les noeuds
-        \node (material) [process, top color=blue!20, bottom color=blue!50] {Chargement des matériaux};
-        \node (fusion) [process, top color=green!20, bottom color=green!50, below=1.5cm of material] {Fusion};
-        \node (Sphéroïdisation) [process, top color=yellow!20, bottom color=yellow!50, below=1.5cm of fusion] {Sphéroïdisation};
-        \node (Inoculation) [process, top color=yellow!20, bottom color=yellow!50, below=1.5cm of Sphéroïdisation] {Inoculation};
-        \node (Coulée) [process, top color=orange!20, bottom color=orange!50, below=1.5cm of Inoculation] {Coulée/Moulage};
-        \node (Moulage) [process, top color=orange!20, bottom color=orange!50, below=1.5cm of Coulée] {Moulage};
-        \node (usinage) [process, top color=red!20, bottom color=red!50, below=1.5cm of Moulage] {Ebarbage/Usinage};
-        \node (controle) [process, top color=purple!20, bottom color=purple!50, below=1.5cm of usinage] {Contrôle qualité};
-        \node (livraison) [process, top color=pink!20, bottom color=pink!50, below=1.5cm of controle] {Livraison};
-
-        % Flèches
-        \draw [arrow] (material) -- (fusion);
-        \draw [arrow] (fusion) -- (Sphéroïdisation);
-        \draw [arrow] (Sphéroïdisation) -- (Inoculation);
-        \draw [arrow] (Inoculation) -- (Coulée);
-        \draw [arrow] (Coulée) -- (Moulage);
-        \draw [arrow] (Moulage) -- (usinage);
-        \draw [arrow] (usinage) -- (controle);
-        \draw [arrow] (controle) -- (livraison);
-    \end{tikzpicture}
-\end{figure}
-
-\begin{enumerate}
-    \item \textbf{Chargement des matériaux :} Cette étape implique la préparation du 
-    matériau de base qui sera utilisé pour produire la fonte GS. Cela peut inclure 
-    le tri, le nettoyage et éventuellement le mélange des matières premières pour 
-    obtenir la composition désirée.
     
-    \item \textbf{Fusion :} Le matériau préparé est fondu dans un four à haute 
-    température pour le rendre liquide. Cette fusion est essentielle pour permettre 
-    le moulage ultérieur du matériau.
-    
-    \item \textbf{Sphéroïdisation :} Après la fusion, le matériau fondu est traité 
-    pour favoriser la formation de sphéroïdes de graphite dans la matrice métallique.
-    Cela améliore les propriétés mécaniques de la fonte, comme sa ductilité et sa 
-    résistance.
-    
-    \item \textbf{Inoculation :} Dans cette étape, des agents d'inoculation sont 
-    ajoutés au métal fondu pour contrôler la structure et les propriétés finales de 
-    la fonte GS. Ces agents favorisent la formation de sphéroïdes de graphite de 
-    taille et de forme uniformes.
-    
-    \item \textbf{Moulage :} Le métal fondu est versé dans des moules qui ont la 
-    forme et les dimensions souhaitées pour les pièces finales. Le processus de 
-    moulage peut être effectué selon différentes techniques, telles que le moulage 
-    au sable ou le moulage sous pression, en fonction des exigences spécifiques du 
-    produit.
-    
-    \item \textbf{Usinage :} Une fois refroidies et solidifiées, les pièces moulées 
-    peuvent nécessiter un usinage supplémentaire pour obtenir les dimensions finales 
-    et la surface lisse souhaitée. Cela peut impliquer des opérations telles que le 
-    tournage, le fraisage ou le perçage.
-    
-    \item \textbf{Contrôle qualité :} Avant la livraison des pièces finales, un 
-    contrôle qualité est effectué pour s'assurer qu'elles répondent aux normes et 
-    aux spécifications requises. Cela peut inclure des tests de dimension, de 
-    résistance, de ductilité, ainsi que des inspections visuelles et des tests non 
-    destructifs.
-    
-    \item \textbf{Livraison :} Une fois les pièces passées avec succès les contrôles 
-    qualité, elles sont prêtes à être livrées au client ou au processus suivant dans 
-    la chaîne de production. Cette étape marque la conclusion du processus de 
-    production de la fonte GS.
-\end{enumerate}
+    pip install nbformat
 
 
-Donne plus de détails à chaque partie grace au images fournis
-
-
-Tu es un etudiant qui doit rediger un rapport de stage, en particulier 
-le contexte du stage. Pour cela ecris en latex un paragraphe qui :
-- definit et presente les fontes GS
-- developper sur les particularite des fontes GS
+Excecutable :
 
 
 
 
 
---------------------------------------------------------------------------
+
