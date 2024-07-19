@@ -47,7 +47,7 @@ def construct_result_dataframe(res, df_mp_dispo, table_mp, constraints):
     """
     # Constantes pour les seuils Métalliques
     SEUIL_0 = 1e-20
-    SEUIL_1 = 0.01  # 1e-20
+    SEUIL_1 = 1e-20 # 1e-20 0.01
 
     # Création du DataFrame df_res
     df_res = df_mp_dispo[['Code Article','Article', 'Prix', 'Métallique ?']].copy()
@@ -175,4 +175,15 @@ def save_errors(erreurs, dossier_data,recette):
         f.write("\n")
     return 
 
-
+def gestion_resultats(erreurs, res, df_mp_dispo, table_mp, constraints, dossier_data, recette):
+    if not erreurs:
+        # Construire le DataFrame résultats
+        df_res, contraints_res = construct_result_dataframe(res, df_mp_dispo, table_mp, constraints)
+        # Écrire le DataFrame résultats dans le fichier Excel
+        export_result(df_res, dossier_data, new_sheet_name=recette)
+        print(f"Le problème pour la recette {recette} admet une solution.")
+    else:
+        # Sauvegarder les erreurs dans un fichier texte
+        save_errors(erreurs, dossier_data, recette)
+        print(f"Les erreurs du problème {recette} ont été enregistrées dans un fichier.")
+    return 
