@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.23)  23 APR 2024 10:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.23)  15 JUL 2024 14:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/congoj/Desktop/Brouillon/Fonderie/Presentation.tex
-(c:/Users/congoj/Desktop/Brouillon/Fonderie/Presentation.tex
+**"c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex"
+(c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (c:/texlive/2024/texmf-dist/tex/latex/beamer/beamer.cls
@@ -991,7 +991,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 13.
- (./Presentation.out) (./Presentation.out)
 \@outlinefile=\write6
 \openout6 = `Presentation.out'.
 
@@ -1086,11 +1085,29 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 13--13
 [][][]  
  []
 
-<imagem3.png, id=50, 1196.97188pt x 145.29282pt>
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 13.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 13.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:13: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \begin{document}
+                     
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 13.
+(c:/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 13--13
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 13
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1099,7 +1116,7 @@ Overfull \hbox (55.38643pt too wide) detected at line 13
 
 
 pdfTeX warning: pdflatex.exe (file ./background.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<background.pdf, id=90, 845.19934pt x 474.09216pt>
+<background.pdf, id=61, 845.19934pt x 474.09216pt>
 File: background.pdf Graphic file (type pdf)
 <use background.pdf>
 Package pdftex.def Info: background.pdf  used on input line 15.
@@ -1118,16 +1135,32 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 17--17
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 17.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 17.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:17: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \maketitle
+               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 17--17
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 17
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-<Figures/logo-Fonderie.pdf, id=131, 632.3625pt x 199.74625pt>
+<Figures/logo-Fonderie.pdf, id=102, 632.3625pt x 199.74625pt>
 File: Figures/logo-Fonderie.pdf Graphic file (type pdf)
 <use Figures/logo-Fonderie.pdf>
 Package pdftex.def Info: Figures/logo-Fonderie.pdf  used on input line 17.
@@ -1180,7 +1213,7 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 
 pdfTeX warning: pdflatex.exe (file ./Figures/logo-unistra.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures/logo-unistra.pdf, id=132, 846.0231pt x 321.56834pt>
+<Figures/logo-unistra.pdf, id=103, 846.0231pt x 321.56834pt>
 File: Figures/logo-unistra.pdf Graphic file (type pdf)
 <use Figures/logo-unistra.pdf>
 Package pdftex.def Info: Figures/logo-unistra.pdf  used on input line 17.
@@ -1188,7 +1221,7 @@ Package pdftex.def Info: Figures/logo-unistra.pdf  used on input line 17.
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/logoCSMI.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures/logoCSMI.pdf, id=133, 846.34946pt x 557.26945pt>
+<Figures/logoCSMI.pdf, id=104, 846.34946pt x 557.26945pt>
 File: Figures/logoCSMI.pdf Graphic file (type pdf)
 <use Figures/logoCSMI.pdf>
 Package pdftex.def Info: Figures/logoCSMI.pdf  used on input line 17.
@@ -1214,20 +1247,53 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 32--32
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 32.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 32.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:32: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \end{frame}
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 32--32
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 32
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-(./Presentation.toc) (./Presentation.toc)
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 32.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+No file Presentation.toc.
+No file Presentation.toc.
+
+LaTeX Warning: File `imagem3.png' not found on input line 32.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:32: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \end{frame}
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1240,25 +1306,57 @@ Overfull \hbox (455.24405pt too wide) has occurred while \output is active
 
 [2
 
- <./imagem3.png>]
+]
 Overfull \hbox (455.24405pt too wide) in paragraph at lines 34--34
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 34.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 34.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:34: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \section{Contexte  et Objectifs}
+                                     
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 34--34
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 34
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-(./Presentation.toc)
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 34.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+No file Presentation.toc.
+
+LaTeX Warning: File `imagem3.png' not found on input line 34.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:34: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \section{Contexte  et Objectifs}
+                                     
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1276,10 +1374,26 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 57--57
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 57.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 57.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:57: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 \end{frame}
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 57--57
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 57
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1297,10 +1411,26 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 57.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7.6> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 57.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 57.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 57.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:57: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 \end{frame}
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1318,20 +1448,52 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 60--60
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 60.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 60.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:60: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 \section{Les données}
+                           
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 60--60
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 60
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-(./Presentation.toc)
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 60.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+No file Presentation.toc.
+
+LaTeX Warning: File `imagem3.png' not found on input line 60.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:60: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 \section{Les données}
+                           
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1349,19 +1511,51 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 81--81
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 81.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 81.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:81: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.81 \end{frame}
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 81--81
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 81
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 81.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 81.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:81: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.81 \end{frame}
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1379,10 +1573,26 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 92--92
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 92.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 92.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:92: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 \end{frame}
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 92--92
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 92
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1391,7 +1601,7 @@ Overfull \hbox (55.38643pt too wide) detected at line 92
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/DonnéesBrut1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures/DonnéesBrut1.pdf, id=802, 661.47125pt x 67.25125pt>
+<Figures/DonnéesBrut1.pdf, id=751, 661.47125pt x 67.25125pt>
 File: Figures/DonnéesBrut1.pdf Graphic file (type pdf)
 <use Figures/DonnéesBrut1.pdf>
 Package pdftex.def Info: Figures/DonnéesBrut1.pdf  used on input line 92.
@@ -1399,7 +1609,7 @@ Package pdftex.def Info: Figures/DonnéesBrut1.pdf  used on input line 92.
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/DonnéesBrut2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures/DonnéesBrut2.pdf, id=803, 659.46375pt x 67.25125pt>
+<Figures/DonnéesBrut2.pdf, id=752, 659.46375pt x 67.25125pt>
 File: Figures/DonnéesBrut2.pdf Graphic file (type pdf)
 <use Figures/DonnéesBrut2.pdf>
 Package pdftex.def Info: Figures/DonnéesBrut2.pdf  used on input line 92.
@@ -1407,15 +1617,31 @@ Package pdftex.def Info: Figures/DonnéesBrut2.pdf  used on input line 92.
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/DonnéesBrut3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures/DonnéesBrut3.pdf, id=804, 621.32124pt x 61.22874pt>
+<Figures/DonnéesBrut3.pdf, id=753, 621.32124pt x 61.22874pt>
 File: Figures/DonnéesBrut3.pdf Graphic file (type pdf)
 <use Figures/DonnéesBrut3.pdf>
 Package pdftex.def Info: Figures/DonnéesBrut3.pdf  used on input line 92.
 (pdftex.def)             Requested size: 398.3386pt x 39.25444pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 92.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 92.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:92: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 \end{frame}
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1439,19 +1665,51 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 144--144
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 144.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 144.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:144: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.144 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 144--144
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 144
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 144.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 144.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:144: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.144 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1469,19 +1727,51 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 167--167
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 167.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 167.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:167: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.167 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 167--167
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 167
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 167.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 167.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:167: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.167 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1499,10 +1789,26 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 175--175
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 175.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 175.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:175: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 175--175
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 175
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1511,7 +1817,7 @@ Overfull \hbox (55.38643pt too wide) detected at line 175
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/DonnéesClean1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures/DonnéesClean1.pdf, id=1164, 667.49374pt x 79.29625pt>
+<Figures/DonnéesClean1.pdf, id=1112, 667.49374pt x 79.29625pt>
 File: Figures/DonnéesClean1.pdf Graphic file (type pdf)
 <use Figures/DonnéesClean1.pdf>
 Package pdftex.def Info: Figures/DonnéesClean1.pdf  used on input line 175.
@@ -1519,15 +1825,31 @@ Package pdftex.def Info: Figures/DonnéesClean1.pdf  used on input line 175.
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/DonnéesClean2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures/DonnéesClean2.pdf, id=1165, 653.44125pt x 67.25125pt>
+<Figures/DonnéesClean2.pdf, id=1113, 653.44125pt x 67.25125pt>
 File: Figures/DonnéesClean2.pdf Graphic file (type pdf)
 <use Figures/DonnéesClean2.pdf>
 Package pdftex.def Info: Figures/DonnéesClean2.pdf  used on input line 175.
 (pdftex.def)             Requested size: 398.3386pt x 40.9965pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 175.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 175.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:175: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1548,20 +1870,52 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 177--177
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 177.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 177.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:177: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 \section{Les indicateurs}
+                               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 177--177
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 177
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-(./Presentation.toc)
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 177.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+No file Presentation.toc.
+
+LaTeX Warning: File `imagem3.png' not found on input line 177.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:177: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 \section{Les indicateurs}
+                               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1579,10 +1933,26 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 203--203
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 203.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 203.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:203: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.203 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 203--203
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 203
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1612,13 +1982,29 @@ Overfull \hbox (20.6874pt too wide) detected at line 203
  []
 
 
-Overfull \vbox (3.48637pt too high) detected at line 203
+Overfull \vbox (3.48598pt too high) detected at line 203
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 203.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 203.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:203: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.203 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1636,19 +2022,51 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 225--225
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 225.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 225.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:225: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 225--225
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 225
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 225.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 225.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:225: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1666,10 +2084,26 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 247--247
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 247.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 247.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:247: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 247--247
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 247
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1678,15 +2112,31 @@ Overfull \hbox (55.38643pt too wide) detected at line 247
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/Matrice_corrélation_qualite_indicateur.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures/Matrice_corrélation_qualite_indicateur.pdf, id=1624, 503.7229pt x 283.86217pt>
+<Figures/Matrice_corrélation_qualite_indicateur.pdf, id=1566, 503.7229pt x 283.86217pt>
 File: Figures/Matrice_corrélation_qualite_indicateur.pdf Graphic file (type pdf)
 <use Figures/Matrice_corrélation_qualite_indicateur.pdf>
 Package pdftex.def Info: Figures/Matrice_corrélation_qualite_indicateur.pdf  used on input line 247.
 (pdftex.def)             Requested size: 199.1693pt x 112.23477pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 247.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 247.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:247: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1704,20 +2154,52 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 251--251
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 251.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 251.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:251: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.251 \section{Les éléments chimiques}
+                                        
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 251--251
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 251
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-(./Presentation.toc)
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 251.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+No file Presentation.toc.
+
+LaTeX Warning: File `imagem3.png' not found on input line 251.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:251: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.251 \section{Les éléments chimiques}
+                                        
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1735,19 +2217,51 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 272--272
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 272.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 272.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:272: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.272 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 272--272
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 272
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 272.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 272.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:272: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.272 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1765,10 +2279,26 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 293--293
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 293.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 293.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:293: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.293 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 293--293
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 293
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1777,15 +2307,31 @@ Overfull \hbox (55.38643pt too wide) detected at line 293
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/Matrice_corrélation_Impurete_Elements.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures/Matrice_corrélation_Impurete_Elements.pdf, id=1948, 437.23436pt x 282.46303pt>
+<Figures/Matrice_corrélation_Impurete_Elements.pdf, id=1884, 437.23436pt x 282.46303pt>
 File: Figures/Matrice_corrélation_Impurete_Elements.pdf Graphic file (type pdf)
 <use Figures/Matrice_corrélation_Impurete_Elements.pdf>
 Package pdftex.def Info: Figures/Matrice_corrélation_Impurete_Elements.pdf  used on input line 293.
 (pdftex.def)             Requested size: 199.1693pt x 128.67172pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 293.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 293.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:293: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.293 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1803,10 +2349,26 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 316--316
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 316.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 316.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:316: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.316 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 316--316
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 316
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1816,10 +2378,26 @@ File: Figures/Matrice_corrélation_qualite_indicateur.pdf Graphic file (type pdf
 <use Figures/Matrice_corrélation_qualite_indicateur.pdf>
 Package pdftex.def Info: Figures/Matrice_corrélation_qualite_indicateur.pdf  used on input line 316.
 (pdftex.def)             Requested size: 199.1693pt x 112.23477pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 316.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 316.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:316: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.316 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1837,10 +2415,26 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 337--337
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 337.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 337.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:337: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.337 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 337--337
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 337
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1850,10 +2444,26 @@ File: Figures/Matrice_corrélation_qualite_indicateur.pdf Graphic file (type pdf
 <use Figures/Matrice_corrélation_qualite_indicateur.pdf>
 Package pdftex.def Info: Figures/Matrice_corrélation_qualite_indicateur.pdf  used on input line 337.
 (pdftex.def)             Requested size: 199.1693pt x 112.23477pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 337.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 337.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:337: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.337 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1871,19 +2481,51 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 368--368
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 368.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 368.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:368: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.368 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 368--368
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 368
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 368.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 368.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:368: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.368 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1901,20 +2543,52 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 374--374
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 374.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 374.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:374: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.374 \section{Les valeurs extrêmes}
+                                     
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 374--374
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 374
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-(./Presentation.toc)
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 374.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+No file Presentation.toc.
+
+LaTeX Warning: File `imagem3.png' not found on input line 374.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:374: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.374 \section{Les valeurs extrêmes}
+                                     
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1932,19 +2606,51 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 390--390
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 390.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 390.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:390: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.390 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 390--390
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 390
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 390.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 390.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:390: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.390 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -1962,29 +2668,61 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 398--398
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 398.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 398.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:398: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.398 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 398--398
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 398
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-<Figures/Impureté_sans_extreme.pdf, id=2588, 1057.9525pt x 756.8275pt>
+<Figures/Impureté_sans_extreme.pdf, id=2519, 1057.9525pt x 756.8275pt>
 File: Figures/Impureté_sans_extreme.pdf Graphic file (type pdf)
 <use Figures/Impureté_sans_extreme.pdf>
 Package pdftex.def Info: Figures/Impureté_sans_extreme.pdf  used on input line 398.
 (pdftex.def)             Requested size: 178.97781pt x 128.03537pt.
-<Figures/Impureté_avec_extreme.pdf, id=2589, 1057.9525pt x 756.8275pt>
+<Figures/Impureté_avec_extreme.pdf, id=2520, 1057.9525pt x 756.8275pt>
 File: Figures/Impureté_avec_extreme.pdf Graphic file (type pdf)
 <use Figures/Impureté_avec_extreme.pdf>
 Package pdftex.def Info: Figures/Impureté_avec_extreme.pdf  used on input line 398.
 (pdftex.def)             Requested size: 178.97781pt x 128.03537pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 398.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 398.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:398: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.398 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2008,20 +2746,52 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 402--402
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 402.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 402.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:402: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.402 \section{La régression linéaire }
+                                         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 402--402
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 402
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-(./Presentation.toc)
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 402.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+No file Presentation.toc.
+
+LaTeX Warning: File `imagem3.png' not found on input line 402.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:402: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.402 \section{La régression linéaire }
+                                         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2039,19 +2809,51 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 424--424
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 424.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 424.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:424: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.424 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 424--424
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 424
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 424.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 424.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:424: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.424 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2069,29 +2871,61 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 443--443
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 443.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 443.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:443: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.443 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 443--443
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 443
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-<Figures/Regression_Impurete_Sn.pdf, id=2932, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Impurete_Sn.pdf, id=2856, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Impurete_Sn.pdf Graphic file (type pdf)
 <use Figures/Regression_Impurete_Sn.pdf>
 Package pdftex.def Info: Figures/Regression_Impurete_Sn.pdf  used on input line 443.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-<Figures/Regression_Impurete_Cu.pdf, id=2933, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Impurete_Cu.pdf, id=2857, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Impurete_Cu.pdf Graphic file (type pdf)
 <use Figures/Regression_Impurete_Cu.pdf>
 Package pdftex.def Info: Figures/Regression_Impurete_Cu.pdf  used on input line 443.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 443.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 443.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:443: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.443 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2109,29 +2943,61 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 461--461
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 461.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 461.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:461: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.461 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 461--461
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 461
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-<Figures/Regression_Ono_Cu.pdf, id=3060, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Ono_Cu.pdf, id=2985, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Ono_Cu.pdf Graphic file (type pdf)
 <use Figures/Regression_Ono_Cu.pdf>
 Package pdftex.def Info: Figures/Regression_Ono_Cu.pdf  used on input line 461.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-<Figures/Regression_Ono_Cr.pdf, id=3061, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Ono_Cr.pdf, id=2986, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Ono_Cr.pdf Graphic file (type pdf)
 <use Figures/Regression_Ono_Cr.pdf>
 Package pdftex.def Info: Figures/Regression_Ono_Cr.pdf  used on input line 461.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 461.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 461.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:461: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.461 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2149,29 +3015,61 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 479--479
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 479.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 479.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:479: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.479 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 479--479
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 479
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-<Figures/Regression_Ferrite_Cu.pdf, id=3189, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Ferrite_Cu.pdf, id=3114, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Ferrite_Cu.pdf Graphic file (type pdf)
 <use Figures/Regression_Ferrite_Cu.pdf>
 Package pdftex.def Info: Figures/Regression_Ferrite_Cu.pdf  used on input line 479.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-<Figures/Regression_Ferrite_Sb.pdf, id=3190, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Ferrite_Sb.pdf, id=3115, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Ferrite_Sb.pdf Graphic file (type pdf)
 <use Figures/Regression_Ferrite_Sb.pdf>
 Package pdftex.def Info: Figures/Regression_Ferrite_Sb.pdf  used on input line 479.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 479.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 479.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:479: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.479 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2189,29 +3087,61 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 498--498
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 498.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 498.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:498: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.498 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 498--498
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 498
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-<Figures/Regression_Cu_Rm.pdf, id=3318, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Cu_Rm.pdf, id=3242, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Cu_Rm.pdf Graphic file (type pdf)
 <use Figures/Regression_Cu_Rm.pdf>
 Package pdftex.def Info: Figures/Regression_Cu_Rm.pdf  used on input line 498.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-<Figures/Regression_Sn_Rm.pdf, id=3319, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Sn_Rm.pdf, id=3243, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Sn_Rm.pdf Graphic file (type pdf)
 <use Figures/Regression_Sn_Rm.pdf>
 Package pdftex.def Info: Figures/Regression_Sn_Rm.pdf  used on input line 498.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 498.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 498.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:498: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.498 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2229,29 +3159,61 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 515--515
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 515.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 515.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:515: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.515 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 515--515
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 515
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-<Figures/Regression_Cr_Rm.pdf, id=3447, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Cr_Rm.pdf, id=3371, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Cr_Rm.pdf Graphic file (type pdf)
 <use Figures/Regression_Cr_Rm.pdf>
 Package pdftex.def Info: Figures/Regression_Cr_Rm.pdf  used on input line 515.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-<Figures/Regression_Cr_Allongement.pdf, id=3448, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Cr_Allongement.pdf, id=3372, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Cr_Allongement.pdf Graphic file (type pdf)
 <use Figures/Regression_Cr_Allongement.pdf>
 Package pdftex.def Info: Figures/Regression_Cr_Allongement.pdf  used on input line 515.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 515.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 515.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:515: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.515 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2269,29 +3231,61 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 533--533
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 533.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 533.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:533: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.533 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 533--533
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 533
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-<Figures/Regression_Cu_Allongement.pdf, id=3576, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Cu_Allongement.pdf, id=3500, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Cu_Allongement.pdf Graphic file (type pdf)
 <use Figures/Regression_Cu_Allongement.pdf>
 Package pdftex.def Info: Figures/Regression_Cu_Allongement.pdf  used on input line 533.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-<Figures/Regression_Sn_Allongement.pdf, id=3577, 1053.9375pt x 752.8125pt>
+<Figures/Regression_Sn_Allongement.pdf, id=3501, 1053.9375pt x 752.8125pt>
 File: Figures/Regression_Sn_Allongement.pdf Graphic file (type pdf)
 <use Figures/Regression_Sn_Allongement.pdf>
 Package pdftex.def Info: Figures/Regression_Sn_Allongement.pdf  used on input line 533.
 (pdftex.def)             Requested size: 199.1693pt x 142.25475pt.
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 533.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 533.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:533: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.533 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2309,20 +3303,52 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 538--538
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 538.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 538.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:538: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.538 \section{Conclusion}
+                          
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 538--538
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 538
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-(./Presentation.toc)
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 538.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+No file Presentation.toc.
+
+LaTeX Warning: File `imagem3.png' not found on input line 538.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:538: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.538 \section{Conclusion}
+                          
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2340,19 +3366,51 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 566--566
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 566.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 566.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:566: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.566 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 566--566
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 566
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 566.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 566.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:566: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.566 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2370,19 +3428,51 @@ Overfull \hbox (455.24405pt too wide) in paragraph at lines 573--573
 [][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 573.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 573.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:573: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.573 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) in paragraph at lines 573--573
+[][]  
+ []
+
 
 Overfull \hbox (55.38643pt too wide) detected at line 573
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
  []
 
-File: imagem3.png Graphic file (type png)
-<use imagem3.png>
-Package pdftex.def Info: imagem3.png  used on input line 573.
-(pdftex.def)             Requested size: 455.2376pt x 34.14381pt.
+
+LaTeX Warning: File `imagem3.png' not found on input line 573.
+
+
+c:/Users/congoj/Desktop/congo/Brouillon/Presentation Orale/Presentation.tex:573: Package pdftex.def Error: File `imagem3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.573 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (0.12543pt too wide) has occurred while \output is active
+[][] 
+ []
+
 
 Overfull \hbox (55.38643pt too wide) has occurred while \output is active
   [] [][][] [][][][][][][] [][][][][] [][][][][][][] [][][][] [][][][][][][][][] [][][][]  
@@ -2410,22 +3500,29 @@ Overfull \hbox (455.24405pt too wide) has occurred while \output is active
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
-Package rerunfilecheck Info: File `Presentation.out' has not changed.
-(rerunfilecheck)             Checksum: C844B5C3AA627086213D4250BDA3BE45;962.
+
+
+Package rerunfilecheck Warning: File `Presentation.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Presentation.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  C844B5C3AA627086213D4250BDA3BE45;962.
  ) 
 Here is how much of TeX's memory you used:
- 28662 strings out of 476020
- 533940 string characters out of 5791981
+ 28641 strings out of 476020
+ 533031 string characters out of 5791981
  1963496 words of memory out of 5000000
- 50047 multiletter control sequences out of 15000+600000
- 641489 words of font info for 158 fonts, out of 8000000 for 9000
+ 50043 multiletter control sequences out of 15000+600000
+ 642110 words of font info for 160 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 101i,20n,107p,445b,1107s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on Presentation.pdf (34 pages, 2089869 bytes).
+ 101i,20n,107p,463b,817s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on Presentation.pdf (34 pages, 2014435 bytes).
 PDF statistics:
- 4034 PDF objects out of 4296 (max. 8388607)
- 2459 compressed objects within 25 object streams
+ 3955 PDF objects out of 4296 (max. 8388607)
+ 2382 compressed objects within 24 object streams
  76 named destinations out of 1000 (max. 500000)
- 282 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
