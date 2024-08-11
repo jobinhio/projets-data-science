@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.7.29)  5 AUG 2024 18:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.7.29)  10 AUG 2024 14:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -771,24 +771,24 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 
-pdfTeX warning: pdflatex (file ./Images/logo-unistra.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/logo-unistra.pdf, id=87, 846.0231pt x 321.56834pt>
-File: Images/logo-unistra.pdf Graphic file (type pdf)
-<use Images/logo-unistra.pdf>
-Package pdftex.def Info: Images/logo-unistra.pdf  used on input line 55.
+pdfTeX warning: pdflatex (file ./Images/Presentation/logo-unistra.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/logo-unistra.pdf, id=107, 846.0231pt x 321.56834pt>
+File: Images/Presentation/logo-unistra.pdf Graphic file (type pdf)
+<use Images/Presentation/logo-unistra.pdf>
+Package pdftex.def Info: Images/Presentation/logo-unistra.pdf  used on input line 55.
 (pdftex.def)             Requested size: 135.36646pt x 51.45198pt.
-<Images/logo-Fonderie.pdf, id=88, 632.3625pt x 199.74625pt>
-File: Images/logo-Fonderie.pdf Graphic file (type pdf)
-<use Images/logo-Fonderie.pdf>
-Package pdftex.def Info: Images/logo-Fonderie.pdf  used on input line 57.
+<Images/Presentation/logo-Fonderie.pdf, id=108, 632.3625pt x 199.74625pt>
+File: Images/Presentation/logo-Fonderie.pdf Graphic file (type pdf)
+<use Images/Presentation/logo-Fonderie.pdf>
+Package pdftex.def Info: Images/Presentation/logo-Fonderie.pdf  used on input line 57.
 (pdftex.def)             Requested size: 101.18007pt x 31.96005pt.
 
 
-pdfTeX warning: pdflatex (file ./Images/logoCSMI.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/logoCSMI.pdf, id=89, 846.34946pt x 557.26945pt>
-File: Images/logoCSMI.pdf Graphic file (type pdf)
-<use Images/logoCSMI.pdf>
-Package pdftex.def Info: Images/logoCSMI.pdf  used on input line 59.
+pdfTeX warning: pdflatex (file ./Images/Presentation/logoCSMI.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/logoCSMI.pdf, id=109, 846.34946pt x 557.26945pt>
+File: Images/Presentation/logoCSMI.pdf Graphic file (type pdf)
+<use Images/Presentation/logoCSMI.pdf>
+Package pdftex.def Info: Images/Presentation/logoCSMI.pdf  used on input line 59.
 (pdftex.def)             Requested size: 135.41867pt x 89.16493pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 65.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
@@ -825,7 +825,7 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 65.
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc} <./Images/logo-unistra.pdf> <./Images/logo-Fonderie.pdf> <./Images/logoCSMI.pdf>] (./rapport.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc} <./Images/Presentation/logo-unistra.pdf> <./Images/Presentation/logo-Fonderie.pdf> <./Images/Presentation/logoCSMI.pdf>] (./rapport.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -846,102 +846,412 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 13
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [3{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 
-pdfTeX warning: pdflatex (file ./Images/Fonderie_vue_de_bas.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Fonderie_vue_de_bas.pdf, id=135, 795.74707pt x 595.6447pt>
-File: Images/Fonderie_vue_de_bas.pdf Graphic file (type pdf)
-<use Images/Fonderie_vue_de_bas.pdf>
-Package pdftex.def Info: Images/Fonderie_vue_de_bas.pdf  used on input line 180.
+pdfTeX warning: pdflatex (file ./Images/Presentation/Fonderie_vue_de_bas.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/Fonderie_vue_de_bas.pdf, id=160, 795.74707pt x 595.6447pt>
+File: Images/Presentation/Fonderie_vue_de_bas.pdf Graphic file (type pdf)
+<use Images/Presentation/Fonderie_vue_de_bas.pdf>
+Package pdftex.def Info: Images/Presentation/Fonderie_vue_de_bas.pdf  used on input line 180.
 (pdftex.def)             Requested size: 214.85457pt x 160.82622pt.
 
 
-pdfTeX warning: pdflatex (file ./Images/Fonderie_vue_de_haut.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Fonderie_vue_de_haut.pdf, id=136, 795.74707pt x 595.6447pt>
-File: Images/Fonderie_vue_de_haut.pdf Graphic file (type pdf)
-<use Images/Fonderie_vue_de_haut.pdf>
-Package pdftex.def Info: Images/Fonderie_vue_de_haut.pdf  used on input line 182.
+pdfTeX warning: pdflatex (file ./Images/Presentation/Fonderie_vue_de_haut.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/Fonderie_vue_de_haut.pdf, id=161, 795.74707pt x 595.6447pt>
+File: Images/Presentation/Fonderie_vue_de_haut.pdf Graphic file (type pdf)
+<use Images/Presentation/Fonderie_vue_de_haut.pdf>
+Package pdftex.def Info: Images/Presentation/Fonderie_vue_de_haut.pdf  used on input line 182.
 (pdftex.def)             Requested size: 214.85457pt x 160.82622pt.
 [4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.186 \newpage
-               <./Images/Fonderie_vue_de_bas.pdf> <./Images/Fonderie_vue_de_haut.pdf>]
+               <./Images/Presentation/Fonderie_vue_de_bas.pdf> <./Images/Presentation/Fonderie_vue_de_haut.pdf>]
 
-pdfTeX warning: pdflatex (file ./Images/Flux de production.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Flux de production.pdf, id=152, 1864.9675pt x 1467.4825pt>
-File: Images/Flux de production.pdf Graphic file (type pdf)
-<use Images/Flux de production.pdf>
-Package pdftex.def Info: Images/Flux de production.pdf  used on input line 198.
+pdfTeX warning: pdflatex (file ./Images/Presentation/Flux de production.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/Flux de production.pdf, id=177, 1864.9675pt x 1467.4825pt>
+File: Images/Presentation/Flux de production.pdf Graphic file (type pdf)
+<use Images/Presentation/Flux de production.pdf>
+Package pdftex.def Info: Images/Presentation/Flux de production.pdf  used on input line 198.
 (pdftex.def)             Requested size: 1864.96295pt x 1467.47893pt.
 [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.213 
-       <./Images/Flux de production.pdf>] [6] [7] [8]
+l.215 
+       <./Images/Presentation/Flux de production.pdf>]
 
-pdfTeX warning: pdflatex (file ./Images/Poche 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Poche 1.pdf, id=232, 1214.5375pt x 820.66597pt>
-File: Images/Poche 1.pdf Graphic file (type pdf)
-<use Images/Poche 1.pdf>
-Package pdftex.def Info: Images/Poche 1.pdf  used on input line 468.
-(pdftex.def)             Requested size: 1214.53455pt x 820.66396pt.
-
-
-pdfTeX warning: pdflatex (file ./Images/Poche 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: Images/Poche 1.pdf Graphic file (type pdf)
-<use Images/Poche 1.pdf>
-Package pdftex.def Info: Images/Poche 1.pdf  used on input line 468.
-(pdftex.def)             Requested size: 1214.53455pt x 820.66396pt.
-
-
-pdfTeX warning: pdflatex (file ./Images/Poche 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex (file ./Images/Poche 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Poche 1.pdf, id=235, page=1, 1214.5375pt x 820.66597pt>
-File: Images/Poche 1.pdf Graphic file (type pdf)
-<use Images/Poche 1.pdf, page 1>
-Package pdftex.def Info: Images/Poche 1.pdf , page1 used on input line 468.
-(pdftex.def)             Requested size: 1214.53455pt x 820.66396pt.
-File: Images/Poche 1.pdf Graphic file (type pdf)
-<use Images/Poche 1.pdf, page 1>
-Package pdftex.def Info: Images/Poche 1.pdf , page1 used on input line 468.
-(pdftex.def)             Requested size: 1214.53455pt x 820.66396pt.
-[9
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+pdfTeX warning: pdflatex (file ./Images/Presentation/Fontes d'affinages.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/Fontes d'affinages.pdf, id=234, 289.48149pt x 216.81pt>
+File: Images/Presentation/Fontes d'affinages.pdf Graphic file (type pdf)
+<use Images/Presentation/Fontes d'affinages.pdf>
+Package pdftex.def Info: Images/Presentation/Fontes d'affinages.pdf  used on input line 222.
+(pdftex.def)             Requested size: 202.63567pt x 151.76596pt.
+File: Images/Presentation/Fontes d'affinages.pdf Graphic file (type pdf)
+<use Images/Presentation/Fontes d'affinages.pdf>
+Package pdftex.def Info: Images/Presentation/Fontes d'affinages.pdf  used on input line 224.
+(pdftex.def)             Requested size: 202.63567pt x 151.76596pt.
+File: Images/Presentation/Fontes d'affinages.pdf Graphic file (type pdf)
+<use Images/Presentation/Fontes d'affinages.pdf>
+Package pdftex.def Info: Images/Presentation/Fontes d'affinages.pdf  used on input line 232.
+(pdftex.def)             Requested size: 202.63567pt x 151.76596pt.
+File: Images/Presentation/Fontes d'affinages.pdf Graphic file (type pdf)
+<use Images/Presentation/Fontes d'affinages.pdf>
+Package pdftex.def Info: Images/Presentation/Fontes d'affinages.pdf  used on input line 234.
+(pdftex.def)             Requested size: 202.63567pt x 151.76596pt.
+[6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.468 ...pdf[pages=-, scale=1]{Images/Poche 1.pdf}
-                                                  ]
+l.255 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.255 
+       <./Images/Presentation/Fontes d'affinages.pdf>] [7] [8]
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesBrut1.pdf, id=268, 661.47125pt x 67.25125pt>
+File: Images/Statistique/DonnéesBrut1.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesBrut1.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesBrut1.pdf  used on input line 415.
+(pdftex.def)             Requested size: 460.72124pt x 46.84055pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesBrut2.pdf, id=269, 659.46375pt x 67.25125pt>
+File: Images/Statistique/DonnéesBrut2.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesBrut2.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesBrut2.pdf  used on input line 417.
+(pdftex.def)             Requested size: 460.72124pt x 46.98523pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesBrut3.pdf, id=270, 621.32124pt x 61.22874pt>
+File: Images/Statistique/DonnéesBrut3.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesBrut3.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesBrut3.pdf  used on input line 419.
+(pdftex.def)             Requested size: 460.72124pt x 45.40196pt.
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.465 \item P
+             ièces : Référence des pièces. <./Images/Statistique/DonnéesBrut1.pdf> <./Images/Statistique/DonnéesBrut2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Statistique/DonnéesBrut3.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesClean1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesClean1.pdf, id=320, 667.49374pt x 79.29625pt>
+File: Images/Statistique/DonnéesClean1.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesClean1.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesClean1.pdf  used on input line 504.
+(pdftex.def)             Requested size: 460.72124pt x 54.73381pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesClean2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesClean2.pdf, id=321, 653.44125pt x 67.25125pt>
+File: Images/Statistique/DonnéesClean2.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesClean2.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesClean2.pdf  used on input line 506.
+(pdftex.def)             Requested size: 460.72124pt x 47.41623pt.
+
+Overfull \hbox (79.61679pt too wide) detected at line 536
+[]
+ []
+
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.536 \end{align*}
+                   <./Images/Statistique/DonnéesClean1.pdf> <./Images/Statistique/DonnéesClean2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesClean2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf, id=357, 503.7229pt x 283.86217pt>
+File: Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf Graphic file (type pdf)
+<use Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf>
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf  used on input line 581.
+(pdftex.def)             Requested size: 460.72124pt x 259.62738pt.
+[11{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}] [12 <./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf>]
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf, id=374, 437.23436pt x 282.46303pt>
+File: Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf Graphic file (type pdf)
+<use Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf>
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf  used on input line 635.
+(pdftex.def)             Requested size: 460.72124pt x 297.64226pt.
+[13 <./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf>]
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/Matrice_corrélation_ONO_Elements.pdf, id=382, 450.36343pt x 283.11061pt>
+File: Images/Statistique/Matrice_corrélation_ONO_Elements.pdf Graphic file (type pdf)
+<use Images/Statistique/Matrice_corrélation_ONO_Elements.pdf>
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_ONO_Elements.pdf  used on input line 655.
+(pdftex.def)             Requested size: 460.72124pt x 289.63297pt.
+File: Images/Statistique/Matrice_corrélation_ONO_Elements.pdf Graphic file (type pdf)
+<use Images/Statistique/Matrice_corrélation_ONO_Elements.pdf>
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_ONO_Elements.pdf  used on input line 693.
+(pdftex.def)             Requested size: 450.36232pt x 283.10991pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf, id=383, 380.62277pt x 283.86288pt>
+File: Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf Graphic file (type pdf)
+<use Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf>
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf  used on input line 694.
+(pdftex.def)             Requested size: 380.62184pt x 283.86218pt.
+[14 <./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf>]
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf, id=390, 486.2576pt x 282.82849pt>
+File: Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf Graphic file (type pdf)
+<use Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf>
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf  used on input line 743.
+(pdftex.def)             Requested size: 486.2564pt x 282.8278pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf, id=391, 372.19122pt x 290.51653pt>
+File: Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf Graphic file (type pdf)
+<use Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf>
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf  used on input line 744.
+(pdftex.def)             Requested size: 372.1903pt x 290.51581pt.
+[15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.754 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.754 
+       <./Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf> <./Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf> <./Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf>]
+<Images/Statistique/Impureté_avec_extreme.pdf, id=404, 1057.9525pt x 756.8275pt>
+File: Images/Statistique/Impureté_avec_extreme.pdf Graphic file (type pdf)
+<use Images/Statistique/Impureté_avec_extreme.pdf>
+Package pdftex.def Info: Images/Statistique/Impureté_avec_extreme.pdf  used on input line 803.
+(pdftex.def)             Requested size: 460.72124pt x 329.58685pt.
+<Images/Statistique/Impureté_sans_extreme.pdf, id=405, 1057.9525pt x 756.8275pt>
+File: Images/Statistique/Impureté_sans_extreme.pdf Graphic file (type pdf)
+<use Images/Statistique/Impureté_sans_extreme.pdf>
+Package pdftex.def Info: Images/Statistique/Impureté_sans_extreme.pdf  used on input line 804.
+(pdftex.def)             Requested size: 460.72124pt x 329.58685pt.
+ [16]
+Overfull \vbox (39.1737pt too high) has occurred while \output is active []
+
+ [17 <./Images/Statistique/Impureté_avec_extreme.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Impureté_avec_extreme.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+> <./Images/Statistique/Impureté_sans_extreme.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Impureté_sans_extreme.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>]
+File: Images/Statistique/Impureté_avec_extreme.pdf Graphic file (type pdf)
+<use Images/Statistique/Impureté_avec_extreme.pdf>
+Package pdftex.def Info: Images/Statistique/Impureté_avec_extreme.pdf  used on input line 813.
+(pdftex.def)             Requested size: 1057.94992pt x 756.82565pt.
+File: Images/Statistique/Impureté_sans_extreme.pdf Graphic file (type pdf)
+<use Images/Statistique/Impureté_sans_extreme.pdf>
+Package pdftex.def Info: Images/Statistique/Impureté_sans_extreme.pdf  used on input line 814.
+(pdftex.def)             Requested size: 1057.94992pt x 756.82565pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Impureté_sans_extreme 2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/Impureté_sans_extreme 2.pdf, id=434, 503.58139pt x 307.1475pt>
+File: Images/Statistique/Impureté_sans_extreme 2.pdf Graphic file (type pdf)
+<use Images/Statistique/Impureté_sans_extreme 2.pdf>
+Package pdftex.def Info: Images/Statistique/Impureté_sans_extreme 2.pdf  used on input line 825.
+(pdftex.def)             Requested size: 503.58015pt x 307.14674pt.
+File: Images/Statistique/Impureté_sans_extreme 2.pdf Graphic file (type pdf)
+<use Images/Statistique/Impureté_sans_extreme 2.pdf>
+Package pdftex.def Info: Images/Statistique/Impureté_sans_extreme 2.pdf  used on input line 826.
+(pdftex.def)             Requested size: 503.58015pt x 307.14674pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Essais.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/Essais.pdf, id=435, 1156.32pt x 352.31625pt>
+File: Images/Statistique/Essais.pdf Graphic file (type pdf)
+<use Images/Statistique/Essais.pdf>
+Package pdftex.def Info: Images/Statistique/Essais.pdf  used on input line 838.
+(pdftex.def)             Requested size: 1156.31718pt x 352.31538pt.
+[18
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.841 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.841 
+       <./Images/Statistique/Impureté_sans_extreme 2.pdf>]
+<Images/Statistique/Regression_Impurete_Sn.pdf, id=449, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Impurete_Sn.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Impurete_Sn.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Impurete_Sn.pdf  used on input line 852.
+(pdftex.def)             Requested size: 414.6463pt x 296.18025pt.
+<Images/Statistique/Regression_Impurete_Cu.pdf, id=450, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Impurete_Cu.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Impurete_Cu.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Impurete_Cu.pdf  used on input line 854.
+(pdftex.def)             Requested size: 414.6463pt x 296.18025pt.
+ [19 <./Images/Statistique/Essais.pdf>]
+File: Images/Statistique/Regression_Impurete_Sn.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Impurete_Sn.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Impurete_Sn.pdf  used on input line 860.
+(pdftex.def)             Requested size: 207.32315pt x 148.07864pt.
+File: Images/Statistique/Regression_Impurete_Cu.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Impurete_Cu.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Impurete_Cu.pdf  used on input line 861.
+(pdftex.def)             Requested size: 216.53954pt x 154.67216pt.
+ [20 <./Images/Statistique/Regression_Impurete_Sn.pdf> <./Images/Statistique/Regression_Impurete_Cu.pdf>]
+File: Images/Statistique/Regression_Impurete_Sn.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Impurete_Sn.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Impurete_Sn.pdf  used on input line 888.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+ [21
+pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.890 
+      ]
+File: Images/Statistique/Regression_Impurete_Cu.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Impurete_Cu.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Impurete_Cu.pdf  used on input line 897.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+
+Overfull \hbox (222.63998pt too wide) in paragraph at lines 896--898
+[]\T1/lmr/bx/n/12 L'impur�t� en fonc-tion du cuivre (Cu) [] 
+ []
+
+[22]
+<Images/Statistique/Regression_Ono_Cu.pdf, id=501, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Ono_Cu.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Ono_Cu.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Ono_Cu.pdf  used on input line 906.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+ [23]
+<Images/Statistique/Regression_Ono_Cr.pdf, id=506, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Ono_Cr.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Ono_Cr.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Ono_Cr.pdf  used on input line 911.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+ [24 <./Images/Statistique/Regression_Ono_Cu.pdf>]
+<Images/Statistique/Regression_Ferrite_Cu.pdf, id=522, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Ferrite_Cu.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Ferrite_Cu.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Ferrite_Cu.pdf  used on input line 919.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+ [25 <./Images/Statistique/Regression_Ono_Cr.pdf>]
+<Images/Statistique/Regression_Ferrite_Sb.pdf, id=539, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Ferrite_Sb.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Ferrite_Sb.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Ferrite_Sb.pdf  used on input line 925.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+ [26 <./Images/Statistique/Regression_Ferrite_Cu.pdf>]
+<Images/Statistique/Regression_Cu_Rm.pdf, id=555, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Cu_Rm.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cu_Rm.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cu_Rm.pdf  used on input line 935.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+ [27 <./Images/Statistique/Regression_Ferrite_Sb.pdf>]
+<Images/Statistique/Regression_Sn_Rm.pdf, id=571, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Sn_Rm.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Sn_Rm.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Sn_Rm.pdf  used on input line 940.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+ [28 <./Images/Statistique/Regression_Cu_Rm.pdf>]
+<Images/Statistique/Regression_Cr_Rm.pdf, id=587, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Cr_Rm.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cr_Rm.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cr_Rm.pdf  used on input line 948.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+ [29 <./Images/Statistique/Regression_Sn_Rm.pdf>]
+<Images/Statistique/Regression_Cr_Allongement.pdf, id=604, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Cr_Allongement.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cr_Allongement.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cr_Allongement.pdf  used on input line 954.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+ [30 <./Images/Statistique/Regression_Cr_Rm.pdf>]
+<Images/Statistique/Regression_Cu_Allongement.pdf, id=620, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Cu_Allongement.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cu_Allongement.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cu_Allongement.pdf  used on input line 963.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+ [31 <./Images/Statistique/Regression_Cr_Allongement.pdf>]
+<Images/Statistique/Regression_Sn_Allongement.pdf, id=637, 1053.9375pt x 752.8125pt>
+File: Images/Statistique/Regression_Sn_Allongement.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Sn_Allongement.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Sn_Allongement.pdf  used on input line 969.
+(pdftex.def)             Requested size: 460.72124pt x 329.09045pt.
+ [32 <./Images/Statistique/Regression_Cu_Allongement.pdf>] [33 <./Images/Statistique/Regression_Sn_Allongement.pdf>]
+
+pdfTeX warning: pdflatex (file ./Images/Poche 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Poche 1.pdf, id=668, 1214.5375pt x 820.66597pt>
+File: Images/Poche 1.pdf Graphic file (type pdf)
+<use Images/Poche 1.pdf>
+Package pdftex.def Info: Images/Poche 1.pdf  used on input line 1055.
+(pdftex.def)             Requested size: 1214.53455pt x 820.66396pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Poche 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+File: Images/Poche 1.pdf Graphic file (type pdf)
+<use Images/Poche 1.pdf>
+Package pdftex.def Info: Images/Poche 1.pdf  used on input line 1055.
+(pdftex.def)             Requested size: 1214.53455pt x 820.66396pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Poche 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./Images/Poche 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Poche 1.pdf, id=671, page=1, 1214.5375pt x 820.66597pt>
 File: Images/Poche 1.pdf Graphic file (type pdf)
 <use Images/Poche 1.pdf, page 1>
-Package pdftex.def Info: Images/Poche 1.pdf , page1 used on input line 468.
+Package pdftex.def Info: Images/Poche 1.pdf , page1 used on input line 1055.
 (pdftex.def)             Requested size: 1214.53455pt x 820.66396pt.
 File: Images/Poche 1.pdf Graphic file (type pdf)
 <use Images/Poche 1.pdf, page 1>
-Package pdftex.def Info: Images/Poche 1.pdf , page1 used on input line 468.
+Package pdftex.def Info: Images/Poche 1.pdf , page1 used on input line 1055.
+(pdftex.def)             Requested size: 1214.53455pt x 820.66396pt.
+[34]
+File: Images/Poche 1.pdf Graphic file (type pdf)
+<use Images/Poche 1.pdf, page 1>
+Package pdftex.def Info: Images/Poche 1.pdf , page1 used on input line 1055.
 (pdftex.def)             Requested size: 1214.53455pt x 820.66396pt.
 File: Images/Poche 1.pdf Graphic file (type pdf)
 <use Images/Poche 1.pdf, page 1>
-Package pdftex.def Info: Images/Poche 1.pdf , page1 used on input line 468.
+Package pdftex.def Info: Images/Poche 1.pdf , page1 used on input line 1055.
 (pdftex.def)             Requested size: 1214.53455pt x 820.66396pt.
- [10
+File: Images/Poche 1.pdf Graphic file (type pdf)
+<use Images/Poche 1.pdf, page 1>
+Package pdftex.def Info: Images/Poche 1.pdf , page1 used on input line 1055.
+(pdftex.def)             Requested size: 1214.53455pt x 820.66396pt.
+ [35
 
  <./Images/Poche 1.pdf>]
 
 pdfTeX warning: pdflatex (file ./Images/Poche 2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Poche 2.pdf, id=271, 1214.5375pt x 827.49153pt>
+<Images/Poche 2.pdf, id=706, 1214.5375pt x 827.49153pt>
 File: Images/Poche 2.pdf Graphic file (type pdf)
 <use Images/Poche 2.pdf>
-Package pdftex.def Info: Images/Poche 2.pdf  used on input line 469.
+Package pdftex.def Info: Images/Poche 2.pdf  used on input line 1056.
 (pdftex.def)             Requested size: 1214.53455pt x 827.48952pt.
 
 
 pdfTeX warning: pdflatex (file ./Images/Poche 2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Images/Poche 2.pdf Graphic file (type pdf)
 <use Images/Poche 2.pdf>
-Package pdftex.def Info: Images/Poche 2.pdf  used on input line 469.
+Package pdftex.def Info: Images/Poche 2.pdf  used on input line 1056.
 (pdftex.def)             Requested size: 1214.53455pt x 827.48952pt.
 
 
@@ -949,43 +1259,43 @@ pdfTeX warning: pdflatex (file ./Images/Poche 2.pdf): PDF inclusion: found PDF v
 
 
 pdfTeX warning: pdflatex (file ./Images/Poche 2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Poche 2.pdf, id=274, page=1, 1214.5375pt x 827.49153pt>
+<Images/Poche 2.pdf, id=709, page=1, 1214.5375pt x 827.49153pt>
 File: Images/Poche 2.pdf Graphic file (type pdf)
 <use Images/Poche 2.pdf, page 1>
-Package pdftex.def Info: Images/Poche 2.pdf , page1 used on input line 469.
+Package pdftex.def Info: Images/Poche 2.pdf , page1 used on input line 1056.
 (pdftex.def)             Requested size: 1214.53455pt x 827.48952pt.
 File: Images/Poche 2.pdf Graphic file (type pdf)
 <use Images/Poche 2.pdf, page 1>
-Package pdftex.def Info: Images/Poche 2.pdf , page1 used on input line 469.
+Package pdftex.def Info: Images/Poche 2.pdf , page1 used on input line 1056.
 (pdftex.def)             Requested size: 1214.53455pt x 827.48952pt.
 File: Images/Poche 2.pdf Graphic file (type pdf)
 <use Images/Poche 2.pdf, page 1>
-Package pdftex.def Info: Images/Poche 2.pdf , page1 used on input line 469.
+Package pdftex.def Info: Images/Poche 2.pdf , page1 used on input line 1056.
 (pdftex.def)             Requested size: 1214.53455pt x 827.48952pt.
 File: Images/Poche 2.pdf Graphic file (type pdf)
 <use Images/Poche 2.pdf, page 1>
-Package pdftex.def Info: Images/Poche 2.pdf , page1 used on input line 469.
+Package pdftex.def Info: Images/Poche 2.pdf , page1 used on input line 1056.
 (pdftex.def)             Requested size: 1214.53455pt x 827.48952pt.
 File: Images/Poche 2.pdf Graphic file (type pdf)
 <use Images/Poche 2.pdf, page 1>
-Package pdftex.def Info: Images/Poche 2.pdf , page1 used on input line 469.
+Package pdftex.def Info: Images/Poche 2.pdf , page1 used on input line 1056.
 (pdftex.def)             Requested size: 1214.53455pt x 827.48952pt.
-[11
+[36
 
  <./Images/Poche 2.pdf>]
 
 pdfTeX warning: pdflatex (file ./Images/Poche 3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Poche 3.pdf, id=306, 1344.02126pt x 827.49153pt>
+<Images/Poche 3.pdf, id=741, 1344.02126pt x 827.49153pt>
 File: Images/Poche 3.pdf Graphic file (type pdf)
 <use Images/Poche 3.pdf>
-Package pdftex.def Info: Images/Poche 3.pdf  used on input line 470.
+Package pdftex.def Info: Images/Poche 3.pdf  used on input line 1057.
 (pdftex.def)             Requested size: 1344.01797pt x 827.48952pt.
 
 
 pdfTeX warning: pdflatex (file ./Images/Poche 3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Images/Poche 3.pdf Graphic file (type pdf)
 <use Images/Poche 3.pdf>
-Package pdftex.def Info: Images/Poche 3.pdf  used on input line 470.
+Package pdftex.def Info: Images/Poche 3.pdf  used on input line 1057.
 (pdftex.def)             Requested size: 1344.01797pt x 827.48952pt.
 
 
@@ -993,54 +1303,59 @@ pdfTeX warning: pdflatex (file ./Images/Poche 3.pdf): PDF inclusion: found PDF v
 
 
 pdfTeX warning: pdflatex (file ./Images/Poche 3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Poche 3.pdf, id=309, page=1, 1344.02126pt x 827.49153pt>
+<Images/Poche 3.pdf, id=744, page=1, 1344.02126pt x 827.49153pt>
 File: Images/Poche 3.pdf Graphic file (type pdf)
 <use Images/Poche 3.pdf, page 1>
-Package pdftex.def Info: Images/Poche 3.pdf , page1 used on input line 470.
+Package pdftex.def Info: Images/Poche 3.pdf , page1 used on input line 1057.
 (pdftex.def)             Requested size: 1344.01797pt x 827.48952pt.
 File: Images/Poche 3.pdf Graphic file (type pdf)
 <use Images/Poche 3.pdf, page 1>
-Package pdftex.def Info: Images/Poche 3.pdf , page1 used on input line 470.
+Package pdftex.def Info: Images/Poche 3.pdf , page1 used on input line 1057.
 (pdftex.def)             Requested size: 1344.01797pt x 827.48952pt.
 File: Images/Poche 3.pdf Graphic file (type pdf)
 <use Images/Poche 3.pdf, page 1>
-Package pdftex.def Info: Images/Poche 3.pdf , page1 used on input line 470.
+Package pdftex.def Info: Images/Poche 3.pdf , page1 used on input line 1057.
 (pdftex.def)             Requested size: 1344.01797pt x 827.48952pt.
 File: Images/Poche 3.pdf Graphic file (type pdf)
 <use Images/Poche 3.pdf, page 1>
-Package pdftex.def Info: Images/Poche 3.pdf , page1 used on input line 470.
+Package pdftex.def Info: Images/Poche 3.pdf , page1 used on input line 1057.
 (pdftex.def)             Requested size: 1344.01797pt x 827.48952pt.
 File: Images/Poche 3.pdf Graphic file (type pdf)
 <use Images/Poche 3.pdf, page 1>
-Package pdftex.def Info: Images/Poche 3.pdf , page1 used on input line 470.
+Package pdftex.def Info: Images/Poche 3.pdf , page1 used on input line 1057.
 (pdftex.def)             Requested size: 1344.01797pt x 827.48952pt.
-[12
+[37
 
  <./Images/Poche 3.pdf>]
 \tf@thm=\write7
 \openout7 = `rapport.thm'.
 
- [13] (./rapport.aux)
+ [38
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1113 \end{document}
+                     ] (./rapport.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 577045E54B82F37F87D7808F0FC26561;2860.
+(rerunfilecheck)             Checksum: 35CA433B970C39273BBF7489375A2676;3509.
  ) 
 Here is how much of TeX's memory you used:
- 26581 strings out of 474222
- 487693 string characters out of 5748733
- 1934975 words of memory out of 5000000
- 48258 multiletter control sequences out of 15000+600000
- 618378 words of font info for 104 fonts, out of 8000000 for 9000
+ 26846 strings out of 474222
+ 499894 string characters out of 5748733
+ 1940975 words of memory out of 5000000
+ 48476 multiletter control sequences out of 15000+600000
+ 624358 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,18n,93p,931b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on rapport.pdf (13 pages, 36986794 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on rapport.pdf (38 pages, 45077777 bytes).
 PDF statistics:
- 372 PDF objects out of 1000 (max. 8388607)
- 286 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 311 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 840 PDF objects out of 1000 (max. 8388607)
+ 623 compressed objects within 7 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 491 words of extra memory for PDF output out of 10000 (max. 10000000)
 

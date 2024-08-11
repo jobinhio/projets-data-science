@@ -321,21 +321,21 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
-INPUT ./Images/logo-unistra.pdf
-INPUT ./Images/logo-unistra.pdf
-INPUT ./Images/logo-unistra.pdf
-INPUT ./Images/logo-unistra.pdf
-INPUT ./Images/logo-unistra.pdf
-INPUT ./Images/logo-Fonderie.pdf
-INPUT ./Images/logo-Fonderie.pdf
-INPUT ./Images/logo-Fonderie.pdf
-INPUT ./Images/logo-Fonderie.pdf
-INPUT ./Images/logo-Fonderie.pdf
-INPUT ./Images/logoCSMI.pdf
-INPUT ./Images/logoCSMI.pdf
-INPUT ./Images/logoCSMI.pdf
-INPUT ./Images/logoCSMI.pdf
-INPUT ./Images/logoCSMI.pdf
+INPUT ./Images/Presentation/logo-unistra.pdf
+INPUT ./Images/Presentation/logo-unistra.pdf
+INPUT ./Images/Presentation/logo-unistra.pdf
+INPUT ./Images/Presentation/logo-unistra.pdf
+INPUT ./Images/Presentation/logo-unistra.pdf
+INPUT ./Images/Presentation/logo-Fonderie.pdf
+INPUT ./Images/Presentation/logo-Fonderie.pdf
+INPUT ./Images/Presentation/logo-Fonderie.pdf
+INPUT ./Images/Presentation/logo-Fonderie.pdf
+INPUT ./Images/Presentation/logo-Fonderie.pdf
+INPUT ./Images/Presentation/logoCSMI.pdf
+INPUT ./Images/Presentation/logoCSMI.pdf
+INPUT ./Images/Presentation/logoCSMI.pdf
+INPUT ./Images/Presentation/logoCSMI.pdf
+INPUT ./Images/Presentation/logoCSMI.pdf
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /usr/share/texmf/tex/latex/lm/ot1lmr.fd
@@ -433,22 +433,211 @@ INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ts1-lmr12.tfm
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_bas.pdf
-INPUT ./Images/Fonderie_vue_de_haut.pdf
-INPUT ./Images/Fonderie_vue_de_haut.pdf
-INPUT ./Images/Fonderie_vue_de_haut.pdf
-INPUT ./Images/Fonderie_vue_de_haut.pdf
-INPUT ./Images/Fonderie_vue_de_haut.pdf
+INPUT ./Images/Presentation/Fonderie_vue_de_bas.pdf
+INPUT ./Images/Presentation/Fonderie_vue_de_bas.pdf
+INPUT ./Images/Presentation/Fonderie_vue_de_bas.pdf
+INPUT ./Images/Presentation/Fonderie_vue_de_bas.pdf
+INPUT ./Images/Presentation/Fonderie_vue_de_bas.pdf
+INPUT ./Images/Presentation/Fonderie_vue_de_haut.pdf
+INPUT ./Images/Presentation/Fonderie_vue_de_haut.pdf
+INPUT ./Images/Presentation/Fonderie_vue_de_haut.pdf
+INPUT ./Images/Presentation/Fonderie_vue_de_haut.pdf
+INPUT ./Images/Presentation/Fonderie_vue_de_haut.pdf
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmcsc10.tfm
-INPUT ./Images/Flux de production.pdf
-INPUT ./Images/Flux de production.pdf
-INPUT ./Images/Flux de production.pdf
-INPUT ./Images/Flux de production.pdf
-INPUT ./Images/Flux de production.pdf
+INPUT ./Images/Presentation/Flux de production.pdf
+INPUT ./Images/Presentation/Flux de production.pdf
+INPUT ./Images/Presentation/Flux de production.pdf
+INPUT ./Images/Presentation/Flux de production.pdf
+INPUT ./Images/Presentation/Flux de production.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Statistique/DonnéesBrut1.pdf
+INPUT ./Images/Statistique/DonnéesBrut1.pdf
+INPUT ./Images/Statistique/DonnéesBrut1.pdf
+INPUT ./Images/Statistique/DonnéesBrut1.pdf
+INPUT ./Images/Statistique/DonnéesBrut1.pdf
+INPUT ./Images/Statistique/DonnéesBrut2.pdf
+INPUT ./Images/Statistique/DonnéesBrut2.pdf
+INPUT ./Images/Statistique/DonnéesBrut2.pdf
+INPUT ./Images/Statistique/DonnéesBrut2.pdf
+INPUT ./Images/Statistique/DonnéesBrut2.pdf
+INPUT ./Images/Statistique/DonnéesBrut3.pdf
+INPUT ./Images/Statistique/DonnéesBrut3.pdf
+INPUT ./Images/Statistique/DonnéesBrut3.pdf
+INPUT ./Images/Statistique/DonnéesBrut3.pdf
+INPUT ./Images/Statistique/DonnéesBrut3.pdf
+INPUT ./Images/Statistique/DonnéesClean1.pdf
+INPUT ./Images/Statistique/DonnéesClean1.pdf
+INPUT ./Images/Statistique/DonnéesClean1.pdf
+INPUT ./Images/Statistique/DonnéesClean1.pdf
+INPUT ./Images/Statistique/DonnéesClean1.pdf
+INPUT ./Images/Statistique/DonnéesClean2.pdf
+INPUT ./Images/Statistique/DonnéesClean2.pdf
+INPUT ./Images/Statistique/DonnéesClean2.pdf
+INPUT ./Images/Statistique/DonnéesClean2.pdf
+INPUT ./Images/Statistique/DonnéesClean2.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr6.tfm
+INPUT ./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT ./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf
+INPUT ./Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf
+INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
+INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
+INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
+INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
+INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
+INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
+INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
+INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
+INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
+INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
+INPUT ./Images/Statistique/Essais.pdf
+INPUT ./Images/Statistique/Essais.pdf
+INPUT ./Images/Statistique/Essais.pdf
+INPUT ./Images/Statistique/Essais.pdf
+INPUT ./Images/Statistique/Essais.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
+INPUT ./Images/Statistique/Regression_Ferrite_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ferrite_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ferrite_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ferrite_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ferrite_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ferrite_Sb.pdf
+INPUT ./Images/Statistique/Regression_Ferrite_Sb.pdf
+INPUT ./Images/Statistique/Regression_Ferrite_Sb.pdf
+INPUT ./Images/Statistique/Regression_Ferrite_Sb.pdf
+INPUT ./Images/Statistique/Regression_Ferrite_Sb.pdf
+INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
+INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
+INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
+INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
+INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
+INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
 INPUT ./Images/Poche 1.pdf
 INPUT ./Images/Poche 1.pdf
 INPUT ./Images/Poche 1.pdf
@@ -495,6 +684,10 @@ INPUT ./rapport.out
 INPUT ./rapport.out
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr12.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmri12.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb
