@@ -409,22 +409,23 @@ La Figure ci-dessous ~\ref{fig:donnees_brutes}  illustre l'état initial des don
 processus de nettoyage ou d'analyse.
 
 
+
 % Les données brutes
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Images/Statistique/DonnéesBrut1.pdf} \\
-    \vspace{10pt}
-    \includegraphics[width=\textwidth]{Images/Statistique/DonnéesBrut2.pdf} \\
-    \vspace{10pt}
-    \includegraphics[width=\textwidth]{Images/Statistique/DonnéesBrut3.pdf}
+    \adjustbox{width=1.3\textwidth, center}{
+        \begin{minipage}{\textwidth}
+            \centering
+            \includegraphics[width=0.75\paperwidth]{Images/Statistique/DonnéesBrut1.pdf} \\
+            \vspace{25pt}
+            \includegraphics[width=0.75\paperwidth]{Images/Statistique/DonnéesBrut2.pdf} \\
+            \vspace{25pt}
+            \includegraphics[width=0.75\paperwidth]{Images/Statistique/DonnéesBrut3.pdf}
+        \end{minipage}
+    }
     \caption{Visualisation des données brutes}
     \label{fig:donnees_brutes}
 \end{figure}
-
-
-
-
-    
 
 
 
@@ -501,9 +502,14 @@ Avant d'utiliser les données dans l'étude, elles ont été soumises aux prétr
 % Les données nettoyées
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Images/Statistique/DonnéesClean1.pdf} \\
-    \vspace{10pt}
-    \includegraphics[width=\textwidth]{Images/Statistique/DonnéesClean2.pdf}
+    \adjustbox{width=1.3\textwidth, center}{
+        \begin{minipage}{\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Images/Statistique/DonnéesClean1.pdf} \\
+            \vspace{25pt}
+            \includegraphics[width=\textwidth]{Images/Statistique/DonnéesClean2.pdf}
+        \end{minipage}
+    }
     \caption{Visualisation des données nettoyées}
     \label{fig:donnees_nettoyees}
 \end{figure}
@@ -813,23 +819,9 @@ Pour améliorer la performance de la régression linéaire, nous procédons à l
         \includegraphics[scale=1]{Images/Statistique/Impureté_avec_extreme.pdf}
         \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme.pdf}
     \end{adjustbox}
-    \caption{Les valeurs extrèmes de l'impurté.}
+    \caption{L'impurté avant et après le traitement des valeurs extrèmes.}
     \label{fig:Extrem}
 \end{figure}
-
-
-% Les valeurs extrèmes de l'impurté
-\begin{figure}[H]
-    \centering
-    \begin{adjustbox}{width=1.3\textwidth,center}
-        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme 2.pdf}
-        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme 2.pdf}
-    \end{adjustbox}
-    \caption{Les valeurs extrèmes de l'impurté.}
-    \label{fig:Extreme}
-\end{figure}
-
-
 
 % Les valeurs extrèmes de l'impurté
 \begin{figure}[H]
@@ -838,6 +830,39 @@ Pour améliorer la performance de la régression linéaire, nous procédons à l
         \includegraphics[scale=1]{Images/Statistique/Essais.pdf}
     \end{adjustbox}
 \end{figure}
+
+
+% Les valeurs extrèmes de l'impureté
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{width=1.3\textwidth,center}
+        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme 2.pdf}
+        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme 2.pdf}
+    \end{adjustbox}
+    \caption{L'impurté avant et après le traitement des valeurs extrèmes.}
+    \label{fig:Extreme}
+\end{figure}
+
+
+
+% Les valeurs extrèmes de ONO
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{width=1.3\textwidth,center}
+        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme 2.pdf}
+        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme 2.pdf}
+    \end{adjustbox}
+    \caption{L'impurté avant et après le traitement des valeurs extrèmes.}
+    \label{fig:Extremem}
+\end{figure}
+
+
+On peut alors discuter des bornes mininum et maximal de l'impurété et de ONO,
+qui permet de garantir un bon lit de fusion.
+
+Les données sont assez distantes l'une des autres, ce qui n'est pas idéal pour
+avoir un intervale de confiance et de prediction fine
+
 
 \subsection{La régression linéaire }
 
@@ -1054,7 +1079,22 @@ Les différents étapes  de la poche 1
 
 \includepdf[pages=-, scale=1]{Images/Poche 1.pdf}
 \includepdf[pages=-, scale=1]{Images/Poche 2.pdf}
-\includepdf[pages=-, scale=1]{Images/Poche 3.pdf}
+
+
+
+
+
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{width=1.3\textwidth,center}
+        \includegraphics{Images/Recette/Poche 3.pdf}
+    \end{adjustbox}
+    \caption{Flux de production des pièces en fonte.}
+    \label{fig:Poche3}
+\end{figure}
+
+
+
 
 
 
@@ -1069,6 +1109,7 @@ Les différents étapes  de la poche 1
         \end{tabular}
 \end{table}
     
+% sudo apt-get install texlive-full
     
 % \begin{table}[H]
 % \caption{Tableau 1.5: composition chimique des fontes GS (ADI) [26]}

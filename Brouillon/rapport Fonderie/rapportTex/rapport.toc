@@ -16,5 +16,5 @@
 \contentsline {section}{\numberline {3}La recette Optimale}{34}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Présentation du problème d'Optimisation }{34}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Modélisation du problème}{34}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}La méthode du simplexe}{38}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Mise en oeuvre de la méthode du simplexe}{38}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.3}La méthode du simplexe}{37}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Mise en oeuvre de la méthode du simplexe}{37}{subsection.3.4}%
