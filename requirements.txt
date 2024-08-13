@@ -3,7 +3,6 @@ Optimisation :
     pip install tqdm
     pip install pandas
     pip install scipy
-    pip install openpyxl
     pip install python-calamine
 
 
@@ -14,6 +13,8 @@ Statistique :
     pip install statsmodels
     pip install xlsxwriter
     pip install -U kaleido
+    pip install openpyxl
+
 
     
     pip install nbformat

@@ -106,12 +106,12 @@ def check_table_values(df_table,erreurs):
 def read_and_check_input_values(chemin_fichier): 
 
     # Lecture de la première feuille du fichier Excel : Table Matière Element
-    Tableau_Matiere_Element = pd.read_excel(chemin_fichier, engine='calamine')
+    Tableau_Matiere_Element = pd.read_excel(chemin_fichier, engine='openpyxl') # 'calamine'
 
     # Lecture de la deuxième feuille du fichier Excel : Contraintes Element
-    Contraintes_Elements = pd.read_excel(chemin_fichier, engine='calamine', sheet_name=1)
+    Contraintes_Elements = pd.read_excel(chemin_fichier, engine='openpyxl', sheet_name=1) # 'calamine'
     # Lecture de la troisième feuille du fichier Excel : Contraintes Matière Première
-    Matieres_premiere = pd.read_excel(chemin_fichier, engine='calamine', sheet_name=2)
+    Matieres_premiere = pd.read_excel(chemin_fichier, engine='openpyxl', sheet_name=2) # 'calamine'
 
     # Separation des contraintes par types de recettes
     contraintes_mp = Give_contraints_MP_per_recipe(Matieres_premiere)
