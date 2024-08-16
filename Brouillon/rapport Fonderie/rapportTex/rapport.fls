@@ -464,17 +464,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
@@ -485,31 +474,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/bbold.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/bbold.sty
@@ -860,6 +824,16 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.std
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.std
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.std
@@ -1004,6 +978,70 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 INPUT /usr/share/texmf/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmr.fd
@@ -1117,6 +1155,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT ./Images/Presentation/logo-unistra.pdf
 INPUT ./Images/Presentation/logo-unistra.pdf
 INPUT Images/Presentation/logo-unistra.pdf
@@ -1132,29 +1176,32 @@ INPUT ./Images/Presentation/logoCSMI.pdf
 INPUT Images/Presentation/logoCSMI.pdf
 INPUT ./Images/Presentation/logoCSMI.pdf
 INPUT ./Images/Presentation/logoCSMI.pdf
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./rapport.toc
+INPUT rapport.toc
+INPUT rapport.toc
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/share/texmf/tex/latex/lm/ot1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/ot1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/ot1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/ot1lmr.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr12.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr8.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr6.tfm
 INPUT /usr/share/texmf/tex/latex/lm/omllmm.fd
 INPUT /usr/share/texmf/tex/latex/lm/omllmm.fd
 INPUT /usr/share/texmf/tex/latex/lm/omllmm.fd
 INPUT /usr/share/texmf/tex/latex/lm/omllmm.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi12.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi8.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi6.tfm
 INPUT /usr/share/texmf/tex/latex/lm/omslmsy.fd
 INPUT /usr/share/texmf/tex/latex/lm/omslmsy.fd
 INPUT /usr/share/texmf/tex/latex/lm/omslmsy.fd
 INPUT /usr/share/texmf/tex/latex/lm/omslmsy.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy8.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy6.tfm
 INPUT /usr/share/texmf/tex/latex/lm/omxlmex.fd
 INPUT /usr/share/texmf/tex/latex/lm/omxlmex.fd
 INPUT /usr/share/texmf/tex/latex/lm/omxlmex.fd
@@ -1175,44 +1222,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm
-INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT ./rapport.toc
-INPUT rapport.toc
-INPUT rapport.toc
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr12.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr8.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr6.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi12.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi8.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi6.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy8.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy6.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
@@ -1221,11 +1230,14 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm
 OUTPUT rapport.toc
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
@@ -1252,23 +1264,26 @@ INPUT ./Images/Presentation/Flux de production.pdf
 INPUT Images/Presentation/Flux de production.pdf
 INPUT ./Images/Presentation/Flux de production.pdf
 INPUT ./Images/Presentation/Flux de production.pdf
+INPUT ./Images/Presentation/Les Retours.pdf
+INPUT ./Images/Presentation/Les Retours.pdf
+INPUT Images/Presentation/Les Retours.pdf
+INPUT ./Images/Presentation/Les Retours.pdf
+INPUT ./Images/Presentation/Les Retours.pdf
+INPUT ./Images/Presentation/Frite Haut Silicium.pdf
+INPUT ./Images/Presentation/Frite Haut Silicium.pdf
+INPUT Images/Presentation/Frite Haut Silicium.pdf
+INPUT ./Images/Presentation/Frite Haut Silicium.pdf
+INPUT ./Images/Presentation/Frite Haut Silicium.pdf
 INPUT ./Images/Presentation/Fontes d'affinages.pdf
 INPUT ./Images/Presentation/Fontes d'affinages.pdf
 INPUT Images/Presentation/Fontes d'affinages.pdf
 INPUT ./Images/Presentation/Fontes d'affinages.pdf
 INPUT ./Images/Presentation/Fontes d'affinages.pdf
-INPUT ./Images/Presentation/Fontes d'affinages.pdf
-INPUT ./Images/Presentation/Fontes d'affinages.pdf
-INPUT Images/Presentation/Fontes d'affinages.pdf
-INPUT ./Images/Presentation/Fontes d'affinages.pdf
-INPUT ./Images/Presentation/Fontes d'affinages.pdf
-INPUT ./Images/Presentation/Fontes d'affinages.pdf
-INPUT Images/Presentation/Fontes d'affinages.pdf
-INPUT ./Images/Presentation/Fontes d'affinages.pdf
-INPUT ./Images/Presentation/Fontes d'affinages.pdf
-INPUT ./Images/Presentation/Fontes d'affinages.pdf
-INPUT Images/Presentation/Fontes d'affinages.pdf
-INPUT ./Images/Presentation/Fontes d'affinages.pdf
+INPUT ./Images/Presentation/Disque.pdf
+INPUT ./Images/Presentation/Disque.pdf
+INPUT Images/Presentation/Disque.pdf
+INPUT ./Images/Presentation/Disque.pdf
+INPUT ./Images/Presentation/Disque.pdf
 INPUT ./Images/Statistique/DonnéesBrut1.pdf
 INPUT ./Images/Statistique/DonnéesBrut1.pdf
 INPUT Images/Statistique/DonnéesBrut1.pdf
@@ -1311,30 +1326,6 @@ INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
 INPUT Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
 INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
 INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
-INPUT Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf
-INPUT Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf
-INPUT Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf
-INPUT Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf
-INPUT ./Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf
-INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
-INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
-INPUT Images/Statistique/Impureté_avec_extreme.pdf
-INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
-INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
 INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
 INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
 INPUT Images/Statistique/Impureté_sans_extreme.pdf
@@ -1344,32 +1335,17 @@ INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
 INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
 INPUT Images/Statistique/Impureté_avec_extreme.pdf
 INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
-INPUT Images/Statistique/Impureté_sans_extreme.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme.pdf
-INPUT ./Images/Statistique/Essais.pdf
-INPUT ./Images/Statistique/Essais.pdf
-INPUT Images/Statistique/Essais.pdf
-INPUT ./Images/Statistique/Essais.pdf
-INPUT ./Images/Statistique/Essais.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT Images/Statistique/Impureté_sans_extreme 2.pdf
-INPUT ./Images/Statistique/Impureté_sans_extreme 2.pdf
+INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
+INPUT Images/Statistique/Purete ONO_avec_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_sans_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_sans_extreme.pdf
+INPUT Images/Statistique/Purete ONO_sans_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_sans_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_sans_extreme.pdf
 INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
 INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
 INPUT Images/Statistique/Regression_Impurete_Sn.pdf
@@ -1379,22 +1355,6 @@ INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
 INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
 INPUT Images/Statistique/Regression_Impurete_Cu.pdf
 INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
-INPUT Images/Statistique/Regression_Impurete_Sn.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
-INPUT Images/Statistique/Regression_Impurete_Cu.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
-INPUT Images/Statistique/Regression_Impurete_Sn.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
-INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
-INPUT Images/Statistique/Regression_Impurete_Cu.pdf
 INPUT ./Images/Statistique/Regression_Impurete_Cu.pdf
 INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
 INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
@@ -1406,135 +1366,106 @@ INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
 INPUT Images/Statistique/Regression_Ono_Cr.pdf
 INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
 INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
-INPUT ./Images/Statistique/Regression_Ferrite_Cu.pdf
-INPUT ./Images/Statistique/Regression_Ferrite_Cu.pdf
-INPUT Images/Statistique/Regression_Ferrite_Cu.pdf
-INPUT ./Images/Statistique/Regression_Ferrite_Cu.pdf
-INPUT ./Images/Statistique/Regression_Ferrite_Cu.pdf
-INPUT ./Images/Statistique/Regression_Ferrite_Sb.pdf
-INPUT ./Images/Statistique/Regression_Ferrite_Sb.pdf
-INPUT Images/Statistique/Regression_Ferrite_Sb.pdf
-INPUT ./Images/Statistique/Regression_Ferrite_Sb.pdf
-INPUT ./Images/Statistique/Regression_Ferrite_Sb.pdf
-INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
-INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
-INPUT Images/Statistique/Regression_Cu_Rm.pdf
-INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
-INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
-INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
-INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
-INPUT Images/Statistique/Regression_Sn_Rm.pdf
-INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
-INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
-INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
-INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
-INPUT Images/Statistique/Regression_Cr_Rm.pdf
-INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
-INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
-INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
-INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
-INPUT Images/Statistique/Regression_Cr_Allongement.pdf
-INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
-INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
-INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
-INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
-INPUT Images/Statistique/Regression_Cu_Allongement.pdf
-INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
-INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
-INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
-INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
-INPUT Images/Statistique/Regression_Sn_Allongement.pdf
-INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
-INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT Images/Poche 1.pdf
-INPUT ./Images/Poche 1.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT Images/Poche 2.pdf
-INPUT ./Images/Poche 2.pdf
-INPUT ./Images/Recette/Poche 3.pdf
-INPUT ./Images/Recette/Poche 3.pdf
-INPUT Images/Recette/Poche 3.pdf
-INPUT ./Images/Recette/Poche 3.pdf
-INPUT ./Images/Recette/Poche 3.pdf
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri12.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold12.tfm
+INPUT ./Images/Recette/Tableau matières premières 1-1.pdf
+INPUT ./Images/Recette/Tableau matières premières 1-1.pdf
+INPUT Images/Recette/Tableau matières premières 1-1.pdf
+INPUT ./Images/Recette/Tableau matières premières 1-1.pdf
+INPUT ./Images/Recette/Tableau matières premières 1-1.pdf
+INPUT ./Images/Recette/Tableau matières premières 1-2.pdf
+INPUT ./Images/Recette/Tableau matières premières 1-2.pdf
+INPUT Images/Recette/Tableau matières premières 1-2.pdf
+INPUT ./Images/Recette/Tableau matières premières 1-2.pdf
+INPUT ./Images/Recette/Tableau matières premières 1-2.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_400_15_1.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_400_15_1.pdf
+INPUT Images/Recette/Contraintes Qualités GS_400_15_1.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_400_15_1.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_400_15_1.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_400_15_2.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_400_15_2.pdf
+INPUT Images/Recette/Contraintes Qualités GS_400_15_2.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_400_15_2.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_400_15_2.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_450_10_1.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_450_10_1.pdf
+INPUT Images/Recette/Contraintes Qualités GS_450_10_1.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_450_10_1.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_450_10_1.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_450_10_2.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_450_10_2.pdf
+INPUT Images/Recette/Contraintes Qualités GS_450_10_2.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_450_10_2.pdf
+INPUT ./Images/Recette/Contraintes Qualités GS_450_10_2.pdf
+INPUT ./Images/Recette/Contraintes matières premières 1.pdf
+INPUT ./Images/Recette/Contraintes matières premières 1.pdf
+INPUT Images/Recette/Contraintes matières premières 1.pdf
+INPUT ./Images/Recette/Contraintes matières premières 1.pdf
+INPUT ./Images/Recette/Contraintes matières premières 1.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT ./Images/Mg/Poche 1.pdf
+INPUT ./Images/Mg/Poche 1.pdf
+INPUT Images/Mg/Poche 1.pdf
+INPUT ./Images/Mg/Poche 1.pdf
+INPUT ./Images/Mg/Poche 1.pdf
+INPUT ./Images/Mg/Poche 2.pdf
+INPUT ./Images/Mg/Poche 2.pdf
+INPUT Images/Mg/Poche 2.pdf
+INPUT ./Images/Mg/Poche 2.pdf
+INPUT ./Images/Mg/Poche 2.pdf
+INPUT ./Images/Mg/Poche 3.pdf
+INPUT ./Images/Mg/Poche 3.pdf
+INPUT Images/Mg/Poche 3.pdf
+INPUT ./Images/Mg/Poche 3.pdf
+INPUT ./Images/Mg/Poche 3.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx8.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx6.tfm
 OUTPUT rapport.thm
 INPUT rapport.aux
 INPUT ./rapport.out
 INPUT ./rapport.out
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmex10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr12.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr17.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmri12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb

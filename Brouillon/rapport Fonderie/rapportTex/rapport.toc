@@ -1,8 +1,8 @@
 \babel@toc {french}{}\relax 
-\contentsline {section}{\numberline {1}Contexte }{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Introduction rapide}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Présentation de la Fonderie de Niederbronn}{3}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Description du processus de production des pièces en fonte}{5}{subsection.1.3}%
+\contentsline {section}{\numberline {1}Contexte }{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Introduction rapide}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Présentation de la Fonderie de Niederbronn}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Description du processus de production des pièces en fonte}{4}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}L'objectif du stage }{8}{subsection.1.4}%
 \contentsline {subsection}{\numberline {1.5}Le plan du rapport}{8}{subsection.1.5}%
 \contentsline {section}{\numberline {2}L'étude statistique}{8}{section.2}%
@@ -10,11 +10,15 @@
 \contentsline {subsection}{\numberline {2.2}Les données}{9}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Les indicateurs}{10}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Les éléments chimiques}{13}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Les valeurs extrêmes}{16}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}La régression linéaire }{19}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Conclusion}{33}{subsection.2.7}%
-\contentsline {section}{\numberline {3}La recette Optimale}{34}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Présentation du problème d'Optimisation }{34}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Modélisation du problème}{34}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}La méthode du simplexe}{37}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Mise en oeuvre de la méthode du simplexe}{37}{subsection.3.4}%
+\contentsline {subsection}{\numberline {2.5}Les valeurs extrêmes}{15}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}La régression linéaire }{16}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Conclusion}{18}{subsection.2.7}%
+\contentsline {section}{\numberline {3}La recette Optimale}{18}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Présentation du problème de la Recette }{18}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2} L'algorithme du simplexe }{18}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3} Modélisation du problème }{20}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Résolutions et Résultats du problème }{21}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Le Traitement au Magnésium de la fonte GS}{23}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Présentation du problème }{23}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Résolutions du problème}{27}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Résultats}{27}{subsection.4.3}%

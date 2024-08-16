@@ -73,6 +73,18 @@ def plot_linear_regression_with_predict_intervals(df,x_name, y_name, width,file_
     # Créer la figure Plotly
     fig = go.Figure()
 
+    # Définir la taille de la figure
+    # fig.update_layout(width=665, height=500)
+    # fig.update_layout(width=630, height=500)
+    # fig.update_layout(width=595, height=500)
+    # fig.update_layout(width=485, height=500)
+    # fig.update_layout(width=475, height=500)
+    fig.update_layout(width=480, height=500)
+
+    # fig.update_layout(width=460, height=500)
+
+
+
     # Ajouter les données observées
     fig.add_trace(go.Scatter(x=x_val, y=y_val, mode='markers', name='Données'))
 
@@ -83,12 +95,24 @@ def plot_linear_regression_with_predict_intervals(df,x_name, y_name, width,file_
     fig.add_trace(go.Scatter(x=np.concatenate([x_val, x_val[::-1]]),
                              y=np.concatenate([pred_low, pred_high[::-1]]),
                              fill='toself',
-                             name='Intervalle de confiance'))
+                             name='Intervalle de prédiction'))
 
     # Mise en forme du graphique
-    fig.update_layout(title='Régression linéaire avec intervalle de confiance',
-                      xaxis_title=x_name,
-                      yaxis_title=y_name)
+    fig.update_layout(
+    title={
+        'text': 'L\'évolution de la ' + y_name + ' en fonction de ' + x_name,
+        # 'text': 'La régression linéaire et l\'intervalle de prédiction de l\'' + y_name + ' en fonction de ' + x_name,
+        'x': 0.5,  # Centre le titre
+        'xanchor': 'center',
+        'yanchor': 'top'#,
+        # 'font': {'size': 15}  # Ajustez la taille de la police selon vos besoins
+    },
+    xaxis_title=x_name,
+    yaxis_title=y_name
+)
+    
+
+
 
     fig.show()
     # Sauvegarder l'image

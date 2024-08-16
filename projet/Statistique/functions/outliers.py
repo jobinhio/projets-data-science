@@ -117,8 +117,8 @@ def plot_and_save(df, y_column, save=None):
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
         path_extreme = os.path.join(folder_path,f'{y_column}_avec_extreme.pdf')
-        fig1.write_image(path_extreme, format='pdf', scale=3)
-        # fig1.write_image(path_extreme, format='pdf', scale=2)
+        # fig1.write_image(path_extreme, format='pdf', scale=3)
+        fig1.write_image(path_extreme, format='pdf', scale=2)
 
     # Suppression des outliers
     df, outliers = remove_outliers(df, Indicateurs)
@@ -136,7 +136,7 @@ def plot_and_save(df, y_column, save=None):
     fig2.show()
     if save: 
         path_no_extreme = os.path.join(folder_path, f'{y_column}_sans_extreme.pdf')
-        fig2.write_image(path_no_extreme, format='pdf', scale=3)
-        # fig2.write_image(path_no_extreme, format='pdf', scale=2)
+        # fig2.write_image(path_no_extreme, format='pdf', scale=3)
+        fig2.write_image(path_no_extreme, format='pdf', scale=2)
 
     return 

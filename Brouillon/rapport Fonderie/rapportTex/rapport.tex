@@ -5,8 +5,7 @@
 \usepackage[colorlinks]{hyperref}
 \usepackage{graphicx}
 
-\usepackage{algorithm}
-\usepackage{algorithmic}
+
 
 \usepackage{float}
 \usepackage{bbold}
@@ -40,36 +39,130 @@
 
 
 
+
+% ----- Recette
+
+\usepackage{listings}
+\usepackage{xcolor} % Pour la coloration syntaxique personnalisée
+\usepackage{calc}
+
+
+\lstdefinestyle{python}{
+    language=Python,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue},
+    stringstyle=\color{green},
+    commentstyle=\color{gray},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=10pt,
+    showstringspaces=false,
+    frame=single,
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=4,
+}
+
+\lstset{
+    inputencoding=utf8,
+    extendedchars=true,
+    literate={é}{{\'e}}1 {è}{{\`e}}1 {ê}{{\^e}}1 {ç}{{\c{c}}}1,
+    % Autres caractères spéciaux peuvent être ajoutés ici
+    language=Python,                     % Langage du code
+    basicstyle=\footnotesize\ttfamily,   % Taille et style de police
+    keywordstyle=\color{blue},           % Style des mots-clés
+    stringstyle=\color{red},             % Style des chaînes de caractères
+    commentstyle=\color{green!50!black}, % Style des commentaires
+    showspaces=false,                    % Ne pas montrer les espaces
+    showstringspaces=false,              % Ne pas montrer les espaces dans les chaînes
+    breaklines=true,                     % Permettre les retours à la ligne automatiques
+    tabsize=2,                           % Taille des tabulations
+    captionpos=b,                        % Position de la légende (b pour en bas)
+    numbers=left,                        % Numérotation des lignes à gauche
+    numberstyle=\tiny\color{gray},       % Style des numéros de ligne
+    escapeinside={(*}{*)},  
+}
+
+
+
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{calc}
+
+
+\usepackage{algorithm2e}
+
+% \usepackage{algorithm}
+% \usepackage{algorithmic}
+
+
+
+
 \begin{document}
 
-\begin{titlepage}
-\title{}
-\author{Congo Job
-\\ Stage Master 2 \\
- IRMA, Université de Strasbourg, France}
-\date{ }
 
-\begin{figure}[b!]
-\centering
-\vfill
-\includegraphics[scale=0.16]{Images/Presentation/logo-unistra.pdf}
-\hspace{0.5 cm}
-\includegraphics[scale=0.16]{Images/Presentation/logo-Fonderie.pdf}
-\hspace{0.5 cm}
-\includegraphics[scale=0.16]{Images/Presentation/logoCSMI.pdf}
-\end{figure}
+% Page de garde
+\begin{titlepage}
+    \centering
+    
+    % Titre du rapport
+    {\Huge \textbf{Rapport de Stage de Fin d'Études}} \\[1.5cm]
+    % {\LARGE Master 2 Mathématiques Appliquées} \\[1cm]
+    {\large \textbf{Sujet du stage :}} \\
+    {\Large Optimisation des coûts de production} \\[2cm]
+    
+    % Nom de l'étudiant
+    {\Large \textbf{Présenté par :}} \\
+    {\Large Congo Job} \\[1cm]
+    
+    % Détails du stage
+    {\large \textbf{Stage réalisé à :}} \\
+    {\large Fonderie de Niederbronn, Niederbronn, France} \\[0.5cm]
+
+    % Dates du stage
+    {\large \textbf{Dates du stage :}} \\
+    {\large Du 11 mars 2024 au 26 juillet 2024} \\[1cm]
+
+    {\large \textbf{Encadrant industriel :}} \\
+    {\large Guy LUTINGER, président de la Fonderie de Niederbronn} \\[0.5cm]
+    
+
+    % Université et laboratoire
+    {\large \textbf{Encadrant universitaire :}} \\
+    {\large Christophe PRUD’HOMME, responsable du master CSMI} \\[2cm]
+    
+    % Logos
+    \begin{figure}[b!]
+    \centering
+    \vfill
+    \includegraphics[scale=0.16]{Images/Presentation/logo-unistra.pdf}
+    \hspace{0.5 cm}
+    \includegraphics[scale=0.16]{Images/Presentation/logo-Fonderie.pdf}
+    \hspace{0.5 cm}
+    \includegraphics[scale=0.16]{Images/Presentation/logoCSMI.pdf}
+    \end{figure}
+    
+    % Date
+    {\large \textbf{Date de soutenance :}} \\
+    {\large 30 août 2024} \\[1cm]
+    
 \end{titlepage}
 
 
-\maketitle
-\thispagestyle{empty}
-
-
 \newpage
 
+% Table des matières
 \tableofcontents
 
 \newpage
+
+
+    
+
+
+
 
 % \section{Présentation de l'entreprise : Fonderie de Niederbronn}
 \section{Contexte }
@@ -89,7 +182,7 @@ Dans ce document, nous avons le rapport de stage qui a eu lieu dans l'équipe
 d'Informatique de la Fonderie de Niederbronn. Il s'est déroulé sur
 une période de quatre mois, entre le 11 mars et le 26 juillet 2024. 
 On retrouvera tous les documents du stage dans ce 
-lien : \url{https://github.com/master-csmi/2022-stage-job-br}. 
+lien : \url{https://github.com/jobinhio/congo/tree/Fonderie}. 
 
 
 % Presenter rapidement le plan du rapport
@@ -99,7 +192,6 @@ de production et de l'objectif du stage, l'étude statistique,
 
 mandat du stage la méthodologie utilisée durant le stage, et les résultats du stage. En
 fin une conclusion boucle ce rapport de stage.
-
 
 
 \subsection{Présentation de la Fonderie de Niederbronn}
@@ -187,10 +279,13 @@ incontournable dans le secteur de la fonderie.
 
 \subsection{Description du processus de production des pièces en fonte}
 
-Voici un schéma décrivant les différents étapes de production d'une pièce en fonte :
-
-
-% \includepdf[pages=-, scale=1]{Images/Flux de production.pdf}
+La production de pièces en fonte suit un processus ordonnée et méticuleux, 
+composé de plusieurs étapes interconnectées qui garantissent la qualité 
+et la durabilité des produits finis. Chaque étape, depuis la préparation 
+des matériaux jusqu'au produit final, est cruciale pour obtenir des pièces 
+répondant aux exigences techniques et aux normes industrielles. 
+Le schéma ci-dessous illustre ce flux de production, offrant une vue 
+d'ensemble des différentes phases. 
 
 \begin{figure}[H]
     \centering
@@ -204,24 +299,24 @@ Voici un schéma décrivant les différents étapes de production d'une pièce e
 
 \begin{enumerate}
     \item \textbf{Chargement des matières premières :}
-    À cette étape, les matériaux de base nécessaires à la production de la fonte sont 
-    préparés. Ce processus implique le tri, le nettoyage et la sélection des matières 
-    premières, telles que le fer, le cuivre, les déchets métalliques provenant d'autres 
-    industries, et les alliages comme le magnésium et le silicium. Pour obtenir les 
-    propriétés mécaniques souhaitées dans la fonte, il est crucial de choisir les 
-    matériaux en fonction de leur composition chimique, car certains éléments chimique 
-    peuvent nuire à la qualité du produit final. 
-    Voici une illustration des matières premières utilisées au sein de la fonderie :
+    À cette étape, les matériaux de base nécessaires à la production de la 
+    fonte sont préparés. Ce processus comprend le tri, le nettoyage et la 
+    sélection des matières premières, telles que le fer, le cuivre, les 
+    déchets métalliques provenant d'autres industries, ainsi que des 
+    alliages comme le magnésium et le silicium. Il est essentiel de choisir
+    ces matériaux en fonction de leur composition chimique afin d'obtenir 
+    les propriétés mécaniques souhaitées dans la fonte, car certains 
+    éléments chimiques peuvent altérer la qualité du produit final.
 
-    % ----------------- Mettre image des matières premières
+    Voici une illustration des matières premières utilisées dans la fonderie :
 
     \begin{figure}[H]
         \centering
         \vfill
         \hspace{0.8 cm}
-        \includegraphics[scale=0.7]{Images/Presentation/Fontes d'affinages.pdf}
+        \includegraphics[scale=0.7]{Images/Presentation/Les Retours.pdf}
         \hspace{0.5 cm}
-        \includegraphics[scale=0.7]{Images/Presentation/Fontes d'affinages.pdf}
+        \includegraphics[scale=0.7]{Images/Presentation/Frite Haut Silicium.pdf}
         \caption{Les retours et les Frite Haut Silicium}
     \end{figure}
 
@@ -231,51 +326,57 @@ Voici un schéma décrivant les différents étapes de production d'une pièce e
         \hspace{0.8 cm}
         \includegraphics[scale=0.7]{Images/Presentation/Fontes d'affinages.pdf}
         \hspace{0.5 cm}
-        \includegraphics[scale=0.7]{Images/Presentation/Fontes d'affinages.pdf}
-        \caption{Les retours et les Frite Haut Silicium}
+        \includegraphics[scale=0.7]{Images/Presentation/Disque.pdf}
+        \caption{Les Fontes d'affinages et les Disques}
     \end{figure}
 
 
-    \item \textbf{Fusion :} Une fois les métaux sélectionnée, le métal est fondu dans 
-    un four à induction atteignant des températures suffisamment élevées pour le 
-    transformer en liquide.
-
-
+    \item \textbf{Fusion :} Après la sélection des métaux, ceux-ci sont 
+    fondus dans un four à induction qui atteint des températures 
+    suffisamment élevées pour les transformer en métal liquide.
 
     \item \textbf{Modélage :} 
+    Le modélage est l'une des premières étapes de la production en fonderie.
+    Il consiste à préparer le modèle et le moule nécessaires pour la coulée.
+    La pièce finale est d'abord conçue numériquement à l'aide de logiciels 
+    de CAO. Une fois la conception validée, un modèle physique est fabriqué
+    en métal.
 
-    Le modélage est l'une des premières étapes de la production en fonderie. Il s'agit 
-    de préparer le modèle et le moule nécessaires à la coulée. La pièce finale est 
-    d'abord conçue numériquement à l'aide de logiciels de CAO. Une fois la conception 
-    terminée, le modèle physique est fabriqué en métal. Le moule est généralement réalisé à partir de sable (mélangé avec de l'argile et 
-    de l'eau) compacté autour du modèle. Le sable doit être suffisamment résistant pour supporter le 
-    poids du métal fondu sans se désagréger. Une fois le sable compacté, le modèle est retiré, et les parties du moule sont 
-    assemblées. Des conduits de coulée sont ajoutés pour permettre au métal fondu de 
-    remplir la cavité du moule.
+    Le moule, généralement réalisé en sable mélangé à de l'argile et de 
+    l'eau, est compacté autour du modèle. Le sable doit être suffisamment 
+    résistant pour supporter le poids du métal fondu sans se désagréger. 
+    Après compactage, le modèle est retiré et les parties du moule sont 
+    assemblées. Des conduits de coulée sont ensuite ajoutés pour permettre 
+    au métal fondu de remplir la cavité du moule.
 
     % ----------------- Mettre image de modèle physique ?!
 
 
     \item \textbf{Noyautage :} 
-    Le noyautage est une étape essentielle pour créer des formes internes ou des 
-    cavités dans la pièce coulée. Comme le moule, les noyaux sont souvent fabriqués 
-    en sable. Ils sont formés à l'aide de boîtes à noyaux qui donnent aux noyaux la 
-    forme nécessaire. Les noyaux permettent de créer des canaux, des alésages, et 
-    d'autres détails internes. Une fois fabriqués, les noyaux sont place avec précision
-    dans le moule pour s'assurer qu'ils créent les cavités désirées. Ils doivent être 
-    solidement fixer pour éviter tout déplacement lors de la coulée.
+    Le noyautage constitue une étape importante dans le processus de 
+    fabrication des pièces moulées, notamment pour créer des formes 
+    internes complexes ou des cavités spécifiques. Semblables au moule, 
+    les noyaux sont souvent réalisés en sable et façonnés à l'aide de 
+    boîtes à noyaux qui leur confèrent la géométrie requise. Ces noyaux 
+    jouent un rôle déterminant en permettant la formation de canaux et 
+    d'autres détails internes indispensables à la pièce finale. 
+    Une fois confectionnés, ils sont positionnés avec précision dans 
+    le moule, où ils doivent être solidement fixés afin d'éviter 
+    tout déplacement pendant la coulée.
 
 
     \item \textbf{Sphéroïdisation :} 
-    Cette etape ne concerne que les fontes GS. 
-    La sphéroïdisation est un processus crucial pour améliorer les propriétés mécaniques 
-    de la fonte, notamment sa ductilité et sa résistance.
-    Le magnésium est ajouté à la fonte liquide pour favoriser la formation de graphite 
-    sphéroïdal plutôt que lamellaire. Cela se fait souvent en ajoutant un alliage 
-    contenant du magnésium comme le fil fourrée. Les sphéroïdes de graphite augmentent la ductilité et la résistance de la fonte, 
-    ce qui la rend plus adaptée à des applications nécessitant une résistance élevée 
-    à la traction. Ce traitement modifie la microstructure de la fonte pour améliorer ses performances
-    mécaniques et sa durabilité.
+    Cette étape est spécifiquement dédiée aux fontes à graphite sphéroïdal 
+    (fonte GS). La sphéroïdisation est un procédé essentiel visant à 
+    optimiser les propriétés mécaniques de la fonte, en particulier sa 
+    ductilité et sa résistance à la traction. Ce processus repose sur 
+    l’ajout de magnésium à la fonte liquide, favorisant ainsi la formation 
+    de graphite sous forme sphéroïdale plutôt que lamellaire. L'ajout de 
+    magnésium se fait souvent à travers un alliage, tel que le fil fourré. 
+    Cette transformation microstructurale, en remplaçant les lamelles de 
+    graphite par des sphéroïdes, permet d'améliorer significativement les 
+    performances mécaniques et la durabilité de la fonte, la rendant ainsi 
+    plus adaptée aux applications exigeantes.
 
 
     % ----------------- Mettre image Microscopique de la fonte GS
@@ -289,6 +390,8 @@ Voici un schéma décrivant les différents étapes de production d'une pièce e
     et les propriétés finales de la fonte. Des agents inoculants, tels que le 
     ferrosilicium, sont ajoutés pour favoriser une précipitation uniforme et fine 
     du graphite.
+
+    Le Degrassage consiste  à enlever la grasse dans la fonte
 
     % ----------------- Mettre image Innoculation/Degrassange en action ou du produits innoculant
     
@@ -409,11 +512,10 @@ La Figure ci-dessous ~\ref{fig:donnees_brutes}  illustre l'état initial des don
 processus de nettoyage ou d'analyse.
 
 
-
 % Les données brutes
 \begin{figure}[H]
     \centering
-    \adjustbox{width=1.3\textwidth, center}{
+    \adjustbox{width=1.23\textwidth, center}{
         \begin{minipage}{\textwidth}
             \centering
             \includegraphics[width=0.75\paperwidth]{Images/Statistique/DonnéesBrut1.pdf} \\
@@ -426,7 +528,6 @@ processus de nettoyage ou d'analyse.
     \caption{Visualisation des données brutes}
     \label{fig:donnees_brutes}
 \end{figure}
-
 
 
 
@@ -530,33 +631,32 @@ Avant d'utiliser les données dans l'étude, elles ont été soumises aux prétr
 Voici les 5 formules, qui consistent en une somme pondérée des éléments chimiques :
 
 
+
+
 \begin{align*}
     \textcolor{blue}{\text{Pureté MAYER \%}} &= \text{Ti\%} + \text{Pb\%} + \text{Bi\%} + \text{Sb\%} \\
-    \textcolor{red}{\text{Ferrite \%}} &= 92.3 - 96.2 (\text{Mn \%}) - 211 (\text{Cu \%}) - 14270 (\text{Pb \%}) - 2815 (\text{Sb \%}) \\
-    \textcolor{green}{\text{Pureté ONO \%}} &= \text{Cu \%} + \text{Ti \%} + \text{Ni \%} + \text{Cr \%} + \text{V \%} + \text{Al \%} + \text{As \%}  + \text{Sn \%} + \text{Pb \%} + \text{Sb \%} \\
-    &\quad + \text{Bi \%} \\
-    \textcolor{purple}{\text{Impureté \%}} &= 4.9 (\text{Cu \%}) + 0.37 (\text{Ni \%}) + 0.37 (\text{Cr \%})  + 7.9 (\text{Mo \%}) + 4.4 (\text{Ti \%}) + 39.0 (\text{Sn \%}) \\ 
-    &\quad + 0.44 (\text{Mn \%}) + 5.6 (\text{P \%}) \\
-    \textcolor{orange}{\text{Pureté THIELMANN \%}} &= 4.4 (\text{Ti \%}) + 2.0 (\text{As \%}) + 2.3 (\text{Sn \%}) + 5.0 (\text{Sb \%}) + 290 (\text{Pb \%}) + 370 (\text{Bi \%}) \\
-    &\quad + 1.6 (\text{Al \%})
+    \textcolor{red}{\text{Ferrite \%}} &= 92.3 - 96.2 (\text{Mn \%}) - 211 (\text{Cu \%}) - 14270 (\text{Pb \%}) \\
+    &\quad - 2815 (\text{Sb \%}) \\
+    \textcolor{green}{\text{Pureté ONO \%}} &= \text{Cu \%} + \text{Ti \%} + \text{Ni \%} + \text{Cr \%} + \text{V \%} + \text{Al \%} + \text{As \%} \\
+    &\quad + \text{Sn \%} + \text{Pb \%} + \text{Sb \%} + \text{Bi \%} \\
+    \textcolor{purple}{\text{Impureté \%}} &= 4.9 (\text{Cu \%}) + 0.37 (\text{Ni \%}) + 0.37 (\text{Cr \%}) + 7.9 (\text{Mo \%}) \\
+    &\quad + 4.4 (\text{Ti \%}) + 39.0 (\text{Sn \%}) + 0.44 (\text{Mn \%}) + 5.6 (\text{P \%}) \\
+    \textcolor{orange}{\text{Pureté THIELMANN \%}} &= 4.4 (\text{Ti \%}) + 2.0 (\text{As \%}) + 2.3 (\text{Sn \%}) + 5.0 (\text{Sb \%}) \\
+    &\quad + 290 (\text{Pb \%}) + 370 (\text{Bi \%}) + 1.6 (\text{Al \%})
 \end{align*}
-
-
-\begin{align*}
-    \textcolor{blue}{\text{Pureté MAYER \%}} &= \text{Ti\%} + \text{Pb\%} + \text{Bi\%} + \text{Sb\%} \\
-    \textcolor{red}{\text{Ferrite \%}} &= 92.3 - 96.2 (\text{Mn \%}) - 211 (\text{Cu \%}) \\
-    &\quad - 14270 (\text{Pb \%}) - 2815 (\text{Sb \%}) \\
-    \textcolor{green}{\text{Pureté ONO \%}} &= \text{Cu \%} + \text{Ti \%} + \text{Ni \%} + \text{Cr \%} + \text{V \%} + \text{Al \%} \\
-    &\quad + \text{As \%}  + \text{Sn \%} + \text{Pb \%} + \text{Sb \%} + \text{Bi \%} \\
-    \textcolor{purple}{\text{Impureté \%}} &= 4.9 (\text{Cu \%}) + 0.37 (\text{Ni \%}) + 0.37 (\text{Cr \%}) \\
-    &\quad + 7.9 (\text{Mo \%}) + 4.4 (\text{Ti \%}) + 39.0 (\text{Sn \%}) \\
-    &\quad + 0.44 (\text{Mn \%}) + 5.6 (\text{P \%}) \\
-    \textcolor{orange}{\text{Pureté THIELMANN \%}} &= 4.4 (\text{Ti \%}) + 2.0 (\text{As \%}) + 2.3 (\text{Sn \%}) \\
-    &\quad + 5.0 (\text{Sb \%}) + 290 (\text{Pb \%}) + 370 (\text{Bi \%}) \\
-    &\quad + 1.6 (\text{Al \%})
-    \end{align*}
     
-
+   
+% \begin{align*}
+%     \textcolor{blue}{\text{Pureté MAYER \%}} &= \text{Ti\%} + \text{Pb\%} + \text{Bi\%} + \text{Sb\%} \\
+%     \textcolor{red}{\text{Ferrite \%}} &= 92.3 - 96.2 (\text{Mn \%}) - 211 (\text{Cu \%}) - 14270 (\text{Pb \%}) - 2815 (\text{Sb \%})\\
+%     \textcolor{green}{\text{Pureté ONO \%}} &= \text{Cu \%} + \text{Ti \%} + \text{Ni \%} + \text{Cr \%} + \text{V \%} + \text{Al \%} + \text{As \%} + \text{Sn \%} \\
+%     &\quad + \text{Pb \%} + \text{Sb \%} + \text{Bi \%} \\
+%     \textcolor{purple}{\text{Impureté \%}} &= 4.9 (\text{Cu \%}) + 0.37 (\text{Ni \%}) + 0.37 (\text{Cr \%}) + 7.9 (\text{Mo \%}) + 4.4 (\text{Ti \%}) \\
+%     &\quad + 39.0 (\text{Sn \%}) + 0.44 (\text{Mn \%}) + 5.6 (\text{P \%}) \\
+%     \textcolor{orange}{\text{Pureté THIELMANN \%}} &= 4.4 (\text{Ti \%}) + 2.0 (\text{As \%}) + 2.3 (\text{Sn \%}) + 5.0 (\text{Sb \%}) + 290 (\text{Pb \%}) \\
+%     &\quad + 370 (\text{Bi \%}) + 1.6 (\text{Al \%})
+% \end{align*}
+    
     
 
 
@@ -677,89 +777,14 @@ Les éléments comme Sb [%], Bi [%], et Al [%] montrent des corrélations faible
 
 
 
-% Ferrite
-
-% \textbf{Corrélation entre la Ferrite et les éléments chimiques} 
-% \begin{figure}[H]
-%     \includegraphics[width=\textwidth]{Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf} 
-% \end{figure}
-
-% \textbf{Classement des éléments chimiques : }
-% \begin{itemize}
-%     \item Cu (Cuivre) [\%] : -0.66
-%     \item Sb (Antimoine) [\%] : -0.64
-%     \item Mn (Manganèse) [\%] : -0.54
-% \end{itemize}
-
-
-% Ferrite et Purete ONO 
-\begin{figure}[H]
-    \centering
-    \begin{adjustbox}{width=1.3\textwidth,center}
-        \includegraphics[scale=1]{Images/Statistique/Matrice_corrélation_ONO_Elements.pdf}
-        \includegraphics[scale=1]{Images/Statistique/Matrice_corrélation_Ferrite_Elements.pdf}
-    \end{adjustbox}
-    \caption{Matrices de corrélation La Purete ONO et la ferrite avec leurs éléments chimique.}
-    \label{fig:correlations Ferrite_ONO}
-\end{figure}
-
-La pureté ONO [%] a une forte corrélation positive avec Cu [%] (0.93) et Ti [%] (0.92).
-Il y a des corrélations positives modérées avec Ni [%] (0.59) et Cr [%] (0.53)
-Les éléments comme Sb [%], Bi [%], et Al [%] montrent des corrélations faibles ou négligeables avec la pureté ONO, suggérant qu’ils n’ont pas un impact significatif sur celle-ci.
-
-
-La Ferrite [%] a une forte corrélation négative avec Sb [%] (-0.64) et Cu [%] (-0.66), 
-Il y a une corrélation négative modérée avec Mn [%] (-0.54)
-Les autres éléments montrent des corrélations faibles ou négligeables avec la Ferrite, suggérant qu’ils n’ont pas un impact significatif sur celle-ci.
 
 
 
 
 
-% Pureté THIELMANN
-
-% \textbf{Corrélation entre la Pureté THIELMANN et les éléments chimiques} 
-% \begin{figure}[H]
-%     \includegraphics[width=\textwidth]{Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf} 
-% \end{figure}
 
 
 
-% Pureté MAYER
-
-% \textbf{Corrélation entre la Pureté MAYER et les éléments chimiques} 
-% \begin{figure}[H]
-%     \includegraphics[width=\textwidth]{Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf} 
-% \end{figure}
-
-% \textbf{Classement des éléments chimiques : }
-% \begin{itemize}
-%     \item 
-%     \item 
-%     \item 
-% \end{itemize}
-
-
-
-
-% Pureté THIELMANN et Pureté MAYER 
-\begin{figure}[H]
-    \centering
-    \begin{adjustbox}{width=1.3\textwidth,center}
-        \includegraphics[scale=1]{Images/Statistique/Matrice_corrélation_THIELMANN_Elements.pdf}
-        \includegraphics[scale=1]{Images/Statistique/Matrice_corrélation_MAYER_Elements.pdf}
-    \end{adjustbox}
-    \caption{Matrices de corrélation des éléments de la Pureté THIELMANN et de la Pureté MAYER.}
-    \label{fig:correlations}
-\end{figure}
-
-
-La pureté THIELMANN [%] a une forte corrélation positive avec Bi [%] (0.93), ce qui signifie que des niveaux élevés de pureté THIELMANN sont associés à des niveaux plus élevés de bismuth.
-Il y a une corrélation positive modérée avec Sb [%] (0.43)
-Les éléments comme Ti [%], As [%], et Al [%] montrent des corrélations faibles ou négligeables avec la pureté THIELMANN, suggérant qu’ils n’ont pas un impact significatif sur celle-ci.
-
-Sur Mayer : Il y a une forte corrélation positive entre Ti [%] et Bi [%] (0.69)
-Sur Mayer : Sb [%] montre une corrélation négative modérée avec Ti [%] (-0.62)
 
 
 
@@ -802,60 +827,28 @@ Pour améliorer la performance de la régression linéaire, nous procédons à l
 
 
 
-
-% Les valeurs extrèmes de l'impurté
-
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{Images/Statistique/Impureté_avec_extreme.pdf}
-    \includegraphics[width=\textwidth]{Images/Statistique/Impureté_sans_extreme.pdf}
-    %  \textwidth
-\end{figure}
-
-
-% Les valeurs extrèmes de l'impurté
-\begin{figure}[H]
-    \centering
-    \begin{adjustbox}{width=1.3\textwidth,center}
-        \includegraphics[scale=1]{Images/Statistique/Impureté_avec_extreme.pdf}
-        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme.pdf}
-    \end{adjustbox}
-    \caption{L'impurté avant et après le traitement des valeurs extrèmes.}
-    \label{fig:Extrem}
-\end{figure}
-
-% Les valeurs extrèmes de l'impurté
-\begin{figure}[H]
-    \centering
-    \begin{adjustbox}{width=1.3\textwidth,center}
-        \includegraphics[scale=1]{Images/Statistique/Essais.pdf}
-    \end{adjustbox}
-\end{figure}
-
-
 % Les valeurs extrèmes de l'impureté
 \begin{figure}[H]
     \centering
     \begin{adjustbox}{width=1.3\textwidth,center}
-        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme 2.pdf}
-        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme 2.pdf}
+        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme.pdf}
+        \includegraphics[scale=1]{Images/Statistique/Impureté_avec_extreme.pdf}
     \end{adjustbox}
-    \caption{L'impurté avant et après le traitement des valeurs extrèmes.}
-    \label{fig:Extreme}
+    \caption{L'impureté avant et après le traitement des valeurs extrèmes.}
+    \label{fig:ExtremeImputerete}
 \end{figure}
-
 
 
 % Les valeurs extrèmes de ONO
 \begin{figure}[H]
     \centering
     \begin{adjustbox}{width=1.3\textwidth,center}
-        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme 2.pdf}
-        \includegraphics[scale=1]{Images/Statistique/Impureté_sans_extreme 2.pdf}
+        \includegraphics[scale=1]{Images/Statistique/Purete ONO_avec_extreme.pdf}
+        \includegraphics[scale=1]{Images/Statistique/Purete ONO_sans_extreme.pdf}
     \end{adjustbox}
-    \caption{L'impurté avant et après le traitement des valeurs extrèmes.}
-    \label{fig:Extremem}
+    \caption{La purete ONO avant et après le traitement des valeurs extrèmes.}
+    \label{fig:ExtremeONO}
 \end{figure}
-
 
 On peut alors discuter des bornes mininum et maximal de l'impurété et de ONO,
 qui permet de garantir un bon lit de fusion.
@@ -870,23 +863,6 @@ avoir un intervale de confiance et de prediction fine
 
 Effectuons une régression linéaire et calculons les intervalles de  prédictions 
 suivant les éléments chimiques et les indicateurs les plus pertinants.
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{Images/Statistique/Regression_Impurete_Sn.pdf} % Réduction à 90% de la largeur de texte
-    \vspace{10pt} % Espace vertical entre les images
-    \includegraphics[width=0.9\textwidth]{Images/Statistique/Regression_Impurete_Cu.pdf}
-\end{figure}
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.45\textwidth]{Images/Statistique/Regression_Impurete_Sn.pdf} 
-    \includegraphics[width=0.47\textwidth]{Images/Statistique/Regression_Impurete_Cu.pdf}
-    \caption{Régressions des impuretés pour l'étain (Sn) et le cuivre (Cu).}
-    \label{fig:regression-impurete}
-\end{figure}
 
 
 \medskip % Mettre un espace
@@ -906,93 +882,104 @@ Où :
 
 
 
-% Impureté
 
-\textbf{L'impurété en fonction de l'étain (Sn)} 
+% % Regression linéaire entre Impurete et Sn, Cu
+% \begin{figure}[H]
+%     \centering
+%     \begin{adjustbox}{width=1.35\textwidth,center}
+%         \includegraphics[scale=1]{Images/Statistique/Regression_Impurete_Sn.pdf}
+%         \includegraphics[scale=1]{Images/Statistique/Regression_Impurete_Sn.pdf}
+%         % \includegraphics[scale=1]{Images/Statistique/Regression_Impurete_Cu.pdf}
+%     \end{adjustbox}
+%     \caption{L'impureté en fonction de Sn et de Cu}
+%     \label{fig:regression-impurete}
+% \end{figure}
+
+
+
+% % Regression linéaire entre Impurete et Sn, Cu ;et Ono  et Cr, Cu 
 \begin{figure}[H]
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Impurete_Sn.pdf} 
+    \centering
+    \adjustbox{width=1.25\textwidth, center}{  % Ajuster à la largeur de la page
+        \begin{minipage}{0.8\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Images/Statistique/Regression_Impurete_Sn.pdf}
+        \end{minipage}
+        \hspace{0.01\textwidth}  % Petit espacement entre les colonnes
+        \begin{minipage}{0.8\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Images/Statistique/Regression_Impurete_Cu.pdf}
+        \end{minipage}
+    }\\[0.5cm]  % Espacement vertical entre les rangées
+    \adjustbox{width=1.25\textwidth, center}{
+        \begin{minipage}{0.8\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Images/Statistique/Regression_Ono_Cu.pdf}
+        \end{minipage}
+        \hspace{0.01\textwidth}  % Petit espacement entre les colonnes
+        \begin{minipage}{0.8\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Images/Statistique/Regression_Ono_Cr.pdf}
+        \end{minipage}
+    }
+    \caption{L'évolution de la pureté Ono et l'impureté}
+    % \caption{La régression linéaire et l'intervalle de prédiction de la pureté Ono en fonction de Cr et de Cu}
+    \label{fig:regression}
 \end{figure}
 
 
 
 
 
-\begin{figure}[H]
-\textbf{L'impurété en fonction du cuivre (Cu)} 
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Impurete_Cu.pdf} 
-\end{figure}
-
-
-
-% Purete ONO
-
-\textbf{La pureté Ono en fonction du cuivre (Cu)} 
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Ono_Cu.pdf} 
-\end{figure}
-
-\textbf{La pureté Ono en fonction du chrome (Cr)} 
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Ono_Cr.pdf} 
-\end{figure}
-
-
-
-% Ferrite
-\textbf{La Ferrite en fonction du cuivre (Cu)} 
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Ferrite_Cu.pdf} 
-\end{figure}
-
-
-\textbf{La Ferrite en fonction de l'ntimoine Sb} 
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Ferrite_Sb.pdf} 
-\end{figure}
 
 
 
 
-% Rm
-
-\textbf{La Résistance mécanique en fonction du Cuivre} 
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Cu_Rm.pdf} 
-\end{figure}
-
-\textbf{La Résistance mécanique en fonction du Sn} 
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Sn_Rm.pdf} 
-\end{figure}
-
-
-% Allongement et Rm
-
-\textbf{La Résistance mécanique en fonction du Cr} 
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Cr_Rm.pdf} 
-\end{figure}
-
-
-\textbf{L'allongement en fonction du  Cr} 
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Cr_Allongement.pdf} 
-\end{figure}
 
 
 
-% Allongement
-
-\textbf{L'allongement en fonction du Cuivre} 
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Cu_Allongement.pdf} 
-\end{figure}
 
 
-\textbf{L'allongement en fonction du Sn}
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{Images/Statistique/Regression_Sn_Allongement.pdf} 
-\end{figure}
+% % Rm
+
+% \textbf{La Résistance mécanique en fonction du Cuivre} 
+% \begin{figure}[H]
+% \includegraphics[width=\textwidth]{Images/Statistique/Regression_Cu_Rm.pdf} 
+% \end{figure}
+
+% \textbf{La Résistance mécanique en fonction du Sn} 
+% \begin{figure}[H]
+% \includegraphics[width=\textwidth]{Images/Statistique/Regression_Sn_Rm.pdf} 
+% \end{figure}
+
+
+% % Allongement et Rm
+
+% \textbf{La Résistance mécanique en fonction du Cr} 
+% \begin{figure}[H]
+% \includegraphics[width=\textwidth]{Images/Statistique/Regression_Cr_Rm.pdf} 
+% \end{figure}
+
+
+% \textbf{L'allongement en fonction du  Cr} 
+% \begin{figure}[H]
+% \includegraphics[width=\textwidth]{Images/Statistique/Regression_Cr_Allongement.pdf} 
+% \end{figure}
+
+
+
+% % Allongement
+
+% \textbf{L'allongement en fonction du Cuivre} 
+% \begin{figure}[H]
+% \includegraphics[width=\textwidth]{Images/Statistique/Regression_Cu_Allongement.pdf} 
+% \end{figure}
+
+
+% \textbf{L'allongement en fonction du Sn}
+% \begin{figure}[H]
+% \includegraphics[width=\textwidth]{Images/Statistique/Regression_Sn_Allongement.pdf} 
+% \end{figure}
 
 
 
@@ -1040,11 +1027,11 @@ Nous constatons une corrélation linéaire entre le cuivre et la résistance mé
 
 \section{La recette Optimale}
 
-\subsection{Présentation du problème d'Optimisation }
+\subsection{Présentation du problème de la Recette }
 
 Dans le cadre du processus de fabrication de 5 tonnes de fontes, l'une des étapes préliminaires fondamentales
 réside dans la détermination du lit de fusion, c'est-à-dire la proportion des matières premières
-nécessaires à la fusion. Dans notre cas, on souhaite  produire une tonne de fonte de haute qualité.
+nécessaires à la fusion. Dans notre cas, on souhaite  produire 5 tonne de fonte de haute qualité.
 Pour ce faire, nous disposons d'une trentaine de matières premières, chacune possédant sa propre
 composition chimique distinctive. Chaque matière première est disponible ou non en quantité limitée
 et leurs prix varient tout au long de l'année. Ces matières sont issues de diverses sources,
@@ -1059,9 +1046,420 @@ des pourcentages d'éléments chimiques présents dans les matières premières.
 l'objectif principal est de déterminer les proportions optimales des matières premières,
 en vue de minimiser les coûts de production tout en préservant la qualité de la fonte.
 
-% (Afficher les images de matières premières de la fonderie)
 
-\subsection{Modélisation du problème}
+
+
+
+% Modélisation du problème ou Formulation mathématique du problème
+
+
+\subsection{ L'algorithme du simplexe }
+
+
+L'algorithme du simplexe, développé par George Dantzig en 1947, est une 
+méthode itérative de résolution des problèmes d'optimisation linéaire. 
+Ces problèmes consistent à maximiser ou minimiser une fonction linéaire 
+sous contraintes linéaires. L'algorithme exploite la structure géométrique 
+des problèmes linéaires, en se déplaçant d'une solution de base faisable 
+à une autre le long des sommets du polytope de solutions, jusqu'à 
+atteindre une solution optimale.
+
+
+
+
+% Tu es un étudiant en dernière année de master de  mathématiques appliquées et tu dois pour un rapport de stage inclure une section qui présente et explique l'algorithme du simplexe.
+% As-tu des idées sur comment t'y prendre ? Si oui , fais-le ! 
+
+
+Phase 1 :
+\section*{Résumé de la phase d'initialisation du simplexe (phase 1)}
+
+On note \( F_{aux} \) la valeur de la fonction objectif du problème auxiliaire (PLA) à la fin du simplexe, c'est-à-dire 
+\[ F_{aux} = \min \sum_{j=1}^{n} x_j \]
+
+\begin{enumerate}
+    \item Si \( F_{aux} = 0 \) et \( x_0 = 0 \), on passe à la phase 2 du simplexe.
+    \item Si \( F_{aux} = 0 \) et \( x_0 > 0 \), on supprime les lignes et colonnes associées aux \( x_i \), et on passe à la phase 2 avec \( q \).
+    \item Si \( F_{aux} > 0 \), alors pas de solution réalisable pour le DPL (phase).
+\end{enumerate}
+
+
+
+\section*{Définition 4.2}
+
+Soit $B \subset \{1, \cdots, n\}$ un ensemble d'indices avec $\text{card}(B) = m$ tel que les colonnes $A_j$, $j \in B$, de $A$ sont linéairement indépendantes. Autrement dit, la matrice carrée $A_B$ formée des colonnes $A_j$, $j \in B$, est inversible. On dit que l'ensemble $B$ des indices est une base.
+
+Les variables $X_B = (x_j)_{j \in B}$ sont appelées variables de base.
+
+Les variables $X_H = (x_j)_{j \notin B}$ sont appelées variables hors-base.
+
+On notera $H = \{j \in \{1, \cdots, n\}, j \notin B\}$ l'ensemble des indices correspondants aux variables hors-base.
+\section*{Résumé de la méthode du simplexe en phase 2 (progression)}
+
+\begin{enumerate}
+    \item \textbf{Variables de base réalisables et coûts réduits :}
+    \begin{itemize}
+        \item Calcul des variables de base réalisables : étant donné $A = (A_B | A_H)$, on calcule les variables de base réalisables $X_B = A_B^{-1}b \geq 0$.
+        \item Calcul des coûts réduits : $\lambda_H = c_H - c_B A_B^{-1} A_H$.
+        \item Si $\lambda_H \leq 0$ alors $X_p$ est une solution optimale (arrêt de l'algorithme).
+    \end{itemize}
+    \item \textbf{Variable entrante $e$ :} détermination de l'indice $e = \arg\max_i \{ \lambda_H \}_i$ tel que $\lambda_H > 0$.
+    \item \textbf{Variable sortante $s$ :}
+    \begin{itemize}
+        \item Calcul de $z = A_B^{-1} A_e$.
+        \item Détermination de l'indice $s = \arg\min_i \left\{ \frac{(X_B)_i}{z_i} \right\}$ tel que $z_i > 0$.
+    \end{itemize}
+    \item On obtient une nouvelle base $B^*$ et une nouvelle matrice $A_B^*$ dans laquelle la colonne $A_e$ remplace la colonne $A_s$. Calcul de $A_B^{-1}$ et retour à l'étape 1 avec la base $B^*$ au lieu de $B$.
+\end{enumerate}
+
+
+
+
+
+\begin{algorithm}[H]
+    \SetAlgoLined
+    \KwIn{Matrice $A$, vecteurs $b$ et $c$ (fonction objectif)}
+    \KwOut{Solution optimale $X^*$ ou indication que le problème est non borné}
+    \BlankLine
+    Initialiser une solution de base réalisable $X_B = A_B^{-1}b$ \;
+    \While{Il existe une variable hors-base avec un coût réduit positif}{
+        Calculer les coûts réduits $\lambda_H = c_H - c_B A_B^{-1} A_H$\;
+        Sélectionner la variable entrante $x_e$ avec le plus grand $\lambda_H > 0$\;
+        Calculer la direction de déplacement $z = A_B^{-1} A_e$\;
+        Calculer le ratio pour chaque variable de base $x_i = \frac{(X_B)_i}{z_i}$ où $z_i > 0$\;
+        Sélectionner la variable sortante $x_s$ correspondant au plus petit ratio\;
+        Mettre à jour la base en remplaçant $x_s$ par $x_e$\;
+        Recalculer $A_B^{-1}$ et mettre à jour $X_B$\;
+    }
+    \If{Toutes les variables hors-base ont des coûts réduits négatifs ou nuls}{
+        La solution courante est optimale\;
+    }
+    \Else{
+        Le problème est non borné\;
+    }
+    \caption{Algorithme du simplexe (Phase 2)}
+    \end{algorithm}
+
+\subsection{ Modélisation du problème }
+
+% Première formulation du problème
+
+On veut résoudre :
+$$ \underset{x}{\min }  C \cdot x $$
+
+sous les contraintes :
+$$
+\begin{cases}
+A_{eq} x = b_{eq} \\
+A_{ub} x \leq b_{ub}
+\end{cases}
+$$
+
+où :
+\begin{itemize}
+    \item \small $x \in [0,1]^m $, les proportions de la matière première.
+    \item \small $m$ : nombre de matières premières
+    \item \small $n$ : nombre d'éléments chimiques
+    \item \small $r$ : nombre de contraintes
+    \item \small $A_{ub}, A_{eq} \in \mathbb{R}^{n \times r}$ : matrices des contraintes
+    \item \small $b_{ub}, b_{eq} \in \mathbb{R}^{n \times r}$ : vecteurs des contraintes
+\end{itemize}
+
+
+% Deuxième formulation du problème
+
+
+On veut résoudre :
+$$ \underset{x}{\min }  C \cdot x - \sum s_i $$
+
+sous les contraintes :
+$$
+\begin{cases}
+A_{eq} x = b_{eq} \\
+A_{ub} x + s = b_{ub}
+\end{cases}
+$$
+
+où :
+\begin{itemize}
+    \item \small $x \in [0,1]^m $, les proportions de la matière première et $ s_i \geq 0 $.
+    \item \small $m$ : nombre de matières premières
+    \item \small $n$ : nombre d'éléments chimiques
+    \item \small $r$ : nombre de contraintes
+    \item \small $A_{ub}, A_{eq} \in \mathbb{R}^{n \times r}$ : matrices des contraintes
+    \item \small $b_{ub}, b_{eq} \in \mathbb{R}^{n \times r}$ : vecteurs des contraintes
+\end{itemize}
+
+
+
+
+
+
+% L'algorithme du simplexe ou La méthode du simplexe
+
+
+
+
+
+\subsection{Résolutions et Résultats du problème  }
+
+
+- Les matiere premieres que l'on utilise sont specifique à chaque Nuance
+par exemple les retours bleu sont utiliser uniquement pour la GS 450-10
+et GS 400-15 et les retours jaune pour les 2 autres nuances
+
+
+- Au cours de mon stage, je me suis focaliser uniquement sur la GS.
+L'ensemble du code est realiser en python et en jupiter.
+
+
+
+
+
+
+
+% Les inputs de l'algorithme du simplexe 
+
+
+% Le Tableau matières premières
+\begin{figure}[H]
+    \centering
+    \adjustbox{width=1.3\textwidth, center}{
+        \begin{minipage}{\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Images/Recette/Tableau matières premières 1-1.pdf} \\
+            \vspace{0.01 cm}
+            \includegraphics[width=\textwidth]{Images/Recette/Tableau matières premières 1-2.pdf}
+        \end{minipage}
+    }
+    \caption{Illustration du tableau matières premières}
+    \label{fig:contraintes1}
+\end{figure}
+
+
+
+% Les contraintes qualités de la GS 400-15 et de la GS 450-10
+\begin{figure}[H]
+    \centering
+    \adjustbox{width=1.3\textwidth, center}{
+        \begin{minipage}{\textwidth}
+            \centering
+            \includegraphics[width=0.75\paperwidth]{Images/Recette/Contraintes Qualités GS_400_15_1.pdf} \\
+            \vspace{0.01 cm}
+            \includegraphics[width=0.75\paperwidth]{Images/Recette/Contraintes Qualités GS_400_15_2.pdf}  \\
+            \vspace{0.5 cm}
+            \includegraphics[width=0.75\paperwidth]{Images/Recette/Contraintes Qualités GS_450_10_1.pdf}  \\
+            \vspace{0.01 cm}
+            \includegraphics[width=0.75\paperwidth]{Images/Recette/Contraintes Qualités GS_450_10_2.pdf}  
+        \end{minipage}
+    }
+    \caption{Les contraintes qualités de la fonte GS 400-15 et GS 450-10}
+    \label{fig:contraintes2}
+\end{figure}
+
+
+% Les contraintes matières premières
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{width=1.25\textwidth,center}
+        \includegraphics[scale=1]{Images/Recette/Contraintes matières premières 1.pdf}
+    \end{adjustbox}
+    \caption{Les contraintes matières premières}
+    \label{fig:contraintes3}
+\end{figure}
+
+
+
+
+
+%  Les ouputs de l'algos
+
+
+
+% \subsection{Mise en oeuvre de la méthode du simplexe}
+
+% Fonction create_optimal_recipe
+
+% \begin{lstlisting}[style=python]
+% \begin{lstlisting}[fragile]
+
+\begin{lstlisting}[style=python]
+    def create_optimal_recipe(recette,table_mp, mp_constraints, elmt_quality_constraints,dossier_data):
+        df_mp, df_elmt_and_quality = mp_constraints[recette], elmt_quality_constraints[recette]
+        df_contraints_element, df_contraints_qualite, df_mp_dispo, df_mp_indispo = Separate_data(table_mp, df_mp, df_elmt_and_quality)
+        # Suppression des matières premières indisponibles
+        table_mp = clean_table_mp(table_mp, df_mp_indispo)
+        # Construction de la matrice A et du vecteur C
+        A, C = create_matrix_A_and_C(table_mp, df_mp_dispo)
+        # Initialisation des listes pour les contraintes
+        constraints = {'A_eq': {},'b_eq': {},'A_sup': {},'b_sup': {} }
+        # contraintes concernant les éléments chimiques
+        constraints = format_constraints_elements(df_contraints_element, A, constraints)
+        # contraintes concernant la qualité
+        constraints = format_constraints_qualite(df_contraints_qualite, A, constraints)
+        # contraintes concernant les matières premières disponibles
+        constraints, bounds = format_constraints_MP(df_mp_dispo, constraints)
+        # Résoudre le problème d'optimisation linéaire
+        method = 'simplex' 
+        res, erreurs = solve_linear_program(C, constraints, bounds, method)
+        # Gestion du résultat
+        gestion_resultats(erreurs, res, df_mp_dispo, table_mp, 
+                        constraints, dossier_data, recette)
+        return
+\end{lstlisting}
+    
+
+
+
+
+
+
+
+
+\section{Le Traitement au Magnésium de la fonte GS}
+
+\subsection{Présentation du problème }
+
+
+
+-  On cherche
+
+
+Voici une reformulation plus claire et lisible de votre texte :
+
+Dans cette partie, nous nous concentrons sur la production de fonte à 
+graphite sphéroïdal (GS) réalisée par le processus DISAMATIC, en 
+particulier sur l’étape de sphéroïdisation. Cette étape consiste 
+principalement à ajouter du magnésium (Mg) à la fonte avant la coulée. 
+Le magnésium est introduit sous forme d'alliage en utilisant un fil fourré.
+
+À la fonderie, le coût du fil fourré est de 6,68 € par kilogramme de poudre,
+avec une masse de 418 g par mètre de fil. La quantité de magnésium contenue
+dans ce fil est de 43 g par mètre.
+
+Avant d'ajouter le fil fourré à la fonte, il est nécessaire de produire 
+cette dernière. La fonderie dispose de deux fours de fusion d'une capacité 
+de 5 tonnes chacun. Le processus de préparation du lit de fusion, qui 
+consiste à charger les matières premières, prend 25 minutes, tandis que 
+la fusion des matières premières dure 45 minutes.
+On suppose le pourcentage de Mg est nul dans la fonte fournis par le four de 
+Fusion. 
+
+
+Une fois la fonte créée, elle est versée et transportée dans des 
+poches. Il existe deux types de poches utilisées : une poche de traitement 
+et une poche de coulée, chacune pouvant contenir jusqu'à 1250 kg de fonte.
+La fonte sera ensuite recu dans le Four de Coullée.
+
+
+Concernant le four de coulée, certaines règles spécifiques doivent être 
+respectées. Le four, d'une capacité maximale de 5 tonnes, doit toujours 
+contenir au moins 2500 kg de fonte. Si cette quantité minimale n'est pas 
+respectée, cela pourrait endommager le four. C’est pourquoi la production 
+des moules ne commence qu’après l’ajout de la troisième poche de fonte.
+
+Le pourcentage de magnésium (Mg) doit être compris entre 0,035 \% et 
+0,045 \%. Cette contrainte sur la teneur en magnésium garantit la qualité 
+de la pièce finale tout en minimisant le coût du fil fourré.
+
+En général, dans le programme des pièces à réaliser dans la journée, 
+le type, la taille et la quantité des pièces varient. Cela entraîne des 
+variations dans le nombre de mottes à réaliser, la masse des grappes et 
+le nombre de moules produits par heure.
+
+
+
+
+% -----------
+
+
+
+
+On a une donnée d'entrée : la candence et la poids de motte. On sait ce que 
+l'on consomme, c'est ca la fonction de consommation. Cette consommation de 
+fonte permet de savoir combien de temps l'on met pour passer de 3500 kg à 
+2500 kg de fonte dans le four de Coulée. On veut savoir à quel moment, on 
+doit lancer la prochaine poche de traitement. Cette poche doit arriver avant
+que la fonte dans le Four de Coulée atteingne son mininum 2500. Si le 
+mininum est depasse cela peut endomager le four de Coulée.
+
+
+
+On a une fonction de perte du Mg en fonction du temps.
+Dans le Four de Coullée, le pourcentage de Mg doit etre compris entre à 
+0.035 - 0.045 \% cette contrainte sur le mg permet de garantir la qualité 
+de la pièce finale tout en limitant le prix du fil Fourre.
+
+
+But : Trouver la quantite de Mg à mettre dans chaque poche de traitement
+qui permettera au Four de Coullée de retrouver le pourcentage maximale de Mg
+fixée à 0.045. La durrée du Traitement MG est d'environ 10 minutes, 
+c'est-à-dire la fonte met 10 minutes de la Fusion au Four de coulée.
+
+
+
+L'un des objectif de ce problème 
+est de trouver la longueur en mettre optimal de fil fourre utiliser. 
+
+% Le Traitement GS
+
+
+% Les Poches MG 1 et 2 et 3
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{height=0.49\textheight,width=1.25\textwidth,center}
+        \includegraphics{Images/Mg/Poche 1.pdf} % Première image
+    \end{adjustbox}
+    
+    \vspace{0.01cm} % Espacement entre les images
+    
+    \begin{adjustbox}{height=0.49\textheight,width=1.25\textwidth,center}
+        \includegraphics{Images/Mg/Poche 2.pdf} % Deuxième image
+    \end{adjustbox}
+
+    \caption{Le Traitement au MG des Poche 1 et Poche 2}
+    \label{fig:Poche1Et2}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{width=1.3\textwidth,center}
+        \includegraphics{Images/Mg/Poche 3.pdf}
+    \end{adjustbox}
+    \caption{Le Traitement au MG de la Poche 3}
+    \label{fig:Poche3}
+\end{figure}
+
+
+
+\subsection{Résolutions du problème}
+
+
+% Le Traitement GS
+Pour calculer la quantité d'alliages au magnésium à introduire dans la poche, on utilise la relation empirique suivante :
+
+$$
+\mathbf{Q} = \mathbf{P} \cdot \frac{0.76 (\mathbf{S} - 0.01) + \mathbf{K} + \mathbf{t} \cdot \mathbf{eP}}{\frac{\mathbf{R} \cdot \mathbf{Mg}}{100}} \cdot \left(\frac{\mathbf{T}}{1450}\right)^2
+$$
+
+\textbf{Variables et paramètres :}
+
+\begin{itemize}
+    \item \textbf{Q} : Quantité d'alliage au magnésium à utiliser (en kg)
+    \item \textbf{P} : Poids de fonte à traiter (en kg)
+    \item \textbf{S} : Taux de soufre de la fonte de base (en \%)
+    \item \textbf{t} : Temps de séjour prévu pour la fonte après traitement (en minutes)
+    \item \textbf{eP} : Pourcentage de perte de magnésium par minute dans la poche (\%)
+    \item \textbf{T} : Température de la fonte au moment du traitement (en degrés Celsius)
+    \item \textbf{R} : Rendement en magnésium de l'opération (en \%)
+    \item \textbf{Mg} : Taux de magnésium dans l'alliage (en \%)
+    \item \textbf{K} : Quantité de magnésium résiduel nécessaire pour que le graphite soit sous forme sphéroïdal (en \%)
+\end{itemize}
+
+
+
 
 
 
@@ -1074,40 +1472,26 @@ Phase Tansitoire
 Dans le drive , exporter en pdf avec parametre Paysage, Statement, dessus puis bas
 
 
-Les différents étapes  de la poche 1
-
-
-\includepdf[pages=-, scale=1]{Images/Poche 1.pdf}
-\includepdf[pages=-, scale=1]{Images/Poche 2.pdf}
 
 
 
 
-
-\begin{figure}[H]
-    \centering
-    \begin{adjustbox}{width=1.3\textwidth,center}
-        \includegraphics{Images/Recette/Poche 3.pdf}
-    \end{adjustbox}
-    \caption{Flux de production des pièces en fonte.}
-    \label{fig:Poche3}
-\end{figure}
+\subsection{Résultats}
+    
 
 
 
 
-
-
-\begin{table}[H]
-    \caption{Tableau 1.5: Composition chimique des fontes GS (ADI) [26]}
-    \centering
-        \begin{tabular}{|c|c|}
-        \hline
-        Nuance & Carbone [\%] \\ \hline
-        GS 400-15 & 3.50-4.00  \\ \hline
-        GS 450-10 & 3.50-4.00  \\ \hline
-        \end{tabular}
-\end{table}
+% \begin{table}[H]
+%     \caption{Tableau 1.5: Composition chimique des fontes GS (ADI) [26]}
+%     \centering
+%         \begin{tabular}{|c|c|}
+%         \hline
+%         Nuance & Carbone [\%] \\ \hline
+%         GS 400-15 & 3.50-4.00  \\ \hline
+%         GS 450-10 & 3.50-4.00  \\ \hline
+%         \end{tabular}
+% \end{table}
     
 % sudo apt-get install texlive-full
     
@@ -1121,11 +1505,7 @@ Les différents étapes  de la poche 1
 %     \end{tabular}
 % \end{table}
 
-\subsection{La méthode du simplexe}
 
-\subsection{Mise en oeuvre de la méthode du simplexe}
-
-LE prix du fil Fourre en metre est de ...
 
 
 \begin{thebibliography}{9}
@@ -1148,6 +1528,9 @@ Université de Strasbourg, 2021-2022 }
 
 \bibitem{Gwenol Grandperrin}
 Gwenol Grandperrin.  \emph{Introduction à la méthode des bases réduites, ResearchGate Janvier 2008 }
+
+
+Dantzig, George B. Linear Programming and Extensions. Princeton University Press, 1963.
 
 \end{thebibliography}
 
