@@ -1042,6 +1042,17 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/share/texmf/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmr.fd
@@ -1238,11 +1249,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm
 OUTPUT rapport.toc
-INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
@@ -1284,6 +1290,8 @@ INPUT ./Images/Presentation/Disque.pdf
 INPUT Images/Presentation/Disque.pdf
 INPUT ./Images/Presentation/Disque.pdf
 INPUT ./Images/Presentation/Disque.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT ./Images/Statistique/DonnéesBrut1.pdf
 INPUT ./Images/Statistique/DonnéesBrut1.pdf
 INPUT Images/Statistique/DonnéesBrut1.pdf
@@ -1309,8 +1317,6 @@ INPUT ./Images/Statistique/DonnéesClean2.pdf
 INPUT Images/Statistique/DonnéesClean2.pdf
 INPUT ./Images/Statistique/DonnéesClean2.pdf
 INPUT ./Images/Statistique/DonnéesClean2.pdf
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr8.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT ./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf
 INPUT ./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf
 INPUT Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf
@@ -1366,7 +1372,34 @@ INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
 INPUT Images/Statistique/Regression_Ono_Cr.pdf
 INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
 INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri12.tfm
+INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
+INPUT Images/Statistique/Regression_Cu_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cu_Rm.pdf
+INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
+INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
+INPUT Images/Statistique/Regression_Sn_Rm.pdf
+INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
+INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
+INPUT Images/Statistique/Regression_Ono_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
+INPUT Images/Statistique/Regression_Ono_Cr.pdf
+INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx8.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx6.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold6.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi10.tfm
@@ -1374,17 +1407,18 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold6.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT ./Images/Recette/Tableau matières premières 1-1.pdf
 INPUT ./Images/Recette/Tableau matières premières 1-1.pdf
 INPUT Images/Recette/Tableau matières premières 1-1.pdf
@@ -1420,8 +1454,58 @@ INPUT ./Images/Recette/Contraintes matières premières 1.pdf
 INPUT Images/Recette/Contraintes matières premières 1.pdf
 INPUT ./Images/Recette/Contraintes matières premières 1.pdf
 INPUT ./Images/Recette/Contraintes matières premières 1.pdf
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
 INPUT ./Images/Mg/Poche 1.pdf
 INPUT ./Images/Mg/Poche 1.pdf
 INPUT Images/Mg/Poche 1.pdf
@@ -1437,16 +1521,14 @@ INPUT ./Images/Mg/Poche 3.pdf
 INPUT Images/Mg/Poche 3.pdf
 INPUT ./Images/Mg/Poche 3.pdf
 INPUT ./Images/Mg/Poche 3.pdf
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx12.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx8.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx6.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri12.tfm
 OUTPUT rapport.thm
 INPUT rapport.aux
 INPUT ./rapport.out
 INPUT ./rapport.out
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc
@@ -1468,4 +1550,3 @@ INPUT /usr/share/texmf/fonts/type1/public/lm/lmri12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb
-INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb

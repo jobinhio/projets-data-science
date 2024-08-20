@@ -18,7 +18,7 @@ def fusion_and_clean_excel_files(files_list):
     # Lire les fichiers Excel et les concaténer
     dfs = []
     for file in files_list:
-        df = pd.read_excel(file, engine='openpyxl') # 'calamine'
+        df = pd.read_excel(file, engine='calamine') # 'calamine' 'openpyxl'
         dfs.append(df)
     df = pd.concat(dfs).reset_index(drop=True)
 
