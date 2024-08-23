@@ -978,6 +978,17 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
@@ -1352,6 +1363,11 @@ INPUT ./Images/Statistique/Purete ONO_sans_extreme.pdf
 INPUT Images/Statistique/Purete ONO_sans_extreme.pdf
 INPUT ./Images/Statistique/Purete ONO_sans_extreme.pdf
 INPUT ./Images/Statistique/Purete ONO_sans_extreme.pdf
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
 INPUT ./Images/Statistique/Regression_Impurete_Sn.pdf
 INPUT Images/Statistique/Regression_Impurete_Sn.pdf
@@ -1382,14 +1398,26 @@ INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
 INPUT Images/Statistique/Regression_Sn_Rm.pdf
 INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
 INPUT ./Images/Statistique/Regression_Sn_Rm.pdf
-INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
-INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
-INPUT Images/Statistique/Regression_Ono_Cu.pdf
-INPUT ./Images/Statistique/Regression_Ono_Cu.pdf
-INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
-INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
-INPUT Images/Statistique/Regression_Ono_Cr.pdf
-INPUT ./Images/Statistique/Regression_Ono_Cr.pdf
+INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
+INPUT Images/Statistique/Regression_Cr_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cr_Rm.pdf
+INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
+INPUT Images/Statistique/Regression_Cr_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cr_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
+INPUT Images/Statistique/Regression_Cu_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Cu_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
+INPUT Images/Statistique/Regression_Sn_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
+INPUT ./Images/Statistique/Regression_Sn_Allongement.pdf
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx8.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx6.tfm
@@ -1401,24 +1429,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold6.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/bbold/bbold10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr10.tfm
-INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT ./Images/Recette/Tableau matières premières 1-1.pdf
 INPUT ./Images/Recette/Tableau matières premières 1-1.pdf
 INPUT Images/Recette/Tableau matières premières 1-1.pdf
@@ -1474,38 +1485,46 @@ INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
 INPUT Images/Recette/Recettes Fonderies GS 600_3_2.pdf
 INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
 INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
-INPUT Images/Recette/Recettes Fonderies GS 450_10_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
-INPUT Images/Recette/Recettes Fonderies GS 450_10_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
-INPUT Images/Recette/Recettes Fonderies GS 450_10_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
-INPUT Images/Recette/Recettes Fonderies GS 450_10_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf
+INPUT Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf
+INPUT Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf
+INPUT Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf
+INPUT Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf
 INPUT ./Images/Mg/Poche 1.pdf
 INPUT ./Images/Mg/Poche 1.pdf
 INPUT Images/Mg/Poche 1.pdf
@@ -1522,26 +1541,84 @@ INPUT Images/Mg/Poche 3.pdf
 INPUT ./Images/Mg/Poche 3.pdf
 INPUT ./Images/Mg/Poche 3.pdf
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri12.tfm
+INPUT ./Images/Recette/Recettes Fonderies GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 400_15_1.pdf
+INPUT Images/Recette/Recettes Fonderies GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 400_15_2.pdf
+INPUT Images/Recette/Recettes Fonderies GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+INPUT Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+INPUT Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf
+INPUT Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf
+INPUT Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf
+INPUT Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf
+INPUT Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf
 OUTPUT rapport.thm
 INPUT rapport.aux
 INPUT ./rapport.out
 INPUT ./rapport.out
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmex10.pfb
-INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb
-INPUT /usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr17.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr6.pfb
@@ -1550,3 +1627,4 @@ INPUT /usr/share/texmf/fonts/type1/public/lm/lmri12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb

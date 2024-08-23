@@ -25,8 +25,8 @@ def solve_linear_program(C, constraints, bounds,method):
     b_ub = np.array(list(constraints['b_sup'].values()))
     b_eq = np.array(list(constraints['b_eq'].values()))
 
-    print("A_eq = ", A_eq)
-    print("b_eq = ", b_eq)
+    # print("A_eq = ", A_eq)
+    # print("b_eq = ", b_eq)
     res  = solver(C, A_ub, b_ub, A_eq, b_eq, bounds,method)  
     ce_result, ci_result = check_constraints_condition(res, tol=1e-4)
     return  res,  ce_result, ci_result

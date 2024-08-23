@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.13)  20 AUG 2024 17:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.13)  22 AUG 2024 18:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -675,23 +675,28 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \sift@deathcycles=\count349
 \@vwid@loff=\dimen304
 \@vwid@roff=\dimen305
-)) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count350
+)) (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count350
+\c@@ppsavesec=\count351
+\c@@ppsaveapp=\count352
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count353
 \lst@gtempboxa=\box70
 \lst@token=\toks59
-\lst@length=\count351
+\lst@length=\count354
 \lst@currlwidth=\dimen306
-\lst@column=\count352
-\lst@pos=\count353
+\lst@column=\count355
+\lst@pos=\count356
 \lst@lostspace=\dimen307
 \lst@width=\dimen308
-\lst@newlines=\count354
-\lst@lineno=\count355
+\lst@newlines=\count357
+\lst@lineno=\count358
 \lst@maxwidth=\dimen309
  (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count356
-\lst@skipnumbers=\count357
+\c@lstnumber=\count359
+\lst@skipnumbers=\count360
 \lst@framebox=\box71
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -701,7 +706,7 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count358
+\c@AlgoLine=\count361
 \algocf@hangindent=\skip65
  (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -738,9 +743,9 @@ Package: relsize 2013/03/29 ver 4.1
 \algoheightrule=\skip81
 \algotitleheightruledefault=\skip82
 \algotitleheightrule=\skip83
-\c@algocfline=\count359
-\c@algocfproc=\count360
-\c@algocf=\count361
+\c@algocfline=\count362
+\c@algocfproc=\count363
+\c@algocf=\count364
 \algocf@algoframe=\box78
 \algocf@algobox=\box79
 ) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
@@ -749,15 +754,15 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen316
 \enit@toks=\toks60
 \enit@inbox=\box80
-\enit@count@id=\count362
-\enitdp@description=\count363
+\enit@count@id=\count365
+\enitdp@description=\count366
 )
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 106.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count364
+\l__color_backend_stack_int=\count367
 \l__pdf_internal_box=\box81
 ) (./rapport.aux)
 \openout1 = `rapport.aux'.
@@ -788,7 +793,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count365
+\c@section@level=\count368
 )
 LaTeX Info: Redefining \ref on input line 106.
 LaTeX Info: Redefining \pageref on input line 106.
@@ -799,16 +804,16 @@ LaTeX Info: Redefining \nameref on input line 106.
 
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count366
+\scratchcounter=\count369
 \scratchdimen=\dimen317
 \scratchbox=\box82
-\nofMPsegments=\count367
-\nofMParguments=\count368
+\nofMPsegments=\count370
+\nofMParguments=\count371
 \everyMPshowfont=\toks61
-\MPscratchCnt=\count369
+\MPscratchCnt=\count372
 \MPscratchDim=\dimen318
-\MPnumerator=\count370
-\makeMPintoPDFobject=\count371
+\MPnumerator=\count373
+\makeMPintoPDFobject=\count374
 \everyMPtoPDFconversion=\toks62
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -831,16 +836,16 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-\c@lstlisting=\count372
+\c@lstlisting=\count375
 
 
 pdfTeX warning: pdflatex (file ./Images/Presentation/logo-unistra.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Presentation/logo-unistra.pdf, id=123, 846.0231pt x 321.56834pt>
+<Images/Presentation/logo-unistra.pdf, id=119, 846.0231pt x 321.56834pt>
 File: Images/Presentation/logo-unistra.pdf Graphic file (type pdf)
 <use Images/Presentation/logo-unistra.pdf>
 Package pdftex.def Info: Images/Presentation/logo-unistra.pdf  used on input line 143.
 (pdftex.def)             Requested size: 135.36646pt x 51.45198pt.
-<Images/Presentation/logo-Fonderie.pdf, id=124, 632.3625pt x 199.74625pt>
+<Images/Presentation/logo-Fonderie.pdf, id=120, 632.3625pt x 199.74625pt>
 File: Images/Presentation/logo-Fonderie.pdf Graphic file (type pdf)
 <use Images/Presentation/logo-Fonderie.pdf>
 Package pdftex.def Info: Images/Presentation/logo-Fonderie.pdf  used on input line 145.
@@ -848,7 +853,7 @@ Package pdftex.def Info: Images/Presentation/logo-Fonderie.pdf  used on input li
 
 
 pdfTeX warning: pdflatex (file ./Images/Presentation/logoCSMI.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Presentation/logoCSMI.pdf, id=125, 846.34946pt x 557.26945pt>
+<Images/Presentation/logoCSMI.pdf, id=121, 846.34946pt x 557.26945pt>
 File: Images/Presentation/logoCSMI.pdf Graphic file (type pdf)
 <use Images/Presentation/logoCSMI.pdf>
 Package pdftex.def Info: Images/Presentation/logoCSMI.pdf  used on input line 147.
@@ -904,7 +909,7 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [2]
 
 pdfTeX warning: pdflatex (file ./Images/Presentation/Fonderie_vue_de_bas.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Presentation/Fonderie_vue_de_bas.pdf, id=178, 795.74707pt x 595.6447pt>
+<Images/Presentation/Fonderie_vue_de_bas.pdf, id=173, 795.74707pt x 595.6447pt>
 File: Images/Presentation/Fonderie_vue_de_bas.pdf Graphic file (type pdf)
 <use Images/Presentation/Fonderie_vue_de_bas.pdf>
 Package pdftex.def Info: Images/Presentation/Fonderie_vue_de_bas.pdf  used on input line 271.
@@ -912,7 +917,7 @@ Package pdftex.def Info: Images/Presentation/Fonderie_vue_de_bas.pdf  used on in
 
 
 pdfTeX warning: pdflatex (file ./Images/Presentation/Fonderie_vue_de_haut.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Presentation/Fonderie_vue_de_haut.pdf, id=179, 795.74707pt x 595.6447pt>
+<Images/Presentation/Fonderie_vue_de_haut.pdf, id=174, 795.74707pt x 595.6447pt>
 File: Images/Presentation/Fonderie_vue_de_haut.pdf Graphic file (type pdf)
 <use Images/Presentation/Fonderie_vue_de_haut.pdf>
 Package pdftex.def Info: Images/Presentation/Fonderie_vue_de_haut.pdf  used on input line 273.
@@ -924,22 +929,22 @@ l.277 \newpage
                <./Images/Presentation/Fonderie_vue_de_bas.pdf> <./Images/Presentation/Fonderie_vue_de_haut.pdf>]
 
 pdfTeX warning: pdflatex (file ./Images/Presentation/Flux de production.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Presentation/Flux de production.pdf, id=196, 1864.9675pt x 1467.4825pt>
+<Images/Presentation/Flux de production.pdf, id=191, 1864.9675pt x 1369.115pt>
 File: Images/Presentation/Flux de production.pdf Graphic file (type pdf)
 <use Images/Presentation/Flux de production.pdf>
-Package pdftex.def Info: Images/Presentation/Flux de production.pdf  used on input line 292.
-(pdftex.def)             Requested size: 1864.96295pt x 1467.47893pt.
+Package pdftex.def Info: Images/Presentation/Flux de production.pdf  used on input line 293.
+(pdftex.def)             Requested size: 1864.96295pt x 1369.11166pt.
 [4] [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.309 
+l.319 
        <./Images/Presentation/Flux de production.pdf>]
 
 pdfTeX warning: pdflatex (file ./Images/Presentation/Les Retours.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <Images/Presentation/Les Retours.pdf, id=256, 289.48149pt x 216.81pt>
 File: Images/Presentation/Les Retours.pdf Graphic file (type pdf)
 <use Images/Presentation/Les Retours.pdf>
-Package pdftex.def Info: Images/Presentation/Les Retours.pdf  used on input line 316.
+Package pdftex.def Info: Images/Presentation/Les Retours.pdf  used on input line 336.
 (pdftex.def)             Requested size: 202.63567pt x 151.76596pt.
 
 
@@ -947,7 +952,7 @@ pdfTeX warning: pdflatex (file ./Images/Presentation/Frite Haut Silicium.pdf): P
 <Images/Presentation/Frite Haut Silicium.pdf, id=257, 289.48149pt x 217.21149pt>
 File: Images/Presentation/Frite Haut Silicium.pdf Graphic file (type pdf)
 <use Images/Presentation/Frite Haut Silicium.pdf>
-Package pdftex.def Info: Images/Presentation/Frite Haut Silicium.pdf  used on input line 318.
+Package pdftex.def Info: Images/Presentation/Frite Haut Silicium.pdf  used on input line 338.
 (pdftex.def)             Requested size: 202.63567pt x 152.047pt.
 
 
@@ -955,7 +960,7 @@ pdfTeX warning: pdflatex (file ./Images/Presentation/Fontes d'affinages.pdf): PD
 <Images/Presentation/Fontes d'affinages.pdf, id=258, 289.48149pt x 216.81pt>
 File: Images/Presentation/Fontes d'affinages.pdf Graphic file (type pdf)
 <use Images/Presentation/Fontes d'affinages.pdf>
-Package pdftex.def Info: Images/Presentation/Fontes d'affinages.pdf  used on input line 326.
+Package pdftex.def Info: Images/Presentation/Fontes d'affinages.pdf  used on input line 346.
 (pdftex.def)             Requested size: 202.63567pt x 151.76596pt.
 
 
@@ -963,253 +968,270 @@ pdfTeX warning: pdflatex (file ./Images/Presentation/Disque.pdf): PDF inclusion:
 <Images/Presentation/Disque.pdf, id=259, 289.48149pt x 215.90663pt>
 File: Images/Presentation/Disque.pdf Graphic file (type pdf)
 <use Images/Presentation/Disque.pdf>
-Package pdftex.def Info: Images/Presentation/Disque.pdf  used on input line 328.
+Package pdftex.def Info: Images/Presentation/Disque.pdf  used on input line 348.
 (pdftex.def)             Requested size: 202.63567pt x 151.13359pt.
 [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.365 
+l.357 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.365 
-       <./Images/Presentation/Les Retours.pdf> <./Images/Presentation/Frite Haut Silicium.pdf> <./Images/Presentation/Fontes d'affinages.pdf> <./Images/Presentation/Disque.pdf>] [7] [8] [9] [10] [11]
+l.357 
+       <./Images/Presentation/Les Retours.pdf> <./Images/Presentation/Frite Haut Silicium.pdf> <./Images/Presentation/Fontes d'affinages.pdf> <./Images/Presentation/Disque.pdf>] [7] [8] [9] [10]
 
 pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Statistique/DonnéesBrut1.pdf, id=330, 661.47125pt x 67.25125pt>
+<Images/Statistique/DonnéesBrut1.pdf, id=327, 661.47125pt x 67.25125pt>
 File: Images/Statistique/DonnéesBrut1.pdf Graphic file (type pdf)
 <use Images/Statistique/DonnéesBrut1.pdf>
-Package pdftex.def Info: Images/Statistique/DonnéesBrut1.pdf  used on input line 731.
+Package pdftex.def Info: Images/Statistique/DonnéesBrut1.pdf  used on input line 736.
 (pdftex.def)             Requested size: 460.72124pt x 46.84055pt.
 
 
 pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Statistique/DonnéesBrut2.pdf, id=331, 659.46375pt x 67.25125pt>
+<Images/Statistique/DonnéesBrut2.pdf, id=328, 659.46375pt x 67.25125pt>
 File: Images/Statistique/DonnéesBrut2.pdf Graphic file (type pdf)
 <use Images/Statistique/DonnéesBrut2.pdf>
-Package pdftex.def Info: Images/Statistique/DonnéesBrut2.pdf  used on input line 733.
+Package pdftex.def Info: Images/Statistique/DonnéesBrut2.pdf  used on input line 738.
 (pdftex.def)             Requested size: 460.72124pt x 46.98523pt.
 
 
 pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Statistique/DonnéesBrut3.pdf, id=332, 621.32124pt x 61.22874pt>
+<Images/Statistique/DonnéesBrut3.pdf, id=329, 621.32124pt x 61.22874pt>
 File: Images/Statistique/DonnéesBrut3.pdf Graphic file (type pdf)
 <use Images/Statistique/DonnéesBrut3.pdf>
-Package pdftex.def Info: Images/Statistique/DonnéesBrut3.pdf  used on input line 735.
+Package pdftex.def Info: Images/Statistique/DonnéesBrut3.pdf  used on input line 740.
 (pdftex.def)             Requested size: 460.72124pt x 45.40196pt.
+[11]
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesClean1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesClean1.pdf, id=334, 667.49374pt x 79.29625pt>
+File: Images/Statistique/DonnéesClean1.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesClean1.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesClean1.pdf  used on input line 791.
+(pdftex.def)             Requested size: 460.72124pt x 54.73381pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesClean2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesClean2.pdf, id=335, 653.44125pt x 67.25125pt>
+File: Images/Statistique/DonnéesClean2.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesClean2.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesClean2.pdf  used on input line 793.
+(pdftex.def)             Requested size: 460.72124pt x 47.41623pt.
 [12pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.771         \item R
-                     enommage des colonnes pour une meilleure clarté et com... <./Images/Statistique/DonnéesBrut1.pdf> <./Images/Statistique/DonnéesBrut2.pdf
+l.799 
+       <./Images/Statistique/DonnéesBrut1.pdf> <./Images/Statistique/DonnéesBrut2.pdf
 
 pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./Images/Statistique/DonnéesBrut3.pdf
 
 pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-
-pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesClean1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Statistique/DonnéesClean1.pdf, id=382, 667.49374pt x 79.29625pt>
-File: Images/Statistique/DonnéesClean1.pdf Graphic file (type pdf)
-<use Images/Statistique/DonnéesClean1.pdf>
-Package pdftex.def Info: Images/Statistique/DonnéesClean1.pdf  used on input line 786.
-(pdftex.def)             Requested size: 460.72124pt x 54.73381pt.
-
-
-pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesClean2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Statistique/DonnéesClean2.pdf, id=383, 653.44125pt x 67.25125pt>
-File: Images/Statistique/DonnéesClean2.pdf Graphic file (type pdf)
-<use Images/Statistique/DonnéesClean2.pdf>
-Package pdftex.def Info: Images/Statistique/DonnéesClean2.pdf  used on input line 788.
-(pdftex.def)             Requested size: 460.72124pt x 47.41623pt.
-[13pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+>] [13pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.839 \end{itemize}
-                    <./Images/Statistique/DonnéesClean1.pdf> <./Images/Statistique/DonnéesClean2.pdf
+l.850 
+       <./Images/Statistique/DonnéesClean1.pdf> <./Images/Statistique/DonnéesClean2.pdf
 
 pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesClean2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
 pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf, id=420, 503.7229pt x 283.86217pt>
+<Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf, id=421, 503.7229pt x 283.86217pt>
 File: Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf Graphic file (type pdf)
 <use Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf>
-Package pdftex.def Info: Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf  used on input line 858.
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf  used on input line 863.
 (pdftex.def)             Requested size: 460.72124pt x 259.62738pt.
 [14pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.873     \end{itemize}
-                        <./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf>]
+l.903 
+       <./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf>]
 
 pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf, id=428, 437.23436pt x 282.46303pt>
+<Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf, id=429, 437.23436pt x 282.46303pt>
 File: Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf Graphic file (type pdf)
 <use Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf>
-Package pdftex.def Info: Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf  used on input line 915.
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf  used on input line 920.
 (pdftex.def)             Requested size: 460.72124pt x 297.64226pt.
-[15]
+[15pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.933 
+       <./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf>]
 
 pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Statistique/Matrice_corrélation_ONO_Elements.pdf, id=433, 450.36343pt x 283.11061pt>
+<Images/Statistique/Matrice_corrélation_ONO_Elements.pdf, id=437, 450.36343pt x 283.11061pt>
 File: Images/Statistique/Matrice_corrélation_ONO_Elements.pdf Graphic file (type pdf)
 <use Images/Statistique/Matrice_corrélation_ONO_Elements.pdf>
-Package pdftex.def Info: Images/Statistique/Matrice_corrélation_ONO_Elements.pdf  used on input line 936.
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_ONO_Elements.pdf  used on input line 941.
 (pdftex.def)             Requested size: 460.72124pt x 289.63297pt.
-[16pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.940 
-       <./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf>]
-<Images/Statistique/Impureté_sans_extreme.pdf, id=441, 902.32205pt x 984.1387pt>
+l.973 
+       <./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf>]
+<Images/Statistique/Impureté_sans_extreme.pdf, id=445, 902.32205pt x 984.1387pt>
 File: Images/Statistique/Impureté_sans_extreme.pdf Graphic file (type pdf)
 <use Images/Statistique/Impureté_sans_extreme.pdf>
-Package pdftex.def Info: Images/Statistique/Impureté_sans_extreme.pdf  used on input line 980.
+Package pdftex.def Info: Images/Statistique/Impureté_sans_extreme.pdf  used on input line 985.
 (pdftex.def)             Requested size: 902.31985pt x 984.1363pt.
-<Images/Statistique/Impureté_avec_extreme.pdf, id=442, 895.30885pt x 981.801pt>
+<Images/Statistique/Impureté_avec_extreme.pdf, id=446, 895.30885pt x 981.801pt>
 File: Images/Statistique/Impureté_avec_extreme.pdf Graphic file (type pdf)
 <use Images/Statistique/Impureté_avec_extreme.pdf>
-Package pdftex.def Info: Images/Statistique/Impureté_avec_extreme.pdf  used on input line 981.
+Package pdftex.def Info: Images/Statistique/Impureté_avec_extreme.pdf  used on input line 986.
 (pdftex.def)             Requested size: 895.30667pt x 981.7986pt.
- [17pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.986 
-       <./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf>]
-<Images/Statistique/Purete ONO_avec_extreme.pdf, id=451, 605.0043pt x 654.90172pt>
+<Images/Statistique/Purete ONO_avec_extreme.pdf, id=447, 605.0043pt x 654.90172pt>
 File: Images/Statistique/Purete ONO_avec_extreme.pdf Graphic file (type pdf)
 <use Images/Statistique/Purete ONO_avec_extreme.pdf>
-Package pdftex.def Info: Images/Statistique/Purete ONO_avec_extreme.pdf  used on input line 992.
+Package pdftex.def Info: Images/Statistique/Purete ONO_avec_extreme.pdf  used on input line 997.
 (pdftex.def)             Requested size: 605.00282pt x 654.90012pt.
-<Images/Statistique/Purete ONO_sans_extreme.pdf, id=452, 608.12296pt x 653.34187pt>
+<Images/Statistique/Purete ONO_sans_extreme.pdf, id=448, 608.12296pt x 653.34187pt>
 File: Images/Statistique/Purete ONO_sans_extreme.pdf Graphic file (type pdf)
 <use Images/Statistique/Purete ONO_sans_extreme.pdf>
-Package pdftex.def Info: Images/Statistique/Purete ONO_sans_extreme.pdf  used on input line 993.
+Package pdftex.def Info: Images/Statistique/Purete ONO_sans_extreme.pdf  used on input line 998.
 (pdftex.def)             Requested size: 608.12146pt x 653.34029pt.
- [18pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+ [17pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.998 
-       <./Images/Statistique/Impureté_sans_extreme.pdf> <./Images/Statistique/Impureté_avec_extreme.pdf>] [19pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
+l.1003 
+        <./Images/Statistique/Impureté_sans_extreme.pdf> <./Images/Statistique/Impureté_avec_extreme.pdf>] [18pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1036 $$
+l.1041 $$
           <./Images/Statistique/Purete ONO_avec_extreme.pdf> <./Images/Statistique/Purete ONO_sans_extreme.pdf>]
-<Images/Statistique/Regression_Impurete_Sn.pdf, id=519, 722.7pt x 752.8125pt>
-File: Images/Statistique/Regression_Impurete_Sn.pdf Graphic file (type pdf)
-<use Images/Statistique/Regression_Impurete_Sn.pdf>
-Package pdftex.def Info: Images/Statistique/Regression_Impurete_Sn.pdf  used on input line 1064.
-(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
-<Images/Statistique/Regression_Impurete_Cu.pdf, id=520, 722.7pt x 752.8125pt>
-File: Images/Statistique/Regression_Impurete_Cu.pdf Graphic file (type pdf)
-<use Images/Statistique/Regression_Impurete_Cu.pdf>
-Package pdftex.def Info: Images/Statistique/Regression_Impurete_Cu.pdf  used on input line 1069.
-(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
-<Images/Statistique/Regression_Ono_Cu.pdf, id=521, 722.7pt x 752.8125pt>
-File: Images/Statistique/Regression_Ono_Cu.pdf Graphic file (type pdf)
-<use Images/Statistique/Regression_Ono_Cu.pdf>
-Package pdftex.def Info: Images/Statistique/Regression_Ono_Cu.pdf  used on input line 1075.
-(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
-<Images/Statistique/Regression_Ono_Cr.pdf, id=522, 722.7pt x 752.8125pt>
-File: Images/Statistique/Regression_Ono_Cr.pdf Graphic file (type pdf)
-<use Images/Statistique/Regression_Ono_Cr.pdf>
-Package pdftex.def Info: Images/Statistique/Regression_Ono_Cr.pdf  used on input line 1080.
-(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
- [20]
-Overfull \vbox (20.45006pt too high) has occurred while \output is active []
-
- [21pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1086 
-        <./Images/Statistique/Regression_Impurete_Sn.pdf> <./Images/Statistique/Regression_Impurete_Cu.pdf> <./Images/Statistique/Regression_Ono_Cu.pdf> <./Images/Statistique/Regression_Ono_Cr.pdf>]
-<Images/Statistique/Regression_Cu_Rm.pdf, id=577, 1053.9375pt x 752.8125pt>
-File: Images/Statistique/Regression_Cu_Rm.pdf Graphic file (type pdf)
-<use Images/Statistique/Regression_Cu_Rm.pdf>
-Package pdftex.def Info: Images/Statistique/Regression_Cu_Rm.pdf  used on input line 1118.
-(pdftex.def)             Requested size: 368.57838pt x 263.27007pt.
-<Images/Statistique/Regression_Sn_Rm.pdf, id=578, 1053.9375pt x 752.8125pt>
-File: Images/Statistique/Regression_Sn_Rm.pdf Graphic file (type pdf)
-<use Images/Statistique/Regression_Sn_Rm.pdf>
-Package pdftex.def Info: Images/Statistique/Regression_Sn_Rm.pdf  used on input line 1123.
-(pdftex.def)             Requested size: 368.57838pt x 263.27007pt.
-File: Images/Statistique/Regression_Ono_Cu.pdf Graphic file (type pdf)
-<use Images/Statistique/Regression_Ono_Cu.pdf>
-Package pdftex.def Info: Images/Statistique/Regression_Ono_Cu.pdf  used on input line 1129.
-(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
-File: Images/Statistique/Regression_Ono_Cr.pdf Graphic file (type pdf)
-<use Images/Statistique/Regression_Ono_Cr.pdf>
-Package pdftex.def Info: Images/Statistique/Regression_Ono_Cr.pdf  used on input line 1134.
-(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
- [22pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1201 ...ervalles de confiance des indicateurs :}
-                                                   <./Images/Statistique/Regression_Cu_Rm.pdf> <./Images/Statistique/Regression_Sn_Rm.pdf>] [23]
-LaTeX Font Info:    Trying to load font information for U+bbold on input line 1292.
- (/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd) [24]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 1382.
- [25]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1510.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1510.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1052.
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [26]
+)
+<Images/Statistique/Regression_Impurete_Sn.pdf, id=516, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Impurete_Sn.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Impurete_Sn.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Impurete_Sn.pdf  used on input line 1081.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Impurete_Cu.pdf, id=517, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Impurete_Cu.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Impurete_Cu.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Impurete_Cu.pdf  used on input line 1086.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Ono_Cu.pdf, id=518, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Ono_Cu.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Ono_Cu.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Ono_Cu.pdf  used on input line 1092.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Ono_Cr.pdf, id=519, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Ono_Cr.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Ono_Cr.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Ono_Cr.pdf  used on input line 1097.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+ [19]
+Overfull \vbox (5.95006pt too high) has occurred while \output is active []
+
+ [20pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1103 
+        <./Images/Statistique/Regression_Impurete_Sn.pdf> <./Images/Statistique/Regression_Impurete_Cu.pdf> <./Images/Statistique/Regression_Ono_Cu.pdf> <./Images/Statistique/Regression_Ono_Cr.pdf>]
+<Images/Statistique/Regression_Cu_Rm.pdf, id=575, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Cu_Rm.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cu_Rm.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cu_Rm.pdf  used on input line 1114.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Sn_Rm.pdf, id=576, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Sn_Rm.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Sn_Rm.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Sn_Rm.pdf  used on input line 1119.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Cr_Rm.pdf, id=577, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Cr_Rm.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cr_Rm.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cr_Rm.pdf  used on input line 1125.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Cr_Allongement.pdf, id=578, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Cr_Allongement.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cr_Allongement.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cr_Allongement.pdf  used on input line 1130.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+
+Overfull \vbox (18.11674pt too high) has occurred while \output is active []
+
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1136 
+        <./Images/Statistique/Regression_Cu_Rm.pdf> <./Images/Statistique/Regression_Sn_Rm.pdf> <./Images/Statistique/Regression_Cr_Rm.pdf> <./Images/Statistique/Regression_Cr_Allongement.pdf>]
+<Images/Statistique/Regression_Cu_Allongement.pdf, id=629, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Cu_Allongement.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cu_Allongement.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cu_Allongement.pdf  used on input line 1146.
+(pdftex.def)             Requested size: 722.69823pt x 752.81065pt.
+<Images/Statistique/Regression_Sn_Allongement.pdf, id=630, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Sn_Allongement.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Sn_Allongement.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Sn_Allongement.pdf  used on input line 1147.
+(pdftex.def)             Requested size: 722.69823pt x 752.81065pt.
+ [22pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1189 
+        <./Images/Statistique/Regression_Cu_Allongement.pdf> <./Images/Statistique/Regression_Sn_Allongement.pdf>] [23]
+LaTeX Font Info:    Trying to load font information for U+bbold on input line 1256.
+ (/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd) [24] [25] [26]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1489.
+
 
 pdfTeX warning: pdflatex (file ./Images/Recette/Tableau matières premières 1-1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Recette/Tableau matières premières 1-1.pdf, id=639, 845.76549pt x 118.93578pt>
+<Images/Recette/Tableau matières premières 1-1.pdf, id=686, 845.76549pt x 118.93578pt>
 File: Images/Recette/Tableau matières premières 1-1.pdf Graphic file (type pdf)
 <use Images/Recette/Tableau matières premières 1-1.pdf>
-Package pdftex.def Info: Images/Recette/Tableau matières premières 1-1.pdf  used on input line 1555.
+Package pdftex.def Info: Images/Recette/Tableau matières premières 1-1.pdf  used on input line 1534.
 (pdftex.def)             Requested size: 460.72124pt x 64.78876pt.
 
 
 pdfTeX warning: pdflatex (file ./Images/Recette/Tableau matières premières 1-2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Recette/Tableau matières premières 1-2.pdf, id=640, 845.19763pt x 122.85901pt>
+<Images/Recette/Tableau matières premières 1-2.pdf, id=687, 845.19763pt x 122.85901pt>
 File: Images/Recette/Tableau matières premières 1-2.pdf Graphic file (type pdf)
 <use Images/Recette/Tableau matières premières 1-2.pdf>
-Package pdftex.def Info: Images/Recette/Tableau matières premières 1-2.pdf  used on input line 1557.
+Package pdftex.def Info: Images/Recette/Tableau matières premières 1-2.pdf  used on input line 1536.
 (pdftex.def)             Requested size: 460.72124pt x 66.97087pt.
 [27]
-<Images/Recette/Contraintes Qualités GS_400_15_1.pdf, id=670, 614.295pt x 59.2614pt>
+<Images/Recette/Contraintes Qualités GS_400_15_1.pdf, id=718, 614.295pt x 59.2614pt>
 File: Images/Recette/Contraintes Qualités GS_400_15_1.pdf Graphic file (type pdf)
 <use Images/Recette/Contraintes Qualités GS_400_15_1.pdf>
-Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_400_15_1.pdf  used on input line 1572.
+Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_400_15_1.pdf  used on input line 1551.
 (pdftex.def)             Requested size: 460.72124pt x 44.44682pt.
-<Images/Recette/Contraintes Qualités GS_400_15_2.pdf, id=671, 614.295pt x 58.04184pt>
+<Images/Recette/Contraintes Qualités GS_400_15_2.pdf, id=719, 614.295pt x 58.04184pt>
 File: Images/Recette/Contraintes Qualités GS_400_15_2.pdf Graphic file (type pdf)
 <use Images/Recette/Contraintes Qualités GS_400_15_2.pdf>
-Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_400_15_2.pdf  used on input line 1574.
+Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_400_15_2.pdf  used on input line 1553.
 (pdftex.def)             Requested size: 460.72124pt x 43.53215pt.
-<Images/Recette/Contraintes Qualités GS_450_10_1.pdf, id=672, 614.295pt x 55.60274pt>
+<Images/Recette/Contraintes Qualités GS_450_10_1.pdf, id=720, 614.295pt x 55.60274pt>
 File: Images/Recette/Contraintes Qualités GS_450_10_1.pdf Graphic file (type pdf)
 <use Images/Recette/Contraintes Qualités GS_450_10_1.pdf>
-Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_450_10_1.pdf  used on input line 1576.
+Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_450_10_1.pdf  used on input line 1555.
 (pdftex.def)             Requested size: 460.72124pt x 41.70277pt.
-<Images/Recette/Contraintes Qualités GS_450_10_2.pdf, id=673, 614.295pt x 56.18993pt>
+<Images/Recette/Contraintes Qualités GS_450_10_2.pdf, id=721, 614.295pt x 56.18993pt>
 File: Images/Recette/Contraintes Qualités GS_450_10_2.pdf Graphic file (type pdf)
 <use Images/Recette/Contraintes Qualités GS_450_10_2.pdf>
-Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_450_10_2.pdf  used on input line 1578.
+Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_450_10_2.pdf  used on input line 1557.
 (pdftex.def)             Requested size: 460.72124pt x 42.14317pt.
 
 
 pdfTeX warning: pdflatex (file ./Images/Recette/Contraintes matières premières 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Recette/Contraintes matières premières 1.pdf, id=674, 640.33228pt x 194.62712pt>
+<Images/Recette/Contraintes matières premières 1.pdf, id=722, 640.33228pt x 194.62712pt>
 File: Images/Recette/Contraintes matières premières 1.pdf Graphic file (type pdf)
 <use Images/Recette/Contraintes matières premières 1.pdf>
-Package pdftex.def Info: Images/Recette/Contraintes matières premières 1.pdf  used on input line 1590.
+Package pdftex.def Info: Images/Recette/Contraintes matières premières 1.pdf  used on input line 1569.
 (pdftex.def)             Requested size: 640.3307pt x 194.62663pt.
-[28pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
+[28pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1595 
-       pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) has been already used, duplicate ignored
+l.1574 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1595 
+l.1574 
         <./Images/Recette/Tableau matières premières 1-1.pdf> <./Images/Recette/Tableau matières premières 1-2.pdf> <./Images/Recette/Contraintes Qualités GS_400_15_1.pdf> <./Images/Recette/Contraintes Qualités GS_400_15_2.pdf
 
 pdfTeX warning: pdflatex (file ./Images/Recette/Contraintes Qualités GS_400_15_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
@@ -1220,150 +1242,291 @@ pdfTeX warning: pdflatex (file ./Images/Recette/Contraintes Qualités GS_450_10_
 
 pdfTeX warning: pdflatex (file ./Images/Recette/Contraintes Qualités GS_450_10_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Images/Recette/Recettes Fonderies GS 450_10_1.pdf, id=718, 550.055pt x 140.525pt>
+<Images/Recette/Recettes Fonderies GS 450_10_1.pdf, id=767, 550.055pt x 140.525pt>
 File: Images/Recette/Recettes Fonderies GS 450_10_1.pdf Graphic file (type pdf)
 <use Images/Recette/Recettes Fonderies GS 450_10_1.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 450_10_1.pdf  used on input line 1608.
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 450_10_1.pdf  used on input line 1588.
 (pdftex.def)             Requested size: 460.72124pt x 117.70567pt.
-<Images/Recette/Recettes Fonderies GS 450_10_2.pdf, id=719, 570.13pt x 137.84799pt>
+<Images/Recette/Recettes Fonderies GS 450_10_2.pdf, id=768, 570.13pt x 137.84799pt>
 File: Images/Recette/Recettes Fonderies GS 450_10_2.pdf Graphic file (type pdf)
 <use Images/Recette/Recettes Fonderies GS 450_10_2.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 450_10_2.pdf  used on input line 1610.
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 450_10_2.pdf  used on input line 1590.
 (pdftex.def)             Requested size: 460.72124pt x 111.39543pt.
-<Images/Recette/Recettes Fonderies GS 600_3_1.pdf, id=720, 554.07pt x 167.292pt>
+<Images/Recette/Recettes Fonderies GS 600_3_1.pdf, id=769, 554.07pt x 167.292pt>
 File: Images/Recette/Recettes Fonderies GS 600_3_1.pdf Graphic file (type pdf)
 <use Images/Recette/Recettes Fonderies GS 600_3_1.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 600_3_1.pdf  used on input line 1612.
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 600_3_1.pdf  used on input line 1604.
 (pdftex.def)             Requested size: 460.72124pt x 139.10757pt.
-<Images/Recette/Recettes Fonderies GS 600_3_2.pdf, id=721, 552.732pt x 165.95299pt>
+<Images/Recette/Recettes Fonderies GS 600_3_2.pdf, id=770, 552.732pt x 165.95299pt>
 File: Images/Recette/Recettes Fonderies GS 600_3_2.pdf Graphic file (type pdf)
 <use Images/Recette/Recettes Fonderies GS 600_3_2.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 600_3_2.pdf  used on input line 1614.
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 600_3_2.pdf  used on input line 1606.
 (pdftex.def)             Requested size: 460.72124pt x 138.32841pt.
- [29pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) has been already used, duplicate ignored
+ [29pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1620 
-        <./Images/Recette/Contraintes matières premières 1.pdf>]
-Overfull \vbox (77.14578pt too high) has occurred while \output is active []
+l.1612 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1612 
+        <./Images/Recette/Contraintes matières premières 1.pdf> <./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
 
- [30pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1620 
-        <./Images/Recette/Recettes Fonderies GS 450_10_1.pdf> <./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
 
 pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-
-pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+>]
+<Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf, id=803, 574.145pt x 153.90799pt>
+File: Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf  used on input line 1626.
+(pdftex.def)             Requested size: 460.72124pt x 123.507pt.
+<Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf, id=804, 533.995pt x 147.21701pt>
+File: Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf  used on input line 1628.
+(pdftex.def)             Requested size: 460.72124pt x 127.02196pt.
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1634 
+        <./Images/Recette/Recettes Fonderies GS 600_3_1.pdf> <./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
 
 pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-File: Images/Recette/Recettes Fonderies GS 450_10_1.pdf Graphic file (type pdf)
-<use Images/Recette/Recettes Fonderies GS 450_10_1.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 450_10_1.pdf  used on input line 1628.
-(pdftex.def)             Requested size: 460.72124pt x 117.70567pt.
-File: Images/Recette/Recettes Fonderies GS 450_10_2.pdf Graphic file (type pdf)
-<use Images/Recette/Recettes Fonderies GS 450_10_2.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 450_10_2.pdf  used on input line 1630.
-(pdftex.def)             Requested size: 460.72124pt x 111.39543pt.
-File: Images/Recette/Recettes Fonderies GS 600_3_1.pdf Graphic file (type pdf)
-<use Images/Recette/Recettes Fonderies GS 600_3_1.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 600_3_1.pdf  used on input line 1632.
-(pdftex.def)             Requested size: 460.72124pt x 139.10757pt.
-File: Images/Recette/Recettes Fonderies GS 600_3_2.pdf Graphic file (type pdf)
-<use Images/Recette/Recettes Fonderies GS 600_3_2.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 600_3_2.pdf  used on input line 1634.
-(pdftex.def)             Requested size: 460.72124pt x 138.32841pt.
-
-Overfull \vbox (89.31247pt too high) has occurred while \output is active []
-
- [31pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) has been already used, duplicate ignored
+<Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf, id=831, 547.378pt x 129.818pt>
+File: Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf  used on input line 1642.
+(pdftex.def)             Requested size: 460.72124pt x 109.26622pt.
+<Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf, id=832, 564.777pt x 132.495pt>
+File: Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf  used on input line 1644.
+(pdftex.def)             Requested size: 460.72124pt x 108.0886pt.
+ [31pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1640 
-       ]
-File: Images/Recette/Recettes Fonderies GS 450_10_1.pdf Graphic file (type pdf)
-<use Images/Recette/Recettes Fonderies GS 450_10_1.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 450_10_1.pdf  used on input line 1648.
-(pdftex.def)             Requested size: 460.72124pt x 117.70567pt.
-File: Images/Recette/Recettes Fonderies GS 450_10_2.pdf Graphic file (type pdf)
-<use Images/Recette/Recettes Fonderies GS 450_10_2.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 450_10_2.pdf  used on input line 1650.
-(pdftex.def)             Requested size: 460.72124pt x 111.39543pt.
-File: Images/Recette/Recettes Fonderies GS 600_3_1.pdf Graphic file (type pdf)
-<use Images/Recette/Recettes Fonderies GS 600_3_1.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 600_3_1.pdf  used on input line 1652.
-(pdftex.def)             Requested size: 460.72124pt x 139.10757pt.
-File: Images/Recette/Recettes Fonderies GS 600_3_2.pdf Graphic file (type pdf)
-<use Images/Recette/Recettes Fonderies GS 600_3_2.pdf>
-Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 600_3_2.pdf  used on input line 1654.
-(pdftex.def)             Requested size: 460.72124pt x 138.32841pt.
+l.1650 
+        <./Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf> <./Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf
 
-Overfull \vbox (89.31247pt too high) has occurred while \output is active []
-
- [32pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) has been already used, duplicate ignored
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf, id=862, 564.777pt x 148.555pt>
+File: Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf  used on input line 1658.
+(pdftex.def)             Requested size: 460.72124pt x 121.19025pt.
+<Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf, id=863, 548.717pt x 145.87799pt>
+File: Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf  used on input line 1660.
+(pdftex.def)             Requested size: 460.72124pt x 122.4899pt.
+<Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf, id=864, 575.483pt x 132.495pt>
+File: Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf  used on input line 1674.
+(pdftex.def)             Requested size: 460.72124pt x 106.07497pt.
+<Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf, id=865, 554.07pt x 135.17201pt>
+File: Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf  used on input line 1676.
+(pdftex.def)             Requested size: 460.72124pt x 112.39897pt.
+ [32pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1660 
-       ]
+l.1682 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1682 
+        <./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf> <./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] Excluding 'comment' comment. [33pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1748 U
+        ne fois la fonte créée, elle est versée dans des poches pour être <./Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf> <./Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
 
 pdfTeX warning: pdflatex (file ./Images/Mg/Poche 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Mg/Poche 1.pdf, id=790, 937.10098pt x 559.59062pt>
+<Images/Mg/Poche 1.pdf, id=949, 937.10098pt x 559.59062pt>
 File: Images/Mg/Poche 1.pdf Graphic file (type pdf)
 <use Images/Mg/Poche 1.pdf>
-Package pdftex.def Info: Images/Mg/Poche 1.pdf  used on input line 1730.
+Package pdftex.def Info: Images/Mg/Poche 1.pdf  used on input line 1795.
 (pdftex.def)             Requested size: 937.0987pt x 559.58925pt.
 
 
 pdfTeX warning: pdflatex (file ./Images/Mg/Poche 2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Mg/Poche 2.pdf, id=791, 937.10098pt x 559.59062pt>
+<Images/Mg/Poche 2.pdf, id=950, 937.10098pt x 559.59062pt>
 File: Images/Mg/Poche 2.pdf Graphic file (type pdf)
 <use Images/Mg/Poche 2.pdf>
-Package pdftex.def Info: Images/Mg/Poche 2.pdf  used on input line 1736.
+Package pdftex.def Info: Images/Mg/Poche 2.pdf  used on input line 1801.
 (pdftex.def)             Requested size: 937.0987pt x 559.58925pt.
-[33]
+[34]
 Overfull \vbox (13.38547pt too high) has occurred while \output is active []
 
- [34pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) has been already used, duplicate ignored
+ [35pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1742 
+l.1807 
         <./Images/Mg/Poche 1.pdf> <./Images/Mg/Poche 2.pdf>]
 
 pdfTeX warning: pdflatex (file ./Images/Mg/Poche 3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Mg/Poche 3.pdf, id=859, 2427.0675pt x 2338.7375pt>
+<Images/Mg/Poche 3.pdf, id=1018, 2427.0675pt x 2338.7375pt>
 File: Images/Mg/Poche 3.pdf Graphic file (type pdf)
 <use Images/Mg/Poche 3.pdf>
-Package pdftex.def Info: Images/Mg/Poche 3.pdf  used on input line 1748.
+Package pdftex.def Info: Images/Mg/Poche 3.pdf  used on input line 1813.
 (pdftex.def)             Requested size: 2427.06161pt x 2338.73183pt.
-[35pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) has been already used, duplicate ignored
+[36pdfTeX warning (ext4): destination with the same identifier (name{figure.25}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1762     \item \textbf
-                        {Régime transitoire} : Cette phase correspond à l'... <./Images/Mg/Poche 3.pdf>] [36] [37] Excluding 'comment' comment. Excluding 'comment' comment.
+l.1827     \item \textbf
+                        {Régime transitoire} : Cette phase correspond à l'... <./Images/Mg/Poche 3.pdf>] [37] [38] [39] Excluding 'comment' comment. Excluding 'comment' comment.
+<Images/Recette/Recettes Fonderies GS 400_15_1.pdf, id=1099, 570.13pt x 119.112pt>
+File: Images/Recette/Recettes Fonderies GS 400_15_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 400_15_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 400_15_1.pdf  used on input line 2139.
+(pdftex.def)             Requested size: 460.72124pt x 96.2548pt.
+<Images/Recette/Recettes Fonderies GS 400_15_2.pdf, id=1100, 529.98pt x 115.097pt>
+File: Images/Recette/Recettes Fonderies GS 400_15_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 400_15_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 400_15_2.pdf  used on input line 2141.
+(pdftex.def)             Requested size: 460.72124pt x 100.05629pt.
+ [40]
+<Images/Recette/Recettes Fonderies GS 500_7_1.pdf, id=1117, 542.025pt x 133.833pt>
+File: Images/Recette/Recettes Fonderies GS 500_7_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 500_7_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 500_7_1.pdf  used on input line 2155.
+(pdftex.def)             Requested size: 460.72124pt x 113.76263pt.
+<Images/Recette/Recettes Fonderies GS 500_7_2.pdf, id=1118, 520.612pt x 143.20201pt>
+File: Images/Recette/Recettes Fonderies GS 500_7_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 500_7_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 500_7_2.pdf  used on input line 2157.
+(pdftex.def)             Requested size: 460.72124pt x 126.73048pt.
+<Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf, id=1119, 574.145pt x 131.15701pt>
+File: Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf  used on input line 2177.
+(pdftex.def)             Requested size: 460.72124pt x 105.24994pt.
+<Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf, id=1120, 528.642pt x 128.48pt>
+File: Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf  used on input line 2179.
+(pdftex.def)             Requested size: 460.72124pt x 111.97469pt.
+ [41pdfTeX warning (ext4): destination with the same identifier (name{figure.26}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2185 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.27}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2185 
+        <./Images/Recette/Recettes Fonderies GS 400_15_1.pdf> <./Images/Recette/Recettes Fonderies GS 400_15_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 400_15_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf, id=1167, 539.348pt x 148.555pt>
+File: Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf  used on input line 2193.
+(pdftex.def)             Requested size: 460.72124pt x 126.89796pt.
+<Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf, id=1168, 568.79199pt x 144.54pt>
+File: Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf  used on input line 2195.
+(pdftex.def)             Requested size: 460.72124pt x 117.07895pt.
+<Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf, id=1169, 568.79199pt x 132.495pt>
+File: Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf  used on input line 2209.
+(pdftex.def)             Requested size: 460.72124pt x 107.32236pt.
+<Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf, id=1170, 516.597pt x 132.495pt>
+File: Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf  used on input line 2211.
+(pdftex.def)             Requested size: 460.72124pt x 118.16277pt.
+ [42pdfTeX warning (ext4): destination with the same identifier (name{figure.28}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2217 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.29}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2217 
+        <./Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf> <./Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf, id=1225, 568.79199pt x 145.87799pt>
+File: Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf  used on input line 2225.
+(pdftex.def)             Requested size: 460.72124pt x 118.16272pt.
+<Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf, id=1226, 564.777pt x 145.87799pt>
+File: Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf  used on input line 2227.
+(pdftex.def)             Requested size: 460.72124pt x 119.00635pt.
 \tf@thm=\write7
 \openout7 = `rapport.thm'.
 
- [38] (./rapport.aux)
+ [43pdfTeX warning (ext4): destination with the same identifier (name{figure.30}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2236 \end{document}
+                     pdfTeX warning (ext4): destination with the same identifier (name{figure.31}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2236 \end{document}
+                      <./Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf> <./Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] (./rapport.aux)
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 6CEFAA49B13BE321A0FC4DC0F578FC5C;4124.
+(rerunfilecheck)             Checksum: 2926752D8B6052D141A315BDF16C06B4;3901.
  ) 
 Here is how much of TeX's memory you used:
- 29566 strings out of 478287
- 542851 string characters out of 5849289
- 1113292 words of memory out of 5000000
- 47011 multiletter control sequences out of 15000+600000
- 547271 words of font info for 92 fonts, out of 8000000 for 9000
+ 29865 strings out of 478287
+ 554152 string characters out of 5849289
+ 1116728 words of memory out of 5000000
+ 47265 multiletter control sequences out of 15000+600000
+ 536106 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,89p,483b,2067s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rapport.pdf (39 pages, 93923733 bytes).
+ 84i,11n,89p,483b,1399s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on rapport.pdf (44 pages, 90459998 bytes).
 PDF statistics:
- 1068 PDF objects out of 1200 (max. 8388607)
- 793 compressed objects within 8 object streams
- 150 named destinations out of 1000 (max. 500000)
- 503 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1406 PDF objects out of 1440 (max. 8388607)
+ 1016 compressed objects within 11 object streams
+ 173 named destinations out of 1000 (max. 500000)
+ 615 words of extra memory for PDF output out of 10000 (max. 10000000)
 
