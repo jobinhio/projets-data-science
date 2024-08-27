@@ -989,6 +989,21 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
@@ -1179,20 +1194,21 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT ./Images/Presentation/logo-unistra.pdf
-INPUT ./Images/Presentation/logo-unistra.pdf
-INPUT Images/Presentation/logo-unistra.pdf
-INPUT ./Images/Presentation/logo-unistra.pdf
-INPUT ./Images/Presentation/logo-unistra.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT ./Images/Presentation/logo-Fonderie.pdf
 INPUT ./Images/Presentation/logo-Fonderie.pdf
 INPUT Images/Presentation/logo-Fonderie.pdf
 INPUT ./Images/Presentation/logo-Fonderie.pdf
 INPUT ./Images/Presentation/logo-Fonderie.pdf
+INPUT ./Images/Presentation/logo-unistra.pdf
+INPUT ./Images/Presentation/logo-unistra.pdf
+INPUT Images/Presentation/logo-unistra.pdf
+INPUT ./Images/Presentation/logo-unistra.pdf
+INPUT ./Images/Presentation/logo-unistra.pdf
 INPUT ./Images/Presentation/logoCSMI.pdf
 INPUT ./Images/Presentation/logoCSMI.pdf
 INPUT Images/Presentation/logoCSMI.pdf
@@ -1353,16 +1369,16 @@ INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
 INPUT Images/Statistique/Impureté_avec_extreme.pdf
 INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
 INPUT ./Images/Statistique/Impureté_avec_extreme.pdf
-INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
-INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
-INPUT Images/Statistique/Purete ONO_avec_extreme.pdf
-INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
-INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
 INPUT ./Images/Statistique/Purete ONO_sans_extreme.pdf
 INPUT ./Images/Statistique/Purete ONO_sans_extreme.pdf
 INPUT Images/Statistique/Purete ONO_sans_extreme.pdf
 INPUT ./Images/Statistique/Purete ONO_sans_extreme.pdf
 INPUT ./Images/Statistique/Purete ONO_sans_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
+INPUT Images/Statistique/Purete ONO_avec_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
+INPUT ./Images/Statistique/Purete ONO_avec_extreme.pdf
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
@@ -1475,16 +1491,6 @@ INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
 INPUT Images/Recette/Recettes Fonderies GS 450_10_2.pdf
 INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
 INPUT ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf
 INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf
 INPUT Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf
@@ -1495,16 +1501,6 @@ INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf
 INPUT Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
-INPUT Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
-INPUT Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf
 INPUT Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf
@@ -1515,6 +1511,26 @@ INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf
 INPUT Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf
 INPUT Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf
@@ -1551,16 +1567,6 @@ INPUT ./Images/Recette/Recettes Fonderies GS 400_15_2.pdf
 INPUT Images/Recette/Recettes Fonderies GS 400_15_2.pdf
 INPUT ./Images/Recette/Recettes Fonderies GS 400_15_2.pdf
 INPUT ./Images/Recette/Recettes Fonderies GS 400_15_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
-INPUT Images/Recette/Recettes Fonderies GS 500_7_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
-INPUT Images/Recette/Recettes Fonderies GS 500_7_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
-INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf
 INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf
 INPUT Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf
@@ -1571,16 +1577,6 @@ INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf
 INPUT Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
-INPUT Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
-INPUT Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
-INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf
 INPUT Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf
@@ -1591,6 +1587,26 @@ INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf
 INPUT Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+INPUT Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+INPUT Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
+INPUT Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
+INPUT ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf
 INPUT ./Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf
 INPUT Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf

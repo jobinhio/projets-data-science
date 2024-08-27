@@ -38,6 +38,7 @@
 \usepackage{appendix}
 
 
+\usepackage{subfigure}
 
 
 % ----- Recette
@@ -112,44 +113,51 @@
     
     % Titre du rapport
     {\Huge \textbf{Rapport de Stage de Fin d'Études}} \\[1.5cm]
-    % {\LARGE Master 2 Mathématiques Appliquées} \\[1cm]
-    {\large \textbf{Sujet du stage }} \\
-    {\Large Optimisation des coûts de production} \\[2cm]
-    
+    {\LARGE Master en Mathématiques Appliquées} \\[1cm]
+    {\Large \textbf{Sujet du stage }} \\
+    {\Large Optimisation des coûts de production} \\[0.5cm]
+
     % Nom de l'étudiant
-    {\Large \textbf{Présenté par }} \\
-    {\Large Job CONGO} \\[1cm]
+    {\large \textbf{Présenté par }} \\
+    {\large Job CONGO} \\[0.5cm]
     
-    % Détails du stage
-    {\large \textbf{Stage réalisé à }} \\
-    {\large Fonderie de Niederbronn, Niederbronn, France} \\[0.5cm]
-
-    % Dates du stage
-    {\large \textbf{Dates du stage }} \\
-    {\large Du 11 mars 2024 au 26 juillet 2024} \\[1cm]
-
     {\large \textbf{Encadrant industriel }} \\
     {\large Guy LUTRINGER, président de la Fonderie de Niederbronn} \\[0.5cm]
     
 
     % Université et laboratoire
     {\large \textbf{Responsable académique }} \\
-    {\large Christophe PRUD’HOMME, responsable du master CSMI} \\[2cm]
+    {\large Christophe PRUD’HOMME, responsable du master CSMI} \\[0.5cm]
+  
+    {\large \textbf{Université de Strasbourg}} \\
+    {\large Faculté de Mathématiques et Informatique} \\[0.5cm]
+
+    % Détails du stage
+    {\large \textbf{Stage réalisé à }} \\
+    {\large Fonderie de Niederbronn, Niederbronn, France} \\[0.5cm]
+
+    % Dates du stage
+    {\large \textbf{Dates du stage }} \\
+    {\large Du 11 mars 2024 au 26 juillet 2024} \\[0.5cm]
+
+
+    % Date
+    {\large \textbf{Date de soutenance }} \\
+    {\large 30 août 2024} 
     
     % Logos
     \begin{figure}[b!]
     \centering
     \vfill
-    \includegraphics[scale=0.16]{Images/Presentation/logo-unistra.pdf}
-    \hspace{0.5 cm}
     \includegraphics[scale=0.16]{Images/Presentation/logo-Fonderie.pdf}
+    \hspace{0.5 cm}
+    \includegraphics[scale=0.16]{Images/Presentation/logo-unistra.pdf}
     \hspace{0.5 cm}
     \includegraphics[scale=0.16]{Images/Presentation/logoCSMI.pdf}
     \end{figure}
     
-    % Date
-    {\large \textbf{Date de soutenance }} \\
-    {\large 30 août 2024} \\[1cm]
+ 
+    
     
 \end{titlepage}
 
@@ -172,11 +180,11 @@
 
 
 
-\section{Contexte }
+\section{Introduction }
 
 
 %  Mettre une introduction générale ici soit en section soit sans!!!
-\subsection{Introduction rapide}
+\subsection{Contexte}
 
 
 % Dire quelque généralité
@@ -187,7 +195,7 @@ répondant ainsi aux besoins diversifiés de l'industrie moderne.
 Ce secteur joue un rôle essentiel dans la production de composants 
 pour de nombreuses applications industrielles.
 
-Le rapport de stage présente une analyse des activités réalisées 
+Ce rapport de stage présente une analyse des activités réalisées 
 au sein de l'équipe Informatique de la Fonderie de Niederbronn. Ce stage 
 a eu lieu sur une période de quatre mois, du 11 mars au 26 juillet 2024. 
 
@@ -279,7 +287,7 @@ incontournable dans le secteur de la fonderie.
 % \subsection{Description du processus de production des pièces en fonte}
 \subsection{Description du processus de production}
 
-La production de pièces en fonte suit un processus ordonnée et méticuleux, 
+La production de pièces en fonte suit un processus ordonné et méticuleux, 
 composé de plusieurs étapes interconnectées qui garantissent la qualité 
 et la durabilité des produits finis. Chaque étape, depuis la préparation 
 des matériaux jusqu'au produit final, est cruciale pour obtenir des pièces 
@@ -336,7 +344,7 @@ d'ensemble des différentes phases.
         \includegraphics[scale=0.7]{Images/Presentation/Les Retours.pdf}
         \hspace{0.5 cm}
         \includegraphics[scale=0.7]{Images/Presentation/Frite Haut Silicium.pdf}
-        \caption{Les retours et les Frite Haut Silicium}
+        \caption{Les retours et les Frites Haut Silicium}
     \end{figure}
 
     \begin{figure}[H]
@@ -473,7 +481,7 @@ Les missions confiées dans ce cadre sont les suivantes :
 \item \textbf{Participer à d'autres problèmes d'optimisation :} Contribuer à d'autres défis liés à l'optimisation des procédés de production de fonte.
 \end{itemize}
 
-\subsection{Le plan du rapport}
+\subsection{Plan du rapport}
 
 % % Presenter rapidement le plan du rapport
 
@@ -629,12 +637,7 @@ d'anticiper les performances de la fonte en fonction de sa composition
 chimique.
 
 
-
-
-
-
-
-
+\newpage
 
 \subsection{Les données}
 
@@ -672,8 +675,8 @@ un total de 38 caractéristiques.
 \begin{itemize}
 \item[$\bullet$] Impureté : Pourcentage d'impureté dans l'échantillon.
 \item[$\bullet$] \% Ferrite : Pourcentage de ferrite dans l'échantillon.
-\item[$\bullet$] ONO, TANIMURA, ... : Un indicateur de qualité en pourcentage.
-\item[$\bullet$] THIELMANN : Un indicateur de qualité en pourcentage.
+\item[$\bullet$] ONO, TANIMURA, ... : un indicateur de qualité en pourcentage.
+\item[$\bullet$] THIELMANN : un indicateur de qualité en pourcentage.
 \end{itemize}
  
 \vspace{0.5cm}
@@ -692,6 +695,7 @@ un total de 38 caractéristiques.
 
 \vspace{0.5cm}
 
+\newpage
 \textbf{Les éléments chimiques :}
 
 \begin{itemize}
@@ -723,7 +727,7 @@ sur la GS 450-10.
 
 
 
-La Figure ci-dessous ~\ref{fig:donnees_brutes}  illustre l'état initial des données avant tout 
+La Figure ~\ref{fig:donnees_brutes} ci-dessous illustre l'état initial des données avant tout 
 processus de nettoyage ou d'analyse.
 
 
@@ -747,6 +751,7 @@ processus de nettoyage ou d'analyse.
 
 
 
+\newpage
 
 % Prétraitement des Données
 Avant d'utiliser les données pour l'analyse, plusieurs étapes de 
@@ -765,7 +770,7 @@ pertinence. Voici les principales opérations effectuées :
     
     \item \textbf{Ajout d'indicateurs} :
     \begin{itemize}
-        \item Introduction de l'indicateur de Pureté MAYER pour enrichir les données disponibles.
+        \item Introduction de l'indicateur de Pureté MAYER pour compléter les données disponibles.
     \end{itemize}
 
     
@@ -994,10 +999,10 @@ deux principaux indicateurs : l'impureté et la pureté ONO.
 \begin{figure}[H]
     \centering
     \begin{adjustbox}{width=1.3\textwidth,center}
-        \includegraphics[scale=1]{Images/Statistique/Purete ONO_avec_extreme.pdf}
         \includegraphics[scale=1]{Images/Statistique/Purete ONO_sans_extreme.pdf}
+        \includegraphics[scale=1]{Images/Statistique/Purete ONO_avec_extreme.pdf}
     \end{adjustbox}
-    \caption{La purete ONO avant et après le traitement des valeurs extrèmes.}
+    \caption{La pureté ONO avant et après le traitement des valeurs extrèmes.}
     \label{fig:ExtremeONO}
 \end{figure}
 
@@ -1029,8 +1034,8 @@ Dans cette section, nous réalisons une régression linéaire pour analyser
 les relations entre certains éléments chimiques et les indicateurs 
 pertinents, tels que l'impureté et la pureté ONO. L'objectif est de 
 comprendre comment ces variables influencent les 2 indicateurs ainsi que 
-les 2 mesures normatives Resistance mecanique et l'allongement, 
-et de calculer les intervalles  de confiance et puis l'intervale 
+les 2 mesures normatives que sont la résistance mécanique et l'allongement, 
+et de calculer les intervalles  de confiance et puis l'intervalle 
 de prédiction pour les valeurs prédites.
 
 \medskip % Ajoute un espace
@@ -1066,7 +1071,7 @@ résistance mécanique, l'allongement, et les éléments Sn (Étain), Cr
 
 Ces graphiques présentent non seulement les valeurs prédites par les 
 modèles de régression, mais aussi les intervalles de prédiction avec 
-une largeur de bande fixée à $n=1,5$. 
+une largeur de bande fixée à $n=1,96$. 
 
 
 
@@ -1230,7 +1235,7 @@ production tout en préservant la qualité de la fonte.
 
 
 
-\subsection{ Modélisation du problème }
+\subsection{Modélisation du problème }
 
 Pour modéliser ce problème de manière optimale, nous avons proposé 
 deux formulation du problème. La première formulation consiste à résoudre 
@@ -1331,7 +1336,7 @@ programmation linéaire en explorant les sommets d'un polytope, qui est
 la région de l'espace définie par l'ensemble des contraintes du problème.
 Dans notre cas, cela signifie que pour les contraintes d'inégalité, 
 l'algorithme propose des solutions où ces inégalités
-sont atteint. Cette situation est problématique lorsqu'il 
+sont atteintes. Cette situation est problématique lorsqu'il 
 s'agit de contraintes sur des éléments chimiques polluants ou toxiques, 
 où l'on souhaite éviter d'atteindre les valeurs limites imposées par ces 
 contraintes.
@@ -1379,7 +1384,7 @@ algorithme.
 
 % L'algorithme du simplexe ou La méthode du simplexe
 
-\subsection{ L'algorithme du simplexe }
+\subsection{L'algorithme du simplexe }
 
 
 L'algorithme du simplexe, développé par George Dantzig en 1947, est une 
@@ -1595,32 +1600,14 @@ GS 400-15 et GS 450-10 :
 \end{figure}
 
 
-% La recette de la fonte GS 600-3 de la fonderie
+
+
+
+
+% La recette de la fonte GS 450-10 du simplexe 1 et 2
 \begin{figure}[H]
     \centering
-    \adjustbox{width=1.18\textwidth, center}{
-        \begin{minipage}{\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{Images/Recette/Recettes Fonderies GS 600_3_1.pdf} \\
-            \vspace{0.01 cm}
-            \includegraphics[width=\textwidth]{Images/Recette/Recettes Fonderies GS 600_3_2.pdf}
-        \end{minipage}
-    }
-    \caption{La recette de la fonte GS 600-3 de la fonderie}
-    \label{fig:Recette2}
-\end{figure}
-
-
-
-
-
-% Les recettes du simplexe :
-
-
-% La recette de la fonte GS 450-10 du simplexe 1
-\begin{figure}[H]
-    \centering
-    \adjustbox{width=1.18\textwidth, center}{
+    \adjustbox{width=1.17\textwidth, center}{
         \begin{minipage}{\textwidth}
             \centering
             \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf} \\
@@ -1630,29 +1617,9 @@ GS 400-15 et GS 450-10 :
     }
     \caption{La recette de la fonte GS 450-10 de l'algorithme du simplexe version 1}
     \label{fig:Recette3}
-\end{figure}
-
-
-% La recette de la fonte GS 600-3  du simplexe 1
-\begin{figure}[H]
+    \hspace{0.01cm}
     \centering
-    \adjustbox{width=1.18\textwidth, center}{
-        \begin{minipage}{\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf} \\
-            \vspace{0.01 cm}
-            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf}
-        \end{minipage}
-    }
-    \caption{La recette de la fonte GS 600-3 de l'algorithme du simplexe version 1}
-    \label{fig:Recette4}
-\end{figure}
-
-
-% La recette de la fonte GS 450-10 du simplexe 2
-\begin{figure}[H]
-    \centering
-    \adjustbox{width=1.18\textwidth, center}{
+    \adjustbox{width=1.17\textwidth, center}{
         \begin{minipage}{\textwidth}
             \centering
             \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf} \\
@@ -1665,10 +1632,41 @@ GS 400-15 et GS 450-10 :
 \end{figure}
 
 
-% La recette de la fonte GS 600-3  du simplexe 2
+
+
+
+% La recette de la fonte GS 600-3 de la fonderie et du simplexe 1
 \begin{figure}[H]
     \centering
     \adjustbox{width=1.18\textwidth, center}{
+        \begin{minipage}{\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Images/Recette/Recettes Fonderies GS 600_3_1.pdf} \\
+            \vspace{0.01 cm}
+            \includegraphics[width=\textwidth]{Images/Recette/Recettes Fonderies GS 600_3_2.pdf}
+        \end{minipage}
+    }
+    \caption{La recette de la fonte GS 600-3 de la fonderie}
+    \label{fig:Recette2}
+    \hspace{0.01cm}
+    \centering
+    \adjustbox{width=1.17\textwidth, center}{
+        \begin{minipage}{\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf} \\
+            \vspace{0.01 cm}
+            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf}
+        \end{minipage}
+    }
+    \caption{La recette de la fonte GS 600-3 de l'algorithme du simplexe version 1}
+    \label{fig:Recette4}
+\end{figure}
+
+
+% La recette de la fonte GS 600-3  du simplexe 2
+\begin{figure}[H]
+    \centering
+    \adjustbox{width=1.17\textwidth, center}{
         \begin{minipage}{\textwidth}
             \centering
             \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf} \\
@@ -1683,9 +1681,6 @@ GS 400-15 et GS 450-10 :
 
 
 
-
-
-
 Pour la GS 450-10 et la GS 600-3, les coûts initiaux des recettes 
 proposées par la fonderie sont de 533,82 euros et 523,02 euros 
 respectivement. En appliquant la première formulation du problème, 
@@ -1696,7 +1691,7 @@ réduire le coût de la GS 600-3 à 510,90 euros.
 Ces résultats montrent un compromis entre le coût et la qualité, où la 
 première formulation privilégie l'économie, tandis que la deuxième vise 
 une qualité supérieure de la fonte, avec un impact minimal sur les coûts.
-
+D'autres recettes supplémentaires sont disponibles en annexe.
 
 \begin{comment}
     
@@ -2096,6 +2091,9 @@ Fonderie de Niederbronn. \emph{Site web de la Fonderie de Niederbronn}. Accessib
 \bibitem{Reynaud}
 Alain Reynaud. \emph{Oligo-éléments \& fontes}. ETIF, 2009.
 
+\bibitem{Haddadi2021}
+Salim Haddadi. \emph{Programmation linéaire - Une approche mathématique et algorithmique}. Références sciences, vol. 1, Ellipses, 2021.
+
 \bibitem{Scheid}
 J.-F Scheid. \emph{Cours de Graphes et Recherche Opérationnelle}. Disponible en ligne : \url{https://scheid.perso.math.cnrs.fr/Enseignement/coursGRO_PL.pdf}.
 
@@ -2122,18 +2120,16 @@ solidification et à l'état solide}. Thèse de doctorat, Université Toulouse, 
 
 \begin{appendices}
     \section{La recette optimale}
-    Voici les recettes d'autres fonte GS :
-
-    
+    Voici les recettes d'autres types de fontes GS :
 
 
-    %  Les ouputs de l'algos
+%  Les ouputs de l'algos
 
 
-% La recette de la fonte GS 400-15  de la fonderie
+% La recette de la fonte GS 400-15  de la fonderie et du simplexe 1
 \begin{figure}[H]
     \centering
-    \adjustbox{width=1.18\textwidth, center}{
+    \adjustbox{width=1.17\textwidth, center}{
         \begin{minipage}{\textwidth}
             \centering
             \includegraphics[width=\textwidth]{Images/Recette/Recettes Fonderies GS 400_15_1.pdf} \\
@@ -2143,11 +2139,35 @@ solidification et à l'état solide}. Thèse de doctorat, Université Toulouse, 
     }
     \caption{La recette de la fonte GS 400-15 de la fonderie}
     \label{fig:Recette7}
+    \hspace{0.01cm}
+    \centering
+    \adjustbox{width=1.17\textwidth, center}{
+        \begin{minipage}{\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf} \\
+            \vspace{0.01 cm}
+            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf}
+        \end{minipage}
+    }
+    \caption{La recette de la fonte GS 400-15 de l'algorithme du simplexe version 1}
+    \label{fig:Recette9}
 \end{figure}
 
 
-% La recette de la fonte GS 500-7 de la fonderie
+% La recette de la fonte GS 400-15 du simplexe 2 et de la fonte GS 500-7 de la fonderie
 \begin{figure}[H]
+    \centering
+    \adjustbox{width=1.18\textwidth, center}{
+        \begin{minipage}{\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf} \\
+            \vspace{0.01 cm}
+            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf}
+        \end{minipage}
+    }
+    \caption{La recette de la fonte GS 400-15 de l'algorithme du simplexe version 2}
+    \label{fig:Recette11}
+    \hspace{0.01cm}
     \centering
     \adjustbox{width=1.18\textwidth, center}{
         \begin{minipage}{\textwidth}
@@ -2162,29 +2182,7 @@ solidification et à l'état solide}. Thèse de doctorat, Université Toulouse, 
 \end{figure}
 
 
-
-
-
-% Les recettes du simplexe :
-
-
-% La recette de la fonte GS 400-15 du simplexe 1
-\begin{figure}[H]
-    \centering
-    \adjustbox{width=1.18\textwidth, center}{
-        \begin{minipage}{\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf} \\
-            \vspace{0.01 cm}
-            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf}
-        \end{minipage}
-    }
-    \caption{La recette de la fonte GS 400-15 de l'algorithme du simplexe version 1}
-    \label{fig:Recette9}
-\end{figure}
-
-
-% La recette de la fonte GS 500-7  du simplexe 1
+% La recette de la fonte GS 500-7  du simplexe 1 et 2
 \begin{figure}[H]
     \centering
     \adjustbox{width=1.18\textwidth, center}{
@@ -2197,27 +2195,7 @@ solidification et à l'état solide}. Thèse de doctorat, Université Toulouse, 
     }
     \caption{La recette de la fonte GS 500-7 de l'algorithme du simplexe version 1}
     \label{fig:Recette10}
-\end{figure}
-
-
-% La recette de la fonte GS 400-15 du simplexe 2
-\begin{figure}[H]
-    \centering
-    \adjustbox{width=1.18\textwidth, center}{
-        \begin{minipage}{\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf} \\
-            \vspace{0.01 cm}
-            \includegraphics[width=\textwidth]{Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf}
-        \end{minipage}
-    }
-    \caption{La recette de la fonte GS 400-15 de l'algorithme du simplexe version 2}
-    \label{fig:Recette11}
-\end{figure}
-
-
-% La recette de la fonte GS 500-7  du simplexe 2
-\begin{figure}[H]
+    \hspace{0.01cm}
     \centering
     \adjustbox{width=1.18\textwidth, center}{
         \begin{minipage}{\textwidth}

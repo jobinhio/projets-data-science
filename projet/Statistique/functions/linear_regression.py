@@ -101,7 +101,10 @@ def plot_linear_regression_with_predict_intervals(df,x_name, y_name, width,file_
     fig.update_layout(
     title={
         # 'text': 'L\'évolution de la ' + y_name + ' en fonction de ' + x_name,
-        'text': 'L\'évolution de l\'allongement' + ' en fonction de ' + x_name,
+        # 'text': 'Évolution de l\'impureté [%]' + ' en fonction de ' + x_name,
+        # 'text': 'Évolution de la pureté ONO [%]' + ' en fonction de ' + x_name,
+        # 'text': 'Évolution de la ' + y_name + ' en fonction de ' + x_name,
+        'text': 'Évolution de l\'allongement [%]' + ' en fonction de ' + x_name,
         # 'text': 'La régression linéaire et l\'intervalle de prédiction de l\'' + y_name + ' en fonction de ' + x_name,
         'x': 0.5,  # Centre le titre
         'xanchor': 'center',
