@@ -3,7 +3,6 @@ import pandas as pd
 
 
 
-
 def Give_contraints_per_recipe(Contraintes_Elements ) :
 
     # Supprimer les lignes entièrement vides de Contraintes_Elements
@@ -89,10 +88,15 @@ def check_MP_and_contraints_values(df_mp,df_elmt_and_quality,erreurs):
         erreurs.append("Erreur : Les valeurs de 'Part Max' doivent être inférieures à 'Part Min'")
 
 
-    # # Contraintes qualité et élement
-    # valid_values = df_elmt_and_quality[df_elmt_and_quality.columns[1:]].apply(lambda x: (x >= 0) & (x <= 100)).all(axis=1)
-    # if not valid_values.all():
-    #     erreurs.append("Erreur : Certaines valeurs des Contraintes qualité et élement sont en dehors de la plage autorisée (0-100).")
+    # Contraintes qualité et élement
+    # Convertir toutes les valeurs en numériques, les chaînes non convertibles deviendront NaN
+    df_numeric = df_elmt_and_quality[df_elmt_and_quality.columns[1:]].apply(pd.to_numeric, errors='coerce')
+
+    # Vérifier les valeurs dans la plage 0-100 ou NaN
+    valid_values = df_numeric.apply(lambda x: ((x >= 0) & (x <= 100)) | x.isna()).all(axis=1)
+
+    if not valid_values.all():
+        erreurs.append("Erreur : Certaines valeurs des Contraintes qualité et élement sont en dehors de la plage autorisée (0-100).")
 
     return 
 
@@ -103,7 +107,10 @@ def check_table_values(df_table,erreurs):
         erreurs.append("Erreur : Certaines valeurs de Tableau A sont en dehors de la plage autorisée (0-100).")
     return
 
-def read_and_check_input_values(chemin_fichier): 
+
+#----------------------------- Version Cle USB ----------------------------- 
+
+def read_and_check_USB_input_values(chemin_fichier): 
 
     # Lecture de la première feuille du fichier Excel : Table Matière Element
     Tableau_Matiere_Element = pd.read_excel(chemin_fichier, engine='openpyxl') # 'calamine'
@@ -145,3 +152,50 @@ def read_and_check_input_values(chemin_fichier):
             # Supprimer le fichier existant
             os.remove(fichier_Resultats)
     return Tableau_Matiere_Element, contraintes_mp, contraintes_elmt_and_quality, erreurs
+
+
+#----------------------------- Version FDN ----------------------------- 
+
+
+def read_and_check_FDN_input_values(chemin_dossier, recetteName): 
+
+    chemin_fichier_1 = os.path.join(chemin_dossier, 'recipe_optimization_data_1.csv')
+    chemin_fichier_2 = os.path.join(chemin_dossier, 'recipe_optimization_data_2.csv')
+    chemin_fichier_3 = os.path.join(chemin_dossier, 'recipe_optimization_data_3.csv')
+
+    # Lecture de la première feuille du fichier CSV : Table Matière Element
+    Tableau_Matiere_Element = pd.read_csv(chemin_fichier_1, sep=';', encoding='UTF-8')
+    # Lecture de la deuxième feuille du fichier CSV : Contraintes Element
+    Contraintes_Elements = pd.read_csv(chemin_fichier_2, sep=';', encoding='UTF-8') # 'ISO-8859-1'
+    # Lecture de la troisième feuille du fichier CSV : Contraintes Matière Première
+    Matieres_premiere = pd.read_csv(chemin_fichier_3, sep=';', encoding='UTF-8')
+
+    # Pour utiliser create_optimal_recipe on a besoin l'écrire avec des dictionnaires
+    contraintes_mp, elmt_quality_constraints = {}, {}
+    contraintes_mp[recetteName] = Matieres_premiere
+    elmt_quality_constraints[recetteName] = Contraintes_Elements
+
+    erreurs =[]
+    check_table_values(Tableau_Matiere_Element,erreurs) 
+    check_MP_and_contraints_values(Matieres_premiere,Contraintes_Elements,erreurs)
+    if erreurs:
+        # Créer le chemin complet du nouveau fichier Excel
+        dossier_data = os.path.dirname(chemin_dossier)
+        fichier_erreurs = os.path.join(dossier_data, 'erreurs.txt')
+
+        with open(fichier_erreurs, "w", encoding="utf-8") as f:
+            for erreur in erreurs:
+                f.write(erreur + "\n")
+        print("Les erreurs ont été enregistrées dans le fichier '{}'.".format(fichier_erreurs))
+
+
+        # Créer le chemin complet du nouveau fichier Excel
+        dossier_data = os.path.dirname(chemin_dossier)
+        fichier_Resultats = os.path.join(dossier_data, 'Resultats.xlsx')
+
+        # Vérifier si le fichier Excel existe déjà
+        if os.path.exists(fichier_Resultats):
+            # Supprimer le fichier existant
+            os.remove(fichier_Resultats)
+    return Tableau_Matiere_Element, contraintes_mp, elmt_quality_constraints, erreurs
+
