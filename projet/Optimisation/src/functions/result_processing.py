@@ -24,9 +24,24 @@ def remove_old_recipes(dossier_data):
     fichier_recipes = os.path.join(dossier_data, 'recipes.xlsx')
     if os.path.exists(fichier_recipes):
         os.remove(fichier_recipes)
-
+    
     # Vérifier si le fichier erreurs existe et le supprime
     fichier_erreurs = os.path.join(dossier_data, 'erreurs.txt')
+    if os.path.exists(fichier_erreurs):
+        os.remove(fichier_erreurs)
+
+    # Vérifier si le fichier résultats existe et le supprime
+    fichier_recipes = os.path.join(dossier_data, 'Outputs','resultats.xlsx')
+    if os.path.exists(fichier_recipes):
+        os.remove(fichier_recipes)
+
+    # Vérifier si le fichier résultats existe et le supprime
+    fichier_recipes = os.path.join(dossier_data, 'Outputs', 'resultatsComposition.xlsx')
+    if os.path.exists(fichier_recipes):
+        os.remove(fichier_recipes)
+
+    # Vérifier si le fichier erreurs existe et le supprime
+    fichier_erreurs = os.path.join(dossier_data, 'Outputs','erreurs.txt')
     if os.path.exists(fichier_erreurs):
         os.remove(fichier_erreurs)
     return 
@@ -195,7 +210,7 @@ def save_errors(erreurs, dossier_data,recette):
     None
     """
     # Sauvegarder les erreurs dans un fichier texte
-    fichier_erreurs = os.path.join(dossier_data, 'erreurs.txt')
+    fichier_erreurs = os.path.join(dossier_data, 'Outputs', 'erreurs.txt')
     with open(fichier_erreurs, "a+", encoding="utf-8") as f:
         message = "Pour la recette " + recette + ":"
         f.write(message+ "\n")
@@ -312,15 +327,13 @@ def construct_FDNresult_dataframe(res, df_mp_dispo, table_mp):
     return df_res, df_resElements
 
 
-###### Pas bon cette fonction ############
-
-def export_FDNresult(df_res1, df_res2, dossier_data, new_sheet_name):
+def export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_data, new_sheet_name):
     """
     Exporte deux DataFrames dans un fichier Excel, créant de nouvelles feuilles ou mettant à jour des feuilles existantes.
 
     Args:
-    df_res1 (DataFrame): Le premier DataFrame à exporter (peut être None).
-    df_res2 (DataFrame): Le deuxième DataFrame à exporter (peut être None).
+    df_res (DataFrame): Le premier DataFrame à exporter (peut être None).
+    df_resElements (DataFrame): Le deuxième DataFrame à exporter (peut être None).
     dossier_data (str): Chemin vers le dossier contenant les données.
     new_sheet_name (str): Nom de la nouvelle feuille Excel.
 
@@ -330,17 +343,17 @@ def export_FDNresult(df_res1, df_res2, dossier_data, new_sheet_name):
     sheet_name1, sheet_name2 = new_sheet_name + " Version 1", new_sheet_name + " Version 2"
 
     # Créer le chemin complet du fichier Excel
-    fichier_recipes = os.path.join(dossier_data, 'recipes.xlsx')
+    fichier_resultats = os.path.join(dossier_data, 'Outputs','resultats.xlsx')
 
     # Vérifier si le fichier Excel existe
-    if os.path.exists(fichier_recipes):
+    if os.path.exists(fichier_resultats):
         # Charger le classeur Excel existant
-        workbook = load_workbook(fichier_recipes)
+        workbook = load_workbook(fichier_resultats)
     else:
         # Créer un nouveau classeur s'il n'existe pas
         workbook = Workbook()
 
-    # Ajouter ou mettre à jour la première feuille (si df_res1 n'est pas None)
+    # Ajouter ou mettre à jour la première feuille (si df_res n'est pas None)
     if df_res1 is not None:
         if sheet_name1 in workbook.sheetnames:
             feuille1 = workbook[sheet_name1]
@@ -354,7 +367,7 @@ def export_FDNresult(df_res1, df_res2, dossier_data, new_sheet_name):
             for c_idx, value in enumerate(row, 1):
                 feuille1.cell(row=r_idx, column=c_idx, value=value)
 
-    # Ajouter ou mettre à jour la deuxième feuille (si df_res2 n'est pas None)
+    # Ajouter ou mettre à jour la deuxième feuille (si df_resElements n'est pas None)
     if df_res2 is not None:
         if sheet_name2 in workbook.sheetnames:
             feuille2 = workbook[sheet_name2]
@@ -374,36 +387,84 @@ def export_FDNresult(df_res1, df_res2, dossier_data, new_sheet_name):
         workbook.remove(default_sheet)
 
     # Sauvegarder le classeur
-    workbook.save(fichier_recipes)
+    workbook.save(fichier_resultats)
+    workbook.close()
+    # gc.collect()
+
+
+    # Créer le chemin complet du fichier Excel
+    fichier_resultatsComposition = os.path.join(dossier_data, 'Outputs', 'resultatsComposition.xlsx')
+
+    # Vérifier si le fichier Excel existe
+    if os.path.exists(fichier_resultatsComposition):
+        # Charger le classeur Excel existant
+        workbook = load_workbook(fichier_resultatsComposition)
+    else:
+        # Créer un nouveau classeur s'il n'existe pas
+        workbook = Workbook()
+
+    # Ajouter ou mettre à jour la première feuille (si df_res n'est pas None)
+    if df_resElements1 is not None:
+        if sheet_name1 in workbook.sheetnames:
+            feuille1 = workbook[sheet_name1]
+            workbook.remove(feuille1)
+            feuille1 = workbook.create_sheet(title=sheet_name1)
+        else:
+            feuille1 = workbook.create_sheet(title=sheet_name1)
+
+        # Écrire le premier DataFrame dans la première feuille
+        for r_idx, row in enumerate(dataframe_to_rows(df_resElements1, index=False, header=True), 1):
+            for c_idx, value in enumerate(row, 1):
+                feuille1.cell(row=r_idx, column=c_idx, value=value)
+
+    # Ajouter ou mettre à jour la deuxième feuille (si df_resElements n'est pas None)
+    if df_resElements2 is not None:
+        if sheet_name2 in workbook.sheetnames:
+            feuille2 = workbook[sheet_name2]
+            workbook.remove(feuille2)
+            feuille2 = workbook.create_sheet(title=sheet_name2)
+        else:
+            feuille2 = workbook.create_sheet(title=sheet_name2)
+
+        # Écrire le deuxième DataFrame dans la deuxième feuille
+        for r_idx, row in enumerate(dataframe_to_rows(df_resElements2, index=False, header=True), 1):
+            for c_idx, value in enumerate(row, 1):
+                feuille2.cell(row=r_idx, column=c_idx, value=value)
+
+        # Supprimer la feuille par défaut si elle existe et n'est pas utilisée
+    if 'Sheet' in workbook.sheetnames :
+        default_sheet = workbook['Sheet']
+        workbook.remove(default_sheet)
+
+    # Sauvegarder le classeur
+    workbook.save(fichier_resultatsComposition)
     workbook.close()
     gc.collect()
 
     return
 
 
-
-
 def gestion_FDNresultats(erreurs1, res1, erreurs2, res2, df_mp_dispo, table_mp, constraints, dossier_data, recette):
     if not erreurs1 and not erreurs2:
         # Aucun des deux cas n'a d'erreurs : les deux solutions sont valides
-        df_res1, df_resElements1 = construct_FDNresult_dataframe(res1, df_mp_dispo, table_mp, constraints)
-        df_res2, df_resElements2 = construct_FDNresult_dataframe(res2, df_mp_dispo, table_mp, constraints)
-        export_result(df_res1, df_res2, dossier_data, recette)
+        df_res1, df_resElements1 = construct_FDNresult_dataframe(res1, df_mp_dispo, table_mp)
+        df_res2, df_resElements2 = construct_FDNresult_dataframe(res2, df_mp_dispo, table_mp)
+        export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_data, recette)
         print(f"Le problème pour la recette {recette} admet une solution pour les deux formulations.")
     
     elif not erreurs1:
         # Seule la première formulation est valide
-        df_res1, df_resElements1 = construct_FDNresult_dataframe(res1, df_mp_dispo, table_mp, constraints)
-        df_res2 = None  # Pas de solution pour res2
-        export_result(df_res1, df_res2, dossier_data, recette)
+        df_res1, df_resElements1 = construct_FDNresult_dataframe(res1, df_mp_dispo, table_mp)
+        df_res2, df_resElements2 = None, None  # Pas de solution pour res2
+        export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_data, recette)
         print(f"Le problème pour la recette {recette} admet une solution uniquement pour la première formulation.")
         save_errors(erreurs2, dossier_data, recette)
     
     elif not erreurs2:
         # Seule la deuxième formulation est valide
-        df_res2, df_resElements2 = construct_FDNresult_dataframe(res2, df_mp_dispo, table_mp, constraints)
-        df_res1 = None  # Pas de solution pour res1
-        export_result(df_res1, df_res2, dossier_data, recette)
+        df_res2, df_resElements2 = construct_FDNresult_dataframe(res2, df_mp_dispo, table_mp)
+        df_res1, df_resElements1 = None, None # Pas de solution pour res1
+        export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_data, recette)
         print(f"Le problème pour la recette {recette} admet une solution uniquement pour la deuxième formulation.")
         save_errors(erreurs1, dossier_data, recette)
     

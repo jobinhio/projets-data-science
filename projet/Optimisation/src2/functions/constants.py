@@ -1,7 +1,0 @@
-# Les constantes du programmme
-Impurete_Values = {'C': 0,'Si': 0,'Mn': 0.44,'Cu': 4.90,'Cr': 0.37,'P': 5.60,'Ni': 0.37,
-                   'Mo': 7.90,'Sn': 39.00,'Sb': 0,'Al': 0,'S': 0,'Mg': 0,'Pb': 0,'Ti': 4.40,
-                   'As': 0,'Bi': 0,'V': 0}
-
-ONO_Values = {'C': 0,'Si': 0,'Mn': 0,'Cu': 1,'Cr': 1,'P': 0,'Ni':1,'Mo': 0,'Sn': 1,'Sb': 1,
-            'Al': 1,'S': 0,'Mg': 0,'Pb': 1,'Ti': 1,'As': 1,'Bi': 1,'V': 1}

@@ -6,21 +6,16 @@ import pandas as pd
 
 
 from functions import Separate_data, clean_table_mp  
-from functions import read_and_check_input_values 
+from functions import read_and_check_FDN_input_values, read_and_check_USB_input_values
 from functions import create_matrix_A_and_C,format_constraints_elements
 from functions import format_constraints_qualite, format_constraints_MP
-from functions import solve_linear_program
 from functions import optimize_with_correction
-from functions import  gestion_resultats,construct_result_dataframe,export_result,save_errors,remove_old_recipes
+from functions import solve_linear_program
+from functions import  remove_old_recipes
+from functions import  gestion_resultats
+from functions import  gestion_FDNresultats
 def create_optimal_recipe(recette,table_mp, mp_constraints, elmt_quality_constraints,dossier_data):
-    
-    # df_mp = mp_constraints[recette]
-    # df_elmt_and_quality = elmt_quality_constraints[recette]
 
-    # df = Separate_data(table_mp, df_mp, df_elmt_and_quality)
-    # df_contraints_element, df_contraints_qualite = df[0],df[1]
-    # df_mp_dispo, df_mp_indispo = df[2],df[3]
-    
     df_mp, df_elmt_and_quality = mp_constraints[recette], elmt_quality_constraints[recette]
     df_contraints_element, df_contraints_qualite, df_mp_dispo, df_mp_indispo = Separate_data(table_mp, df_mp, df_elmt_and_quality)
 
@@ -45,14 +40,22 @@ def create_optimal_recipe(recette,table_mp, mp_constraints, elmt_quality_constra
 
     # Résoudre le problème d'optimisation linéaire
     method = 'simplex' #'interior-point' 'simplex'
+
+    # Résolution de la formulation 1
     coefficients = [0.6, 0.65,0.7, 0.75, 0.8, 0.85, 0.9, 0.95]
-    # res, erreurs = optimize_with_correction(table_mp, C, constraints, bounds, method, coefficients)
-    res, erreurs = solve_linear_program(C, constraints, bounds,method)
+    coefficients = [0.85, 0.9, 0.95,1]
+    res1, erreurs1 = optimize_with_correction(table_mp, C, constraints, bounds, method, coefficients)
     
-    # Gestion du resultats
-    gestion_resultats(erreurs, res, df_mp_dispo, table_mp, 
-                      constraints, dossier_data, recette)
+    # Résolution de la formulation 2
+    res2, erreurs2 = solve_linear_program(C, constraints, bounds,method)
     
+    # # Gestion du resultats USB
+    # gestion_resultats(erreurs1, res1, erreurs2, res2, 
+    #                   df_mp_dispo, table_mp, constraints, dossier_data, recette)
+    
+    # Gestion du resultats pour FDN
+    gestion_FDNresultats(erreurs1, res1, erreurs2, res2, df_mp_dispo, table_mp, constraints, dossier_data, recette)
+
     return 
 if __name__ == "__main__":
     # Vérifiez si un chemin de fichier Excel est fourni en argument
@@ -60,17 +63,20 @@ if __name__ == "__main__":
         print("Usage: python main.py recipe_optimization_data")
         sys.exit(1)
     # Récupérez le chemin du fichier Excel à partir des arguments de ligne de commande
-    chemin_fichier = abspath(sys.argv[1])
+    chemin_dossier = abspath(sys.argv[1])
 
+    # chemin_dossier = os.path.join('.', 'data', 'Inputs')
     # On recupere le chemin du dossier data
-    dossier_data = os.path.dirname(chemin_fichier)
+    dossier_data = os.path.dirname(chemin_dossier)
     # Suppression du vieux resultats
     remove_old_recipes(dossier_data)
-    # Resolutions du nouveau probleme
-    Recettes = [col for col in pd.read_excel(chemin_fichier, engine='calamine', sheet_name=2).columns if 'Unnamed' not in col]
-    for recette in tqdm(Recettes, desc="Processing recipes", unit="recipe"):
-        raw_material_table, mp_constraints, elmt_quality_constraints, errors= read_and_check_input_values(chemin_fichier)
-        if errors :
-            save_errors(errors, dossier_data,recette)
-            break;
-        create_optimal_recipe(recette, raw_material_table, mp_constraints,elmt_quality_constraints,dossier_data)
+
+    # Vérifications des données d'entrée
+    recette = 'Inconnu' # Nom de la recette
+    table_mp, mp_constraints, elmt_quality_constraints, errors= read_and_check_FDN_input_values(chemin_dossier,recette)
+
+    # Resolutions du nouveau probleme 1 et 2
+    if not errors :
+        create_optimal_recipe(recette, table_mp, mp_constraints,elmt_quality_constraints,dossier_data)
+
+        

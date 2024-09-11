@@ -12,5 +12,6 @@ from .result_processing import gestion_resultats,export_result
 
 
 from .result_processing import construct_FDNresult_dataframe
+from .result_processing import gestion_FDNresultats
 
 
