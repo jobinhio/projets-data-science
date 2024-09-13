@@ -31,17 +31,17 @@ def remove_old_recipes(dossier_data):
         os.remove(fichier_erreurs)
 
     # Vérifier si le fichier résultats existe et le supprime
-    fichier_recipes = os.path.join(dossier_data, 'Outputs','resultats.xlsx')
+    fichier_recipes = os.path.join(dossier_data, 'InputsOutputs','resultats.xlsx')
     if os.path.exists(fichier_recipes):
         os.remove(fichier_recipes)
 
     # Vérifier si le fichier résultats existe et le supprime
-    fichier_recipes = os.path.join(dossier_data, 'Outputs', 'resultatsComposition.xlsx')
+    fichier_recipes = os.path.join(dossier_data, 'InputsOutputs', 'resultatsComposition.xlsx')
     if os.path.exists(fichier_recipes):
         os.remove(fichier_recipes)
 
     # Vérifier si le fichier erreurs existe et le supprime
-    fichier_erreurs = os.path.join(dossier_data, 'Outputs','erreurs.txt')
+    fichier_erreurs = os.path.join(dossier_data, 'InputsOutputs','erreurs.txt')
     if os.path.exists(fichier_erreurs):
         os.remove(fichier_erreurs)
     return 
@@ -210,7 +210,8 @@ def save_errors(erreurs, dossier_data,recette):
     None
     """
     # Sauvegarder les erreurs dans un fichier texte
-    fichier_erreurs = os.path.join(dossier_data, 'Outputs', 'erreurs.txt')
+    # fichier_erreurs = os.path.join(dossier_data, 'erreurs.txt')
+    fichier_erreurs = os.path.join(dossier_data, 'InputsOutputs', 'erreurs.txt')
     with open(fichier_erreurs, "a+", encoding="utf-8") as f:
         message = "Pour la recette " + recette + ":"
         f.write(message+ "\n")
@@ -343,7 +344,7 @@ def export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier
     sheet_name1, sheet_name2 = new_sheet_name + " Version 1", new_sheet_name + " Version 2"
 
     # Créer le chemin complet du fichier Excel
-    fichier_resultats = os.path.join(dossier_data, 'Outputs','resultats.xlsx')
+    fichier_resultats = os.path.join(dossier_data, 'InputsOutputs','resultats.xlsx')
 
     # Vérifier si le fichier Excel existe
     if os.path.exists(fichier_resultats):
@@ -393,7 +394,7 @@ def export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier
 
 
     # Créer le chemin complet du fichier Excel
-    fichier_resultatsComposition = os.path.join(dossier_data, 'Outputs', 'resultatsComposition.xlsx')
+    fichier_resultatsComposition = os.path.join(dossier_data, 'InputsOutputs', 'resultatsComposition.xlsx')
 
     # Vérifier si le fichier Excel existe
     if os.path.exists(fichier_resultatsComposition):

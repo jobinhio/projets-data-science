@@ -59,20 +59,18 @@ def create_optimal_recipe(recette,table_mp, mp_constraints, elmt_quality_constra
     return 
 if __name__ == "__main__":
     # Vérifiez si un chemin de fichier Excel est fourni en argument
-    if len(sys.argv) != 2:
-        print("Usage: python main.py recipe_optimization_data")
+    if len(sys.argv) != 3:
+        print("Usage: python main.py InputsOutputs recette")
         sys.exit(1)
     # Récupérez le chemin du fichier Excel à partir des arguments de ligne de commande
     chemin_dossier = abspath(sys.argv[1])
-
-    # chemin_dossier = os.path.join('.', 'data', 'Inputs')
+    recette = sys.argv[2]
     # On recupere le chemin du dossier data
     dossier_data = os.path.dirname(chemin_dossier)
     # Suppression du vieux resultats
     remove_old_recipes(dossier_data)
 
     # Vérifications des données d'entrée
-    recette = 'Inconnu' # Nom de la recette
     table_mp, mp_constraints, elmt_quality_constraints, errors= read_and_check_FDN_input_values(chemin_dossier,recette)
 
     # Resolutions du nouveau probleme 1 et 2
