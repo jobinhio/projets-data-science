@@ -118,12 +118,15 @@ def Transpose_dataframe(df):
 def format_constraints_elements(df_contraints_element, A,constraints):
     df_contraints_element = Transpose_dataframe(df_contraints_element)
     # Parcours des données de contraintes
+    n = A.shape[0]
     for index, row in df_contraints_element.iterrows():
         if not pd.isna(row['Valeur visée']):
             composant = row['Composant'] + '_visee'
-            constraints['A_eq'][composant] = A[index]
+            E = np.zeros(n)
+            E[index] = 1
+            E_dot_A  = E@A
+            constraints['A_eq'][composant] = E_dot_A 
             constraints['b_eq'][composant] = pd.to_numeric(row['Valeur visée'], errors='coerce')
-
 
         if not pd.isna(row['Valeur Max par four']):
             composant = row['Composant'] + '_max'

@@ -9,39 +9,39 @@ from openpyxl import Workbook
 import gc
 
 
-def remove_old_recipes(dossier_data):
+def remove_old_recipes(dossier):
     """
     Supprime les anciens fichiers de recettes et de fichiers d'erreurs, s'ils existent, dans le dossier de données.
 
     Args:
-    dossier_data (str): Chemin vers le dossier contenant les données.
+    dossier (str): Chemin vers le dossier contenant les données.
 
     Returns:
     None
     """
     gc.collect()
     # Vérifier si le fichier résultats existe et le supprime
-    fichier_recipes = os.path.join(dossier_data, 'recipes.xlsx')
+    fichier_recipes = os.path.join(dossier, 'recipes.xlsx')
     if os.path.exists(fichier_recipes):
         os.remove(fichier_recipes)
     
     # Vérifier si le fichier erreurs existe et le supprime
-    fichier_erreurs = os.path.join(dossier_data, 'erreurs.txt')
+    fichier_erreurs = os.path.join(dossier, 'erreurs.txt')
     if os.path.exists(fichier_erreurs):
         os.remove(fichier_erreurs)
 
     # Vérifier si le fichier résultats existe et le supprime
-    fichier_recipes = os.path.join(dossier_data, 'InputsOutputs','resultats.xlsx')
+    fichier_recipes = os.path.join(dossier,'resultats.xlsx')
     if os.path.exists(fichier_recipes):
         os.remove(fichier_recipes)
 
     # Vérifier si le fichier résultats existe et le supprime
-    fichier_recipes = os.path.join(dossier_data, 'InputsOutputs', 'resultatsComposition.xlsx')
+    fichier_recipes = os.path.join(dossier,'resultatsComposition.xlsx')
     if os.path.exists(fichier_recipes):
         os.remove(fichier_recipes)
 
     # Vérifier si le fichier erreurs existe et le supprime
-    fichier_erreurs = os.path.join(dossier_data, 'InputsOutputs','erreurs.txt')
+    fichier_erreurs = os.path.join(dossier,'erreurs.txt')
     if os.path.exists(fichier_erreurs):
         os.remove(fichier_erreurs)
     return 
@@ -197,21 +197,20 @@ def export_result(df_res1, df_res2, dossier_data, new_sheet_name):
     return
 
 
-def save_errors(erreurs, dossier_data,recette):
+def save_errors(erreurs, dossier,recette):
     """
     Sauvegarde les erreurs dans un fichier texte.
 
     Args:
     erreurs (list): Liste des erreurs à sauvegarder.
-    dossier_data (str): Chemin vers le dossier contenant les données.
+    dossier (str): Chemin vers le dossier contenant les données.
     recette (str): Nom de la recette associée aux erreurs.
 
     Returns:
     None
     """
     # Sauvegarder les erreurs dans un fichier texte
-    # fichier_erreurs = os.path.join(dossier_data, 'erreurs.txt')
-    fichier_erreurs = os.path.join(dossier_data, 'InputsOutputs', 'erreurs.txt')
+    fichier_erreurs = os.path.join(dossier, 'erreurs.txt')
     with open(fichier_erreurs, "a+", encoding="utf-8") as f:
         message = "Pour la recette " + recette + ":"
         f.write(message+ "\n")
@@ -328,14 +327,14 @@ def construct_FDNresult_dataframe(res, df_mp_dispo, table_mp):
     return df_res, df_resElements
 
 
-def export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_data, new_sheet_name):
+def export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_InputsOutputs, new_sheet_name):
     """
     Exporte deux DataFrames dans un fichier Excel, créant de nouvelles feuilles ou mettant à jour des feuilles existantes.
 
     Args:
     df_res (DataFrame): Le premier DataFrame à exporter (peut être None).
     df_resElements (DataFrame): Le deuxième DataFrame à exporter (peut être None).
-    dossier_data (str): Chemin vers le dossier contenant les données.
+    dossier_InputsOutputs (str): Chemin vers le dossier contenant les données.
     new_sheet_name (str): Nom de la nouvelle feuille Excel.
 
     Returns:
@@ -344,7 +343,7 @@ def export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier
     sheet_name1, sheet_name2 = new_sheet_name + " Version 1", new_sheet_name + " Version 2"
 
     # Créer le chemin complet du fichier Excel
-    fichier_resultats = os.path.join(dossier_data, 'InputsOutputs','resultats.xlsx')
+    fichier_resultats = os.path.join(dossier_InputsOutputs, 'resultats.xlsx')
 
     # Vérifier si le fichier Excel existe
     if os.path.exists(fichier_resultats):
@@ -394,7 +393,7 @@ def export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier
 
 
     # Créer le chemin complet du fichier Excel
-    fichier_resultatsComposition = os.path.join(dossier_data, 'InputsOutputs', 'resultatsComposition.xlsx')
+    fichier_resultatsComposition = os.path.join(dossier_InputsOutputs,'resultatsComposition.xlsx')
 
     # Vérifier si le fichier Excel existe
     if os.path.exists(fichier_resultatsComposition):
@@ -445,34 +444,34 @@ def export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier
     return
 
 
-def gestion_FDNresultats(erreurs1, res1, erreurs2, res2, df_mp_dispo, table_mp, constraints, dossier_data, recette):
+def gestion_FDNresultats(erreurs1, res1, erreurs2, res2, df_mp_dispo, table_mp, constraints, dossier_InputsOutputs, recette):
     if not erreurs1 and not erreurs2:
         # Aucun des deux cas n'a d'erreurs : les deux solutions sont valides
         df_res1, df_resElements1 = construct_FDNresult_dataframe(res1, df_mp_dispo, table_mp)
         df_res2, df_resElements2 = construct_FDNresult_dataframe(res2, df_mp_dispo, table_mp)
-        export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_data, recette)
+        export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_InputsOutputs, recette)
         print(f"Le problème pour la recette {recette} admet une solution pour les deux formulations.")
     
     elif not erreurs1:
         # Seule la première formulation est valide
         df_res1, df_resElements1 = construct_FDNresult_dataframe(res1, df_mp_dispo, table_mp)
         df_res2, df_resElements2 = None, None  # Pas de solution pour res2
-        export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_data, recette)
+        export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_InputsOutputs, recette)
         print(f"Le problème pour la recette {recette} admet une solution uniquement pour la première formulation.")
-        save_errors(erreurs2, dossier_data, recette)
+        save_errors(erreurs2, dossier_InputsOutputs, recette)
     
     elif not erreurs2:
         # Seule la deuxième formulation est valide
         df_res2, df_resElements2 = construct_FDNresult_dataframe(res2, df_mp_dispo, table_mp)
         df_res1, df_resElements1 = None, None # Pas de solution pour res1
-        export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_data, recette)
+        export_FDNresult(df_res1, df_res2, df_resElements1, df_resElements2, dossier_InputsOutputs, recette)
         print(f"Le problème pour la recette {recette} admet une solution uniquement pour la deuxième formulation.")
-        save_errors(erreurs1, dossier_data, recette)
+        save_errors(erreurs1, dossier_InputsOutputs, recette)
     
     else:
         # Les deux formulations ont des erreurs
-        save_errors(erreurs1, dossier_data, recette)
-        save_errors(erreurs2, dossier_data, recette)
+        save_errors(erreurs1, dossier_InputsOutputs, recette)
+        save_errors(erreurs2, dossier_InputsOutputs, recette)
         print(f"Les erreurs des deux formulations pour la recette {recette} ont été enregistrées dans un fichier.")
     
     return

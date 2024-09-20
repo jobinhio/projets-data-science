@@ -14,7 +14,7 @@ from functions import solve_linear_program
 from functions import  remove_old_recipes
 from functions import  gestion_resultats
 from functions import  gestion_FDNresultats
-def create_optimal_recipe(recette,table_mp, mp_constraints, elmt_quality_constraints,dossier_data):
+def create_optimal_recipe(recette,table_mp, mp_constraints, elmt_quality_constraints,dossier):
 
     df_mp, df_elmt_and_quality = mp_constraints[recette], elmt_quality_constraints[recette]
     df_contraints_element, df_contraints_qualite, df_mp_dispo, df_mp_indispo = Separate_data(table_mp, df_mp, df_elmt_and_quality)
@@ -51,10 +51,10 @@ def create_optimal_recipe(recette,table_mp, mp_constraints, elmt_quality_constra
     
     # # Gestion du resultats USB
     # gestion_resultats(erreurs1, res1, erreurs2, res2, 
-    #                   df_mp_dispo, table_mp, constraints, dossier_data, recette)
+    #                   df_mp_dispo, table_mp, constraints, dossier, recette)
     
     # Gestion du resultats pour FDN
-    gestion_FDNresultats(erreurs1, res1, erreurs2, res2, df_mp_dispo, table_mp, constraints, dossier_data, recette)
+    gestion_FDNresultats(erreurs1, res1, erreurs2, res2, df_mp_dispo, table_mp, constraints, dossier, recette)
 
     return 
 if __name__ == "__main__":
@@ -63,18 +63,14 @@ if __name__ == "__main__":
         print("Usage: python main.py InputsOutputs recette")
         sys.exit(1)
     # Récupérez le chemin du fichier Excel à partir des arguments de ligne de commande
-    chemin_dossier = abspath(sys.argv[1])
+    dossier_InputsOutputs = abspath(sys.argv[1])
     recette = sys.argv[2]
-    # On recupere le chemin du dossier data
-    dossier_data = os.path.dirname(chemin_dossier)
     # Suppression du vieux resultats
-    remove_old_recipes(dossier_data)
+    remove_old_recipes(dossier_InputsOutputs)
 
     # Vérifications des données d'entrée
-    table_mp, mp_constraints, elmt_quality_constraints, errors= read_and_check_FDN_input_values(chemin_dossier,recette)
+    table_mp, mp_constraints, elmt_quality_constraints, errors= read_and_check_FDN_input_values(dossier_InputsOutputs,recette)
 
     # Resolutions du nouveau probleme 1 et 2
     if not errors :
-        create_optimal_recipe(recette, table_mp, mp_constraints,elmt_quality_constraints,dossier_data)
-
-        
+        create_optimal_recipe(recette, table_mp, mp_constraints,elmt_quality_constraints,dossier_InputsOutputs)

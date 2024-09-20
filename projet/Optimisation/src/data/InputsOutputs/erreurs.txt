@@ -1,3 +1,0 @@
-Pour la recette GS:
-Veuillez revoir la valeur de 'Si_visee' : 2.15
-
