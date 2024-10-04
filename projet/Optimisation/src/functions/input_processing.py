@@ -180,8 +180,7 @@ def read_and_check_FDN_input_values(chemin_dossier, recetteName):
     check_MP_and_contraints_values(Matieres_premiere,Contraintes_Elements,erreurs)
     if erreurs:
         # Créer le chemin complet du nouveau fichier Excel
-        dossier_data = os.path.dirname(chemin_dossier)
-        fichier_erreurs = os.path.join(dossier_data, 'erreurs.txt')
+        fichier_erreurs = os.path.join(chemin_dossier, 'erreurs.txt')
 
         with open(fichier_erreurs, "w", encoding="utf-8") as f:
             for erreur in erreurs:
@@ -190,12 +189,20 @@ def read_and_check_FDN_input_values(chemin_dossier, recetteName):
 
 
         # Créer le chemin complet du nouveau fichier Excel
-        dossier_data = os.path.dirname(chemin_dossier)
-        fichier_Resultats = os.path.join(dossier_data, 'Resultats.xlsx')
+        fichier_Resultats = os.path.join(chemin_dossier, 'resultats.xlsx')
 
         # Vérifier si le fichier Excel existe déjà
         if os.path.exists(fichier_Resultats):
             # Supprimer le fichier existant
             os.remove(fichier_Resultats)
+
+        # Créer le chemin complet du nouveau fichier Excel
+        fichier_ResultatsComposition = os.path.join(chemin_dossier, 'resultatsComposition.xlsx')
+
+        # Vérifier si le fichier Excel existe déjà
+        if os.path.exists(fichier_ResultatsComposition):
+            # Supprimer le fichier existant
+            os.remove(fichier_ResultatsComposition)
+
     return Tableau_Matiere_Element, contraintes_mp, elmt_quality_constraints, erreurs
 

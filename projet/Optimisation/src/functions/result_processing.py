@@ -301,8 +301,13 @@ def construct_FDNresult_dataframe(res, df_mp_dispo, table_mp):
 
     # Pour le deuxieme fichier excel
     # Calcul des proportions des éléments dans la fonte
+    # Sélectionner des colonnes spécifiques après la fusion
     cols_elements = table_mp.columns[2:].tolist()
-    proportions_elements = table_mp[cols_elements].mul(df_res['Proportion'], axis=0).sum()
+    df_commun = pd.merge(df_res[['Article', 'Proportion']], table_mp[cols_elements + ['Article']], on='Article')
+
+    # Calcul des proportions des éléments après la fusion
+    proportions_elements = df_commun[cols_elements].mul(df_commun['Proportion'], axis=0).sum()
+
 
     # creer un nouveau dataframme df_resElements
     df_resElements = pd.DataFrame([proportions_elements], columns=cols_elements)
@@ -312,8 +317,8 @@ def construct_FDNresult_dataframe(res, df_mp_dispo, table_mp):
     impurete_values, ono_values = np.array(list(Impurete_Values.values())), np.array(list(ONO_Values.values()))
     thielmann_values, mayer_values = np.array(list(THIELMANN_Values.values())), np.array(list(MAYER_Values.values()))
     ferrite_values = np.array(list(Ferrite_Values.values()))
-    df_resElements['Impurete'] = impurete_values @ proportions_elements
     df_resElements['ONO'] = ono_values @ proportions_elements
+    df_resElements['Impurete'] = impurete_values @ proportions_elements
     df_resElements['THIELMANN'] = thielmann_values @ proportions_elements
     df_resElements['MAYER'] = mayer_values @ proportions_elements
     df_resElements['Ferrite'] = 92.3 + ferrite_values @ proportions_elements

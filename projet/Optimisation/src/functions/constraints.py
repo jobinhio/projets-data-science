@@ -15,7 +15,9 @@ def create_matrix_A_and_C(table_mp, df_mp_dispo):
     - C : Tableau NumPy contenant les prix des matières premières
     """
     # Construction de A : le tableau des pourcentages des éléments dans chaque matière première
-    df_A = table_mp.drop(columns=['Article','Code Article'])
+    # df_A = table_mp.drop(columns=['Article','Code Article'])
+    df_A = pd.merge(table_mp, df_mp_dispo[['Article', 'Code Article']], on=['Article', 'Code Article'])
+    df_A = df_A.drop(columns=['Article','Code Article'])
     A = df_A.to_numpy().T
 
     # Récupération des prix des matières premières
@@ -125,6 +127,7 @@ def format_constraints_elements(df_contraints_element, A,constraints):
             E = np.zeros(n)
             E[index] = 1
             E_dot_A  = E@A
+            # print(A.shape,E.shape,E_dot_A.shape)
             constraints['A_eq'][composant] = E_dot_A 
             constraints['b_eq'][composant] = pd.to_numeric(row['Valeur visée'], errors='coerce')
 
