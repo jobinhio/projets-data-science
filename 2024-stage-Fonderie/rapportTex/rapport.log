@@ -1,0 +1,1563 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.13)  26 AUG 2024 22:21
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"/home/congo/congo/Brouillon/rapport Fonderie/rapportTex/rapport.tex"
+(/home/congo/congo/Brouillon/rapport Fonderie/rapportTex/rapport.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/usr/share/texlive/texmf-dist/tex/latex/a4wide/a4wide.sty
+Package: a4wide 1994/08/30
+ (/usr/share/texlive/texmf-dist/tex/latex/ntgclass/a4.sty
+Package: a4 2020/02/18 v1.2g A4 based page layout
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen139
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count193
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count194
+\leftroot@=\count195
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count196
+\DOTSCASE@=\count197
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count198
+\c@MaxMatrixCols=\count199
+\dotsspace@=\muskip16
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
+\tag@help=\toks17
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
+\andhelp@=\toks18
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen148
+\Hy@linkcounter=\count271
+\Hy@pagecounter=\count272
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel languages
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count273
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count274
+ (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen149
+ (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count275
+\Field@Width=\dimen150
+\Fld@charsize=\dimen151
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring ON on input line 6094.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count276
+\c@Item=\count277
+\c@Hfootnote=\count278
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count279
+\c@bookmark@seq@number=\count280
+ (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip52
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen152
+\Gin@req@width=\dimen153
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count281
+\float@exts=\toks22
+\float@box=\box52
+\@float@everytoks=\toks23
+\@floatcapt=\box53
+) (/usr/share/texlive/texmf-dist/tex/latex/bbold/bbold.sty
+Package: bbold 1994/04/06 Bbold symbol package
+LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
+) (/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+ Excluding comment 'comment') (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2021/02/02 v1.28 mathematical typesetting tools
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count282
+\calc@Bcount=\count283
+\calc@Adimen=\dimen154
+\calc@Bdimen=\dimen155
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count284
+\calc@Cskip=\skip55
+) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count285
+\l_MT_multwidth_dim=\dimen156
+\origjot=\skip56
+\l_MT_shortvdotswithinadjustabove_dim=\dimen157
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen158
+\l_MT_above_intertext_sep=\dimen159
+\l_MT_below_intertext_sep=\dimen160
+\l_MT_above_shortintertext_sep=\dimen161
+\l_MT_below_shortintertext_sep=\dimen162
+\xmathstrut@box=\box54
+\xmathstrut@dim=\dimen163
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen164
+\pgfutil@tempdimb=\dimen165
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box55
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks27
+))
+\pgf@x=\dimen166
+\pgf@y=\dimen167
+\pgf@xa=\dimen168
+\pgf@ya=\dimen169
+\pgf@xb=\dimen170
+\pgf@yb=\dimen171
+\pgf@xc=\dimen172
+\pgf@yc=\dimen173
+\pgf@xd=\dimen174
+\pgf@yd=\dimen175
+\w@pgf@writea=\write4
+\r@pgf@reada=\read2
+\c@pgf@counta=\count286
+\c@pgf@countb=\count287
+\c@pgf@countc=\count288
+\c@pgf@countd=\count289
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
+\pgf@sys@id@count=\count290
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count291
+\pgfsyssoftpath@bigbuffer@items=\count292
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen176
+\pgfmath@count=\count293
+\pgfmath@box=\box56
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count294
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen177
+\pgf@picmaxx=\dimen178
+\pgf@picminy=\dimen179
+\pgf@picmaxy=\dimen180
+\pgf@pathminx=\dimen181
+\pgf@pathmaxx=\dimen182
+\pgf@pathminy=\dimen183
+\pgf@pathmaxy=\dimen184
+\pgf@xx=\dimen185
+\pgf@xy=\dimen186
+\pgf@yx=\dimen187
+\pgf@yy=\dimen188
+\pgf@zx=\dimen189
+\pgf@zy=\dimen190
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen191
+\pgf@path@lasty=\dimen192
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen193
+\pgf@shorten@start@additional=\dimen194
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box57
+\pgf@hbox=\box58
+\pgf@layerbox@main=\box59
+\pgf@picture@serial@count=\count295
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen195
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen196
+\pgf@pt@y=\dimen197
+\pgf@pt@temp=\dimen198
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen199
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen256
+\pgf@sys@shading@range@num=\count296
+\pgf@shadingcount=\count297
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box60
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box61
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen257
+\pgf@nodesepend=\dimen258
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen259
+\pgffor@skip=\dimen260
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count298
+\pgfplotmarksize=\dimen261
+)
+\tikz@lastx=\dimen262
+\tikz@lasty=\dimen263
+\tikz@lastxsaved=\dimen264
+\tikz@lastysaved=\dimen265
+\tikz@lastmovetox=\dimen266
+\tikz@lastmovetoy=\dimen267
+\tikzleveldistance=\dimen268
+\tikzsiblingdistance=\dimen269
+\tikz@figbox=\box62
+\tikz@figbox@bg=\box63
+\tikz@tempbox=\box64
+\tikz@tempbox@bg=\box65
+\tikztreelevel=\count299
+\tikznumberofchildren=\count300
+\tikznumberofcurrentchild=\count301
+\tikz@fig@count=\count302
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count303
+\pgfmatrixcurrentcolumn=\count304
+\pgf@matrix@numberofcolumns=\count305
+)
+\tikz@expandcount=\count306
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2022/01/26 3.70 The Babel package
+\babel@savecnt=\count307
+\U@D=\dimen270
+\l@unhyphenated=\language87
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read3
+\bbl@dirlevel=\count308
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2021/07/20 v3.5m French support from the babel system
+Package babel Info: Hyphen rules for 'acadian' set to \l@french
+(babel)             (\language10). Reported on input line 91.
+Package babel Info: Hyphen rules for 'canadien' set to \l@french
+(babel)             (\language10). Reported on input line 92.
+\FB@nonchar=\count309
+Package babel Info: Making : an active character on input line 430.
+Package babel Info: Making ; an active character on input line 431.
+Package babel Info: Making ! an active character on input line 432.
+Package babel Info: Making ? an active character on input line 433.
+\FBguill@level=\count310
+\FBold@everypar=\toks36
+\FB@Mht=\dimen271
+\mc@charclass=\count311
+\mc@charfam=\count312
+\mc@charslot=\count313
+\std@mcc=\count314
+\dec@mcc=\count315
+\listindentFB=\dimen272
+\descindentFB=\dimen273
+\labelindentFB=\dimen274
+\labelwidthFB=\dimen275
+\leftmarginFB=\dimen276
+\parindentFFN=\dimen277
+\FBfnindent=\dimen278
+)) (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/share/texmf/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+   defining Unicode char U+2009 (decimal 8201)
+ (/usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\theorem@style=\toks37
+\theorem@@style=\toks38
+\theorembodyfont=\toks39
+\theoremnumbering=\toks40
+\theorempreskipamount=\skip57
+\theorempostskipamount=\skip58
+\theoremframepreskipamount=\skip59
+\theoremframepostskipamount=\skip60
+\theoreminframepreskipamount=\skip61
+\theoreminframepostskipamount=\skip62
+\theorem@preskip=\toks41
+\theorem@postskip=\toks42
+\theorem@framepreskip=\toks43
+\theorem@framepostskip=\toks44
+\theorem@inframepreskip=\toks45
+\theorem@inframepostskip=\toks46
+\theoremindent=\dimen279
+\theorem@indent=\dimen280
+\theoremrightindent=\dimen281
+\theorem@rightindent=\dimen282
+\theoremheaderfont=\toks47
+\theoremseparator=\toks48
+\theoremprework=\toks49
+\theorempostwork=\toks50
+\theoremsymbol=\toks51
+\qedsymbol=\toks52
+\theoremkeyword=\toks53
+\qedsymbol=\toks54
+\thm@topsep=\skip63
+\thm@topsepadd=\skip64
+Package ntheorem Info: Standard config file ntheorem.std used on input line 1184.
+ (/usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.std (/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+\c@Theorem=\count316
+\c@theorem=\count317
+\c@Satz=\count318
+\c@satz=\count319
+\c@Proposition=\count320
+\c@proposition=\count321
+\c@Lemma=\count322
+\c@lemma=\count323
+\c@Korollar=\count324
+\c@korollar=\count325
+\c@Corollary=\count326
+\c@corollary=\count327
+\c@Example=\count328
+\c@example=\count329
+\c@Beispiel=\count330
+\c@beispiel=\count331
+\c@Bemerkung=\count332
+\c@bemerkung=\count333
+\c@Anmerkung=\count334
+\c@anmerkung=\count335
+\c@Remark=\count336
+\c@remark=\count337
+\c@Definition=\count338
+\c@definition=\count339
+\c@Proof=\count340
+\c@proof=\count341
+\c@Beweis=\count342
+\c@beweis=\count343
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowinset=\dimen283
+\pgfarrowlength=\dimen284
+\pgfarrowwidth=\dimen285
+\pgfarrowlinewidth=\dimen286
+) (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2022/01/29 v0.5u Insert pages of external PDF documents (AM)
+ (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen287
+\ESO@tempdimb=\dimen288
+)
+\AM@pagewidth=\dimen289
+\AM@pageheight=\dimen290
+\AM@fboxrule=\dimen291
+ (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2022/01/29 v0.5u Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count344
+\AM@pagebox=\box66
+\AM@global@opts=\toks55
+\AM@pagecnt=\count345
+\AM@toc@title=\toks56
+\c@AM@survey=\count346
+\AM@templatesizebox=\box67
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+ (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks57
+\XKV@tempa@toks=\toks58
+)
+\XKV@depth=\count347
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box68
+)
+\tc@llx=\dimen292
+\tc@lly=\dimen293
+\tc@urx=\dimen294
+\tc@ury=\dimen295
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen296
+\adjbox@Height=\dimen297
+\adjbox@Depth=\dimen298
+\adjbox@Totalheight=\dimen299
+\adjbox@pwidth=\dimen300
+\adjbox@pheight=\dimen301
+\adjbox@pdepth=\dimen302
+\adjbox@ptotalheight=\dimen303
+ (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count348
+) (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box69
+\sift@deathcycles=\count349
+\@vwid@loff=\dimen304
+\@vwid@roff=\dimen305
+)) (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count350
+\c@@ppsavesec=\count351
+\c@@ppsaveapp=\count352
+) (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip65
+\subfigcapskip=\skip66
+\subfigcaptopadj=\dimen306
+\subfigbottomskip=\skip67
+\subfigcapmargin=\dimen307
+\subfiglabelskip=\skip68
+\c@subfigure=\count353
+\c@lofdepth=\count354
+\c@subtable=\count355
+\c@lotdepth=\count356
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip69
+\subfig@bottom=\skip70
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count357
+\lst@gtempboxa=\box70
+\lst@token=\toks59
+\lst@length=\count358
+\lst@currlwidth=\dimen308
+\lst@column=\count359
+\lst@pos=\count360
+\lst@lostspace=\dimen309
+\lst@width=\dimen310
+\lst@newlines=\count361
+\lst@lineno=\count362
+\lst@maxwidth=\dimen311
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count363
+\lst@skipnumbers=\count364
+\lst@framebox=\box71
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count365
+\algocf@hangindent=\skip71
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip72
+\skiplinenumber=\skip73
+\skiprule=\skip74
+\skiphlne=\skip75
+\skiptext=\skip76
+\skiplength=\skip77
+\algomargin=\skip78
+\skipalgocfslide=\skip79
+\algowidth=\dimen312
+\inoutsize=\dimen313
+\inoutindent=\dimen314
+\interspacetitleruled=\dimen315
+\interspacealgoruled=\dimen316
+\interspacetitleboxruled=\dimen317
+\algocf@ruledwidth=\skip80
+\algocf@inoutbox=\box72
+\algocf@inputbox=\box73
+\AlCapSkip=\skip81
+\AlCapHSkip=\skip82
+\algoskipindent=\skip83
+\algocf@nlbox=\box74
+\algocf@hangingbox=\box75
+\algocf@untilbox=\box76
+\algocf@skipuntil=\skip84
+\algocf@capbox=\box77
+\algocf@lcaptionbox=\skip85
+\algoheightruledefault=\skip86
+\algoheightrule=\skip87
+\algotitleheightruledefault=\skip88
+\algotitleheightrule=\skip89
+\c@algocfline=\count366
+\c@algocfproc=\count367
+\c@algocf=\count368
+\algocf@algoframe=\box78
+\algocf@algobox=\box79
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip90
+\enit@outerparindent=\dimen318
+\enit@toks=\toks60
+\enit@inbox=\box80
+\enit@count@id=\count369
+\enitdp@description=\count370
+)
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 107.
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count371
+\l__pdf_internal_box=\box81
+) (./rapport.aux)
+\openout1 = `rapport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+Package hyperref Info: Link coloring ON on input line 107.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+ (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count372
+)
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
+ (./rapport.out) (./rapport.out)
+\@outlinefile=\write5
+\openout5 = `rapport.out'.
+
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count373
+\scratchdimen=\dimen319
+\scratchbox=\box82
+\nofMPsegments=\count374
+\nofMParguments=\count375
+\everyMPshowfont=\toks61
+\MPscratchCnt=\count376
+\MPscratchDim=\dimen320
+\MPnumerator=\count377
+\makeMPintoPDFobject=\count378
+\everyMPtoPDFconversion=\toks62
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Info: Redefining \degres on input line 107.
+Package french.ldf Info: Setting StandardItemizeEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 107.
+Package french.ldf Info: Setting StandardEnumerateEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 107.
+LaTeX Info: Redefining \up on input line 107.
+ (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+\c@lstlisting=\count379
+<Images/Presentation/logo-Fonderie.pdf, id=119, 632.3625pt x 199.74625pt>
+File: Images/Presentation/logo-Fonderie.pdf Graphic file (type pdf)
+<use Images/Presentation/logo-Fonderie.pdf>
+Package pdftex.def Info: Images/Presentation/logo-Fonderie.pdf  used on input line 152.
+(pdftex.def)             Requested size: 101.18007pt x 31.96005pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Presentation/logo-unistra.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/logo-unistra.pdf, id=120, 846.0231pt x 321.56834pt>
+File: Images/Presentation/logo-unistra.pdf Graphic file (type pdf)
+<use Images/Presentation/logo-unistra.pdf>
+Package pdftex.def Info: Images/Presentation/logo-unistra.pdf  used on input line 154.
+(pdftex.def)             Requested size: 135.36646pt x 51.45198pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Presentation/logoCSMI.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/logoCSMI.pdf, id=121, 846.34946pt x 557.26945pt>
+File: Images/Presentation/logoCSMI.pdf Graphic file (type pdf)
+<use Images/Presentation/logoCSMI.pdf>
+Package pdftex.def Info: Images/Presentation/logoCSMI.pdf  used on input line 156.
+(pdftex.def)             Requested size: 135.41867pt x 89.16493pt.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/Presentation/logo-Fonderie.pdf> <./Images/Presentation/logo-unistra.pdf> <./Images/Presentation/logoCSMI.pdf>] (./rapport.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3.
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3.
+ (/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 3.
+ (/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 3.
+ (/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 3.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+))
+\tf@toc=\write6
+\openout6 = `rapport.toc'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.170 \newpage
+               [1]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 235.
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [2]
+
+pdfTeX warning: pdflatex (file ./Images/Presentation/Fonderie_vue_de_bas.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/Fonderie_vue_de_bas.pdf, id=173, 795.74707pt x 595.6447pt>
+File: Images/Presentation/Fonderie_vue_de_bas.pdf Graphic file (type pdf)
+<use Images/Presentation/Fonderie_vue_de_bas.pdf>
+Package pdftex.def Info: Images/Presentation/Fonderie_vue_de_bas.pdf  used on input line 279.
+(pdftex.def)             Requested size: 214.85457pt x 160.82622pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Presentation/Fonderie_vue_de_haut.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/Fonderie_vue_de_haut.pdf, id=174, 795.74707pt x 595.6447pt>
+File: Images/Presentation/Fonderie_vue_de_haut.pdf Graphic file (type pdf)
+<use Images/Presentation/Fonderie_vue_de_haut.pdf>
+Package pdftex.def Info: Images/Presentation/Fonderie_vue_de_haut.pdf  used on input line 281.
+(pdftex.def)             Requested size: 214.85457pt x 160.82622pt.
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.285 \newpage
+               <./Images/Presentation/Fonderie_vue_de_bas.pdf> <./Images/Presentation/Fonderie_vue_de_haut.pdf>]
+
+pdfTeX warning: pdflatex (file ./Images/Presentation/Flux de production.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/Flux de production.pdf, id=191, 1864.9675pt x 1369.115pt>
+File: Images/Presentation/Flux de production.pdf Graphic file (type pdf)
+<use Images/Presentation/Flux de production.pdf>
+Package pdftex.def Info: Images/Presentation/Flux de production.pdf  used on input line 301.
+(pdftex.def)             Requested size: 1864.96295pt x 1369.11166pt.
+[4] [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.327 
+       <./Images/Presentation/Flux de production.pdf>]
+
+pdfTeX warning: pdflatex (file ./Images/Presentation/Les Retours.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/Les Retours.pdf, id=256, 289.48149pt x 216.81pt>
+File: Images/Presentation/Les Retours.pdf Graphic file (type pdf)
+<use Images/Presentation/Les Retours.pdf>
+Package pdftex.def Info: Images/Presentation/Les Retours.pdf  used on input line 344.
+(pdftex.def)             Requested size: 202.63567pt x 151.76596pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Presentation/Frite Haut Silicium.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/Frite Haut Silicium.pdf, id=257, 289.48149pt x 217.21149pt>
+File: Images/Presentation/Frite Haut Silicium.pdf Graphic file (type pdf)
+<use Images/Presentation/Frite Haut Silicium.pdf>
+Package pdftex.def Info: Images/Presentation/Frite Haut Silicium.pdf  used on input line 346.
+(pdftex.def)             Requested size: 202.63567pt x 152.047pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Presentation/Fontes d'affinages.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/Fontes d'affinages.pdf, id=258, 289.48149pt x 216.81pt>
+File: Images/Presentation/Fontes d'affinages.pdf Graphic file (type pdf)
+<use Images/Presentation/Fontes d'affinages.pdf>
+Package pdftex.def Info: Images/Presentation/Fontes d'affinages.pdf  used on input line 354.
+(pdftex.def)             Requested size: 202.63567pt x 151.76596pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Presentation/Disque.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Presentation/Disque.pdf, id=259, 289.48149pt x 215.90663pt>
+File: Images/Presentation/Disque.pdf Graphic file (type pdf)
+<use Images/Presentation/Disque.pdf>
+Package pdftex.def Info: Images/Presentation/Disque.pdf  used on input line 356.
+(pdftex.def)             Requested size: 202.63567pt x 151.13359pt.
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.365 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.365 
+       <./Images/Presentation/Les Retours.pdf> <./Images/Presentation/Frite Haut Silicium.pdf> <./Images/Presentation/Fontes d'affinages.pdf> <./Images/Presentation/Disque.pdf>] [7] [8] [9] [10] [11]
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesBrut1.pdf, id=331, 661.47125pt x 67.25125pt>
+File: Images/Statistique/DonnéesBrut1.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesBrut1.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesBrut1.pdf  used on input line 740.
+(pdftex.def)             Requested size: 460.72124pt x 46.84055pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesBrut2.pdf, id=332, 659.46375pt x 67.25125pt>
+File: Images/Statistique/DonnéesBrut2.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesBrut2.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesBrut2.pdf  used on input line 742.
+(pdftex.def)             Requested size: 460.72124pt x 46.98523pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesBrut3.pdf, id=333, 621.32124pt x 61.22874pt>
+File: Images/Statistique/DonnéesBrut3.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesBrut3.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesBrut3.pdf  used on input line 744.
+(pdftex.def)             Requested size: 460.72124pt x 45.40196pt.
+[12pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.754 \newpage
+               <./Images/Statistique/DonnéesBrut1.pdf> <./Images/Statistique/DonnéesBrut2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Statistique/DonnéesBrut3.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesBrut3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesClean1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesClean1.pdf, id=383, 667.49374pt x 79.29625pt>
+File: Images/Statistique/DonnéesClean1.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesClean1.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesClean1.pdf  used on input line 796.
+(pdftex.def)             Requested size: 460.72124pt x 54.73381pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesClean2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/DonnéesClean2.pdf, id=384, 653.44125pt x 67.25125pt>
+File: Images/Statistique/DonnéesClean2.pdf Graphic file (type pdf)
+<use Images/Statistique/DonnéesClean2.pdf>
+Package pdftex.def Info: Images/Statistique/DonnéesClean2.pdf  used on input line 798.
+(pdftex.def)             Requested size: 460.72124pt x 47.41623pt.
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.836 \]
+         <./Images/Statistique/DonnéesClean1.pdf> <./Images/Statistique/DonnéesClean2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/DonnéesClean2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf, id=420, 503.7229pt x 283.86217pt>
+File: Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf Graphic file (type pdf)
+<use Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf>
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf  used on input line 868.
+(pdftex.def)             Requested size: 460.72124pt x 259.62738pt.
+[14] [15pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.919 
+       <./Images/Statistique/Matrice_corrélation_qualite_indicateur.pdf>]
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf, id=433, 437.23436pt x 282.46303pt>
+File: Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf Graphic file (type pdf)
+<use Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf>
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf  used on input line 925.
+(pdftex.def)             Requested size: 460.72124pt x 297.64226pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Statistique/Matrice_corrélation_ONO_Elements.pdf, id=434, 450.36343pt x 283.11061pt>
+File: Images/Statistique/Matrice_corrélation_ONO_Elements.pdf Graphic file (type pdf)
+<use Images/Statistique/Matrice_corrélation_ONO_Elements.pdf>
+Package pdftex.def Info: Images/Statistique/Matrice_corrélation_ONO_Elements.pdf  used on input line 946.
+(pdftex.def)             Requested size: 460.72124pt x 289.63297pt.
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.950 
+       <./Images/Statistique/Matrice_corrélation_Impurete_Elements.pdf>]
+<Images/Statistique/Impureté_sans_extreme.pdf, id=442, 902.32205pt x 984.1387pt>
+File: Images/Statistique/Impureté_sans_extreme.pdf Graphic file (type pdf)
+<use Images/Statistique/Impureté_sans_extreme.pdf>
+Package pdftex.def Info: Images/Statistique/Impureté_sans_extreme.pdf  used on input line 990.
+(pdftex.def)             Requested size: 902.31985pt x 984.1363pt.
+<Images/Statistique/Impureté_avec_extreme.pdf, id=443, 895.30885pt x 981.801pt>
+File: Images/Statistique/Impureté_avec_extreme.pdf Graphic file (type pdf)
+<use Images/Statistique/Impureté_avec_extreme.pdf>
+Package pdftex.def Info: Images/Statistique/Impureté_avec_extreme.pdf  used on input line 991.
+(pdftex.def)             Requested size: 895.30667pt x 981.7986pt.
+ [17pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.996 
+       <./Images/Statistique/Matrice_corrélation_ONO_Elements.pdf>]
+<Images/Statistique/Purete ONO_sans_extreme.pdf, id=452, 608.12296pt x 653.34187pt>
+File: Images/Statistique/Purete ONO_sans_extreme.pdf Graphic file (type pdf)
+<use Images/Statistique/Purete ONO_sans_extreme.pdf>
+Package pdftex.def Info: Images/Statistique/Purete ONO_sans_extreme.pdf  used on input line 1002.
+(pdftex.def)             Requested size: 608.12146pt x 653.34029pt.
+<Images/Statistique/Purete ONO_avec_extreme.pdf, id=453, 605.0043pt x 654.90172pt>
+File: Images/Statistique/Purete ONO_avec_extreme.pdf Graphic file (type pdf)
+<use Images/Statistique/Purete ONO_avec_extreme.pdf>
+Package pdftex.def Info: Images/Statistique/Purete ONO_avec_extreme.pdf  used on input line 1003.
+(pdftex.def)             Requested size: 605.00282pt x 654.90012pt.
+ [18pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1008 
+        <./Images/Statistique/Impureté_sans_extreme.pdf> <./Images/Statistique/Impureté_avec_extreme.pdf>] [19pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1046 $$
+          <./Images/Statistique/Purete ONO_sans_extreme.pdf> <./Images/Statistique/Purete ONO_avec_extreme.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1057.
+ (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<Images/Statistique/Regression_Impurete_Sn.pdf, id=520, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Impurete_Sn.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Impurete_Sn.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Impurete_Sn.pdf  used on input line 1086.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Impurete_Cu.pdf, id=521, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Impurete_Cu.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Impurete_Cu.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Impurete_Cu.pdf  used on input line 1091.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Ono_Cu.pdf, id=522, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Ono_Cu.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Ono_Cu.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Ono_Cu.pdf  used on input line 1097.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Ono_Cr.pdf, id=523, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Ono_Cr.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Ono_Cr.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Ono_Cr.pdf  used on input line 1102.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+ [20]
+Overfull \vbox (5.95006pt too high) has occurred while \output is active []
+
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1108 
+        <./Images/Statistique/Regression_Impurete_Sn.pdf> <./Images/Statistique/Regression_Impurete_Cu.pdf> <./Images/Statistique/Regression_Ono_Cu.pdf> <./Images/Statistique/Regression_Ono_Cr.pdf>]
+<Images/Statistique/Regression_Cu_Rm.pdf, id=579, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Cu_Rm.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cu_Rm.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cu_Rm.pdf  used on input line 1119.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Sn_Rm.pdf, id=580, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Sn_Rm.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Sn_Rm.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Sn_Rm.pdf  used on input line 1124.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Cr_Rm.pdf, id=581, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Cr_Rm.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cr_Rm.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cr_Rm.pdf  used on input line 1130.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+<Images/Statistique/Regression_Cr_Allongement.pdf, id=582, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Cr_Allongement.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cr_Allongement.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cr_Allongement.pdf  used on input line 1135.
+(pdftex.def)             Requested size: 368.57838pt x 383.94078pt.
+
+Overfull \vbox (18.11674pt too high) has occurred while \output is active []
+
+ [22pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1141 
+        <./Images/Statistique/Regression_Cu_Rm.pdf> <./Images/Statistique/Regression_Sn_Rm.pdf> <./Images/Statistique/Regression_Cr_Rm.pdf> <./Images/Statistique/Regression_Cr_Allongement.pdf>]
+<Images/Statistique/Regression_Cu_Allongement.pdf, id=633, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Cu_Allongement.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Cu_Allongement.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Cu_Allongement.pdf  used on input line 1151.
+(pdftex.def)             Requested size: 722.69823pt x 752.81065pt.
+<Images/Statistique/Regression_Sn_Allongement.pdf, id=634, 722.7pt x 752.8125pt>
+File: Images/Statistique/Regression_Sn_Allongement.pdf Graphic file (type pdf)
+<use Images/Statistique/Regression_Sn_Allongement.pdf>
+Package pdftex.def Info: Images/Statistique/Regression_Sn_Allongement.pdf  used on input line 1152.
+(pdftex.def)             Requested size: 722.69823pt x 752.81065pt.
+ [23pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1194 
+        <./Images/Statistique/Regression_Cu_Allongement.pdf> <./Images/Statistique/Regression_Sn_Allongement.pdf>] [24]
+LaTeX Font Info:    Trying to load font information for U+bbold on input line 1261.
+ (/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd) [25] [26] [27]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1494.
+
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Tableau matières premières 1-1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Recette/Tableau matières premières 1-1.pdf, id=690, 845.76549pt x 118.93578pt>
+File: Images/Recette/Tableau matières premières 1-1.pdf Graphic file (type pdf)
+<use Images/Recette/Tableau matières premières 1-1.pdf>
+Package pdftex.def Info: Images/Recette/Tableau matières premières 1-1.pdf  used on input line 1539.
+(pdftex.def)             Requested size: 460.72124pt x 64.78876pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Tableau matières premières 1-2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Recette/Tableau matières premières 1-2.pdf, id=691, 845.19763pt x 122.85901pt>
+File: Images/Recette/Tableau matières premières 1-2.pdf Graphic file (type pdf)
+<use Images/Recette/Tableau matières premières 1-2.pdf>
+Package pdftex.def Info: Images/Recette/Tableau matières premières 1-2.pdf  used on input line 1541.
+(pdftex.def)             Requested size: 460.72124pt x 66.97087pt.
+[28]
+<Images/Recette/Contraintes Qualités GS_400_15_1.pdf, id=722, 614.295pt x 59.2614pt>
+File: Images/Recette/Contraintes Qualités GS_400_15_1.pdf Graphic file (type pdf)
+<use Images/Recette/Contraintes Qualités GS_400_15_1.pdf>
+Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_400_15_1.pdf  used on input line 1556.
+(pdftex.def)             Requested size: 460.72124pt x 44.44682pt.
+<Images/Recette/Contraintes Qualités GS_400_15_2.pdf, id=723, 614.295pt x 58.04184pt>
+File: Images/Recette/Contraintes Qualités GS_400_15_2.pdf Graphic file (type pdf)
+<use Images/Recette/Contraintes Qualités GS_400_15_2.pdf>
+Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_400_15_2.pdf  used on input line 1558.
+(pdftex.def)             Requested size: 460.72124pt x 43.53215pt.
+<Images/Recette/Contraintes Qualités GS_450_10_1.pdf, id=724, 614.295pt x 55.60274pt>
+File: Images/Recette/Contraintes Qualités GS_450_10_1.pdf Graphic file (type pdf)
+<use Images/Recette/Contraintes Qualités GS_450_10_1.pdf>
+Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_450_10_1.pdf  used on input line 1560.
+(pdftex.def)             Requested size: 460.72124pt x 41.70277pt.
+<Images/Recette/Contraintes Qualités GS_450_10_2.pdf, id=725, 614.295pt x 56.18993pt>
+File: Images/Recette/Contraintes Qualités GS_450_10_2.pdf Graphic file (type pdf)
+<use Images/Recette/Contraintes Qualités GS_450_10_2.pdf>
+Package pdftex.def Info: Images/Recette/Contraintes Qualités GS_450_10_2.pdf  used on input line 1562.
+(pdftex.def)             Requested size: 460.72124pt x 42.14317pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Contraintes matières premières 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Recette/Contraintes matières premières 1.pdf, id=726, 640.33228pt x 194.62712pt>
+File: Images/Recette/Contraintes matières premières 1.pdf Graphic file (type pdf)
+<use Images/Recette/Contraintes matières premières 1.pdf>
+Package pdftex.def Info: Images/Recette/Contraintes matières premières 1.pdf  used on input line 1574.
+(pdftex.def)             Requested size: 640.3307pt x 194.62663pt.
+[29pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1579 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1579 
+        <./Images/Recette/Tableau matières premières 1-1.pdf> <./Images/Recette/Tableau matières premières 1-2.pdf> <./Images/Recette/Contraintes Qualités GS_400_15_1.pdf> <./Images/Recette/Contraintes Qualités GS_400_15_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Contraintes Qualités GS_400_15_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Contraintes Qualités GS_450_10_1.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Contraintes Qualités GS_450_10_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Contraintes Qualités GS_450_10_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Contraintes Qualités GS_450_10_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Images/Recette/Recettes Fonderies GS 450_10_1.pdf, id=771, 550.055pt x 140.525pt>
+File: Images/Recette/Recettes Fonderies GS 450_10_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 450_10_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 450_10_1.pdf  used on input line 1593.
+(pdftex.def)             Requested size: 460.72124pt x 117.70567pt.
+<Images/Recette/Recettes Fonderies GS 450_10_2.pdf, id=772, 570.13pt x 137.84799pt>
+File: Images/Recette/Recettes Fonderies GS 450_10_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 450_10_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 450_10_2.pdf  used on input line 1595.
+(pdftex.def)             Requested size: 460.72124pt x 111.39543pt.
+<Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf, id=773, 574.145pt x 153.90799pt>
+File: Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf  used on input line 1613.
+(pdftex.def)             Requested size: 460.72124pt x 123.507pt.
+<Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf, id=774, 533.995pt x 147.21701pt>
+File: Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf  used on input line 1615.
+(pdftex.def)             Requested size: 460.72124pt x 127.02196pt.
+<Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf, id=775, 564.777pt x 148.555pt>
+File: Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf  used on input line 1625.
+(pdftex.def)             Requested size: 460.72124pt x 121.19025pt.
+<Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf, id=776, 548.717pt x 145.87799pt>
+File: Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf  used on input line 1627.
+(pdftex.def)             Requested size: 460.72124pt x 122.4899pt.
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1633 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1633 
+        <./Images/Recette/Contraintes matières premières 1.pdf> <./Images/Recette/Recettes Fonderies GS 450_10_1.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 450_10_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Fonderies GS 450_10_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 450_10_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Overfull \vbox (19.40524pt too high) has occurred while \output is active []
+
+ [31pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1633 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1633 
+        <./Images/Recette/Recettes Simplexe 1 GS 450_10_1.pdf> <./Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 1 GS 450_10_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 450_10_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 450_10_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Images/Recette/Recettes Fonderies GS 600_3_1.pdf, id=863, 554.07pt x 167.292pt>
+File: Images/Recette/Recettes Fonderies GS 600_3_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 600_3_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 600_3_1.pdf  used on input line 1644.
+(pdftex.def)             Requested size: 460.72124pt x 139.10757pt.
+<Images/Recette/Recettes Fonderies GS 600_3_2.pdf, id=864, 552.732pt x 165.95299pt>
+File: Images/Recette/Recettes Fonderies GS 600_3_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 600_3_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 600_3_2.pdf  used on input line 1646.
+(pdftex.def)             Requested size: 460.72124pt x 138.32841pt.
+<Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf, id=865, 547.378pt x 129.818pt>
+File: Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf  used on input line 1656.
+(pdftex.def)             Requested size: 460.72124pt x 109.26622pt.
+<Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf, id=866, 564.777pt x 132.495pt>
+File: Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf  used on input line 1658.
+(pdftex.def)             Requested size: 460.72124pt x 108.0886pt.
+
+Overfull \vbox (22.81766pt too high) has occurred while \output is active []
+
+ [32pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1664 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1664 
+        <./Images/Recette/Recettes Fonderies GS 600_3_1.pdf> <./Images/Recette/Recettes Fonderies GS 600_3_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 600_3_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 1 GS 600_3_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 1 GS 600_3_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf, id=917, 575.483pt x 132.495pt>
+File: Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf  used on input line 1672.
+(pdftex.def)             Requested size: 460.72124pt x 106.07497pt.
+<Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf, id=918, 554.07pt x 135.17201pt>
+File: Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf  used on input line 1674.
+(pdftex.def)             Requested size: 460.72124pt x 112.39897pt.
+ Excluding 'comment' comment. [33pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1742 
+        <./Images/Recette/Recettes Simplexe 2 GS 600_3_1.pdf> <./Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 600_3_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+pdfTeX warning: pdflatex (file ./Images/Mg/Poche 1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Mg/Poche 1.pdf, id=948, 937.10098pt x 559.59062pt>
+File: Images/Mg/Poche 1.pdf Graphic file (type pdf)
+<use Images/Mg/Poche 1.pdf>
+Package pdftex.def Info: Images/Mg/Poche 1.pdf  used on input line 1790.
+(pdftex.def)             Requested size: 937.0987pt x 559.58925pt.
+
+
+pdfTeX warning: pdflatex (file ./Images/Mg/Poche 2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Mg/Poche 2.pdf, id=949, 937.10098pt x 559.59062pt>
+File: Images/Mg/Poche 2.pdf Graphic file (type pdf)
+<use Images/Mg/Poche 2.pdf>
+Package pdftex.def Info: Images/Mg/Poche 2.pdf  used on input line 1796.
+(pdftex.def)             Requested size: 937.0987pt x 559.58925pt.
+[34]
+Overfull \vbox (13.38547pt too high) has occurred while \output is active []
+
+ [35pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1802 
+        <./Images/Mg/Poche 1.pdf> <./Images/Mg/Poche 2.pdf>]
+
+pdfTeX warning: pdflatex (file ./Images/Mg/Poche 3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/Mg/Poche 3.pdf, id=1017, 2427.0675pt x 2338.7375pt>
+File: Images/Mg/Poche 3.pdf Graphic file (type pdf)
+<use Images/Mg/Poche 3.pdf>
+Package pdftex.def Info: Images/Mg/Poche 3.pdf  used on input line 1808.
+(pdftex.def)             Requested size: 2427.06161pt x 2338.73183pt.
+[36pdfTeX warning (ext4): destination with the same identifier (name{figure.25}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1822     \item \textbf
+                        {Régime transitoire} : Cette phase correspond à l'... <./Images/Mg/Poche 3.pdf>] [37] [38] [39] Excluding 'comment' comment. Excluding 'comment' comment.
+<Images/Recette/Recettes Fonderies GS 400_15_1.pdf, id=1098, 570.13pt x 119.112pt>
+File: Images/Recette/Recettes Fonderies GS 400_15_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 400_15_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 400_15_1.pdf  used on input line 2135.
+(pdftex.def)             Requested size: 460.72124pt x 96.2548pt.
+<Images/Recette/Recettes Fonderies GS 400_15_2.pdf, id=1099, 529.98pt x 115.097pt>
+File: Images/Recette/Recettes Fonderies GS 400_15_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 400_15_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 400_15_2.pdf  used on input line 2137.
+(pdftex.def)             Requested size: 460.72124pt x 100.05629pt.
+<Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf, id=1100, 574.145pt x 131.15701pt>
+File: Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf  used on input line 2147.
+(pdftex.def)             Requested size: 460.72124pt x 105.24994pt.
+<Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf, id=1101, 528.642pt x 128.48pt>
+File: Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf  used on input line 2149.
+(pdftex.def)             Requested size: 460.72124pt x 111.97469pt.
+ [40]
+<Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf, id=1119, 568.79199pt x 132.495pt>
+File: Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf  used on input line 2163.
+(pdftex.def)             Requested size: 460.72124pt x 107.32236pt.
+<Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf, id=1120, 516.597pt x 132.495pt>
+File: Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf  used on input line 2165.
+(pdftex.def)             Requested size: 460.72124pt x 118.16277pt.
+<Images/Recette/Recettes Fonderies GS 500_7_1.pdf, id=1121, 542.025pt x 133.833pt>
+File: Images/Recette/Recettes Fonderies GS 500_7_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 500_7_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 500_7_1.pdf  used on input line 2175.
+(pdftex.def)             Requested size: 460.72124pt x 113.76263pt.
+<Images/Recette/Recettes Fonderies GS 500_7_2.pdf, id=1122, 520.612pt x 143.20201pt>
+File: Images/Recette/Recettes Fonderies GS 500_7_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Fonderies GS 500_7_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Fonderies GS 500_7_2.pdf  used on input line 2177.
+(pdftex.def)             Requested size: 460.72124pt x 126.73048pt.
+ [41pdfTeX warning (ext4): destination with the same identifier (name{figure.26}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2183 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.27}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2183 
+        <./Images/Recette/Recettes Fonderies GS 400_15_1.pdf> <./Images/Recette/Recettes Fonderies GS 400_15_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 400_15_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 1 GS 400_15_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 1 GS 400_15_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf, id=1173, 539.348pt x 148.555pt>
+File: Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf  used on input line 2191.
+(pdftex.def)             Requested size: 460.72124pt x 126.89796pt.
+<Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf, id=1174, 568.79199pt x 144.54pt>
+File: Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf  used on input line 2193.
+(pdftex.def)             Requested size: 460.72124pt x 117.07895pt.
+<Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf, id=1175, 568.79199pt x 145.87799pt>
+File: Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf  used on input line 2203.
+(pdftex.def)             Requested size: 460.72124pt x 118.16272pt.
+<Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf, id=1176, 564.777pt x 145.87799pt>
+File: Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf Graphic file (type pdf)
+<use Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf>
+Package pdftex.def Info: Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf  used on input line 2205.
+(pdftex.def)             Requested size: 460.72124pt x 119.00635pt.
+ [42pdfTeX warning (ext4): destination with the same identifier (name{figure.28}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2211 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.29}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2211 
+        <./Images/Recette/Recettes Simplexe 2 GS 400_15_1.pdf> <./Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 400_15_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Fonderies GS 500_7_1.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 500_7_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Fonderies GS 500_7_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Fonderies GS 500_7_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Overfull \vbox (9.13603pt too high) has occurred while \output is active []
+
+ [43pdfTeX warning (ext4): destination with the same identifier (name{figure.30}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2211 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.31}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2211 
+        <./Images/Recette/Recettes Simplexe 1 GS 500_7_1.pdf> <./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 1 GS 500_7_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 500_7_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf
+
+pdfTeX warning: pdflatex (file ./Images/Recette/Recettes Simplexe 2 GS 500_7_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+\tf@thm=\write7
+\openout7 = `rapport.thm'.
+
+ (./rapport.aux)
+Package rerunfilecheck Info: File `rapport.out' has not changed.
+(rerunfilecheck)             Checksum: D5ECB0AFBD2790C193D8BF8771EF5121;3829.
+ ) 
+Here is how much of TeX's memory you used:
+ 30040 strings out of 478287
+ 556899 string characters out of 5849289
+ 1118678 words of memory out of 5000000
+ 47433 multiletter control sequences out of 15000+600000
+ 539121 words of font info for 81 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,11n,89p,483b,1399s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on rapport.pdf (44 pages, 90461176 bytes).
+PDF statistics:
+ 1406 PDF objects out of 1440 (max. 8388607)
+ 1016 compressed objects within 11 object streams
+ 174 named destinations out of 1000 (max. 500000)
+ 615 words of extra memory for PDF output out of 10000 (max. 10000000)
+

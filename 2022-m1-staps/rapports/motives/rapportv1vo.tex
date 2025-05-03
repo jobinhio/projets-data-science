@@ -1,0 +1,625 @@
+\documentclass[12pt]{article}
+
+
+\usepackage[english]{babel}
+
+
+%% Je veux pouvoir inclure des figures...
+\usepackage[pdftex]{graphicx}
+
+%% ... des figures ``jpeg'' ou ``pdf'' ou "png"
+\DeclareGraphicsExtensions{.jpg,.pdf,.png}
+
+%% Je veux pouvoir inclure gantt diagram...
+\usepackage{pgfgantt}
+
+%% Je veux créer des Hyperdocuments
+\usepackage[pdftex,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+%% Je contrôle la taille de ma zone imprimée...
+\usepackage{anysize}
+%% ...en définissants les marges {gauche}{droite}{haute}{basse}
+\marginsize{18mm}{18mm}{12mm}{12mm}
+
+%% J'inclue une bibliographie ; j'ai donc besoin du package natbib
+\usepackage{natbib}
+
+%% ecrire tableau
+\usepackage{pgfplotstable}
+
+%Pour utiliser la virgule comme séparateur décimal en mode math,
+%sans que Latex introduise un espace inutile après la virgule :
+\usepackage{icomma}
+
+
+\usepackage{minted}
+
+
+
+%% pour les codes 
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{fullpage}
+\usepackage{color}
+ 
+\definecolor{darkWhite}{rgb}{0.94,0.94,0.94}
+ 
+\lstset{
+    backgroundcolor=\color{darkWhite},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    commentstyle=\color{red},
+    deletekeywords={...},
+    escapeinside={\%*}{*)},
+    extendedchars=true,
+    keepspaces=true,
+    keywordstyle=\color{blue},
+    language=python,
+    morekeywords={*,...},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    stepnumber=1,
+    stringstyle=\color{gray},
+    tabsize=4,
+    title=\lstname,
+}
+ 
+\lstdefinestyle{frameStyle}{
+    basicstyle=\footnotesize,
+    numbers=left,
+    numbersep=20pt,
+    numberstyle=\tiny\color{black}
+}
+ 
+\tcbuselibrary{listings,skins,breakable}
+ 
+\newtcblisting{customFrame}{
+    arc=0mm,
+    top=0mm,
+    bottom=0mm,
+    left=3mm,
+    right=0mm,
+    width=\textwidth,
+    listing only,
+    listing options={style=frameStyle},
+    breakable
+}
+
+
+%% pour les referneces
+\usepackage{url}
+\usepackage[final]{pdfpages}
+
+\usepackage{afterpage}
+
+\usepackage{a4wide}
+\usepackage{csquotes}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\UseRawInputEncoding
+\usepackage[toc,page]{appendix}
+\usepackage{color}
+\usepackage{captcont}
+\usepackage{hvfloat}
+\usepackage{siunitx}
+\usepackage{forest}
+\renewcommand{\figurename}{Fig.}
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm}
+
+%%\MakeOuterQuote{"}
+\oddsidemargin0cm
+
+\topmargin-2cm     %I recommend adding these three lines to increase the 
+\textwidth16.5cm   %amount of usable space on the page (and save trees)
+\textheight23.5cm 
+\usepackage{setspace}
+\usepackage[margin=20mm,labelfont=bf]{caption}
+\usepackage[left=20mm, right=20mm, top=20mm, bottom=20mm]{geometry}
+\usepackage{amssymb}
+\usepackage[section] {placeins}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usepackage{mwe,tikz,pgfplots}
+
+
+ 
+
+
+
+
+\newcommand{\vect}[1]{\hat{\boldsymbol{#1}}}
+\title{Report final}
+\author{Congo Job}
+\usepackage{minted}
+\begin{document}
+    \maketitle
+
+\tableofcontents
+
+\section{Introduction}
+The regular practice of physical activities has many benefits such as 
+as an improvement of mental health, prevention of cardiovascular diseases, limiting weight gain and many others. 
+
+However, we observe a decline in the practice of physical activities.
+It appears primordia to encourage young people to maintain a physical activity or to become more active, it is in this optics that this project is registered. 
+
+
+
+\subsection{Sport and sciences sociales}
+
+Created in Strasbourg( 1979 ) by Bernard Michon , the Sport and Social Sciences research unit
+remains the only STAPS research unit in the Grand Est region and is recognized as a key research structure in the social sciences of sport in France and Europe.
+With more than 20 researchers (full and associate) and 17 doctoral students, it produces reference works and articles (more than 174 publications).
+
+
+
+
+\subsection{Main Objectives}
+
+The objective of this work is to identify practitioner profiles based on positive or negative qualifiers, i.e., to assign a profile to each cluster in the data and to estimate the strength of these profiles, i.e., the number of clusters or profiles that are most representative of the data.
+
+
+\subsection{Specific Objectives}
+We will first perform a preprocessing of the data by renormalizing the data, removing outliers, completing or removing missing values, then to analyze the data we will use different algorithms such as: K-means, principal component analysis, decision trees. Finally, we will test the robustness of our cluster by using classification algorithms such as: logistic regression, k-nearest neighbors,...
+
+
+The Gantt chart below gives us a quick overview of the organization of the work over time.
+
+\begin{ganttchart}[
+  hgrid,x unit=1.5mm,
+  hgrid style/.style={draw=black!5, line width=.75pt},
+  vgrid={*{6}{draw=none},dotted},
+  time slot format=little-endian,
+]{1-04-2022}{27-05-2022}
+  \gantttitlecalendar{ month=shortname,week=4} \\
+  \ganttgroup{Report V0}{1-04-2022}{5-04-2022}\\
+  \ganttbar{data pre-processing}{5-04-2022}{30-04-2022}\\
+  \ganttbar{clustering methods}{5-04-2022}{10-05-2022}\\
+  \ganttbar{Validation}{5-04-2022}{22-05-2022}\\
+  \ganttgroup{Report V1}{5-04-2022}{22-05-2022}\\
+  \ganttbar{data pre-processing}{5-04-2022}{30-04-2022}\\
+  \ganttbar{clustering methods}{5-04-2022}{10-05-2022}\\
+  \ganttbar{Validation}{5-04-2022}{22-05-2022}\\
+  \ganttgroup{Report Vfinale}{22-05-2022}{27-05-2022}\\
+\end{ganttchart}
+
+
+
+\section{Description of raw data}
+
+The dataset contains personal information about the high school students (1070 participants) such as their initial, high school, gender, study choice, parents' work and parents' support as well as date of birth, body shape (height and weight). Twenty variables measure the nature of motivation such as enjoyment, affiliation, physical condition and the degree of motivation such as SIMS intrinsic and SIMS external regulation. 
+
+Finally, the rest of the variables (71) were collected as follows:
+We ask a question: "In PE, what is the sport that you enjoyed the most?
+
+Then we indicate:
+"We are now going to present you with words that will allow you to describe how you feel about this sport. Your job is to indicate, as quickly as possible, whether you agree or disagree with these propositions by clicking on yes or no.
+The response time has been taken into account in each answer. If this time is short, it means that the term seems obvious.
+For example, if the sport is "soccer", the student could answer "yes" quickly to the qualifier "fun", "no" quickly to the qualifier "beauty".
+
+The possible answers to each question are "yes", "no", "I don't know". When the answer to a question is "yes", the time value is positive, negative in the case of "no" and zero in the case of "I don't know".
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.5]{donnée_brute.png} 
+\caption[]{ Raw \ data}
+\end{center}
+\end{figure}
+
+
+\section{Preprocessing}
+
+\subsection{Preprocessing Method}
+
+
+The missing values are set to zero assuming that the qualifier is not of interest to the students concerned and that they could have answered: "I don't know".
+For the management of the outliers, those which are higher than 5*standard deviation have been set to zero in order not to impact the weight given to each word. The standard deviation is calculated using the unsigned data in order to reduce the extreme values and avoid the possible compensation of the values.
+Values less than 200 ms are set to 0 assuming there is a minimum response time for each question.
+The students who answered "I don't know" to all these questions were not considered in the rest of the project.  
+The normalization is done by line in order to keep what is "important" for each person. 
+
+\newpage
+
+\subsection{Results of processed data}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.7]{donnée_nettoyé.png} 
+\caption[]{Data \ processed }
+\end{center}
+\end{figure}
+
+The most "important" and least "important" words for each person are respectively close to either 1 or -1 . Those which are less "important" are close to zero.
+
+The cleaned dataset contains 1048
+high school students and 71 features.
+
+
+\section{Clustering} 
+
+
+\subsection{Principal component analysis}
+
+Principal Component Analysis (PCA) is used to reduce the size of the data to a few variables and keep the most important data. It is a method of multivariate statistics, which consists in transforming variables related to each other (called "correlated" in statistics) into new variables decorrelated from each other. To determine the number of optimal components, the function fviz\_eig of Rstudio was used. 
+
+
+\begin{customFrame}
+fviz_eig(res.pca, addlabels = TRUE, ylim = c(0, 50))
+\end{customFrame}
+ 
+
+This function allows to have the graph of the eigenvalues.
+The eigenvalues measure the amount of variance explained by each principal axis. They are large for the first axes and small for the following axes.
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1.]{ACP_0.png} 
+\caption[]{Percentage of variance explained by dimensions number }
+\end{center}
+\end{figure}
+
+From the graph above, we might want to stop at the fifth principal component because 
+stop at the fifth principal component because the variation is less after the fifth.
+However 39.79760 \% of the information (variances) contained in the data is retained by the first 5 principal components.
+in the data is retained by the first 5 principal components.
+
+
+The graph below shows the top 35 variables that contribute the most to the 5 principal components. 
+The red dotted lines on the graphs indicate the average contribution value.
+ 
+\begin{customFrame}
+# Contributions of variables to PC1,PC2,PC3,PC4,PC5 top = 35 
+fviz_contrib(res.pca, choice = "var", axes = 1, top = 35) 
+fviz_contrib(res.pca, choice = "var", axes = 2, top = 35) 
+fviz_contrib(res.pca, choice = "var", axes = 3, top = 35) 
+fviz_contrib(res.pca, choice = "var", axes = 4, top = 35) 
+fviz_contrib(res.pca, choice = "var", axes = 5, top = 35) 
+\end{customFrame}
+
+
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1.1]{ACP_1.pdf} 
+\caption[]{ Variable contributions to  dimension 1 }
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1.1]{ACP_2.pdf} 
+\caption[]{ Variable contributions to  dimension 2 }
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1.1]{ACP_3.pdf} 
+\caption[]{Variable contributions to  dimension 3 }
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1.1]{ACP_4.pdf} 
+\caption[]{Variable contributions to  dimension 4 }
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1.1]{ACP_5.pdf} 
+\caption[]{ Variable contributions to  dimension 5 }
+\end{center}
+\end{figure}
+
+By combining the most important variables in our different axes, we keep 69 variables. The least important variables are "Recuperation" and "Facility".
+We can say that all the qualifiers are important to describe our dataset.
+
+
+\subsection{Hierarchical Clustering on Principal Components (HCPC) }
+
+To perform the clustering, we will use Hierarchical Clustering on Principal Components (HCPC).
+This method combines the three standard methods used in multivariate data analysis:
+
+    
+ \begin{itemize}
+    \item  Principal component methods (PCA, CA, MCA, FAMD, MFA),
+    \item  Hierarchical regrouping and
+    \item  Partitioning clustering, in particular the k-means method.
+ \end{itemize}
+
+\vspace{0.2 cm}
+
+The HCPC method algorithm has 4 main steps:
+
+\begin{enumerate}
+    \item  Perform a PCA. Choose the number of dimensions to retain by specifying the argument ncp. In our case, the value is 5.
+    \item Apply the hierarchical classification on the result of step 1.
+    \item Choose the number of groups according to the dendrogram obtained in step 2. In our case, the number of groups is 3.
+    \item Perform k-means to improve the initial partitioning obtained in step 3.
+\end{enumerate}
+
+
+\subsection{Implementation  of HCPC}
+
+We start by computing the principal component analysis (PCA). The argument ncp = 5 is used in the PCA() function to keep only the first five principal components. Then, the HCPC is applied on the PCA result.
+
+Here are the main lines of code in Rstudio for the implementation:
+
+\begin{customFrame}
+# Compute PCA with ncp = 5
+res.pca <- PCA(data_base , ncp = 5 ,graph = TRUE)
+# Compute hierarchical clustering on principal components
+res.hcpc <- HCPC(res.pca,nb.clust=3,consol=FALSE,graph=TRUE)
+\end{customFrame}
+
+
+To visualize the dendrogram generated by the hierarchical clustering, we will use the fviz\_dend() function
+
+\begin{customFrame}
+fviz_dend(res.hcpc, 
+          cex = 0.5,                    
+          palette = "jco",               
+          rect = TRUE, rect_fill = TRUE, 
+          rect_border = "jco",           
+          labels_track_height = 0.5 )
+\end{customFrame}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1.]{dentogram.pdf} 
+\caption[]{Dendogram }
+\end{center}
+\end{figure}
+
+The dendrogram suggests a 3-cluster solution.However, the size ratio between each cluster disproportionate.
+
+It is possible to visualize the individuals on the principal components map and to color the individuals according to the cluster they belong to. The function fviz\_cluster()[in factoextra ] can be used to visualize individual clusters.
+
+\begin{customFrame}
+
+fviz_cluster(res.hcpc,repel = TRUE,            
+             show.clust.cent = TRUE, 
+             palette = "jco",         
+             ggtheme = theme_minimal(),
+             main = "Factor map")
+             
+\end{customFrame}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1.]{HCPC.pdf} 
+\caption[]{Visualisation of  individuals cluster }
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1.]{HCPC_2.pdf} 
+\caption[]{Visualisation of  individuals cluster }
+\end{center}
+\end{figure}
+
+
+\subsection{Results of HCPC}
+
+Le nombre d'étudiants dans chaque cluster est  547, 387 et 204 .
+
+The cluster 1 is made of individuals sharing :
+\begin{itemize}
+    \item  high values for the variables Galbant
+    
+    \item  low values for variables like Progression, Objectif, Challenge,Transpiration, Actif, Perseverance, Confiance\_en\_soi, Performance, Endurance and Plaisir (variables are sorted from the weakest).
+\end{itemize}
+
+The cluster 2 is made of individuals sharing :
+\begin{itemize}
+    \item  high values for variables like Puissance, Competition, Se\_defouler, Muscle, Se\_relaxer, Technicite, Force, Legerete, Qualite and Resistance (variables are sorted from the strongest).
+    
+    \item  low values for variables like Meilleur, Partage, Vital, Depassement, Groupe, Cardio, Serenite, Efficacite, Plaisir and Actif (variables are sorted from the weakest).
+\end{itemize}
+
+
+The cluster 3 is made of individuals sharing :
+\begin{itemize}
+    \item  high values for variables like Actif, Progression, Performance, Cardio, Partage, Plaisir, Depassement, Challenge, Rapide and Efficacite (variables are sorted from the strongest).
+    
+    \item  low values for variables like Confort, Securite, Galbant, Douceur, Force, Ennuyeux, Inconfort, Qualite, Maintien and Ralentissement (variables are sorted from the weakest).
+\end{itemize}
+
+
+
+
+\section{Classification}  %%%%  Testing the strength of clusters %%%%
+ 
+ We separated our data in 2 parts: 80 \% of the data for the choice of the selection algorithm,20 \% of the data to select the most important columns and test the final model.
+ 
+ 
+\subsection{Choice of Classification algorithm} 
+
+ 4 multi-class classifiers are used: the support vector classifier
+(SVC), linear support vector classifier
+(LSVC), k-nearest neighbors (KNN) and logistic regression (logreg). 
+(KNN) and logistic regression (logreg).
+
+\vspace{0.4 cm}
+We used to evaluate our models and then optimize them using the functions below.
+It uses the learning\_curve and GridSearchCV() functions from scikit\_learn. 
+Learning\_curve() determine cross-validated training and test scores for different training set sizes.
+GridSearchCV allows us to select the best hyperparameters by comparing the different performances of each of each combination using the cross-validation technique.
+
+\begin{customFrame}
+# Procedure d'evalution des modeles
+def evaluation(model,X_train_3,y_train_3,X_test_3,y_test_3):
+    model.fit(X_train_3,y_train_3)
+    y_pred_3 = model.predict(X_test_3)
+    # print(confusion_matrix(y_test_3 , y_pred_3))
+    # print(classification_report(y_test_3 , y_pred_3))
+
+    N, train_score ,val_score = learning_curve(model, X_train_3,y_train_3,
+                            train_sizes = np.linspace(0.1,1.0,10),cv=5)
+
+    plt.figure(figsize =(12,8))
+    plt.plot(N,train_score.mean(axis = 1), label ='train score')
+    plt.plot(N,val_score.mean(axis = 1), label ='validation score')
+    plt.xlabel('amount of data')
+    plt.ylabel('Performance of model')
+    plt.legend()
+
+
+# Optimisation des hyperparametres du modele 
+def optimiseur(model,parameters,X_train_3,y_train_3):
+    grid = GridSearchCV(model,parameters)
+    grid.fit(X_train_3,y_train_3)
+
+    print("best parameters ",grid.best_params_)
+    print("accuracy :",grid.best_score_)
+
+\end{customFrame}
+Here is the graph of the performance of each model: 
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{learning_curve_1.png} 
+\caption[]{ KNN \ learning \ curve }
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{learning_curve_2.png} 
+\caption[]{ logreg \ learning \ curve }
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{learning_curve_3.png} 
+\caption[]{ LSVC \ learning \ curve }
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{learning_curve_4.png} 
+\caption[]{ SVC \ learning \ curve }
+\end{center}
+\end{figure}
+
+
+The performance of our 4 models is quite good, no overfiting for the 4 models. The difference between the train score and validation is quite small,it is approximately between 0.1 and 0.02 using 600 data. We selected SVC because it has the best score.
+
+\vspace{0.2 cm}
+
+
+
+  
+\subsection{Feature selection} 
+
+
+\noindent The graph below shows the variance of each feature. 
+ 4 threshold candidates stand out: 0.8, 0.06, 0.04 and 0.02.
+Stretchcing , Partage ,Role ,Performance ,Meilleur font partie des variables ayant une grande variance .
+
+\includepdf[pages=-]{variance.pdf}
+
+\noindent To eliminate the values below this threshold, the VarianceThreshold function of scikit-learn is used.In the end, the threshold set at 0.02 gives better results. No column was suppressed. 
+
+\subsection{Results final model} 
+
+
+
+\begin{center}
+    
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|c|c|c|}
+        \hline
+         & Predicted class 1 & Predicted class 2 & Predicted class 3  \tabularnewline
+        \hline
+        Actual class 1 & 79 & 4 & 0 \tabularnewline
+        \hline 
+        Actual class 2 & 18 & 67  & 3  \tabularnewline
+        \hline
+         Actual class 3 & 0 & 1 & 38 \tabularnewline
+        \hline
+    \end{tabular}
+    \caption{Confusion matrix}
+    \label{tab:my_label}
+\end{table}
+
+\end{center}
+
+
+
+\noindent We obtain satisfactory results: 
+26 misplaced values, the value of 0.890 for the precision\_score and 0.895 for the recall\_score and 0.888 the f1\-score. However, after several simulations, the components of the confusion matrix are very variable, but the performance remains the same.  
+
+\section{Conclusion}
+The main objective of the project was to do clustering on our data.
+Thanks to the HCPC clustering, we can distinguish 3 types of students:
+
+\begin{itemize}
+
+\item The unmotivated, those who do not like sports, whose variables that characterize them negatively are:  Progression, Objective, Challenge, Perspiration, Active, Perseverance
+
+\item In the second group, we have those who like combat sports such as wrestling, boxing and MMA. It is characterized by its words: Power, Competition, Technicite, Qualite, Energie, Muscle, Force and Intensite 
+
+\item  The last group is characterized by its words: Progression, Performance, 
+Challenge, Cardio, Sharing, Exceeding, Fast and Efficiency. 
+We find those who enjoy running and nature activities. 
+
+\end{itemize}
+
+\noindent Regarding classification, one of these algorithms (SVM) gave the value of 0.89 of precision .But the result of this algorithm is not satisfactory.  
+
+
+\begin{thebibliography}{9}
+
+\bibitem{text}
+\url{https://www.cairn.info/revue-staps-2018-2-page-99.htm}
+
+\bibitem{text}
+
+\url{https://solidarites-sante.gouv.fr/prevention-en-sante/preserver-sa-sante/article/activite-physique-et-sante}
+
+\bibitem{text}
+\url{https://e3s.unistra.fr/equipe/presentation/}
+
+\bibitem{text}
+\url{https://scikit-learn.org}
+
+\bibitem{}
+\url{https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales}
+
+
+\bibitem{text}
+\url{http://www.sthda.com/english/}
+
+\bibitem{text}
+\url{http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/117-hcpc-hierarchical-clustering-on-principal-components-essentials/#algorithm-of-the-hcpc-method}
+
+
+\bibitem{text}
+\url{https://husson.github.io/teaching.html}
+
+
+\bibitem{text}
+\url{https://www.youtube.com/c/MachineLearnia}
+
+
+
+\end{thebibliography}
+
+
+
+\end{document}
+
