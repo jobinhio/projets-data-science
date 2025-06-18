@@ -1,0 +1,30 @@
+# Pipeline pour lister les fichiers .mo
+trigger:
+- master
+# Le pipeline se déclenche dès qu'il y a un changement sur la branche master
+
+pool:
+  vmImage: windows-latest
+  name: BDUHPSimulation
+
+steps:
+# Cette étape liste tous les fichiers .mo dans le répertoire HPSiMoLib
+- script: dir /s /b *.mo
+  workingDirectory: HPSiMoLib
+  displayName: 'Lister les fichiers .mo'
+
+# Copie des fichiers .mo dans un répertoire Output sur l'agent
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'HPSiMoLib'
+    Contents: '**/*.mo'
+    TargetFolder: 'Output'
+  displayName: 'Copier les fichiers .mo dans Output'
+
+# Publication du répertoire Output comme artefact
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'Output'
+    ArtifactName: 'Modeles MO'
+    publishLocation: 'Container'
+

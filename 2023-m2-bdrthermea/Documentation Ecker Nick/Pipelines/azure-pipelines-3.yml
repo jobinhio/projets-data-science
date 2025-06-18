@@ -1,0 +1,33 @@
+trigger:
+- master
+# The pipeline is triggered whenever there's a change on the master branch
+
+pool:
+  vmImage: 'windows-latest'
+  name: BDUHPSimulation
+
+variables:
+  Dymola: '"C:\Program Files\Dymola 2021x\bin64\Dymola.exe"'
+
+steps:
+# Running a Dymola script to export .mo model to .fmu
+- script: |
+    $(Dymola) -s "translateModelFMU('TestPipeline_FMU', false, 'TestFMU', '2', 'csSolver', true, 0)"
+  displayName: 'Export .mo model to .fmu using Dymola'
+  workingDirectory: HPSiMoLib/Test
+  timeoutInMinutes: 10  # Adds a timeout of 10 minutes for this step
+
+# Copying the generated .fmu file to the Output directory
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'HPSiMoLib/Test'
+    Contents: 'TestFMU.fmu'
+    TargetFolder: 'Output'
+  displayName: 'Copy .fmu file to Output'
+
+# Publishing the Output directory as an artifact
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'Output'
+    ArtifactName: 'FMU File'
+    publishLocation: 'Container'

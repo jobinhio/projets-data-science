@@ -1,0 +1,42 @@
+# Pipeline pour lister les fichiers .mo
+trigger:
+- master
+# Le pipeline se déclenche dès qu'il y a un changement sur la branche master
+
+pool:
+  vmImage: windows-latest
+  name: BDUHPSimulation
+
+steps:
+# Cette étape liste tous les fichiers .mo dans le répertoire HPSiMoLib
+- script: dir /s /b *.mo
+  workingDirectory: HPSiMoLib
+  displayName: 'Lister les fichiers .mo'
+
+# Compte le nombre de fichiers .mo et affiche le résultat en utilisant PowerShell
+- powershell: |
+    Write-Host "Comptage des fichiers package.mo dans HPSiMoLib..."
+    $count = (Get-ChildItem -Recurse -Filter package.mo).Count
+    Write-Host "Nombre de fichiers package.mo trouvés : $count"
+    $output = "Nombre de fichiers package.mo trouvés : $count"
+    $output | Out-File -FilePath Nb_Modèles.txt -Encoding UTF8
+  workingDirectory: HPSiMoLib
+  displayName: 'Compter et enregistrer le nombre de fichiers package.mo'
+
+# Copie des fichiers .mo dans un répertoire Output sur l'agent
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'HPSiMoLib'
+    Contents: |
+      **/package.mo
+      Nb_Modèles.txt
+    TargetFolder: 'Output'
+  displayName: 'Copier les fichiers package.mo et Nb_Modèles.txt dans Output'
+
+# Publication du répertoire Output comme artefact
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'Output'
+    ArtifactName: 'Modeles MO et Compte'
+    publishLocation: 'Container'
+
